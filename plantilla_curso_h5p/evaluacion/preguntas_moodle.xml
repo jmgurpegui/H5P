@@ -1,0 +1,1976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Unidad 2 - Retos Ambientales y Agenda 2030</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 01: ¿Qué define conceptualmente el marco de ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué define conceptualmente el marco de los 'Límites Planetarios' desarrollado por Johan Rockström y el Stockholm Resilience Centre?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El marco de los Límites Planetarios define los umbrales biofísicos globales (9 procesos clave) que no deben sobrepasarse para preservar el 'espacio operativo seguro' de la civilización humana.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El espacio operativo seguro para la humanidad dentro del cual el sistema de la Tierra puede mantener condiciones estables similares a las del Holoceno.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El marco de los Límites Planetarios define los umbrales biofísicos globales (9 procesos clave) que no deben sobrepasarse para preservar el 'espacio operativo seguro' de la civilización humana.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El límite máximo de PIB que una economía desarrollada puede generar anualmente sin agotar sus reservas minerales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El marco de los Límites Planetarios define los umbrales biofísicos globales (9 procesos clave) que no deben sobrepasarse para preservar el 'espacio operativo seguro' de la civilización humana.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El volumen total de residuos urbanos que los vertederos municipales de la Unión Europea pueden asimilar por habitante al año.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El marco de los Límites Planetarios define los umbrales biofísicos globales (9 procesos clave) que no deben sobrepasarse para preservar el 'espacio operativo seguro' de la civilización humana.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La cuota obligatoria de impuestos verdes que los países miembros de la ONU deben transferir a los fondos de mitigación climática.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El marco de los Límites Planetarios define los umbrales biofísicos globales (9 procesos clave) que no deben sobrepasarse para preservar el 'espacio operativo seguro' de la civilización humana.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 02: Según las evaluaciones científicas de 20...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Según las evaluaciones científicas de 2023 (Richardson et al.), ¿cuál es el estado actual de los 9 límites planetarios?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Las investigaciones más recientes demuestran que la humanidad ha rebasado 6 de los 9 límites planetarios: cambio climático, biosfera, cambios en el uso del suelo, ciclos biogeoquímicos, agua dulce y contaminación química.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Todos los límites se encuentran dentro de la zona de seguridad gracias a los acuerdos del Protocolo de Kioto.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las investigaciones más recientes demuestran que la humanidad ha rebasado 6 de los 9 límites planetarios: cambio climático, biosfera, cambios en el uso del suelo, ciclos biogeoquímicos, agua dulce y contaminación química.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Se han transgredido ya al menos 6 de los 9 límites planetarios, situando a la Tierra en una zona de alto riesgo e inestabilidad ecosistémica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Las investigaciones más recientes demuestran que la humanidad ha rebasado 6 de los 9 límites planetarios: cambio climático, biosfera, cambios en el uso del suelo, ciclos biogeoquímicos, agua dulce y contaminación química.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Únicamente el límite del agujero de la capa de ozono estratosférico se encuentra en situación de alerta roja irreversible.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las investigaciones más recientes demuestran que la humanidad ha rebasado 6 de los 9 límites planetarios: cambio climático, biosfera, cambios en el uso del suelo, ciclos biogeoquímicos, agua dulce y contaminación química.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Solo el consumo de agua dulce supera los umbrales seguros debido a la agricultura intensiva de regadío.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las investigaciones más recientes demuestran que la humanidad ha rebasado 6 de los 9 límites planetarios: cambio climático, biosfera, cambios en el uso del suelo, ciclos biogeoquímicos, agua dulce y contaminación química.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 03: En relación con el límite planetario de ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En relación con el límite planetario de 'Agotamiento del ozono estratosférico', ¿por qué se considera el mayor caso de éxito regulatorio global?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Protocolo de Montreal es el paradigma de gobernanza ambiental exitosa: la eliminación gradual de los clorofluorocarbonos (CFC) ha revertido la destrucción del ozono estratosférico.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la atmósfera destruye de forma espontánea los gases fluorados mediante fotólisis sin necesidad de intervención humana.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Protocolo de Montreal es el paradigma de gobernanza ambiental exitosa: la eliminación gradual de los clorofluorocarbonos (CFC) ha revertido la destrucción del ozono estratosférico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la sustitución de combustibles fósiles por carbón redujo las emisiones de cloro y bromo en un 90%.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Protocolo de Montreal es el paradigma de gobernanza ambiental exitosa: la eliminación gradual de los clorofluorocarbonos (CFC) ha revertido la destrucción del ozono estratosférico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque la prohibición internacional vinculante de los CFC bajo el Protocolo de Montreal (1987) permitió su paulatina recuperación hacia el espacio operativo seguro.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Protocolo de Montreal es el paradigma de gobernanza ambiental exitosa: la eliminación gradual de los clorofluorocarbonos (CFC) ha revertido la destrucción del ozono estratosférico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la directiva Euro 6 de vehículos diésel eliminó por completo los agentes halógenos de los sistemas de escape.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Protocolo de Montreal es el paradigma de gobernanza ambiental exitosa: la eliminación gradual de los clorofluorocarbonos (CFC) ha revertido la destrucción del ozono estratosférico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 04: ¿A qué fenómeno ambiental hace referenci...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿A qué fenómeno ambiental hace referencia la alteración del límite de los 'Flujos Biogeoquímicos' (Nitrógeno y Fósforo)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La actividad humana fija más nitrógeno y fósforo que todos los procesos naturales terrestres combinados, generando blooms de algas que agotan el oxígeno disuelto (eutrofización) en mares y ríos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Al enriquecimiento en oxígeno disuelto de las aguas de alta montaña por la lluvia ácida.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La actividad humana fija más nitrógeno y fósforo que todos los procesos naturales terrestres combinados, generando blooms de algas que agotan el oxígeno disuelto (eutrofización) en mares y ríos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;A la acumulación de dióxido de carbono en las cámaras de combustión de motores térmicos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La actividad humana fija más nitrógeno y fósforo que todos los procesos naturales terrestres combinados, generando blooms de algas que agotan el oxígeno disuelto (eutrofización) en mares y ríos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;A la reducción de la evaporación en los océanos producida por vertidos de aceites sintéticos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La actividad humana fija más nitrógeno y fósforo que todos los procesos naturales terrestres combinados, generando blooms de algas que agotan el oxígeno disuelto (eutrofización) en mares y ríos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;A la sobrefijación antropogénica de nitrógeno y fósforo para fertilizantes y procesos industriales, provocando eutrofización masiva y zonas hipóxicas muertas en aguas fluviales y marinas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La actividad humana fija más nitrógeno y fósforo que todos los procesos naturales terrestres combinados, generando blooms de algas que agotan el oxígeno disuelto (eutrofización) en mares y ríos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 05: ¿Cuál es la causa química directa de la ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es la causa química directa de la 'Acidificación de los Océanos', uno de los límites planetarios en riesgo creciente?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los océanos absorben aproximadamente el 25-30% del CO2 antropogénico emitido. Al reaccionar químicamente (CO2 + H2O -&gt; H2CO3), disminuye el pH marino y dificulta la formación de caparazones calcáreos de aragonito.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La absorción constante del exceso de CO2 atmosférico por las aguas oceánicas, formando ácido carbónico que reduce el pH del agua y disminuye la disponibilidad de iones carbonato para moluscos y corales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los océanos absorben aproximadamente el 25-30% del CO2 antropogénico emitido. Al reaccionar químicamente (CO2 + H2O -&gt; H2CO3), disminuye el pH marino y dificulta la formación de caparazones calcáreos de aragonito.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El vertido masivo de ácido sulfúrico procedente del mantenimiento incorrecto de las baterías de plomo-ácido de vehículos fuera de uso.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los océanos absorben aproximadamente el 25-30% del CO2 antropogénico emitido. Al reaccionar químicamente (CO2 + H2O -&gt; H2CO3), disminuye el pH marino y dificulta la formación de caparazones calcáreos de aragonito.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El incremento de la temperatura del agua dulce que disuelve sales marinas en las plataformas continentales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los océanos absorben aproximadamente el 25-30% del CO2 antropogénico emitido. Al reaccionar químicamente (CO2 + H2O -&gt; H2CO3), disminuye el pH marino y dificulta la formación de caparazones calcáreos de aragonito.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La proliferación de bacterias nitrificantes en los casquetes polares provocada por el deshielo del permafrost.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los océanos absorben aproximadamente el 25-30% del CO2 antropogénico emitido. Al reaccionar químicamente (CO2 + H2O -&gt; H2CO3), disminuye el pH marino y dificulta la formación de caparazones calcáreos de aragonito.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 06: En el marco de los límites planetarios, ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el marco de los límites planetarios, ¿qué abarca la categoría de 'Nuevas Entidades' (Contaminación Química)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Las 'nuevas entidades' comprenden miles de compuestos químicos sintéticos creados por el ser humano cuya tasa de producción y vertido sobrepasa la capacidad global de control, monitorización y asimilación biológica.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Únicamente los residuos radiactivos procedentes de centrales nucleares de tercera generación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las 'nuevas entidades' comprenden miles de compuestos químicos sintéticos creados por el ser humano cuya tasa de producción y vertido sobrepasa la capacidad global de control, monitorización y asimilación biológica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Sustancias químicas sintéticas, compuestos químicos persistentes (PFAS), plásticos, nanopartículas artificiales y metales pesados liberados al medio sin evaluación toxicológica previa.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Las 'nuevas entidades' comprenden miles de compuestos químicos sintéticos creados por el ser humano cuya tasa de producción y vertido sobrepasa la capacidad global de control, monitorización y asimilación biológica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Las nuevas especies vegetales descubiertas en bosques tropicales vírgenes de la cuenca amazónica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las 'nuevas entidades' comprenden miles de compuestos químicos sintéticos creados por el ser humano cuya tasa de producción y vertido sobrepasa la capacidad global de control, monitorización y asimilación biológica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Los gases nobles inertes utilizados en la presurización de amortiguadores de gas en automoción.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las 'nuevas entidades' comprenden miles de compuestos químicos sintéticos creados por el ser humano cuya tasa de producción y vertido sobrepasa la capacidad global de control, monitorización y asimilación biológica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 07: ¿Qué aspecto diferencia al 'Agua Verde' ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué aspecto diferencia al 'Agua Verde' del 'Agua Azul' en la reciente actualización del límite planetario del agua dulce?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Stockholm Resilience Centre incluyó el agua verde (humedad del suelo disponible para biomasa y bosques) junto al agua azul (escorrentía y acuíferos), concluyendo que ambos componentes se encuentran en zona de riesgo.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El agua azul es el agua destilada utilizada en baterías y el agua verde es el líquido refrigerante con glicol.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Stockholm Resilience Centre incluyó el agua verde (humedad del suelo disponible para biomasa y bosques) junto al agua azul (escorrentía y acuíferos), concluyendo que ambos componentes se encuentran en zona de riesgo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El agua verde es el agua residual urbana y el agua azul es el agua potable mineral embotellada.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Stockholm Resilience Centre incluyó el agua verde (humedad del suelo disponible para biomasa y bosques) junto al agua azul (escorrentía y acuíferos), concluyendo que ambos componentes se encuentran en zona de riesgo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El agua azul comprende los ríos, lagos y acuíferos subterráneos superficiales, mientras que el agua verde es el agua de lluvia disponible en el suelo para la vegetación y la transpiración vegetal.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Stockholm Resilience Centre incluyó el agua verde (humedad del suelo disponible para biomasa y bosques) junto al agua azul (escorrentía y acuíferos), concluyendo que ambos componentes se encuentran en zona de riesgo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El agua verde procede exclusivamente del deshielo polar y el agua azul proviene de la condensación del vapor en plantas desalinizadoras.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Stockholm Resilience Centre incluyó el agua verde (humedad del suelo disponible para biomasa y bosques) junto al agua azul (escorrentía y acuíferos), concluyendo que ambos componentes se encuentran en zona de riesgo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 08: ¿De qué modo incide el límite de 'Carga ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿De qué modo incide el límite de 'Carga atmosférica de aerosoles' en el balance climático y la salud humana?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los aerosoles antropogénicos (partículas finas de combustión de motores y fábricas) modifican la reflectividad atmosférica, interfieren en la formación de nubes y son responsables de millones de muertes prematuras anuales.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumenta la capa de ozono troposférico acelerando la fotosíntesis nocturna de los bosques.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los aerosoles antropogénicos (partículas finas de combustión de motores y fábricas) modifican la reflectividad atmosférica, interfieren en la formación de nubes y son responsables de millones de muertes prematuras anuales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Provoca la evaporación inmediata de los mares cerrados mediante radiación térmica directa.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los aerosoles antropogénicos (partículas finas de combustión de motores y fábricas) modifican la reflectividad atmosférica, interfieren en la formación de nubes y son responsables de millones de muertes prematuras anuales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Inhabilita la conductividad eléctrica de los tendidos de alta tensión en las redes de distribución urbana.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los aerosoles antropogénicos (partículas finas de combustión de motores y fábricas) modifican la reflectividad atmosférica, interfieren en la formación de nubes y son responsables de millones de muertes prematuras anuales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Las partículas microscópicas en suspensión (PM2.5, hollín, sulfatos) dispersan la radiación solar alterando patrones de lluvia monzónica y generan patologías cardiorrespiratorias graves.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los aerosoles antropogénicos (partículas finas de combustión de motores y fábricas) modifican la reflectividad atmosférica, interfieren en la formación de nubes y son responsables de millones de muertes prematuras anuales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 09: ¿Cuál es el umbral de concentración de C...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es el umbral de concentración de CO2 en la atmósfera considerado seguro en el límite de Cambio Climático, y en qué nivel nos encontramos aproximadamente en la actualidad?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El umbral de seguridad climática se estableció en 350 partes por millón (ppm) de CO2. En la actualidad se superan las 420-425 ppm, provocando un forzamiento radiactivo desestabilizador del clima.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Límite seguro: 350 ppm de CO2; Nivel actual: superior a 420-425 ppm de CO2.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El umbral de seguridad climática se estableció en 350 partes por millón (ppm) de CO2. En la actualidad se superan las 420-425 ppm, provocando un forzamiento radiactivo desestabilizador del clima.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Límite seguro: 500 ppm de CO2; Nivel actual: 300 ppm de CO2.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El umbral de seguridad climática se estableció en 350 partes por millón (ppm) de CO2. En la actualidad se superan las 420-425 ppm, provocando un forzamiento radiactivo desestabilizador del clima.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Límite seguro: 150 ppm de CO2; Nivel actual: 200 ppm de CO2.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El umbral de seguridad climática se estableció en 350 partes por millón (ppm) de CO2. En la actualidad se superan las 420-425 ppm, provocando un forzamiento radiactivo desestabilizador del clima.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Límite seguro: 1000 ppm de CO2; Nivel actual: 850 ppm de CO2.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El umbral de seguridad climática se estableció en 350 partes por millón (ppm) de CO2. En la actualidad se superan las 420-425 ppm, provocando un forzamiento radiactivo desestabilizador del clima.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 10: En el límite de 'Integridad de la Biosfe...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el límite de 'Integridad de la Biosfera', ¿qué dos facetas complementarias evalúan los científicos para medir la pérdida biológica?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La integridad de la biosfera analiza tanto la pérdida irreversible de información genética (extinciones respecto a la tasa basal) como la pérdida de funcionalidad ecosistémica que sostiene la vida sobre la Tierra.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El tamaño medio de los árboles tropicales y el volumen de madera comercial exportada.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La integridad de la biosfera analiza tanto la pérdida irreversible de información genética (extinciones respecto a la tasa basal) como la pérdida de funcionalidad ecosistémica que sostiene la vida sobre la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La diversidad genética (tasa de extinción de especies) y la diversidad funcional (integridad de la biomasa e impacto en servicios ecosistémicos como polinización y reciclaje de nutrientes).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La integridad de la biosfera analiza tanto la pérdida irreversible de información genética (extinciones respecto a la tasa basal) como la pérdida de funcionalidad ecosistémica que sostiene la vida sobre la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El número de animales en zoológicos urbanos y la cantidad de hectáreas de jardines botánicos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La integridad de la biosfera analiza tanto la pérdida irreversible de información genética (extinciones respecto a la tasa basal) como la pérdida de funcionalidad ecosistémica que sostiene la vida sobre la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La pureza microbiológica del agua de lluvia y la concentración de plancton en acuarios de investigación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La integridad de la biosfera analiza tanto la pérdida irreversible de información genética (extinciones respecto a la tasa basal) como la pérdida de funcionalidad ecosistémica que sostiene la vida sobre la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 11: ¿Qué porcentaje mínimo de cubierta fores...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué porcentaje mínimo de cubierta forestal original global se establece como límite seguro para el 'Cambio en el uso del suelo'?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El límite para el uso del suelo exige mantener al menos el 75% de la superficie forestal original para preservar el albedo, los ciclos hídricos y el secuestro biológico de carbono.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Al menos un 25% de la superficie vegetal preagrícola.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite para el uso del suelo exige mantener al menos el 75% de la superficie forestal original para preservar el albedo, los ciclos hídricos y el secuestro biológico de carbono.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Un 40% de la superficie de bosque templado europeo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite para el uso del suelo exige mantener al menos el 75% de la superficie forestal original para preservar el albedo, los ciclos hídricos y el secuestro biológico de carbono.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Aproximadamente el 75% de la cubierta forestal original del planeta (actualmente descendida por debajo del 60%).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El límite para el uso del suelo exige mantener al menos el 75% de la superficie forestal original para preservar el albedo, los ciclos hídricos y el secuestro biológico de carbono.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El 95% de la vegetación de zonas desérticas y tundras boreales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite para el uso del suelo exige mantener al menos el 75% de la superficie forestal original para preservar el albedo, los ciclos hídricos y el secuestro biológico de carbono.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 12: ¿Por qué los límites planetarios interac...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Por qué los límites planetarios interactúan entre sí como un sistema acoplado y no de forma aislada?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El sistema Tierra es altamente no lineal y complejo: la degradación de un subsistema (ej. bosques) amplifica las presiones sobre otros (clima, biodiversidad, agua dulce), acelerando efectos en cascada e irreversibles.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque todos los límites dependen exclusivamente del precio internacional del barril de petróleo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El sistema Tierra es altamente no lineal y complejo: la degradación de un subsistema (ej. bosques) amplifica las presiones sobre otros (clima, biodiversidad, agua dulce), acelerando efectos en cascada e irreversibles.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la legislación ambiental de la Unión Europea obliga a evaluar únicamente proyectos nucleares conjuntos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El sistema Tierra es altamente no lineal y complejo: la degradación de un subsistema (ej. bosques) amplifica las presiones sobre otros (clima, biodiversidad, agua dulce), acelerando efectos en cascada e irreversibles.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque las mediciones por satélite solo pueden registrar datos meteorológicos de forma bimensual.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El sistema Tierra es altamente no lineal y complejo: la degradación de un subsistema (ej. bosques) amplifica las presiones sobre otros (clima, biodiversidad, agua dulce), acelerando efectos en cascada e irreversibles.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque transgredir un límite (por ejemplo, deforestación en el uso del suelo) degrada sumideros de carbono agravando el cambio climático, intensificando a su vez el estrés hídrico y la acidificación marina.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El sistema Tierra es altamente no lineal y complejo: la degradación de un subsistema (ej. bosques) amplifica las presiones sobre otros (clima, biodiversidad, agua dulce), acelerando efectos en cascada e irreversibles.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 13: ¿Qué Objetivo de Desarrollo Sostenible (...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué Objetivo de Desarrollo Sostenible (ODS) encabeza el Reto 1: 'Combatir el cambio climático y sus efectos'?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Reto 1 se fundamenta directamente en el ODS 13: Acción por el Clima, exigiendo a estados y empresas planes de mitigación, reducción de emisiones y resiliencia ante desastres climáticos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El ODS 13 (Acción por el Clima), que impele a adoptar medidas urgentes para combatir el cambio climático y sus efectos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Reto 1 se fundamenta directamente en el ODS 13: Acción por el Clima, exigiendo a estados y empresas planes de mitigación, reducción de emisiones y resiliencia ante desastres climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 3 (Salud y Bienestar), enfocado en la erradicación de epidemias infecciosas transmisibles.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 1 se fundamenta directamente en el ODS 13: Acción por el Clima, exigiendo a estados y empresas planes de mitigación, reducción de emisiones y resiliencia ante desastres climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 8 (Trabajo Decente y Crecimiento Económico), orientado a la digitalización del sector bancario.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 1 se fundamenta directamente en el ODS 13: Acción por el Clima, exigiendo a estados y empresas planes de mitigación, reducción de emisiones y resiliencia ante desastres climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 16 (Paz, Justicia e Instituciones Sólidas), que regula la firma de tratados militares de desarme.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 1 se fundamenta directamente en el ODS 13: Acción por el Clima, exigiendo a estados y empresas planes de mitigación, reducción de emisiones y resiliencia ante desastres climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 14: En el marco del Reto 2 ('Producir energí...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el marco del Reto 2 ('Producir energía asequible y no contaminante'), ¿qué meta concreta del ODS 7 resulta indispensable para la transición ecológica?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El ODS 7 plantea como meta clave aumentar drásticamente la cuota de energías renovables en el mix energético mundial y descarbonizar la generación de electricidad mediante solar, eólica e hidroeléctrica.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Subvencionar el carbón térmico nacional para reducir la dependencia de las importaciones de gas licuado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 7 plantea como meta clave aumentar drásticamente la cuota de energías renovables en el mix energético mundial y descarbonizar la generación de electricidad mediante solar, eólica e hidroeléctrica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La descarbonización de la energía eléctrica, aumentando sustancialmente el porcentaje de renovables y duplicando la tasa de eficiencia energética.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El ODS 7 plantea como meta clave aumentar drásticamente la cuota de energías renovables en el mix energético mundial y descarbonizar la generación de electricidad mediante solar, eólica e hidroeléctrica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Fijar precios máximos artificiales a los combustibles diésel en las estaciones de servicio urbanas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 7 plantea como meta clave aumentar drásticamente la cuota de energías renovables en el mix energético mundial y descarbonizar la generación de electricidad mediante solar, eólica e hidroeléctrica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Eliminar los contadores eléctricos individuales para fomentar el consumo ilimitado sin tarificación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 7 plantea como meta clave aumentar drásticamente la cuota de energías renovables en el mix energético mundial y descarbonizar la generación de electricidad mediante solar, eólica e hidroeléctrica.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 15: ¿Cuál es la conexión ecológica esencial ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es la conexión ecológica esencial entre la deforestación (Reto 3) y el cambio climático (Reto 1)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los bosques son los principales sumideros terrestres de carbono. Su destrucción no solo cancela su capacidad de secuestrar carbono, sino que libera a la atmósfera todo el CO2 acumulado en madera y suelo.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La tala de árboles enfría las capas medias de la troposfera debido a la sombra del asfalto.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los bosques son los principales sumideros terrestres de carbono. Su destrucción no solo cancela su capacidad de secuestrar carbono, sino que libera a la atmósfera todo el CO2 acumulado en madera y suelo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Los bosques absorben nitrógeno puro del suelo emitiendo vapor de agua a temperaturas bajo cero.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los bosques son los principales sumideros terrestres de carbono. Su destrucción no solo cancela su capacidad de secuestrar carbono, sino que libera a la atmósfera todo el CO2 acumulado en madera y suelo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La destrucción de masas forestales elimina sumideros naturales de carbono y libera el CO2 almacenado en la biomasa, incrementando las emisiones netas a la atmósfera.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los bosques son los principales sumideros terrestres de carbono. Su destrucción no solo cancela su capacidad de secuestrar carbono, sino que libera a la atmósfera todo el CO2 acumulado en madera y suelo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Las selvas tropicales consumen radiación ultravioleta destruyendo la capa protectora de ozono.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los bosques son los principales sumideros terrestres de carbono. Su destrucción no solo cancela su capacidad de secuestrar carbono, sino que libera a la atmósfera todo el CO2 acumulado en madera y suelo.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 16: ¿Qué meta del ODS 15 responde directamen...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué meta del ODS 15 responde directamente al Reto 4 ('Conservar la biodiversidad') frente a la acelerada pérdida de especies?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La meta 15.5 del ODS 15 exige a la comunidad internacional detener la pérdida de diversidad biológica, frenar el tráfico ilícito de especies y proteger los hábitats críticos antes de alcanzar puntos de no retorno.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Crear reservas comerciales de caza mayor en todos los parques nacionales periféricos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La meta 15.5 del ODS 15 exige a la comunidad internacional detener la pérdida de diversidad biológica, frenar el tráfico ilícito de especies y proteger los hábitats críticos antes de alcanzar puntos de no retorno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Sustituir insectos polinizadores silvestres por micro-drones autónomos recargables con energía solar.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La meta 15.5 del ODS 15 exige a la comunidad internacional detener la pérdida de diversidad biológica, frenar el tráfico ilícito de especies y proteger los hábitats críticos antes de alcanzar puntos de no retorno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumentar la cría intensiva en granjas avícolas cerradas para reducir el contacto con aves migratorias.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La meta 15.5 del ODS 15 exige a la comunidad internacional detener la pérdida de diversidad biológica, frenar el tráfico ilícito de especies y proteger los hábitats críticos antes de alcanzar puntos de no retorno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Adoptar medidas urgentes y significativas para reducir la degradación de los hábitats naturales, detener la pérdida de biodiversidad y proteger las especies amenazadas de extinción.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La meta 15.5 del ODS 15 exige a la comunidad internacional detener la pérdida de diversidad biológica, frenar el tráfico ilícito de especies y proteger los hábitats críticos antes de alcanzar puntos de no retorno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 17: ¿Cuál es el núcleo del Reto 5: 'Gestiona...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es el núcleo del Reto 5: 'Gestionar el agua de forma sostenible' bajo el ODS 6?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El ODS 6 busca el acceso universal al agua potable y saneamiento, reduciendo a la mitad la proporción de aguas residuales sin tratar y aumentando drásticamente la eficiencia en el uso de los recursos hídricos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Garantizar la disponibilidad y la gestión sostenible del agua y el saneamiento para todos, mejorando la calidad del agua y aumentando el reciclado y reutilización segura.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El ODS 6 busca el acceso universal al agua potable y saneamiento, reduciendo a la mitad la proporción de aguas residuales sin tratar y aumentando drásticamente la eficiencia en el uso de los recursos hídricos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Canalizar el 100% de los caudales fluviales hacia embalses hidroeléctricos cerrados sin caudal ecológico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 6 busca el acceso universal al agua potable y saneamiento, reduciendo a la mitad la proporción de aguas residuales sin tratar y aumentando drásticamente la eficiencia en el uso de los recursos hídricos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Sustituir el consumo de agua corriente por bebidas carbonatadas pasteurizadas de larga duración.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 6 busca el acceso universal al agua potable y saneamiento, reduciendo a la mitad la proporción de aguas residuales sin tratar y aumentando drásticamente la eficiencia en el uso de los recursos hídricos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Prohibir el uso de agua en la limpieza hospitalaria para evitar el consumo de recursos de red.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 6 busca el acceso universal al agua potable y saneamiento, reduciendo a la mitad la proporción de aguas residuales sin tratar y aumentando drásticamente la eficiencia en el uso de los recursos hídricos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 18: Para cumplir con el Reto 6 ('Lograr que ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Para cumplir con el Reto 6 ('Lograr que las ciudades sean espacios sostenibles' - ODS 11), ¿qué medida de movilidad urbana es prioritaria en las áreas metropolitanas?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El ODS 11 (meta 11.2) prioriza el transporte público accesible, seguro y no contaminante, y la mejora de la calidad del aire mediante ZBE (obligatorias en España para municipios de más de 50.000 habitantes).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Eliminar aceras y pasos peatonales para agilizar la circulación de camiones pesados de distribución.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 11 (meta 11.2) prioriza el transporte público accesible, seguro y no contaminante, y la mejora de la calidad del aire mediante ZBE (obligatorias en España para municipios de más de 50.000 habitantes).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Implantar Zonas de Bajas Emisiones (ZBE), transporte público electrificado accesible y fomento de la movilidad activa (peatonal y ciclista).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El ODS 11 (meta 11.2) prioriza el transporte público accesible, seguro y no contaminante, y la mejora de la calidad del aire mediante ZBE (obligatorias en España para municipios de más de 50.000 habitantes).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Construir autopistas elevadas gratuitas en el centro histórico de las ciudades para evitar atascos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 11 (meta 11.2) prioriza el transporte público accesible, seguro y no contaminante, y la mejora de la calidad del aire mediante ZBE (obligatorias en España para municipios de más de 50.000 habitantes).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Subvencionar el estacionamiento en superficie de vehículos diésel sin etiqueta ambiental de la DGT.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 11 (meta 11.2) prioriza el transporte público accesible, seguro y no contaminante, y la mejora de la calidad del aire mediante ZBE (obligatorias en España para municipios de más de 50.000 habitantes).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 19: ¿Qué aspecto aborda el Reto 7: 'Conserva...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué aspecto aborda el Reto 7: 'Conservar el mar' mediante el ODS 14 respecto a los vertidos de origen terrestre?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El ODS 14.1 establece que para 2025 se debe prevenir y reducir significativamente la contaminación marina de origen terrestre, responsable de más del 80% de los residuos que asfixian los océanos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Exigir que todos los vertidos al mar se realicen a temperaturas superiores a 80 °C para esterilizarlos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 14.1 establece que para 2025 se debe prevenir y reducir significativamente la contaminación marina de origen terrestre, responsable de más del 80% de los residuos que asfixian los océanos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Trasladar los vertederos municipales de residuos plásticos a plataformas flotantes en alta mar.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 14.1 establece que para 2025 se debe prevenir y reducir significativamente la contaminación marina de origen terrestre, responsable de más del 80% de los residuos que asfixian los océanos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Prevenir y reducir de forma significativa la contaminación marina de todo tipo, incluidos los detritos plásticos, escorrentías de fertilizantes y vertidos de hidrocarburos de origen terrestre.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El ODS 14.1 establece que para 2025 se debe prevenir y reducir significativamente la contaminación marina de origen terrestre, responsable de más del 80% de los residuos que asfixian los océanos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Fomentar la pesca de arrastre intensiva de fondo marino para retirar restos orgánicos de la plataforma continental.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 14.1 establece que para 2025 se debe prevenir y reducir significativamente la contaminación marina de origen terrestre, responsable de más del 80% de los residuos que asfixian los océanos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 20: En el Reto 8: 'Producir y consumir de fo...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el Reto 8: 'Producir y consumir de forma sostenible' (ODS 12), ¿qué transformación de modelo económico se exige al sector productivo?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El ODS 12 insta a desacoplar el crecimiento económico de la degradación ambiental mediante la prevención de residuos, compras verdes, alargamiento de la vida útil de los productos y economía circular.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Acelerar la obsolescencia programada para incentivar la venta continuada de nuevos modelos de electrodomésticos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 12 insta a desacoplar el crecimiento económico de la degradación ambiental mediante la prevención de residuos, compras verdes, alargamiento de la vida útil de los productos y economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Priorizar productos desechables de un solo uso para abaratar costes laborales en tareas de limpieza.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 12 insta a desacoplar el crecimiento económico de la degradación ambiental mediante la prevención de residuos, compras verdes, alargamiento de la vida útil de los productos y economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Incentivar el empaquetado de plástico multicapa no reciclable para proteger los productos de la humedad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 12 insta a desacoplar el crecimiento económico de la degradación ambiental mediante la prevención de residuos, compras verdes, alargamiento de la vida útil de los productos y economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Abandonar el modelo lineal extractivo ('extraer-fabricar-usar-tirar') y adoptar los principios de la economía circular, el ecodiseño y la valorización de recursos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El ODS 12 insta a desacoplar el crecimiento económico de la degradación ambiental mediante la prevención de residuos, compras verdes, alargamiento de la vida útil de los productos y economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 21: ¿Qué horizonte temporal establece la Age...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué horizonte temporal establece la Agenda 2030 aprobada por los 193 Estados miembros de la ONU y cuántos ODS contiene en total?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La Resolución 70/1 de la ONU ('Transformar nuestro mundo: la Agenda 2030 para el Desarrollo Sostenible') integra 17 ODS y 169 metas universales e indivisibles para alcanzar antes del año 2030.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Aprobada en septiembre de 2015 con horizonte en el año 2030, estructurada en 17 Objetivos de Desarrollo Sostenible y 169 metas concretas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La Resolución 70/1 de la ONU ('Transformar nuestro mundo: la Agenda 2030 para el Desarrollo Sostenible') integra 17 ODS y 169 metas universales e indivisibles para alcanzar antes del año 2030.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aprobada en 1992 en la Cumbre de Río, con 8 Objetivos del Milenio orientados exclusivamente al continente africano.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Resolución 70/1 de la ONU ('Transformar nuestro mundo: la Agenda 2030 para el Desarrollo Sostenible') integra 17 ODS y 169 metas universales e indivisibles para alcanzar antes del año 2030.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aprobada en el Tratado de Roma de 1957 con 25 directivas económicas comunitarias no vinculantes.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Resolución 70/1 de la ONU ('Transformar nuestro mundo: la Agenda 2030 para el Desarrollo Sostenible') integra 17 ODS y 169 metas universales e indivisibles para alcanzar antes del año 2030.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aprobada en 2020 durante la pandemia, con 5 recomendaciones técnicas sanitarias de la OMS.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Resolución 70/1 de la ONU ('Transformar nuestro mundo: la Agenda 2030 para el Desarrollo Sostenible') integra 17 ODS y 169 metas universales e indivisibles para alcanzar antes del año 2030.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 22: En el modelo conceptual de la 'Tarta Nup...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el modelo conceptual de la 'Tarta Nupcial' de los ODS (Rockström &amp; Sukhdev), ¿cuál es la relación de dependencia entre las 3 dimensiones de la sostenibilidad?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El modelo demuestra que la economía es un subsistema de la sociedad humana, y ambas están estrictamente limitadas por la capacidad biológica y física de la biosfera (los ODS ambientales sustentan todo lo demás).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La economía es la base que soporta a la sociedad y al medio ambiente; sin beneficio monetario no existe naturaleza.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El modelo demuestra que la economía es un subsistema de la sociedad humana, y ambas están estrictamente limitadas por la capacidad biológica y física de la biosfera (los ODS ambientales sustentan todo lo demás).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La biosfera (Planeta: ODS 6, 13, 14, 15) es la base indispensable sobre la que se asienta la sociedad (ODS 1, 2, 3, 4, 5, 7, 11, 16), la cual a su vez sostiene a la economía (ODS 8, 9, 10, 12).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El modelo demuestra que la economía es un subsistema de la sociedad humana, y ambas están estrictamente limitadas por la capacidad biológica y física de la biosfera (los ODS ambientales sustentan todo lo demás).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Las tres dimensiones son compartimentos estancos totalmente independientes que no interactúan entre sí.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El modelo demuestra que la economía es un subsistema de la sociedad humana, y ambas están estrictamente limitadas por la capacidad biológica y física de la biosfera (los ODS ambientales sustentan todo lo demás).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La tecnología informática sustituye a la biosfera, permitiendo que la sociedad prospere al margen de los recursos naturales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El modelo demuestra que la economía es un subsistema de la sociedad humana, y ambas están estrictamente limitadas por la capacidad biológica y física de la biosfera (los ODS ambientales sustentan todo lo demás).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 23: ¿Cuáles son las conocidas '5 P' que arti...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuáles son las conocidas '5 P' que articulan los principios rectores de la Agenda 2030?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Las 5P resumen los ejes transversales de la Agenda 2030: erradicar la pobreza (Personas), proteger el sistema Tierra (Planeta), garantizar vidas prósperas (Prosperidad), fomentar sociedades pacíficas (Paz) y forjar alianzas globales (Partnership).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Petróleo, Plásticos, Producción, Precios y Publicidad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las 5P resumen los ejes transversales de la Agenda 2030: erradicar la pobreza (Personas), proteger el sistema Tierra (Planeta), garantizar vidas prósperas (Prosperidad), fomentar sociedades pacíficas (Paz) y forjar alianzas globales (Partnership).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Poder, Política, Presupuesto, Producto interior y Población.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las 5P resumen los ejes transversales de la Agenda 2030: erradicar la pobreza (Personas), proteger el sistema Tierra (Planeta), garantizar vidas prósperas (Prosperidad), fomentar sociedades pacíficas (Paz) y forjar alianzas globales (Partnership).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Personas (People), Planeta (Planet), Prosperidad (Prosperity), Paz (Peace) y Partenariado / Alianzas (Partnership).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Las 5P resumen los ejes transversales de la Agenda 2030: erradicar la pobreza (Personas), proteger el sistema Tierra (Planeta), garantizar vidas prósperas (Prosperidad), fomentar sociedades pacíficas (Paz) y forjar alianzas globales (Partnership).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Protección, Protocolos, Procedimientos, Prevención y Pólizas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las 5P resumen los ejes transversales de la Agenda 2030: erradicar la pobreza (Personas), proteger el sistema Tierra (Planeta), garantizar vidas prósperas (Prosperidad), fomentar sociedades pacíficas (Paz) y forjar alianzas globales (Partnership).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 24: ¿Qué papel asigna la meta 12.6 del ODS 1...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué papel asigna la meta 12.6 del ODS 12 a las empresas y al tejido productivo?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La meta 12.6 exige la transición hacia memorias e informes de sostenibilidad corporativa (ESG / Directiva CSRD en la UE), transparentando la huella de carbono, el uso de materias primas y los riesgos climáticos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Prohibir que las empresas publiquen datos financieros ante entidades bancarias privadas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La meta 12.6 exige la transición hacia memorias e informes de sostenibilidad corporativa (ESG / Directiva CSRD en la UE), transparentando la huella de carbono, el uso de materias primas y los riesgos climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Obligar a las pymes a externalizar sus departamentos de ingeniería a países sin regulación ambiental.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La meta 12.6 exige la transición hacia memorias e informes de sostenibilidad corporativa (ESG / Directiva CSRD en la UE), transparentando la huella de carbono, el uso de materias primas y los riesgos climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Permitir la deducción total de impuestos por cada tonelada de residuo peligroso no reciclado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La meta 12.6 exige la transición hacia memorias e informes de sostenibilidad corporativa (ESG / Directiva CSRD en la UE), transparentando la huella de carbono, el uso de materias primas y los riesgos climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Alentar a las empresas, en especial las grandes empresas e industriales, a adoptar prácticas sostenibles e incorporar información sobre la sostenibilidad en su ciclo de presentación de informes.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La meta 12.6 exige la transición hacia memorias e informes de sostenibilidad corporativa (ESG / Directiva CSRD en la UE), transparentando la huella de carbono, el uso de materias primas y los riesgos climáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 25: ¿Cómo contribuye un taller técnico al OD...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cómo contribuye un taller técnico al ODS 13 (Acción por el Clima) de forma inmediata en sus operaciones de climatización?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El venteo de gases refrigerantes como el R-134a (con un PCA de 1.430) agrava severamente el cambio climático. Su recuperación y reciclaje con estación estanca certificada es una obligación legal y una acción climática directa.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Recuperando obligatoriamente los gases fluorados refrigerantes (R-134a, R-1234yf) con estación homologada sin permitir su venteo a la atmósfera, evitando su alto potencial de calentamiento atmosférico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El venteo de gases refrigerantes como el R-134a (con un PCA de 1.430) agrava severamente el cambio climático. Su recuperación y reciclaje con estación estanca certificada es una obligación legal y una acción climática directa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Venteando el gas a la atmósfera durante la noche para que la radiación solar no lo descomponga.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El venteo de gases refrigerantes como el R-134a (con un PCA de 1.430) agrava severamente el cambio climático. Su recuperación y reciclaje con estación estanca certificada es una obligación legal y una acción climática directa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Rellenando el circuito de aire acondicionado con propano sin verificar estanqueidad previa.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El venteo de gases refrigerantes como el R-134a (con un PCA de 1.430) agrava severamente el cambio climático. Su recuperación y reciclaje con estación estanca certificada es una obligación legal y una acción climática directa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Sustituyendo el compresor de climatización por un ventilador mecánico de aspas de madera.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El venteo de gases refrigerantes como el R-134a (con un PCA de 1.430) agrava severamente el cambio climático. Su recuperación y reciclaje con estación estanca certificada es una obligación legal y una acción climática directa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 26: ¿De qué manera impacta el abandono incon...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿De qué manera impacta el abandono incontrolado de neumáticos fuera de uso en los ODS 15 (Biodiversidad) y 3 (Salud)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los acopios ilegales de neumáticos son un gravísimo riesgo ambiental: desprenden lixiviados tóxicos, liberan contaminantes cancerígenos si arden y actúan como criadero de vectores infecciosos (ej. mosquito tigre).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Fomenta el crecimiento espontáneo de especies botánicas endémicas en los taludes de las carreteras.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los acopios ilegales de neumáticos son un gravísimo riesgo ambiental: desprenden lixiviados tóxicos, liberan contaminantes cancerígenos si arden y actúan como criadero de vectores infecciosos (ej. mosquito tigre).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Genera focos de incendios tóxicos de difícil extinción que emiten dioxinas, furanos y metales pesados, y crea reservorios de agua estancada que proliferan mosquitos transmisores de enfermedades víricas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los acopios ilegales de neumáticos son un gravísimo riesgo ambiental: desprenden lixiviados tóxicos, liberan contaminantes cancerígenos si arden y actúan como criadero de vectores infecciosos (ej. mosquito tigre).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Reduce la salinidad de los acuíferos subterráneos gracias a la acción absorbente del caucho vulcanizado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los acopios ilegales de neumáticos son un gravísimo riesgo ambiental: desprenden lixiviados tóxicos, liberan contaminantes cancerígenos si arden y actúan como criadero de vectores infecciosos (ej. mosquito tigre).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Neutraliza las radiaciones electromagnéticas de las antenas de telecomunicación rural.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los acopios ilegales de neumáticos son un gravísimo riesgo ambiental: desprenden lixiviados tóxicos, liberan contaminantes cancerígenos si arden y actúan como criadero de vectores infecciosos (ej. mosquito tigre).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 27: ¿Qué vinculación guarda la gestión de lo...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué vinculación guarda la gestión de los aceites industriales usados con el ODS 14 (Conservar el mar)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El aceite usado es extremadamente contaminante y bioacumulable. La película oleosa que forma sobre el agua bloquea la entrada de luz y oxígeno, aniquilando la fauna y flora acuática.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Los aceites de motor sintéticos nutren a los cetáceos marinos acelerando su tasa reproductiva.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El aceite usado es extremadamente contaminante y bioacumulable. La película oleosa que forma sobre el agua bloquea la entrada de luz y oxígeno, aniquilando la fauna y flora acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El aceite residual aumenta la solubilidad del oxígeno en el agua de mar facilitando la respiración marina.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El aceite usado es extremadamente contaminante y bioacumulable. La película oleosa que forma sobre el agua bloquea la entrada de luz y oxígeno, aniquilando la fauna y flora acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Un solo litro de aceite mineral usado puede contaminar hasta un millón de litros de agua dulce o marina, formando una película impermeable que asfixia a los organismos acuáticos e impide la fotosíntesis del fitoplancton.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El aceite usado es extremadamente contaminante y bioacumulable. La película oleosa que forma sobre el agua bloquea la entrada de luz y oxígeno, aniquilando la fauna y flora acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El vertido controlado de hidrocarburos reduce la corrosión de los barcos de pesca en puertos fluviales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El aceite usado es extremadamente contaminante y bioacumulable. La película oleosa que forma sobre el agua bloquea la entrada de luz y oxígeno, aniquilando la fauna y flora acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 28: ¿Cómo apoya la diagnosis electrónica y m...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cómo apoya la diagnosis electrónica y mantenimiento predictivo en talleres al ODS 11 (Ciudades Sostenibles)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los vehículos mal calibrados o con sistemas anticontaminación anulados emiten hasta 20 veces más NOx y partículas tóxicas, disparando los picos de contaminación en las ciudades.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Permitiendo circular a mayores velocidades dentro de zonas residenciales escolares.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los vehículos mal calibrados o con sistemas anticontaminación anulados emiten hasta 20 veces más NOx y partículas tóxicas, disparando los picos de contaminación en las ciudades.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Desactivando las alertas acústicas del cuadro de instrumentos para reducir el ruido dentro del habitáculo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los vehículos mal calibrados o con sistemas anticontaminación anulados emiten hasta 20 veces más NOx y partículas tóxicas, disparando los picos de contaminación en las ciudades.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumentando la potencia de los inyectores de combustible para acelerar más rápidamente en semáforos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los vehículos mal calibrados o con sistemas anticontaminación anulados emiten hasta 20 veces más NOx y partículas tóxicas, disparando los picos de contaminación en las ciudades.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Garantizando que los sistemas anticontaminación (EGR, DPF/FAP, catalizadores SCR con AdBlue) funcionen dentro de tolerancias de homologación, reduciendo las emisiones de NOx y partículas que envenenan el aire urbano.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los vehículos mal calibrados o con sistemas anticontaminación anulados emiten hasta 20 veces más NOx y partículas tóxicas, disparando los picos de contaminación en las ciudades.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 29: Según el GHG Protocol (Protocolo de Gase...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Según el GHG Protocol (Protocolo de Gases de Efecto Invernadero) y la norma ISO 14064, ¿qué son las emisiones de 'Alcance 1'?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Alcance 1 (Scope 1) comprende las emisiones directas bajo control físico de la organización: combustión in situ, consumo de carburante en furgonetas propias y fugas fugitivas de gases fluorados.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Emisiones directas de GEI procedentes de fuentes que son propiedad o están controladas por la empresa (ej. calderas de calefacción de la nave, flota de vehículos propia, fugas de refrigerantes).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Alcance 1 (Scope 1) comprende las emisiones directas bajo control físico de la organización: combustión in situ, consumo de carburante en furgonetas propias y fugas fugitivas de gases fluorados.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Emisiones asociadas al consumo de electricidad adquirida de la red general de distribución de media tensión.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 1 (Scope 1) comprende las emisiones directas bajo control físico de la organización: combustión in situ, consumo de carburante en furgonetas propias y fugas fugitivas de gases fluorados.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Emisiones indirectas generadas exclusivamente por los clientes cuando conducen los vehículos entregados.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 1 (Scope 1) comprende las emisiones directas bajo control físico de la organización: combustión in situ, consumo de carburante en furgonetas propias y fugas fugitivas de gases fluorados.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Emisiones de metano producidas por la respiración del personal técnico durante su jornada de trabajo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 1 (Scope 1) comprende las emisiones directas bajo control físico de la organización: combustión in situ, consumo de carburante en furgonetas propias y fugas fugitivas de gases fluorados.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 30: ¿A qué categoría de emisión corresponden...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿A qué categoría de emisión corresponden las emisiones de 'Alcance 2' de una empresa?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Alcance 2 (Scope 2) mide las emisiones indirectas derivadas de la energía eléctrica consumida en las instalaciones, calculadas según el factor de emisión del mix eléctrico de la comercializadora.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;A las emisiones causadas por los residuos plásticos enterrados en vertederos autorizados.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 2 (Scope 2) mide las emisiones indirectas derivadas de la energía eléctrica consumida en las instalaciones, calculadas según el factor de emisión del mix eléctrico de la comercializadora.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;A las emisiones indirectas de GEI derivadas de la generación de electricidad, vapor o calefacción/refrigeración adquirida y consumida por la organización.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Alcance 2 (Scope 2) mide las emisiones indirectas derivadas de la energía eléctrica consumida en las instalaciones, calculadas según el factor de emisión del mix eléctrico de la comercializadora.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;A las emisiones generadas en la extracción de mineral de hierro en minas extranjeras para fabricar herramientas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 2 (Scope 2) mide las emisiones indirectas derivadas de la energía eléctrica consumida en las instalaciones, calculadas según el factor de emisión del mix eléctrico de la comercializadora.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;A las emisiones del transporte público utilizado ocasionalmente por los clientes para recoger sus vehículos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 2 (Scope 2) mide las emisiones indirectas derivadas de la energía eléctrica consumida en las instalaciones, calculadas según el factor de emisión del mix eléctrico de la comercializadora.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 31: ¿Por qué el 'Alcance 3' suele representa...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Por qué el 'Alcance 3' suele representar entre el 70% y el 85% de la huella de carbono total de una empresa del sector técnico?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Alcance 3 abarca la cadena de suministro completa 'aguas arriba' (fabricación de materias primas y recambios) y 'aguas abajo' (gestión de residuos, uso de producto). En el sector electromecánico, representa la inmensa mayoría del impacto.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque incluye el coste de matriculación de los vehículos nuevos en la delegación de tráfico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 3 abarca la cadena de suministro completa 'aguas arriba' (fabricación de materias primas y recambios) y 'aguas abajo' (gestión de residuos, uso de producto). En el sector electromecánico, representa la inmensa mayoría del impacto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque calcula el volumen de agua de lluvia que cae sobre el tejado de la nave durante el año fiscal.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 3 abarca la cadena de suministro completa 'aguas arriba' (fabricación de materias primas y recambios) y 'aguas abajo' (gestión de residuos, uso de producto). En el sector electromecánico, representa la inmensa mayoría del impacto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque engloba todas las emisiones indirectas de la cadena de valor: producción de los recambios adquiridos, transporte de proveedores, fin de vida de los productos y desplazamientos de empleados.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Alcance 3 abarca la cadena de suministro completa 'aguas arriba' (fabricación de materias primas y recambios) y 'aguas abajo' (gestión de residuos, uso de producto). En el sector electromecánico, representa la inmensa mayoría del impacto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque contabiliza las multas de tráfico pendientes de cobro por infracciones en zonas peatonales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Alcance 3 abarca la cadena de suministro completa 'aguas arriba' (fabricación de materias primas y recambios) y 'aguas abajo' (gestión de residuos, uso de producto). En el sector electromecánico, representa la inmensa mayoría del impacto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 32: ¿Qué fórmula estándar se utiliza para ca...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué fórmula estándar se utiliza para calcular la huella de carbono de una actividad determinada?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El cálculo de huella de carbono homologado multiplica el 'Dato de Actividad' (magnitud cuantitativa de consumo) por su respectivo 'Factor de Emisión' oficial publicado por el ministerio (MITECO).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Huella de Carbono = Superficie en m² de la nave / Número de empleados en nómina.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El cálculo de huella de carbono homologado multiplica el 'Dato de Actividad' (magnitud cuantitativa de consumo) por su respectivo 'Factor de Emisión' oficial publicado por el ministerio (MITECO).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Huella de Carbono = Facturación bruta anual × Tasa de inflación media del sector.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El cálculo de huella de carbono homologado multiplica el 'Dato de Actividad' (magnitud cuantitativa de consumo) por su respectivo 'Factor de Emisión' oficial publicado por el ministerio (MITECO).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Huella de Carbono = Horas trabajadas por operario + Presión media del compresor de aire.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El cálculo de huella de carbono homologado multiplica el 'Dato de Actividad' (magnitud cuantitativa de consumo) por su respectivo 'Factor de Emisión' oficial publicado por el ministerio (MITECO).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Huella de Carbono (kg CO2eq) = Dato de Actividad (kWh, litros de combustible, kg de material) × Factor de Emisión (kg CO2eq / unidad).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El cálculo de huella de carbono homologado multiplica el 'Dato de Actividad' (magnitud cuantitativa de consumo) por su respectivo 'Factor de Emisión' oficial publicado por el ministerio (MITECO).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 33: ¿Cómo puede una empresa reducir drástica...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cómo puede una empresa reducir drásticamente a CERO sus emisiones de Alcance 2 en su factura de electricidad?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El factor de emisión de Alcance 2 bajo el enfoque 'market-based' es 0 kg CO2/kWh si el suministro está cubierto con Garantías de Origen Renovable oficiales o se genera in situ mediante paneles solares.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Contratando una comercializadora eléctrica con certificación de Garantías de Origen 100% renovable (GdO de la CNMC) o instalando autoconsumo solar fotovoltaico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El factor de emisión de Alcance 2 bajo el enfoque 'market-based' es 0 kg CO2/kWh si el suministro está cubierto con Garantías de Origen Renovable oficiales o se genera in situ mediante paneles solares.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Desconectando los diferenciales de seguridad durante las horas punta de mayor tarifa.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El factor de emisión de Alcance 2 bajo el enfoque 'market-based' es 0 kg CO2/kWh si el suministro está cubierto con Garantías de Origen Renovable oficiales o se genera in situ mediante paneles solares.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Utilizando generadores diésel autónomos portátiles en lugar de la red eléctrica general.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El factor de emisión de Alcance 2 bajo el enfoque 'market-based' es 0 kg CO2/kWh si el suministro está cubierto con Garantías de Origen Renovable oficiales o se genera in situ mediante paneles solares.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumentando la potencia contratada en el boletín eléctrico para reducir la resistencia óhmica de los cables.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El factor de emisión de Alcance 2 bajo el enfoque 'market-based' es 0 kg CO2/kWh si el suministro está cubierto con Garantías de Origen Renovable oficiales o se genera in situ mediante paneles solares.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 34: ¿Qué diferencia sustancial existe entre ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué diferencia sustancial existe entre la Huella de Carbono (ISO 14064) y la Huella Hídrica (ISO 14046)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La huella de carbono cuantifica las emisiones de gases de efecto invernadero (forzamiento radiativo), mientras que la huella hídrica cuantifica la apropiación de agua dulce (azul, verde y gris) y su impacto en el estrés hídrico local.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La huella de carbono solo la calculan empresas automovilísticas y la huella hídrica los astilleros navales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La huella de carbono cuantifica las emisiones de gases de efecto invernadero (forzamiento radiativo), mientras que la huella hídrica cuantifica la apropiación de agua dulce (azul, verde y gris) y su impacto en el estrés hídrico local.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La huella de carbono mide el impacto sobre el calentamiento global en unidades de CO2 equivalente, mientras que la huella hídrica evalúa el volumen de agua dulce consumida, evaporada o contaminada a lo largo del ciclo productivo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La huella de carbono cuantifica las emisiones de gases de efecto invernadero (forzamiento radiativo), mientras que la huella hídrica cuantifica la apropiación de agua dulce (azul, verde y gris) y su impacto en el estrés hídrico local.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La huella de carbono es obligatoria para autónomos y la huella hídrica es ilegal en el ámbito de la Unión Europea.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La huella de carbono cuantifica las emisiones de gases de efecto invernadero (forzamiento radiativo), mientras que la huella hídrica cuantifica la apropiación de agua dulce (azul, verde y gris) y su impacto en el estrés hídrico local.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La huella de carbono mide el peso en kilogramos de los neumáticos y la huella hídrica mide los litros de aceite lubricante.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La huella de carbono cuantifica las emisiones de gases de efecto invernadero (forzamiento radiativo), mientras que la huella hídrica cuantifica la apropiación de agua dulce (azul, verde y gris) y su impacto en el estrés hídrico local.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 35: ¿Qué mide la 'Huella de Agua Gris' en el...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué mide la 'Huella de Agua Gris' en el cálculo de la huella hídrica corporativa?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El agua gris es el volumen de agua requerido para diluir los contaminantes vertidos (hidrocarburos, disolventes, metales) hasta que la concentración baje por debajo de los límites legales permitidos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El agua de lluvia acumulada en los canalones de las cubiertas industriales durante el otoño.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El agua gris es el volumen de agua requerido para diluir los contaminantes vertidos (hidrocarburos, disolventes, metales) hasta que la concentración baje por debajo de los límites legales permitidos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El volumen de agua mineral consumida por los técnicos durante las pausas del café en el taller.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El agua gris es el volumen de agua requerido para diluir los contaminantes vertidos (hidrocarburos, disolventes, metales) hasta que la concentración baje por debajo de los límites legales permitidos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El volumen teórico de agua dulce necesario para asimilar y diluir la carga de contaminantes de un vertido hasta que el medio receptor cumpla los estándares de calidad ambiental vigentes.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El agua gris es el volumen de agua requerido para diluir los contaminantes vertidos (hidrocarburos, disolventes, metales) hasta que la concentración baje por debajo de los límites legales permitidos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El agua destilada utilizada en las cubetas de ultrasonidos para el desengrase de piezas mecánicas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El agua gris es el volumen de agua requerido para diluir los contaminantes vertidos (hidrocarburos, disolventes, metales) hasta que la concentración baje por debajo de los límites legales permitidos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 36: ¿Cuál es la jerarquía prioritaria de acc...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es la jerarquía prioritaria de acción climática recomendada por los estándares internacionales frente al cambio climático?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El principio ético y técnico de descarbonización exige priorizar la reducción directa en origen ('reducción real'). La compensación de emisiones mediante créditos de carbono solo es admisible para el residuo no reducible.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;1º Pagar multas ambientales, 2º Incrementar la publicidad corporativa, 3º Cerrar la empresa.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio ético y técnico de descarbonización exige priorizar la reducción directa en origen ('reducción real'). La compensación de emisiones mediante créditos de carbono solo es admisible para el residuo no reducible.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;1º Compensar con bonos de carbono de bosques lejanos, 2º Aumentar el consumo energético, 3º Medir.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio ético y técnico de descarbonización exige priorizar la reducción directa en origen ('reducción real'). La compensación de emisiones mediante créditos de carbono solo es admisible para el residuo no reducible.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;1º Cambiar de razón social cada año, 2º Donar fondos a ONGs, 3º Externalizar los residuos fuera de España.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio ético y técnico de descarbonización exige priorizar la reducción directa en origen ('reducción real'). La compensación de emisiones mediante créditos de carbono solo es admisible para el residuo no reducible.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;1º Medir rigurosamente la huella (Diagnóstico), 2º Evitar y Reducir al máximo las emisiones in situ (Eficiencia y Renovables), 3º Compensar únicamente las emisiones residuales inevitables.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El principio ético y técnico de descarbonización exige priorizar la reducción directa en origen ('reducción real'). La compensación de emisiones mediante créditos de carbono solo es admisible para el residuo no reducible.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 37: En el registro oficial de huella de carb...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el registro oficial de huella de carbono del MITECO (España), ¿qué significan los tres sellos progresivos que puede obtener una organización?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Ministerio (MITECO) otorga los sellos 'Calculo' (reconoce la medición auditada), 'Reduzco' (reconoce el cumplimiento de compromisos reales de reducción) y 'Compenso' (absorción certificada de carbono).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;'CALCULO' (calcula y registra su huella), 'REDUZCO' (demuestra una reducción efectiva tras un plan plurianual) y 'COMPENSO' (neutraliza sus emisiones residuales mediante proyectos de absorción forestal certificados).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Ministerio (MITECO) otorga los sellos 'Calculo' (reconoce la medición auditada), 'Reduzco' (reconoce el cumplimiento de compromisos reales de reducción) y 'Compenso' (absorción certificada de carbono).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;'APROBADO', 'NOTABLE' y 'SOBRESALIENTE' otorgados por inspectores de tráfico en las inspecciones técnicas de vehículos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Ministerio (MITECO) otorga los sellos 'Calculo' (reconoce la medición auditada), 'Reduzco' (reconoce el cumplimiento de compromisos reales de reducción) y 'Compenso' (absorción certificada de carbono).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;'BRONCE', 'PLATA' y 'ORO' según el volumen de ventas de vehículos híbridos enchufables en la provincia.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Ministerio (MITECO) otorga los sellos 'Calculo' (reconoce la medición auditada), 'Reduzco' (reconoce el cumplimiento de compromisos reales de reducción) y 'Compenso' (absorción certificada de carbono).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;'ALCANCE 1', 'ALCANCE 2' y 'ALCANCE 3' según la antigüedad del edificio en el catastro inmobiliario.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Ministerio (MITECO) otorga los sellos 'Calculo' (reconoce la medición auditada), 'Reduzco' (reconoce el cumplimiento de compromisos reales de reducción) y 'Compenso' (absorción certificada de carbono).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 38: ¿Qué papel juega una 'Auditoría Energéti...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué papel juega una 'Auditoría Energética' según la norma UNE-EN 16247 en el proceso de descarbonización de unas instalaciones técnicas?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La auditoría energética proporciona la radiografía técnica del consumo energético, cuantificando costes y oportunidades de mejora (aislamiento, variadores de frecuencia, aire comprimido, iluminación LED).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Emitir multas coercitivas automáticas si las luces se dejan encendidas durante los fines de semana.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La auditoría energética proporciona la radiografía técnica del consumo energético, cuantificando costes y oportunidades de mejora (aislamiento, variadores de frecuencia, aire comprimido, iluminación LED).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Analizar de forma sistemática los flujos y usos energéticos para identificar puntos de ineficiencia, cuantificar consumos parásitos y proponer medidas de ahorro rentables técnica y económicamente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La auditoría energética proporciona la radiografía técnica del consumo energético, cuantificando costes y oportunidades de mejora (aislamiento, variadores de frecuencia, aire comprimido, iluminación LED).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Comprobar que todos los empleados vistan uniformes con propiedades ignífugas de fibra de vidrio.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La auditoría energética proporciona la radiografía técnica del consumo energético, cuantificando costes y oportunidades de mejora (aislamiento, variadores de frecuencia, aire comprimido, iluminación LED).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Obligar a la sustitución inmediata de toda la maquinaria por herramientas exclusivamente manuales sin motor.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La auditoría energética proporciona la radiografía técnica del consumo energético, cuantificando costes y oportunidades de mejora (aislamiento, variadores de frecuencia, aire comprimido, iluminación LED).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 39: ¿Qué objetivo vinculante establece la Le...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué objetivo vinculante establece la Ley 7/2021 de Cambio Climático y Transición Energética para España en el horizonte 2050?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La Ley 7/2021 fija como meta vinculante la neutralidad climática en España no más tarde de 2050, obligando al tejido productivo y al transporte a una descarbonización integral.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Cerrar todas las actividades industriales que empleen más de 50 trabajadores en áreas metropolitanas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Ley 7/2021 fija como meta vinculante la neutralidad climática en España no más tarde de 2050, obligando al tejido productivo y al transporte a una descarbonización integral.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Prohibir la venta de cualquier tipo de vehículo a motor, incluidos los de propulsión 100% eléctrica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Ley 7/2021 fija como meta vinculante la neutralidad climática en España no más tarde de 2050, obligando al tejido productivo y al transporte a una descarbonización integral.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Alcanzar la neutralidad climática (emisiones netas cero de gases de efecto invernadero) antes de 2050, operando con un sistema eléctrico 100% renovable.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La Ley 7/2021 fija como meta vinculante la neutralidad climática en España no más tarde de 2050, obligando al tejido productivo y al transporte a una descarbonización integral.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Sustituir el transporte de mercancías por ferrocarril diésel de alta velocidad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Ley 7/2021 fija como meta vinculante la neutralidad climática en España no más tarde de 2050, obligando al tejido productivo y al transporte a una descarbonización integral.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 40: ¿Qué implica el principio de 'No causar ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué implica el principio de 'No causar un perjuicio significativo al medio ambiente' (DNSH - Do No Significant Harm) de la Taxonomía Verde Europea?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El principio DNSH (artículo 17 del Reglamento UE 2020/852) exige que cualquier actividad evalúe de forma holística sus impactos sobre los 6 objetivos ambientales de la UE para no resolver un problema generando otro.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que una empresa puede contaminar libremente los ríos siempre que no corte árboles en la misma cuenca.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio DNSH (artículo 17 del Reglamento UE 2020/852) exige que cualquier actividad evalúe de forma holística sus impactos sobre los 6 objetivos ambientales de la UE para no resolver un problema generando otro.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que los proyectos técnicos subvencionados solo deben preocuparse por la rentabilidad económica a corto plazo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio DNSH (artículo 17 del Reglamento UE 2020/852) exige que cualquier actividad evalúe de forma holística sus impactos sobre los 6 objetivos ambientales de la UE para no resolver un problema generando otro.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que ningún producto químico puede ser transportado en camiones que no sean de fabricación alemana.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio DNSH (artículo 17 del Reglamento UE 2020/852) exige que cualquier actividad evalúe de forma holística sus impactos sobre los 6 objetivos ambientales de la UE para no resolver un problema generando otro.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Que ninguna actividad económica o inversión puede considerarse verde o recibir fondos europeos si progresa en un objetivo ambiental (ej. clima) perjudicando a otro (ej. biodiversidad, agua, residuos o contaminación).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El principio DNSH (artículo 17 del Reglamento UE 2020/852) exige que cualquier actividad evalúe de forma holística sus impactos sobre los 6 objetivos ambientales de la UE para no resolver un problema generando otro.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 41: ¿Qué exige el nuevo Reglamento Europeo d...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué exige el nuevo Reglamento Europeo de Ecodiseño para Productos Sostenibles (ESPR) en relación con la información técnica de los productos?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Pasaporte Digital de Producto (DPP) permitirá a talleres y consumidores escanear una pieza para conocer sus materiales, huella de CO2, desmontabilidad y compatibilidad de reciclaje a lo largo de su ciclo de vida.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La implantación progresiva del Pasaporte Digital de Producto (DPP), que registrará la huella de carbono, durabilidad, reparabilidad, contenido reciclado y disponibilidad de repuestos de cada componente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Pasaporte Digital de Producto (DPP) permitirá a talleres y consumidores escanear una pieza para conocer sus materiales, huella de CO2, desmontabilidad y compatibilidad de reciclaje a lo largo de su ciclo de vida.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La prohibición de imprimir etiquetas en color sobre las cajas de cartón de recambios.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Pasaporte Digital de Producto (DPP) permitirá a talleres y consumidores escanear una pieza para conocer sus materiales, huella de CO2, desmontabilidad y compatibilidad de reciclaje a lo largo de su ciclo de vida.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que cada pieza incluya un manual de instrucciones impreso en papel de más de 500 páginas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Pasaporte Digital de Producto (DPP) permitirá a talleres y consumidores escanear una pieza para conocer sus materiales, huella de CO2, desmontabilidad y compatibilidad de reciclaje a lo largo de su ciclo de vida.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La obligación de fundir y destruir cualquier pieza usada que tenga más de 2 años de fabricación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Pasaporte Digital de Producto (DPP) permitirá a talleres y consumidores escanear una pieza para conocer sus materiales, huella de CO2, desmontabilidad y compatibilidad de reciclaje a lo largo de su ciclo de vida.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 42: ¿Qué beneficio ambiental y económico dir...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué beneficio ambiental y económico directo aporta la reparación de fugas en la red de aire comprimido de un taller?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Las fugas en acoples rápidos y mangueras neumáticas representan hasta un tercio del consumo de un compresor de taller. Un programa regular de detección y sellado ahorra miles de kilovatios-hora al año.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumenta la velocidad del viento dentro de la nave industrial mejorando la climatización estival.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las fugas en acoples rápidos y mangueras neumáticas representan hasta un tercio del consumo de un compresor de taller. Un programa regular de detección y sellado ahorra miles de kilovatios-hora al año.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El aire comprimido es una de las energías más caras del taller (hasta 8 veces más que la electricidad directa); eliminar fugas reduce inmediatamente el consumo eléctrico del compresor entre un 15% y un 30% sin coste operativo adicional.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Las fugas en acoples rápidos y mangueras neumáticas representan hasta un tercio del consumo de un compresor de taller. Un programa regular de detección y sellado ahorra miles de kilovatios-hora al año.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Evita que el nitrógeno del aire se degrade en oxígeno puro generando peligro de deflagración.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las fugas en acoples rápidos y mangueras neumáticas representan hasta un tercio del consumo de un compresor de taller. Un programa regular de detección y sellado ahorra miles de kilovatios-hora al año.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Disminuye el desgaste de los neumáticos de los vehículos de los clientes mientras están en el elevador.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las fugas en acoples rápidos y mangueras neumáticas representan hasta un tercio del consumo de un compresor de taller. Un programa regular de detección y sellado ahorra miles de kilovatios-hora al año.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 43: ¿Cuál es la función obligatoria de un 'S...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es la función obligatoria de un 'Separador de Hidrocarburos Coalescente' en los lavaderos y zonas de taller mecánico?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El separador coalescente evita que los hidrocarburos insolubles lleguen a la red pública de saneamiento o a los cauces públicos, protegiendo las depuradoras biológicas y los ecosistemas acuáticos (ODS 6 y 14).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Mezclar el agua de lluvia con gasóleo para utilizarlo como combustible en la calefacción de la nave.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El separador coalescente evita que los hidrocarburos insolubles lleguen a la red pública de saneamiento o a los cauces públicos, protegiendo las depuradoras biológicas y los ecosistemas acuáticos (ODS 6 y 14).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Separar las partículas de polvo de pintura antes de que salgan por la chimenea de la cabina de barnizado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El separador coalescente evita que los hidrocarburos insolubles lleguen a la red pública de saneamiento o a los cauces públicos, protegiendo las depuradoras biológicas y los ecosistemas acuáticos (ODS 6 y 14).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Retener por diferencia de densidad y efecto coalescente las grasas, aceites y combustibles arrastrados por el agua, garantizando que el efluente vertido al colector no supere los límites legales de vertido (ej. &amp;lt; 5 ppm de hidrocarburos).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El separador coalescente evita que los hidrocarburos insolubles lleguen a la red pública de saneamiento o a los cauces públicos, protegiendo las depuradoras biológicas y los ecosistemas acuáticos (ODS 6 y 14).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Destilar agua desmineralizada de alta pureza para alimentar los limpiaparabrisas de los vehículos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El separador coalescente evita que los hidrocarburos insolubles lleguen a la red pública de saneamiento o a los cauces públicos, protegiendo las depuradoras biológicas y los ecosistemas acuáticos (ODS 6 y 14).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 44: ¿Por qué la sustitución de iluminación t...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Por qué la sustitución de iluminación tradicional (tubos fluorescentes o halogenuros metálicos) por luminarias LED industriales es una de las primeras medidas del plan de sostenibilidad?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El LED combina eficiencia energética drástica (reducción directa de Alcance 2) con la eliminación de sustancias peligrosas como el mercurio (prevención de contaminación química y residuos peligrosos).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la luz LED elimina los virus informáticos de las máquinas de diagnosis electrónica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El LED combina eficiencia energética drástica (reducción directa de Alcance 2) con la eliminación de sustancias peligrosas como el mercurio (prevención de contaminación química y residuos peligrosos).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque los tubos fluorescentes son considerados residuos no tóxicos que pueden tirarse al contenedor amarillo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El LED combina eficiencia energética drástica (reducción directa de Alcance 2) con la eliminación de sustancias peligrosas como el mercurio (prevención de contaminación química y residuos peligrosos).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque las luces halógenas enfrían excesivamente el aire del taller obligando a encender la calefacción.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El LED combina eficiencia energética drástica (reducción directa de Alcance 2) con la eliminación de sustancias peligrosas como el mercurio (prevención de contaminación química y residuos peligrosos).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque la tecnología LED reduce el consumo eléctrico en iluminación entre un 60% y un 75%, elimina el mercurio tóxico presente en los tubos fluorescentes y tiene una vida útil hasta cinco veces mayor.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El LED combina eficiencia energética drástica (reducción directa de Alcance 2) con la eliminación de sustancias peligrosas como el mercurio (prevención de contaminación química y residuos peligrosos).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 45: En un Plan de Compras Verdes para una py...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En un Plan de Compras Verdes para una pyme del sector del automóvil, ¿qué criterio debe primar en la adquisición de productos químicos de limpieza?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Las compras verdes priorizan productos sin COV (compuestos orgánicos volátiles) y de base acuosa, reduciendo las emisiones tóxicas a la atmósfera, la exposición de los trabajadores y los costes de gestión de residuos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Elegir desengrasantes y detergentes biodegradables con base acuosa libres de disolventes orgánicos volátiles (COV) clorados y con certificación Ecolabel europea.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Las compras verdes priorizan productos sin COV (compuestos orgánicos volátiles) y de base acuosa, reduciendo las emisiones tóxicas a la atmósfera, la exposición de los trabajadores y los costes de gestión de residuos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Comprar disolventes clorados de acción rápida para reducir el tiempo de mano de obra a la mitad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las compras verdes priorizan productos sin COV (compuestos orgánicos volátiles) y de base acuosa, reduciendo las emisiones tóxicas a la atmósfera, la exposición de los trabajadores y los costes de gestión de residuos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Seleccionar los botes que incluyan el mayor número de pictogramas de peligro de la directiva CLP.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las compras verdes priorizan productos sin COV (compuestos orgánicos volátiles) y de base acuosa, reduciendo las emisiones tóxicas a la atmósfera, la exposición de los trabajadores y los costes de gestión de residuos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Utilizar gasolina de 98 octanos para limpiar manualmente las piezas mecánicas de motor.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las compras verdes priorizan productos sin COV (compuestos orgánicos volátiles) y de base acuosa, reduciendo las emisiones tóxicas a la atmósfera, la exposición de los trabajadores y los costes de gestión de residuos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 46: ¿Qué ventaja competitiva estratégica apo...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué ventaja competitiva estratégica aporta la certificación bajo el estándar ambiental internacional ISO 14001 o Reglamento EMAS a una pyme?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;ISO 14001 y EMAS garantizan la mejora continua, el blindaje legal ante inspecciones y aportan una diferenciación comercial clave ante flotas corporativas y administraciones públicas con criterios ESG.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Exención permanente del pago de la tasa de basuras y del IVA en la compra de recambios.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. ISO 14001 y EMAS garantizan la mejora continua, el blindaje legal ante inspecciones y aportan una diferenciación comercial clave ante flotas corporativas y administraciones públicas con criterios ESG.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Sistematizar la gestión ambiental y el cumplimiento normativo legal, reduciendo costes por ineficiencias de recursos y abriendo puertas a licitaciones públicas y homologaciones como taller preferente de grandes flotas corporativas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! ISO 14001 y EMAS garantizan la mejora continua, el blindaje legal ante inspecciones y aportan una diferenciación comercial clave ante flotas corporativas y administraciones públicas con criterios ESG.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Poder almacenar residuos peligrosos en la vía pública sin límite temporal de custodia.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. ISO 14001 y EMAS garantizan la mejora continua, el blindaje legal ante inspecciones y aportan una diferenciación comercial clave ante flotas corporativas y administraciones públicas con criterios ESG.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Permiso oficial para anular filtros de partículas diésel en vehículos matriculados antes de 2015.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. ISO 14001 y EMAS garantizan la mejora continua, el blindaje legal ante inspecciones y aportan una diferenciación comercial clave ante flotas corporativas y administraciones públicas con criterios ESG.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 47: ¿Cómo influye el cálculo de la 'Huella d...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cómo influye el cálculo de la 'Huella de Carbono de Producto' en la decisión de un cliente consciente en la compra o reparación de su vehículo?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La huella de carbono de producto cuantifica con rigor científico el beneficio climático: comprar una pieza remanufacturada certificada evita la extracción mineral y fundición de metales nuevos, ahorrando ingentes cantidades de CO2.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Obliga al cliente a pagar el impuesto de circulación dos veces al año en la delegación de hacienda.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La huella de carbono de producto cuantifica con rigor científico el beneficio climático: comprar una pieza remanufacturada certificada evita la extracción mineral y fundición de metales nuevos, ahorrando ingentes cantidades de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Determina el color exterior obligatorio que debe tener la pintura de la carrocería del vehículo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La huella de carbono de producto cuantifica con rigor científico el beneficio climático: comprar una pieza remanufacturada certificada evita la extracción mineral y fundición de metales nuevos, ahorrando ingentes cantidades de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Permite comparar con datos verificados y científicos el impacto climático de una pieza nueva frente a una remanufacturada, demostrando que la pieza reconstruida ahorra hasta un 85% de emisiones de CO2 equivalente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La huella de carbono de producto cuantifica con rigor científico el beneficio climático: comprar una pieza remanufacturada certificada evita la extracción mineral y fundición de metales nuevos, ahorrando ingentes cantidades de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Indica el número de kilómetros que el vehículo puede circular antes de cambiar el filtro de polen.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La huella de carbono de producto cuantifica con rigor científico el beneficio climático: comprar una pieza remanufacturada certificada evita la extracción mineral y fundición de metales nuevos, ahorrando ingentes cantidades de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 48: ¿Cuál es la conclusión fundamental que d...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es la conclusión fundamental que deben asumir los futuros profesionales técnicos sobre la Agenda 2030 y los límites ecológicos del planeta?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los profesionales del siglo XXI deben dominar las técnicas de descarbonización, eficiencia energética y circularidad. La viabilidad económica y social del sistema depende de operar dentro del espacio operativo seguro de la Tierra.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que la sostenibilidad es solo una moda pasajera que desaparecerá cuando se agoten los fondos europeos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los profesionales del siglo XXI deben dominar las técnicas de descarbonización, eficiencia energética y circularidad. La viabilidad económica y social del sistema depende de operar dentro del espacio operativo seguro de la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que la protección ambiental es competencia exclusiva de biólogos y no tiene ninguna relación con la tecnología o la mecánica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los profesionales del siglo XXI deben dominar las técnicas de descarbonización, eficiencia energética y circularidad. La viabilidad económica y social del sistema depende de operar dentro del espacio operativo seguro de la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Que los recursos naturales de la Tierra son ilimitados y la atmósfera asimilará cualquier volumen de emisiones contaminantes.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los profesionales del siglo XXI deben dominar las técnicas de descarbonización, eficiencia energética y circularidad. La viabilidad económica y social del sistema depende de operar dentro del espacio operativo seguro de la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Que la sostenibilidad no es una opción estética sino una necesidad biofísica ineludible: la competitividad profesional futura dependerá de la capacidad de operar con eficiencia de recursos, descarbonización y circularidad dentro de los límites del planeta.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los profesionales del siglo XXI deben dominar las técnicas de descarbonización, eficiencia energética y circularidad. La viabilidad económica y social del sistema depende de operar dentro del espacio operativo seguro de la Tierra.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

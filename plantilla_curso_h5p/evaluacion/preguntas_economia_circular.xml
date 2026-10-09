@@ -1,0 +1,1976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Economía Circular y Ecodiseño</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 01: ¿Qué caracteriza fundamentalmente al mod...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué caracteriza fundamentalmente al modelo económico lineal tradicional aplicado a la industria del automóvil?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El modelo lineal tradicional se define por el esquema 'extraer, fabricar, usar y tirar' (de la cuna a la tumba), generando agotamiento acelerado de materias primas y saturación de vertederos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El flujo unidireccional de extracción masiva, fabricación intensiva, uso pasivo y vertido final del componente ('Cradle to Grave').&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El modelo lineal tradicional se define por el esquema 'extraer, fabricar, usar y tirar' (de la cuna a la tumba), generando agotamiento acelerado de materias primas y saturación de vertederos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El retorno sistemático del 100% de los componentes desgastados a la fundición original mediante bucles biológicos regenerativos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El modelo lineal tradicional se define por el esquema 'extraer, fabricar, usar y tirar' (de la cuna a la tumba), generando agotamiento acelerado de materias primas y saturación de vertederos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La recirculación infinita de materias primas secundarias sin generar ninguna pérdida de valor energético ni técnico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El modelo lineal tradicional se define por el esquema 'extraer, fabricar, usar y tirar' (de la cuna a la tumba), generando agotamiento acelerado de materias primas y saturación de vertederos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La exigencia legal de diseñar piezas con uniones roscadas desmontables sin necesidad de herramientas especiales de taller.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El modelo lineal tradicional se define por el esquema 'extraer, fabricar, usar y tirar' (de la cuna a la tumba), generando agotamiento acelerado de materias primas y saturación de vertederos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 02: Conforme a la Norma Española UNE 26438 s...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Conforme a la Norma Española UNE 26438 sobre recambios remanufacturados en automoción, ¿qué condición debe cumplir obligatoriamente un turbocompresor reconstruido?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La norma UNE 26438 exige que la pieza remanufacturada cumpla las mismas especificaciones técnicas, tolerancias y garantía funcional que el componente nuevo de origen.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Ofrecer idénticas tolerancias dimensionales, prestaciones dinámicas y garantía legal que un turbocompresor original a estrenar.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La norma UNE 26438 exige que la pieza remanufacturada cumpla las mismas especificaciones técnicas, tolerancias y garantía funcional que el componente nuevo de origen.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Comercializarse exclusivamente para vehículos dados de baja temporal en la DGT con más de 15 años de antigüedad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La norma UNE 26438 exige que la pieza remanufacturada cumpla las mismas especificaciones técnicas, tolerancias y garantía funcional que el componente nuevo de origen.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Estar exento de pruebas de equilibrado dinámico de alta velocidad para reducir el coste final de taller.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La norma UNE 26438 exige que la pieza remanufacturada cumpla las mismas especificaciones técnicas, tolerancias y garantía funcional que el componente nuevo de origen.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Haber sustituido obligatoriamente tanto las dos caracolas exteriores de fundición como los colectores de escape por piezas vírgenes.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La norma UNE 26438 exige que la pieza remanufacturada cumpla las mismas especificaciones técnicas, tolerancias y garantía funcional que el componente nuevo de origen.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 03: ¿Cuál es el código LER oficial que ident...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es el código LER oficial que identifica en el taller al residuo peligroso de 'aceites minerales no clorados de motor'?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El aceite usado mineral de motor se clasifica con el código LER 13 02 05*, siendo un residuo peligroso sujeto a recogida obligatoria por el SCRAP SIGAUS.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;LER 13 02 05*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El aceite usado mineral de motor se clasifica con el código LER 13 02 05*, siendo un residuo peligroso sujeto a recogida obligatoria por el SCRAP SIGAUS.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 07*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El aceite usado mineral de motor se clasifica con el código LER 13 02 05*, siendo un residuo peligroso sujeto a recogida obligatoria por el SCRAP SIGAUS.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 13*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El aceite usado mineral de motor se clasifica con el código LER 13 02 05*, siendo un residuo peligroso sujeto a recogida obligatoria por el SCRAP SIGAUS.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 06 01*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El aceite usado mineral de motor se clasifica con el código LER 13 02 05*, siendo un residuo peligroso sujeto a recogida obligatoria por el SCRAP SIGAUS.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 04: En el marco del Análisis de Ciclo de Vid...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el marco del Análisis de Ciclo de Vida (ACV), ¿qué diferencia conceptual existe entre el enfoque 'Cradle to Grave' y el 'Cradle to Cradle'?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;'Cradle to Cradle' (de la cuna a la cuna) concibe el diseño para que el fin de vida de un producto sea el inicio de un nuevo proceso de manufactura, cerrando el bucle de materiales.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;'Cradle to Grave' finaliza en la eliminación o vertedero del residuo, mientras que 'Cradle to Cradle' reincorpora los materiales a nuevos ciclos técnicos de valor sin pérdida de calidad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! 'Cradle to Cradle' (de la cuna a la cuna) concibe el diseño para que el fin de vida de un producto sea el inicio de un nuevo proceso de manufactura, cerrando el bucle de materiales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;'Cradle to Grave' se aplica exclusivamente a motores de combustión interna y 'Cradle to Cradle' únicamente a baterías de tracción eléctrica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. 'Cradle to Cradle' (de la cuna a la cuna) concibe el diseño para que el fin de vida de un producto sea el inicio de un nuevo proceso de manufactura, cerrando el bucle de materiales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;'Cradle to Cradle' exige que todos los componentes mecánicos se biodegraden de forma natural en el foso del taller en menos de 30 días.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. 'Cradle to Cradle' (de la cuna a la cuna) concibe el diseño para que el fin de vida de un producto sea el inicio de un nuevo proceso de manufactura, cerrando el bucle de materiales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;'Cradle to Grave' evalúa únicamente las emisiones del tubo de escape y 'Cradle to Cradle' únicamente la energía de fabricación de la chapa exterior.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. 'Cradle to Cradle' (de la cuna a la cuna) concibe el diseño para que el fin de vida de un producto sea el inicio de un nuevo proceso de manufactura, cerrando el bucle de materiales.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 05: En el diseño para el desmontaje (Design ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el diseño para el desmontaje (Design for Disassembly - DfD) de una pinza de freno, ¿qué criterio de ecodiseño resulta determinante?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El principio DfD exige uniones mecánicas desmontables y accesibles que posibiliten sustituir los elementos de desgaste (sellos, fuelles, pistón) preservando la estructura principal.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Emplear pasadores y fijaciones roscadas accesibles que permitan extraer pistones y retenes de elastómero sin destruir el cuerpo mecanizado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El principio DfD exige uniones mecánicas desmontables y accesibles que posibiliten sustituir los elementos de desgaste (sellos, fuelles, pistón) preservando la estructura principal.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Unir la carcasa de la pinza al portapinzas mediante soldadura láser irreversible para asegurar que nunca se desmonte en taller.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio DfD exige uniones mecánicas desmontables y accesibles que posibiliten sustituir los elementos de desgaste (sellos, fuelles, pistón) preservando la estructura principal.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Utilizar al menos seis tipos de aleaciones metálicas incompatibles para aumentar la resistencia estructural del pistón.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio DfD exige uniones mecánicas desmontables y accesibles que posibiliten sustituir los elementos de desgaste (sellos, fuelles, pistón) preservando la estructura principal.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Sellar herméticamente los purgadores con resina epoxi para evitar cualquier posible pérdida de fluido durante el frenado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El principio DfD exige uniones mecánicas desmontables y accesibles que posibiliten sustituir los elementos de desgaste (sellos, fuelles, pistón) preservando la estructura principal.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 06: ¿Qué beneficio ambiental prioritario apo...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué beneficio ambiental prioritario aporta la sustitución de una cuba tradicional de disolvente orgánico por una estación de lavado biológico por biorremediación enzimática en el taller?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El lavado biológico emplea soluciones acuosas con bacterias o enzimas que digieren los hidrocarburos transformándolos en agua y CO₂, eliminando los COVs y el residuo tóxico.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Elimina las emisiones de Compuestos Orgánicos Volátiles (COV) y suprime la generación del residuo peligroso de disolvente contaminado mediante microorganismos que degradan la grasa.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El lavado biológico emplea soluciones acuosas con bacterias o enzimas que digieren los hidrocarburos transformándolos en agua y CO₂, eliminando los COVs y el residuo tóxico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumenta la inflamabilidad del líquido de limpieza para permitir un secado térmico instantáneo con pistola de aire caliente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El lavado biológico emplea soluciones acuosas con bacterias o enzimas que digieren los hidrocarburos transformándolos en agua y CO₂, eliminando los COVs y el residuo tóxico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Permite verter los residuos directamente a la red general de alcantarillado sin necesidad de decantador de hidrocarburos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El lavado biológico emplea soluciones acuosas con bacterias o enzimas que digieren los hidrocarburos transformándolos en agua y CO₂, eliminando los COVs y el residuo tóxico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Multiplica por cinco la toxicidad dérmica del producto para acelerar la disolución de carbonilla en culatas y pistones.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El lavado biológico emplea soluciones acuosas con bacterias o enzimas que digieren los hidrocarburos transformándolos en agua y CO₂, eliminando los COVs y el residuo tóxico.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 07: Al aplicar la jerarquía de las 9R en el ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Al aplicar la jerarquía de las 9R en el taller, ¿por qué la 'Reparación' (R4) y la 'Remanufactura' (R6) se sitúan por delante del 'Reciclaje' (R8)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Reparar o remanufacturar mantiene intacta la pieza elaborada, ahorrando hasta un 85% de energía y emisiones en comparación con refundir la materia prima en un alto horno.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque conservan la forma geométrica, la energía embebida y el valor añadido de la pieza, mientras que el reciclaje destruye la estructura física fundiendo el metal con alto gasto energético.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Reparar o remanufacturar mantiene intacta la pieza elaborada, ahorrando hasta un 85% de energía y emisiones en comparación con refundir la materia prima en un alto horno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque el reciclaje de metales está prohibido expresamente en el sector de la automoción por la Directiva VFU 2000/53/CE.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Reparar o remanufacturar mantiene intacta la pieza elaborada, ahorrando hasta un 85% de energía y emisiones en comparación con refundir la materia prima en un alto horno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la remanufactura incrementa la huella de carbono un 80% respecto a la fundición secundaria de chatarra.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Reparar o remanufacturar mantiene intacta la pieza elaborada, ahorrando hasta un 85% de energía y emisiones en comparación con refundir la materia prima en un alto horno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la Ley 7/2022 de Residuos sanciona a los talleres que envían componentes metálicos a fundiciones autorizadas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Reparar o remanufacturar mantiene intacta la pieza elaborada, ahorrando hasta un 85% de energía y emisiones en comparación con refundir la materia prima en un alto horno.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 08: ¿Cuál es la capacidad estanca mínima que...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es la capacidad estanca mínima que debe poseer un cubeto de retención para el almacenamiento de bidones de residuos peligrosos en el taller según las directrices técnicas de medio ambiente?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La normativa técnica ambiental fija que el cubeto debe poder retener como mínimo el 100% del envase más grande o el 10% del volumen global almacenado.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El 100% del volumen del recipiente mayor que soporte o el 10% del volumen total almacenado sobre él (el valor que resulte mayor).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La normativa técnica ambiental fija que el cubeto debe poder retener como mínimo el 100% del envase más grande o el 10% del volumen global almacenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El 25% de la capacidad del envase más pequeño para facilitar el trasvase manual en caso de derrame.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa técnica ambiental fija que el cubeto debe poder retener como mínimo el 100% del envase más grande o el 10% del volumen global almacenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Exactamente 50 litros, con independencia de si almacena garrafas de 5 litros o un depósito IBC de 1.000 litros.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa técnica ambiental fija que el cubeto debe poder retener como mínimo el 100% del envase más grande o el 10% del volumen global almacenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El 200% del volumen de todos los recipientes juntos más un sistema de drenaje directo al colector municipal.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa técnica ambiental fija que el cubeto debe poder retener como mínimo el 100% del envase más grande o el 10% del volumen global almacenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 09: En el reacondicionamiento de un alternad...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el reacondicionamiento de un alternador inteligente pilotado por red LIN, ¿qué elemento mecánico suele ser objeto prioritario de sustitución dentro del proceso de remanufactura?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;En la remanufactura de alternadores se sustituyen rodamientos, escobillas y retenes (elementos de fricción y fatiga), conservando el cobre del bobinado y la carcasa.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Los rodamientos sellados de apoyo del rotor y las escobillas de grafito desgastadas del regulador electrónico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! En la remanufactura de alternadores se sustituyen rodamientos, escobillas y retenes (elementos de fricción y fatiga), conservando el cobre del bobinado y la carcasa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El bobinado estatórico de cobre y la carcasa exterior de aluminio forjado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. En la remanufactura de alternadores se sustituyen rodamientos, escobillas y retenes (elementos de fricción y fatiga), conservando el cobre del bobinado y la carcasa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La polea libre de desacoplamiento, que debe ser soldada fijamente al eje para evitar que gire libremente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. En la remanufactura de alternadores se sustituyen rodamientos, escobillas y retenes (elementos de fricción y fatiga), conservando el cobre del bobinado y la carcasa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Los diodos rectificadores de potencia, reemplazándolos por fusibles térmicos de acción retardada.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. En la remanufactura de alternadores se sustituyen rodamientos, escobillas y retenes (elementos de fricción y fatiga), conservando el cobre del bobinado y la carcasa.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 10: Conforme a la Ley 7/2022 de Residuos, ¿d...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Conforme a la Ley 7/2022 de Residuos, ¿durante cuánto tiempo debe conservar obligatoriamente el taller el Archivo Cronológico y los Documentos de Identificación (DI) de sus residuos peligrosos?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La Ley 7/2022 estipula en su artículo 64 que los productores de residuos peligrosos deben mantener el archivo cronológico y la documentación de traslado durante mínimo 3 años.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Durante al menos 3 años a disposición del órgano ambiental competente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La Ley 7/2022 estipula en su artículo 64 que los productores de residuos peligrosos deben mantener el archivo cronológico y la documentación de traslado durante mínimo 3 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Durante 6 meses contados desde la fecha del albarán de recogida.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Ley 7/2022 estipula en su artículo 64 que los productores de residuos peligrosos deben mantener el archivo cronológico y la documentación de traslado durante mínimo 3 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Durante 10 años únicamente si se trata de aceites usados con PCB superior a 50 ppm.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Ley 7/2022 estipula en su artículo 64 que los productores de residuos peligrosos deben mantener el archivo cronológico y la documentación de traslado durante mínimo 3 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;No es necesario custodiarlos si el transportista dispone de firma digital en su albarán.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Ley 7/2022 estipula en su artículo 64 que los productores de residuos peligrosos deben mantener el archivo cronológico y la documentación de traslado durante mínimo 3 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 11: ¿Cuál de los siguientes Retos Ambientale...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál de los siguientes Retos Ambientales de la Agenda 2030 se vincula directamente con el ODS 13 y exige adoptar medidas urgentes frente al calentamiento global en automoción?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Reto 1 de la Agenda 2030 se fundamenta en el ODS 13 ('Acción por el clima'), impulsando la descarbonización urgente y la mitigación de GEI.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Reto 1: Combatir el cambio climático y sus efectos mediante la reducción de emisiones de gases de efecto invernadero (GEI) y la descarbonización del transporte.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Reto 1 de la Agenda 2030 se fundamenta en el ODS 13 ('Acción por el clima'), impulsando la descarbonización urgente y la mitigación de GEI.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Reto 5: Gestionar el agua dulce mediante la instalación exclusiva de tuberías de cobre sin soldadura.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 1 de la Agenda 2030 se fundamenta en el ODS 13 ('Acción por el clima'), impulsando la descarbonización urgente y la mitigación de GEI.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Reto 6: Lograr ciudades sostenibles mediante la eliminación obligatoria de todas las vías públicas asfaltadas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 1 de la Agenda 2030 se fundamenta en el ODS 13 ('Acción por el clima'), impulsando la descarbonización urgente y la mitigación de GEI.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Reto 7: Conservar el mar mediante la prohibición de uso de neumáticos de caucho sintético en vehículos pesados.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 1 de la Agenda 2030 se fundamenta en el ODS 13 ('Acción por el clima'), impulsando la descarbonización urgente y la mitigación de GEI.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 12: Dentro del modelo científico de los Lími...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Dentro del modelo científico de los Límites Planetarios (Planetary Boundaries), ¿cuál de los siguientes describe la alteración de los ciclos biogeoquímicos provocada por el transporte y los motores térmicos?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El límite de ciclos biogeoquímicos (nitrógeno y fósforo) se ve gravemente sobrepasado por los óxidos de nitrógeno (NOx) emitidos por los motores de combustión.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La emisión masiva a la atmósfera de óxidos de nitrógeno (NO y NO₂ / NOx) producida por la combustión a alta temperatura, que genera lluvia ácida y eutrofización.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El límite de ciclos biogeoquímicos (nitrógeno y fósforo) se ve gravemente sobrepasado por los óxidos de nitrógeno (NOx) emitidos por los motores de combustión.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La congelación prematura del líquido refrigerante en el radiador durante los meses de invierno.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite de ciclos biogeoquímicos (nitrógeno y fósforo) se ve gravemente sobrepasado por los óxidos de nitrógeno (NOx) emitidos por los motores de combustión.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El desgaste natural de los dientes de bronce de los anillos sincronizadores de la caja de cambios.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite de ciclos biogeoquímicos (nitrógeno y fósforo) se ve gravemente sobrepasado por los óxidos de nitrógeno (NOx) emitidos por los motores de combustión.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La acumulación estática de carga eléctrica en la carrocería de fibra de carbono de los vehículos deportivos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite de ciclos biogeoquímicos (nitrógeno y fósforo) se ve gravemente sobrepasado por los óxidos de nitrógeno (NOx) emitidos por los motores de combustión.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 13: ¿Cuál es el plazo máximo legal que un ta...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es el plazo máximo legal que un taller puede almacenar residuos peligrosos en sus instalaciones sin solicitar prórroga administrativa?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El artículo 21 de la Ley 7/2022 establece un plazo máximo general de 6 meses para el almacenamiento de residuos peligrosos en las instalaciones del productor.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;12 meses para cualquier tipo de residuo peligroso.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El artículo 21 de la Ley 7/2022 establece un plazo máximo general de 6 meses para el almacenamiento de residuos peligrosos en las instalaciones del productor.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;6 meses desde la fecha de inicio del envasado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El artículo 21 de la Ley 7/2022 establece un plazo máximo general de 6 meses para el almacenamiento de residuos peligrosos en las instalaciones del productor.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;3 meses improrrogables bajo apercibimiento de cierre.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El artículo 21 de la Ley 7/2022 establece un plazo máximo general de 6 meses para el almacenamiento de residuos peligrosos en las instalaciones del productor.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;2 años siempre que se disponga de cubetos de polietileno.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El artículo 21 de la Ley 7/2022 establece un plazo máximo general de 6 meses para el almacenamiento de residuos peligrosos en las instalaciones del productor.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 14: En el ecodiseño de un turbocompresor, ¿q...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el ecodiseño de un turbocompresor, ¿qué elemento constituye el núcleo reemplazable clave que permite aprovechar ambas caracolas en un proceso circular?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El CHRA integra el eje, los rodetes de escape/admisión, cojinetes y sellos. Sustituyendo el CHRA se renueva mecánicamente el turbo conservando el 100% de las pesadas caracolas de fundición.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La válvula de descarga wastegate accionada por depresión.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El CHRA integra el eje, los rodetes de escape/admisión, cojinetes y sellos. Sustituyendo el CHRA se renueva mecánicamente el turbo conservando el 100% de las pesadas caracolas de fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El cartucho central ensamblado y equilibrado dinámicamente (CHRA - Center Housing Rotating Assembly).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El CHRA integra el eje, los rodetes de escape/admisión, cojinetes y sellos. Sustituyendo el CHRA se renueva mecánicamente el turbo conservando el 100% de las pesadas caracolas de fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El conducto flexible de engrase y retorno de aceite al cárter.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El CHRA integra el eje, los rodetes de escape/admisión, cojinetes y sellos. Sustituyendo el CHRA se renueva mecánicamente el turbo conservando el 100% de las pesadas caracolas de fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La brida de unión cónica mecanizada hacia el catalizador de escape.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El CHRA integra el eje, los rodetes de escape/admisión, cojinetes y sellos. Sustituyendo el CHRA se renueva mecánicamente el turbo conservando el 100% de las pesadas caracolas de fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 15: ¿Qué Sistema Colectivo de Responsabilida...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué Sistema Colectivo de Responsabilidad Ampliada del Productor (SCRAP) gestiona en España la recogida gratuita y el reciclaje de neumáticos fuera de uso (NFU) generados en el taller?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;SIGNUS Ecovalor y TNU son los SCRAPs autorizados que gestionan los neumáticos fuera de uso (LER 16 01 03) para recauchutado, granza de caucho y valorización.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;SIGAUS.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. SIGNUS Ecovalor y TNU son los SCRAPs autorizados que gestionan los neumáticos fuera de uso (LER 16 01 03) para recauchutado, granza de caucho y valorización.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;SIGNUS Ecovalor (o TNU).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! SIGNUS Ecovalor y TNU son los SCRAPs autorizados que gestionan los neumáticos fuera de uso (LER 16 01 03) para recauchutado, granza de caucho y valorización.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;SIGRAUTO.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. SIGNUS Ecovalor y TNU son los SCRAPs autorizados que gestionan los neumáticos fuera de uso (LER 16 01 03) para recauchutado, granza de caucho y valorización.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;ECOEMBES.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. SIGNUS Ecovalor y TNU son los SCRAPs autorizados que gestionan los neumáticos fuera de uso (LER 16 01 03) para recauchutado, granza de caucho y valorización.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 16: Bajo la norma internacional UNE-EN ISO 1...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Bajo la norma internacional UNE-EN ISO 14006 de ecodiseño, ¿cuál es el objetivo principal que debe perseguir el fabricante de un componente automotriz?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La norma ISO 14006 establece directrices para incorporar la gestión ambiental y el ecodiseño de forma sistemática durante la fase de desarrollo del producto.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Maximizar el peso de la pieza mediante aleaciones densas para garantizar una rigidez infinita.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La norma ISO 14006 establece directrices para incorporar la gestión ambiental y el ecodiseño de forma sistemática durante la fase de desarrollo del producto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Integrar los aspectos ambientales en el diseño y desarrollo del producto para reducir sus impactos negativos a lo largo de todo su ciclo de vida.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La norma ISO 14006 establece directrices para incorporar la gestión ambiental y el ecodiseño de forma sistemática durante la fase de desarrollo del producto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Asegurar que el componente falle de forma programada a los 100.000 km para incentivar la venta de repuestos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La norma ISO 14006 establece directrices para incorporar la gestión ambiental y el ecodiseño de forma sistemática durante la fase de desarrollo del producto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Prohibir el uso de componentes de fundición de aluminio en favor de plásticos termoestables no reciclables.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La norma ISO 14006 establece directrices para incorporar la gestión ambiental y el ecodiseño de forma sistemática durante la fase de desarrollo del producto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 17: Al recepcionar un vehículo eléctrico con...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Al recepcionar un vehículo eléctrico con fallo de aislamiento o batería degradada, ¿qué servicio responsable representa la mejor opción circular antes de desechar el acumulador completo?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El mantenimiento modular de baterías permite diagnosticar qué módulos han perdido capacidad o presentan resistencia interna anómala, sustituyendo solo estos y reutilizando el resto.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La perforación de las celdas afectadas con un punzón para drenar el electrolito líquido en un recipiente de plástico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El mantenimiento modular de baterías permite diagnosticar qué módulos han perdido capacidad o presentan resistencia interna anómala, sustituyendo solo estos y reutilizando el resto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La diagnosis del State of Health (SOH) por celda/módulo y la sustitución selectiva únicamente de los bloques defectuosos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El mantenimiento modular de baterías permite diagnosticar qué módulos han perdido capacidad o presentan resistencia interna anómala, sustituyendo solo estos y reutilizando el resto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La recarga forzada a 800V con polaridad invertida para desulfatar las placas internas de litio.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El mantenimiento modular de baterías permite diagnosticar qué módulos han perdido capacidad o presentan resistencia interna anómala, sustituyendo solo estos y reutilizando el resto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El envío inmediato de la batería íntegra a un vertedero de residuos no peligrosos sin registrar el código LER.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El mantenimiento modular de baterías permite diagnosticar qué módulos han perdido capacidad o presentan resistencia interna anómala, sustituyendo solo estos y reutilizando el resto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 18: ¿Qué código LER corresponde reglamentari...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué código LER corresponde reglamentariamente al residuo peligroso de 'filtros de aceite usados' retirados de los motores de los vehículos?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El código LER 16 01 07* identifica los filtros de aceite usados de vehículos, catalogados como residuo peligroso debido a los hidrocarburos retenidos en su medio filtrante.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 13 02 05*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El código LER 16 01 07* identifica los filtros de aceite usados de vehículos, catalogados como residuo peligroso debido a los hidrocarburos retenidos en su medio filtrante.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;LER 16 01 07*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El código LER 16 01 07* identifica los filtros de aceite usados de vehículos, catalogados como residuo peligroso debido a los hidrocarburos retenidos en su medio filtrante.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 14*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El código LER 16 01 07* identifica los filtros de aceite usados de vehículos, catalogados como residuo peligroso debido a los hidrocarburos retenidos en su medio filtrante.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 14 06 01*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El código LER 16 01 07* identifica los filtros de aceite usados de vehículos, catalogados como residuo peligroso debido a los hidrocarburos retenidos en su medio filtrante.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 19: En un motor de combustión con problemas ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En un motor de combustión con problemas de opacidad en la prueba de gases ITV por acumulación de carbonilla en la EGR y geometría del turbo, ¿qué servicio preventivo evita sustituir piezas caras?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La descarbonización con gas oxihidrógeno piroliza los depósitos de carbonilla en admisión, cámaras, válvulas y geometría del turbo, restaurando la combustión limpia de forma no invasiva.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El vaciado completo del filtro de partículas con un cincel para permitir el libre paso de humo negro.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La descarbonización con gas oxihidrógeno piroliza los depósitos de carbonilla en admisión, cámaras, válvulas y geometría del turbo, restaurando la combustión limpia de forma no invasiva.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El tratamiento de descarbonización por inyección controlada de oxihidrógeno (HHO) en la admisión sin desmontar el motor.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La descarbonización con gas oxihidrógeno piroliza los depósitos de carbonilla en admisión, cámaras, válvulas y geometría del turbo, restaurando la combustión limpia de forma no invasiva.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La sustitución del aceite de motor por disolvente nitrocelulósico durante 500 kilómetros de rodaje.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La descarbonización con gas oxihidrógeno piroliza los depósitos de carbonilla en admisión, cámaras, válvulas y geometría del turbo, restaurando la combustión limpia de forma no invasiva.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El aumento permanente de la presión del common-rail en 600 bar para quemar los sedimentos por sobretemperatura.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La descarbonización con gas oxihidrógeno piroliza los depósitos de carbonilla en admisión, cámaras, válvulas y geometría del turbo, restaurando la combustión limpia de forma no invasiva.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 20: Conforme al Reglamento F-Gas (UE 2024/57...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Conforme al Reglamento F-Gas (UE 2024/573), ¿qué obligación técnica ineludible tiene el técnico electromecánico al intervenir en el circuito de climatización con gas fluorado?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La normativa europea F-Gas prohíbe de forma absoluta cualquier purga de refrigerante a la atmósfera y exige el uso de estaciones de recuperación automáticas herméticas.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Purgar el gas refrigerante directamente a la atmósfera siempre que se trabaje en un espacio exterior ventilado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa europea F-Gas prohíbe de forma absoluta cualquier purga de refrigerante a la atmósfera y exige el uso de estaciones de recuperación automáticas herméticas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Recuperar el gas mediante estación de carga y reciclaje homologada con una eficacia mínima del 95% sin emitir refrigerante a la atmósfera.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La normativa europea F-Gas prohíbe de forma absoluta cualquier purga de refrigerante a la atmósfera y exige el uso de estaciones de recuperación automáticas herméticas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Sustituir el gas R-1234yf por gas butano doméstico para abaratar los costes de mantenimiento del cliente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa europea F-Gas prohíbe de forma absoluta cualquier purga de refrigerante a la atmósfera y exige el uso de estaciones de recuperación automáticas herméticas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Mezclar el refrigerante usado con el aceite del compresor en la misma botella de recuperación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa europea F-Gas prohíbe de forma absoluta cualquier purga de refrigerante a la atmósfera y exige el uso de estaciones de recuperación automáticas herméticas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 21: ¿Qué impacto tiene el uso de pastillas d...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué impacto tiene el uso de pastillas de freno 'libres de cobre' (Copper-Free) formuladas bajo criterios de ecodiseño?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La normativa internacional y el ecodiseño restringen el cobre a menos del 0,5% en las pastillas (Better Brake Rules) para evitar la toxicidad biológica que el polvo de cobre genera en la fauna acuática.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aumenta la distancia de frenada un 40% debido a la falta de conductividad térmica del forro.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa internacional y el ecodiseño restringen el cobre a menos del 0,5% en las pastillas (Better Brake Rules) para evitar la toxicidad biológica que el polvo de cobre genera en la fauna acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Previene la contaminación por metales pesados en las aguas fluviales y acuíferos provocada por el polvo de desgaste de los frenos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La normativa internacional y el ecodiseño restringen el cobre a menos del 0,5% en las pastillas (Better Brake Rules) para evitar la toxicidad biológica que el polvo de cobre genera en la fauna acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Provoca un desgaste acelerado del disco de freno de fundición gris en menos de 5.000 kilómetros.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa internacional y el ecodiseño restringen el cobre a menos del 0,5% en las pastillas (Better Brake Rules) para evitar la toxicidad biológica que el polvo de cobre genera en la fauna acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Obliga a cambiar el líquido de frenos cada semana debido a la reacción química galvánica.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La normativa internacional y el ecodiseño restringen el cobre a menos del 0,5% en las pastillas (Better Brake Rules) para evitar la toxicidad biológica que el polvo de cobre genera en la fauna acuática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 22: ¿Cuál es el destino circular prioritario...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es el destino circular prioritario del aceite de motor usado recogido en los talleres por SIGAUS?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;En España, más del 95% del aceite usado gestionado por SIGAUS se destina a regeneración, eliminando agua, metales y aditivos degradados para producir bases lubricantes de alta pureza.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Su vertido en balsas mineras para la estabilización de lodos radiactivos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. En España, más del 95% del aceite usado gestionado por SIGAUS se destina a regeneración, eliminando agua, metales y aditivos degradados para producir bases lubricantes de alta pureza.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Su regeneración en plantas de refino para transformarlo en bases lubricantes de primera calidad aptas para nuevos aceites.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! En España, más del 95% del aceite usado gestionado por SIGAUS se destina a regeneración, eliminando agua, metales y aditivos degradados para producir bases lubricantes de alta pureza.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Su incineración inmediata en quemadores artesanales de taller para calefacción en invierno.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. En España, más del 95% del aceite usado gestionado por SIGAUS se destina a regeneración, eliminando agua, metales y aditivos degradados para producir bases lubricantes de alta pureza.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Su pulverización sobre caminos de tierra para fijar el polvo en zonas rurales.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. En España, más del 95% del aceite usado gestionado por SIGAUS se destina a regeneración, eliminando agua, metales y aditivos degradados para producir bases lubricantes de alta pureza.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 23: ¿Qué meta específica del Reto 2 ('Produc...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué meta específica del Reto 2 ('Producir energía asequible y no contaminante') vinculado al ODS 7 afecta de manera directa a la evolución tecnológica del electromecánico?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El ODS 7 (Reto 2) persigue descarbonizar la matriz energética y aumentar la eficiencia, impulsando la electromovilidad frente al bajo rendimiento del motor térmico (25-35%).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La prohibición de utilizar herramientas eléctricas a batería en el taller mecánico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 7 (Reto 2) persigue descarbonizar la matriz energética y aumentar la eficiencia, impulsando la electromovilidad frente al bajo rendimiento del motor térmico (25-35%).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La descarbonización de la energía eléctrica y la transición hacia sistemas de propulsión eléctrica de alta eficiencia (VE y HEV con rendimientos superiores al 90%).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El ODS 7 (Reto 2) persigue descarbonizar la matriz energética y aumentar la eficiencia, impulsando la electromovilidad frente al bajo rendimiento del motor térmico (25-35%).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La obligación de alimentar los motores de combustión interna únicamente con queroseno de aviación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 7 (Reto 2) persigue descarbonizar la matriz energética y aumentar la eficiencia, impulsando la electromovilidad frente al bajo rendimiento del motor térmico (25-35%).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La eliminación de los alternadores inteligentes pilotados por red LIN en todos los turismos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El ODS 7 (Reto 2) persigue descarbonizar la matriz energética y aumentar la eficiencia, impulsando la electromovilidad frente al bajo rendimiento del motor térmico (25-35%).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 24: En relación con el Reto 3 de la Agenda 2...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En relación con el Reto 3 de la Agenda 2030 ('Revertir la deforestación y los procesos de desertificación') y el ODS 15, ¿por qué la deforestación agrava de forma crítica el cambio climático?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los bosques absorben y almacenan enormes cantidades de carbono; su destrucción no solo libera ese carbono como CO₂, sino que elimina la capacidad de la Tierra para fijar emisiones futuras.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque los árboles talados desprenden gas refrigerante R-134a de forma espontánea hacia la estratosfera.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los bosques absorben y almacenan enormes cantidades de carbono; su destrucción no solo libera ese carbono como CO₂, sino que elimina la capacidad de la Tierra para fijar emisiones futuras.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque la destrucción de las masas forestales incrementa las emisiones netas de CO₂ al destruir los principales sumideros naturales de carbono de la biosfera.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los bosques absorben y almacenan enormes cantidades de carbono; su destrucción no solo libera ese carbono como CO₂, sino que elimina la capacidad de la Tierra para fijar emisiones futuras.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque los bosques talados impiden la circulación de vehículos con tracción total a las cuatro ruedas (4x4).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los bosques absorben y almacenan enormes cantidades de carbono; su destrucción no solo libera ese carbono como CO₂, sino que elimina la capacidad de la Tierra para fijar emisiones futuras.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque el serrín de madera bloquea los caudalímetros de masa de aire (MAF) de los turismos diésel.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los bosques absorben y almacenan enormes cantidades de carbono; su destrucción no solo libera ese carbono como CO₂, sino que elimina la capacidad de la Tierra para fijar emisiones futuras.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 25: En el marco del ecodiseño, ¿qué directiv...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el marco del ecodiseño, ¿qué directiva europea prohíbe de manera estricta el uso de plomo, mercurio, cadmio y cromo hexavalente en los vehículos nuevos para facilitar su reciclaje?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La Directiva 2000/53/CE (VFU) prohíbe el uso de metales pesados altamente tóxicos (Pb, Hg, Cd, Cr-VI) para asegurar que los materiales del vehículo no contaminen durante el reciclaje.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El Reglamento General de Protección de Datos (RGPD UE 2016/679).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Directiva 2000/53/CE (VFU) prohíbe el uso de metales pesados altamente tóxicos (Pb, Hg, Cd, Cr-VI) para asegurar que los materiales del vehículo no contaminen durante el reciclaje.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La Directiva de Bajas Emisiones Euro 7 sobre partículas de frenos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Directiva 2000/53/CE (VFU) prohíbe el uso de metales pesados altamente tóxicos (Pb, Hg, Cd, Cr-VI) para asegurar que los materiales del vehículo no contaminen durante el reciclaje.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La Directiva 2000/53/CE sobre Vehículos al Final de su Vida Útil (VFU).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La Directiva 2000/53/CE (VFU) prohíbe el uso de metales pesados altamente tóxicos (Pb, Hg, Cd, Cr-VI) para asegurar que los materiales del vehículo no contaminen durante el reciclaje.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El Real Decreto 1457/1986 de regulación de talleres mecánicos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La Directiva 2000/53/CE (VFU) prohíbe el uso de metales pesados altamente tóxicos (Pb, Hg, Cd, Cr-VI) para asegurar que los materiales del vehículo no contaminen durante el reciclaje.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 26: Si un taller mecánico genera menos de 10...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Si un taller mecánico genera menos de 10 toneladas al año de residuos peligrosos, ¿qué figura administrativa le corresponde formalizar ante la Consejería de Medio Ambiente?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los talleres que generan menos de 10 t/año de residuos peligrosos tienen la consideración legal de Pequeño Productor de Residuos Peligrosos, con deber de inscripción telemática.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Gestor Final de Valorización Energética de Alta Complejidad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los talleres que generan menos de 10 t/año de residuos peligrosos tienen la consideración legal de Pequeño Productor de Residuos Peligrosos, con deber de inscripción telemática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Operador Logístico de Tratamiento Biológico de Áridos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los talleres que generan menos de 10 t/año de residuos peligrosos tienen la consideración legal de Pequeño Productor de Residuos Peligrosos, con deber de inscripción telemática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Pequeño Productor de Residuos Peligrosos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los talleres que generan menos de 10 t/año de residuos peligrosos tienen la consideración legal de Pequeño Productor de Residuos Peligrosos, con deber de inscripción telemática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Agente Comercializador Mayorista de Hidrocarburos Clorados.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los talleres que generan menos de 10 t/año de residuos peligrosos tienen la consideración legal de Pequeño Productor de Residuos Peligrosos, con deber de inscripción telemática.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 27: ¿Qué estrategia circular representa la '...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué estrategia circular representa la 'Segunda Vida' (Second Life) de los módulos de batería de un vehículo eléctrico que han alcanzado el 70-75% de State of Health (SOH)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Una batería degradada para tracción automotriz (SOH 70-75%) es perfecta para almacenamiento estacionario de energía solar, donde el peso y las descargas ultrarrápidas no son críticos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Su trituración en molino de martillos para extraer cobre de forma inmediata.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Una batería degradada para tracción automotriz (SOH 70-75%) es perfecta para almacenamiento estacionario de energía solar, donde el peso y las descargas ultrarrápidas no son críticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Su instalación en camiones pesados de larga distancia para triplicar la potencia motriz.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Una batería degradada para tracción automotriz (SOH 70-75%) es perfecta para almacenamiento estacionario de energía solar, donde el peso y las descargas ultrarrápidas no son críticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Su reutilización en sistemas de almacenamiento estacionario de energía solar fotovoltaica en el propio taller o edificios.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Una batería degradada para tracción automotriz (SOH 70-75%) es perfecta para almacenamiento estacionario de energía solar, donde el peso y las descargas ultrarrápidas no son críticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Su utilización como contrapesos mecánicos en las ruedas traseras de carretillas elevadoras.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Una batería degradada para tracción automotriz (SOH 70-75%) es perfecta para almacenamiento estacionario de energía solar, donde el peso y las descargas ultrarrápidas no son críticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 28: En el equilibrado dinámico de un turboco...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el equilibrado dinámico de un turbocompresor remanufacturado según UNE 26438, ¿qué máquina de precisión resulta obligatoria para certificar la ausencia de vibraciones perjudiciales?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El equilibrado del conjunto CHRA en una máquina VSR somete el eje a regímenes de trabajo reales (&gt;150.000 rpm) con suministro de aceite a presión, garantizando tolerancias microscópicas.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Un tornillo de banco con mordazas blandas de plomo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El equilibrado del conjunto CHRA en una máquina VSR somete el eje a regímenes de trabajo reales (&gt;150.000 rpm) con suministro de aceite a presión, garantizando tolerancias microscópicas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Un torno paralelo convencional calibrado a 500 revoluciones por minuto.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El equilibrado del conjunto CHRA en una máquina VSR somete el eje a regímenes de trabajo reales (&gt;150.000 rpm) con suministro de aceite a presión, garantizando tolerancias microscópicas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Una equilibradora dinámica de alta velocidad VSR (Vibration Sorting Rig) a regímenes superiores a 150.000 rpm.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El equilibrado del conjunto CHRA en una máquina VSR somete el eje a regímenes de trabajo reales (&gt;150.000 rpm) con suministro de aceite a presión, garantizando tolerancias microscópicas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Un dinamómetro de tracción estática con sensor piezoeléctrico de impacto.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El equilibrado del conjunto CHRA en una máquina VSR somete el eje a regímenes de trabajo reales (&gt;150.000 rpm) con suministro de aceite a presión, garantizando tolerancias microscópicas.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 29: ¿Qué código LER identifica al residuo de...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué código LER identifica al residuo de 'baterías de arranque de plomo-ácido de 12V' generadas en las operaciones de mantenimiento del taller?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Las baterías de plomo-ácido se identifican bajo el código LER 16 06 01*, residuo peligroso por su contenido en plomo y ácido sulfúrico corrosivo con un 98% de reciclabilidad.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 13 02 05*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las baterías de plomo-ácido se identifican bajo el código LER 16 06 01*, residuo peligroso por su contenido en plomo y ácido sulfúrico corrosivo con un 98% de reciclabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 03&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las baterías de plomo-ácido se identifican bajo el código LER 16 06 01*, residuo peligroso por su contenido en plomo y ácido sulfúrico corrosivo con un 98% de reciclabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;LER 16 06 01*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Las baterías de plomo-ácido se identifican bajo el código LER 16 06 01*, residuo peligroso por su contenido en plomo y ácido sulfúrico corrosivo con un 98% de reciclabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 13*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Las baterías de plomo-ácido se identifican bajo el código LER 16 06 01*, residuo peligroso por su contenido en plomo y ácido sulfúrico corrosivo con un 98% de reciclabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 30: ¿Qué documento oficial debe acompañar pr...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué documento oficial debe acompañar preceptivamente cada traslado de residuos peligrosos desde el taller hasta las instalaciones del gestor autorizado?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Documento de Identificación (DI) y la Notificación Previa de Traslado (NT) son los documentos administrativos telemáticos exigidos por la Ley 7/2022 para garantizar la trazabilidad.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La Ficha de Inspección Técnica del Vehículo (tarjeta ITV) del transportista.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Documento de Identificación (DI) y la Notificación Previa de Traslado (NT) son los documentos administrativos telemáticos exigidos por la Ley 7/2022 para garantizar la trazabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El justificante de pago del Impuesto de Actividades Económicas (IAE).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Documento de Identificación (DI) y la Notificación Previa de Traslado (NT) son los documentos administrativos telemáticos exigidos por la Ley 7/2022 para garantizar la trazabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El Documento de Identificación (DI) de residuos peligrosos debidamente formalizado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Documento de Identificación (DI) y la Notificación Previa de Traslado (NT) son los documentos administrativos telemáticos exigidos por la Ley 7/2022 para garantizar la trazabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Una copia impresa del manual de taller del vehículo reparado.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Documento de Identificación (DI) y la Notificación Previa de Traslado (NT) son los documentos administrativos telemáticos exigidos por la Ley 7/2022 para garantizar la trazabilidad.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 31: Al presentar un presupuesto a un cliente...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Al presentar un presupuesto a un cliente que necesita sustituir una caja de cambios averiada, ¿cómo debe estructurarse una propuesta responsable basada en la economía circular?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La propuesta responsable consiste en ofrecer una comparativa formal (nueva vs remanufacturada), informando de la idéntica garantía técnica (2 años), el menor coste y el ahorro de emisiones de CO2.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Ocultar la opción de la pieza reconstruida para obligar al cliente a comprar un vehículo eléctrico nuevo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La propuesta responsable consiste en ofrecer una comparativa formal (nueva vs remanufacturada), informando de la idéntica garantía técnica (2 años), el menor coste y el ahorro de emisiones de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Presupuestar exclusivamente una caja de desguace sin revisar ni ofrecer ninguna garantía legal por escrito.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La propuesta responsable consiste en ofrecer una comparativa formal (nueva vs remanufacturada), informando de la idéntica garantía técnica (2 años), el menor coste y el ahorro de emisiones de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Ofrecer un presupuesto comparativo transparente: pieza nueva de fábrica frente a recambio remanufacturado certificado (UNE 26438), destacando el ahorro del 40% y el impacto ecológico positivo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La propuesta responsable consiste en ofrecer una comparativa formal (nueva vs remanufacturada), informando de la idéntica garantía técnica (2 años), el menor coste y el ahorro de emisiones de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Cobrar un suplemento de penalización ambiental al cliente si no acepta cambiar el embrague simultáneamente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La propuesta responsable consiste en ofrecer una comparativa formal (nueva vs remanufacturada), informando de la idéntica garantía técnica (2 años), el menor coste y el ahorro de emisiones de CO2.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 32: ¿Qué código LER corresponde reglamentari...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué código LER corresponde reglamentariamente a los residuos peligrosos de 'líquido de frenos usado' retirados del circuito hidráulico?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El líquido de frenos (glicoles sintéticos higroscópicos DOT 4/5.1) se clasifica como residuo peligroso bajo el código LER 16 01 13*, debiendo segregarse sin mezclar con aceites.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 13 02 05*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El líquido de frenos (glicoles sintéticos higroscópicos DOT 4/5.1) se clasifica como residuo peligroso bajo el código LER 16 01 13*, debiendo segregarse sin mezclar con aceites.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 07*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El líquido de frenos (glicoles sintéticos higroscópicos DOT 4/5.1) se clasifica como residuo peligroso bajo el código LER 16 01 13*, debiendo segregarse sin mezclar con aceites.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;LER 16 01 13*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El líquido de frenos (glicoles sintéticos higroscópicos DOT 4/5.1) se clasifica como residuo peligroso bajo el código LER 16 01 13*, debiendo segregarse sin mezclar con aceites.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 14*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El líquido de frenos (glicoles sintéticos higroscópicos DOT 4/5.1) se clasifica como residuo peligroso bajo el código LER 16 01 13*, debiendo segregarse sin mezclar con aceites.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 33: ¿Por qué mezclar líquido de frenos (LER ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Por qué mezclar líquido de frenos (LER 16 01 13*) o disolventes en el bidón de aceite de motor usado (LER 13 02 05*) constituye una infracción ambiental grave en el taller?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La presencia de cloro, disolventes o agua en el aceite usado supera los límites admisibles de la planta de regeneración, arruinando miles de litros y provocando la pérdida del valor circular.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque el líquido de frenos hace que el aceite huela a perfume floral y confunde a los mecánicos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La presencia de cloro, disolventes o agua en el aceite usado supera los límites admisibles de la planta de regeneración, arruinando miles de litros y provocando la pérdida del valor circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque incrementa la viscosidad del aceite impidiendo que pase por la boquilla de la pistola de engrase.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La presencia de cloro, disolventes o agua en el aceite usado supera los límites admisibles de la planta de regeneración, arruinando miles de litros y provocando la pérdida del valor circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque contamina el aceite e inutiliza por completo su proceso de regeneración en la planta de refino, obligando a su destrucción por incineración.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La presencia de cloro, disolventes o agua en el aceite usado supera los límites admisibles de la planta de regeneración, arruinando miles de litros y provocando la pérdida del valor circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la mezcla produce una cristalización instantánea que hace estallar el bidón de acero.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La presencia de cloro, disolventes o agua en el aceite usado supera los límites admisibles de la planta de regeneración, arruinando miles de litros y provocando la pérdida del valor circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 34: ¿Qué porcentaje aproximado de reducción ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué porcentaje aproximado de reducción de emisiones de CO₂ y de consumo de materias primas se consigue mediante la remanufactura de un turbocompresor o una pinza de freno frente a su fabricación nueva?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Diversos Análisis de Ciclo de Vida (ACV) certifican que la remanufactura mecánica ahorra entre un 80% y un 88% de materias primas vírgenes y hasta un 85% de emisiones de CO₂ asociadas a fundición.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Aproximadamente un 5% de ahorro en materiales y un 2% en CO₂.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Diversos Análisis de Ciclo de Vida (ACV) certifican que la remanufactura mecánica ahorra entre un 80% y un 88% de materias primas vírgenes y hasta un 85% de emisiones de CO₂ asociadas a fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Alrededor de un 20% de ahorro en ambos indicadores.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Diversos Análisis de Ciclo de Vida (ACV) certifican que la remanufactura mecánica ahorra entre un 80% y un 88% de materias primas vírgenes y hasta un 85% de emisiones de CO₂ asociadas a fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Entre un 80% y un 88% de reducción de materias primas y hasta un 85% de ahorro en huella de carbono.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Diversos Análisis de Ciclo de Vida (ACV) certifican que la remanufactura mecánica ahorra entre un 80% y un 88% de materias primas vírgenes y hasta un 85% de emisiones de CO₂ asociadas a fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Exactamente un 100% de ahorro absoluto sin requerir energía en ninguna fase.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Diversos Análisis de Ciclo de Vida (ACV) certifican que la remanufactura mecánica ahorra entre un 80% y un 88% de materias primas vírgenes y hasta un 85% de emisiones de CO₂ asociadas a fundición.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 35: ¿Qué ODS y Reto Ambiental de la Agenda 2...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué ODS y Reto Ambiental de la Agenda 2030 ampara la adopción obligatoria de normativas como 'Better Brake Rules' para eliminar el cobre de las pastillas de freno en el taller?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Reto 4 (ODS 15) protege la biodiversidad. El polvo de cobre desprendido por los frenos se lava con la lluvia hacia ríos y estuarios, resultando altamente tóxico para los peces e invertebrados acuáticos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 1 (Fin de la pobreza) y el Reto de fomento de créditos al consumo de recambios.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 4 (ODS 15) protege la biodiversidad. El polvo de cobre desprendido por los frenos se lava con la lluvia hacia ríos y estuarios, resultando altamente tóxico para los peces e invertebrados acuáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 4 (Educación de calidad) y el Reto de digitalización de manuales técnicos de taller.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 4 (ODS 15) protege la biodiversidad. El polvo de cobre desprendido por los frenos se lava con la lluvia hacia ríos y estuarios, resultando altamente tóxico para los peces e invertebrados acuáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El ODS 15 y el Reto 4 ('Conservar la biodiversidad'), protegiendo los ecosistemas y evitando la extinción acelerada de especies acuáticas por toxicidad de metales pesados.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Reto 4 (ODS 15) protege la biodiversidad. El polvo de cobre desprendido por los frenos se lava con la lluvia hacia ríos y estuarios, resultando altamente tóxico para los peces e invertebrados acuáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 9 (Industria e innovación) y el Reto de aumento de la velocidad máxima en autopista.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 4 (ODS 15) protege la biodiversidad. El polvo de cobre desprendido por los frenos se lava con la lluvia hacia ríos y estuarios, resultando altamente tóxico para los peces e invertebrados acuáticos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 36: ¿A qué Límite Planetario hace frente dir...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿A qué Límite Planetario hace frente directo la Directiva europea 2000/53/CE sobre Vehículos al Final de su Vida Útil (VFU) al prohibir metales pesados como plomo, cadmio, mercurio y cromo hexavalente?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El límite de entidades novedosas / contaminación química abarca sustancias artificiales y metales pesados altamente tóxicos y bioacumulables, cuya eliminación en el vehículo exige ecodiseño estricto.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Al Límite de Acidificación de los Océanos exclusivamente.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite de entidades novedosas / contaminación química abarca sustancias artificiales y metales pesados altamente tóxicos y bioacumulables, cuya eliminación en el vehículo exige ecodiseño estricto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Al Límite de Agotamiento de la Capa de Ozono Estratosférico por halones.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite de entidades novedosas / contaminación química abarca sustancias artificiales y metales pesados altamente tóxicos y bioacumulables, cuya eliminación en el vehículo exige ecodiseño estricto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Al Límite de 'Contaminación Química y Entidades Novedosas', impidiendo la dispersión de sustancias sintéticas y metales tóxicos persistentes en el medio natural.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El límite de entidades novedosas / contaminación química abarca sustancias artificiales y metales pesados altamente tóxicos y bioacumulables, cuya eliminación en el vehículo exige ecodiseño estricto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Al Límite de Carga Atmosférica de Aerosoles provocada por arena del desierto.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El límite de entidades novedosas / contaminación química abarca sustancias artificiales y metales pesados altamente tóxicos y bioacumulables, cuya eliminación en el vehículo exige ecodiseño estricto.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 37: ¿Qué código LER identifica a los 'neumát...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué código LER identifica a los 'neumáticos fuera de uso (NFU)' generados en el taller tras su sustitución?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los neumáticos fuera de uso se clasifican bajo el código LER 16 01 03. No están catalogados como residuo peligroso, pero están sometidos a régimen de responsabilidad ampliada (SIGNUS/TNU).&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 13 02 05*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los neumáticos fuera de uso se clasifican bajo el código LER 16 01 03. No están catalogados como residuo peligroso, pero están sometidos a régimen de responsabilidad ampliada (SIGNUS/TNU).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 07*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los neumáticos fuera de uso se clasifican bajo el código LER 16 01 03. No están catalogados como residuo peligroso, pero están sometidos a régimen de responsabilidad ampliada (SIGNUS/TNU).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 06 01*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los neumáticos fuera de uso se clasifican bajo el código LER 16 01 03. No están catalogados como residuo peligroso, pero están sometidos a régimen de responsabilidad ampliada (SIGNUS/TNU).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;LER 16 01 03&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los neumáticos fuera de uso se clasifican bajo el código LER 16 01 03. No están catalogados como residuo peligroso, pero están sometidos a régimen de responsabilidad ampliada (SIGNUS/TNU).&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 38: En el etiquetado oficial de un bidón de ...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el etiquetado oficial de un bidón de residuos peligrosos en el taller conforme al Reglamento CLP y Ley 7/2022, ¿qué dato resulta obligatorio incluir además del código LER y pictogramas?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La etiqueta reglamentaria debe reflejar el código LER, denominación del residuo, datos del titular/RII, pictogramas GHS/CLP, frases H/P y de manera crítica la fecha de inicio del llenado.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El número de bastidor del último coche reparado en el taller.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La etiqueta reglamentaria debe reflejar el código LER, denominación del residuo, datos del titular/RII, pictogramas GHS/CLP, frases H/P y de manera crítica la fecha de inicio del llenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;La marca comercial del aceite nuevo que se compró para reponer.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La etiqueta reglamentaria debe reflejar el código LER, denominación del residuo, datos del titular/RII, pictogramas GHS/CLP, frases H/P y de manera crítica la fecha de inicio del llenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El nombre y titulación académica de todos los mecánicos del turno de tarde.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La etiqueta reglamentaria debe reflejar el código LER, denominación del residuo, datos del titular/RII, pictogramas GHS/CLP, frases H/P y de manera crítica la fecha de inicio del llenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;La fecha de inicio del envasado, datos completos del taller productor y las frases de peligro H y consejos de prudencia P.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La etiqueta reglamentaria debe reflejar el código LER, denominación del residuo, datos del titular/RII, pictogramas GHS/CLP, frases H/P y de manera crítica la fecha de inicio del llenado.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 39: ¿Cuál es el código LER oficial que clasi...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Cuál es el código LER oficial que clasifica al residuo de 'anticongelantes que contienen sustancias peligrosas (etilenglicol)'?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El líquido refrigerante/anticongelante usado con etilenglicol se cataloga como residuo peligroso bajo el código LER 16 01 14*, exigiendo almacenamiento en envases independientes estancos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 13 02 05*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El líquido refrigerante/anticongelante usado con etilenglicol se cataloga como residuo peligroso bajo el código LER 16 01 14*, exigiendo almacenamiento en envases independientes estancos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 07*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El líquido refrigerante/anticongelante usado con etilenglicol se cataloga como residuo peligroso bajo el código LER 16 01 14*, exigiendo almacenamiento en envases independientes estancos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;LER 16 01 13*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El líquido refrigerante/anticongelante usado con etilenglicol se cataloga como residuo peligroso bajo el código LER 16 01 14*, exigiendo almacenamiento en envases independientes estancos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;LER 16 01 14*&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El líquido refrigerante/anticongelante usado con etilenglicol se cataloga como residuo peligroso bajo el código LER 16 01 14*, exigiendo almacenamiento en envases independientes estancos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 40: En el ecodiseño aplicado a vehículos elé...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En el ecodiseño aplicado a vehículos eléctricos, ¿qué diferencia existe entre la arquitectura de batería 'Cell-to-Pack' (CTP) y la arquitectura modular 'Cell-to-Module' (CTM)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La arquitectura CTM (Cell-to-Module) favorece el ecodiseño y la reparabilidad porque permite sustituir un módulo defectuoso de 12 celdas. La arquitectura CTP ahorra peso pero dificulta la economía circular.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;CTP utiliza celdas de combustible de hidrógeno y CTM utiliza celdas de gasolina sin plomo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La arquitectura CTM (Cell-to-Module) favorece el ecodiseño y la reparabilidad porque permite sustituir un módulo defectuoso de 12 celdas. La arquitectura CTP ahorra peso pero dificulta la economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;CTM impide cualquier reparación técnica porque las celdas se funden en un único bloque cerámico.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La arquitectura CTM (Cell-to-Module) favorece el ecodiseño y la reparabilidad porque permite sustituir un módulo defectuoso de 12 celdas. La arquitectura CTP ahorra peso pero dificulta la economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;CTP está diseñada exclusivamente para patinetes eléctricos urbanos y CTM para trenes de alta velocidad.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La arquitectura CTM (Cell-to-Module) favorece el ecodiseño y la reparabilidad porque permite sustituir un módulo defectuoso de 12 celdas. La arquitectura CTP ahorra peso pero dificulta la economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;CTM agrupa las celdas en módulos independientes desmontables y fácilmente reparables en taller, mientras que CTP integra las celdas pegadas directamente en el chasis complicando su reparación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La arquitectura CTM (Cell-to-Module) favorece el ecodiseño y la reparabilidad porque permite sustituir un módulo defectuoso de 12 celdas. La arquitectura CTP ahorra peso pero dificulta la economía circular.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 41: ¿Qué papel desempeñan los Centros Autori...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué papel desempeñan los Centros Autorizados de Tratamiento de Vehículos (CATV) en la cadena de economía circular de automoción?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Los CATV (antiguos desguaces) son los únicos autorizados por la DGT y Medio Ambiente para descontaminar fluidos y comercializar recambios usados con garantía según el RD 265/2021.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Se dedican exclusivamente a la venta de combustible diésel bonificado para maquinaria agrícola.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los CATV (antiguos desguaces) son los únicos autorizados por la DGT y Medio Ambiente para descontaminar fluidos y comercializar recambios usados con garantía según el RD 265/2021.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Son plantas de ensamblaje de vehículos nuevos a partir de piezas importadas sin pasar aduana.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los CATV (antiguos desguaces) son los únicos autorizados por la DGT y Medio Ambiente para descontaminar fluidos y comercializar recambios usados con garantía según el RD 265/2021.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Emiten permisos de conducir internacionales y gestionan multas de radar de la DGT.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Los CATV (antiguos desguaces) son los únicos autorizados por la DGT y Medio Ambiente para descontaminar fluidos y comercializar recambios usados con garantía según el RD 265/2021.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Efectúan la descontaminación legal obligatoria del vehículo al final de su vida útil y recuperan piezas usadas con trazabilidad y garantía comercial para su reutilización.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Los CATV (antiguos desguaces) son los únicos autorizados por la DGT y Medio Ambiente para descontaminar fluidos y comercializar recambios usados con garantía según el RD 265/2021.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 42: Al producirse un derrame accidental de 1...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Al producirse un derrame accidental de 10 litros de aceite de motor usado en el suelo del taller, ¿cuál es el procedimiento correcto de actuación ambiental que debe seguir el electromecánico?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El protocolo de seguridad exige contener el vertido con sepiolita/absorbente inerte, evitando la red de alcantarillado, y gestionar la sepiolita usada como residuo peligroso LER 15 02 02*.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Baldear rápidamente el foso con agua a presión hacia la rejilla de aguas pluviales de la calle.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El protocolo de seguridad exige contener el vertido con sepiolita/absorbente inerte, evitando la red de alcantarillado, y gestionar la sepiolita usada como residuo peligroso LER 15 02 02*.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Encender una llama con el soplete de oxiacetileno para quemar el hidrocarburo sobre el suelo de hormigón.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El protocolo de seguridad exige contener el vertido con sepiolita/absorbente inerte, evitando la red de alcantarillado, y gestionar la sepiolita usada como residuo peligroso LER 15 02 02*.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Cubrir el derrame con cartones viejos de embalaje y esperar a que se evaporen los componentes ligeros.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El protocolo de seguridad exige contener el vertido con sepiolita/absorbente inerte, evitando la red de alcantarillado, y gestionar la sepiolita usada como residuo peligroso LER 15 02 02*.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Esparcir inmediatamente material absorbente específico (sepiolita o vermiculita), recogerlo con pala y cepillo y depositarlo en el contenedor específico de 'absorbentes contaminados' (LER 15 02 02*).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El protocolo de seguridad exige contener el vertido con sepiolita/absorbente inerte, evitando la red de alcantarillado, y gestionar la sepiolita usada como residuo peligroso LER 15 02 02*.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 43: En una caja de cambios manual que presen...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;En una caja de cambios manual que presenta desgaste severo en el sincronizador de 3ª velocidad, ¿qué intervención técnica representa el paradigma del ecodiseño frente al consumismo lineal?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La reparación modular mediante sustitución del componente de sacrificio (anillo sincronizador) recupera el 98% del valor y masa de la caja de cambios, reduciendo el residuo a gramos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Proponer el achatarramiento del coche completo porque una avería de transmisión nunca es reparable.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La reparación modular mediante sustitución del componente de sacrificio (anillo sincronizador) recupera el 98% del valor y masa de la caja de cambios, reduciendo el residuo a gramos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Rellenar la caja de cambios con grasa de litio de alta densidad para enmascarar el rascado de marchas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La reparación modular mediante sustitución del componente de sacrificio (anillo sincronizador) recupera el 98% del valor y masa de la caja de cambios, reduciendo el residuo a gramos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Instalar una caja de cambios nueva importada por transporte aéreo desde fábrica sin desmontar la original.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La reparación modular mediante sustitución del componente de sacrificio (anillo sincronizador) recupera el 98% del valor y masa de la caja de cambios, reduciendo el residuo a gramos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Desarmar la caja, inspeccionar piñones y carcasas, sustituir exclusivamente el anillo sincronizador de bronce y los rodamientos de agujas, y rellenar con valvulina nueva con la viscosidad recomendada.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La reparación modular mediante sustitución del componente de sacrificio (anillo sincronizador) recupera el 98% del valor y masa de la caja de cambios, reduciendo el residuo a gramos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 44: Conforme a la Ley de Garantías en la Ven...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Conforme a la Ley de Garantías en la Venta de Bienes de Consumo en España, ¿qué garantía mínima legal ampara a un cliente que adquiere un recambio remanufacturado según UNE 26438?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La legislación española y europea equipara los productos remanufacturados con certificación industrial a los bienes nuevos, otorgando una cobertura de garantía de 2 años.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;15 días de prueba sin derecho a reclamación por mano de obra.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La legislación española y europea equipara los productos remanufacturados con certificación industrial a los bienes nuevos, otorgando una cobertura de garantía de 2 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Ninguna garantía, ya que los componentes con materiales reutilizados no están cubiertos por la legislación.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La legislación española y europea equipara los productos remanufacturados con certificación industrial a los bienes nuevos, otorgando una cobertura de garantía de 2 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;3 meses únicamente en caso de rotura catastrófica de carcasas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La legislación española y europea equipara los productos remanufacturados con certificación industrial a los bienes nuevos, otorgando una cobertura de garantía de 2 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;2 años de garantía legal (o mínimo 1 año si se pacta expresamente en bienes de segunda mano/reacondicionados), idéntica a la cobertura de un componente nuevo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La legislación española y europea equipara los productos remanufacturados con certificación industrial a los bienes nuevos, otorgando una cobertura de garantía de 2 años.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 45: ¿Qué gas refrigerante utilizado en clima...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué gas refrigerante utilizado en climatización de automoción posee un Potencial de Calentamiento Atmosférico (PCA / GWP) inferior a 1, sustituyendo al contaminante R-134a (PCA = 1.430)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El hidrofluoroolefina HFO R-1234yf posee un PCA menor de 1, habiendo sustituido obligatoriamente al R-134a en todos los vehículos nuevos europeos por exigencia de la Directiva MAC.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Gas R-12 (CFC-12).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El hidrofluoroolefina HFO R-1234yf posee un PCA menor de 1, habiendo sustituido obligatoriamente al R-134a en todos los vehículos nuevos europeos por exigencia de la Directiva MAC.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Gas R-22 (HCFC-22).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El hidrofluoroolefina HFO R-1234yf posee un PCA menor de 1, habiendo sustituido obligatoriamente al R-134a en todos los vehículos nuevos europeos por exigencia de la Directiva MAC.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Gas R-410A.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El hidrofluoroolefina HFO R-1234yf posee un PCA menor de 1, habiendo sustituido obligatoriamente al R-134a en todos los vehículos nuevos europeos por exigencia de la Directiva MAC.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Gas R-1234yf (HFO-1234yf).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El hidrofluoroolefina HFO R-1234yf posee un PCA menor de 1, habiendo sustituido obligatoriamente al R-134a en todos los vehículos nuevos europeos por exigencia de la Directiva MAC.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 46: ¿Qué oportunidad comercial estratégica o...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué oportunidad comercial estratégica ofrece a un taller electromecánico la homologación e instalación de kits de conversión a Autogás (GLP / GNC)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;La conversión a GLP de motores gasolina Euro 4 o superior permite tramitar el distintivo ambiental ECO de la DGT, reduciendo emisiones de NOx (-80%), partículas y permitiendo el acceso legal a ZBEs.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Permite suprimir legalmente el catalizador de tres vías y la sonda lambda sin pasar por la ITV.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La conversión a GLP de motores gasolina Euro 4 o superior permite tramitar el distintivo ambiental ECO de la DGT, reduciendo emisiones de NOx (-80%), partículas y permitiendo el acceso legal a ZBEs.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Exime al vehículo del pago del seguro obligatorio de responsabilidad civil de automóviles.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La conversión a GLP de motores gasolina Euro 4 o superior permite tramitar el distintivo ambiental ECO de la DGT, reduciendo emisiones de NOx (-80%), partículas y permitiendo el acceso legal a ZBEs.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Hace que el motor funcione sin necesidad de aceite lubricante en el cárter inferior.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. La conversión a GLP de motores gasolina Euro 4 o superior permite tramitar el distintivo ambiental ECO de la DGT, reduciendo emisiones de NOx (-80%), partículas y permitiendo el acceso legal a ZBEs.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Permite a turismos de gasolina matriculados a partir de 2006 (Euro 4 o superior) obtener el distintivo ambiental ECO de la DGT y acceder sin restricciones a las Zonas de Bajas Emisiones (ZBE).&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! La conversión a GLP de motores gasolina Euro 4 o superior permite tramitar el distintivo ambiental ECO de la DGT, reduciendo emisiones de NOx (-80%), partículas y permitiendo el acceso legal a ZBEs.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 47: ¿Qué Objetivo de Desarrollo Sostenible (...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;¿Qué Objetivo de Desarrollo Sostenible (ODS) y Reto de la Agenda 2030 constituye la base normativa de la economía circular (las 9R y la Norma UNE 26438 de recambios remanufacturados)?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;El Reto 8 y el ODS 12 constituyen el pilar directo de la economía circular, impulsando modelos de ciclo cerrado (Cradle to Cradle) y la extensión de vida útil de componentes mecánicos.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 2 (Hambre cero) y el Reto de biocombustibles agrícolas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 8 y el ODS 12 constituyen el pilar directo de la economía circular, impulsando modelos de ciclo cerrado (Cradle to Cradle) y la extensión de vida útil de componentes mecánicos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 5 (Igualdad de género) y el Reto de paridad en puestos directivos.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 8 y el ODS 12 constituyen el pilar directo de la economía circular, impulsando modelos de ciclo cerrado (Cradle to Cradle) y la extensión de vida útil de componentes mecánicos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;El ODS 8 (Trabajo decente) y el Reto de control de jornada por tacógrafo.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. El Reto 8 y el ODS 12 constituyen el pilar directo de la economía circular, impulsando modelos de ciclo cerrado (Cradle to Cradle) y la extensión de vida útil de componentes mecánicos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;El ODS 12 ('Producción y consumo sostenibles') y el Reto 8 ('Producir y consumir de forma sostenible'), que exige reducir a la mitad la generación de desechos mediante prevención, remanufactura y reciclaje.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! El Reto 8 y el ODS 12 constituyen el pilar directo de la economía circular, impulsando modelos de ciclo cerrado (Cradle to Cradle) y la extensión de vida útil de componentes mecánicos.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>Pregunta 48: Respecto al Reto 5 ('Gestionar el agua d...</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Respecto al Reto 5 ('Gestionar el agua de forma sostenible' - ODS 6) y el Límite Planetario de 'Consumo de agua dulce', ¿por qué el taller electromecánico debe almacenar anticongelantes (LER 16 01 14*) y líquido de frenos (LER 16 01 13*) en cubetos estancos de retención?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;Tanto el etilenglicol (anticongelante) como los poliglicoles (líquido de frenos) son extremadamente tóxicos para el medio acuático (ODS 6). Un vertido incontrolado contamina miles de metros cúbicos de agua dulce.&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque la evaporación de los glicoles atrae insectos que dañan el cableado del foso.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Tanto el etilenglicol (anticongelante) como los poliglicoles (líquido de frenos) son extremadamente tóxicos para el medio acuático (ODS 6). Un vertido incontrolado contamina miles de metros cúbicos de agua dulce.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque el etilenglicol reacciona con el aire ambiente convirtiéndose en gas helio inflamable.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Tanto el etilenglicol (anticongelante) como los poliglicoles (líquido de frenos) son extremadamente tóxicos para el medio acuático (ODS 6). Un vertido incontrolado contamina miles de metros cúbicos de agua dulce.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Porque el suelo del taller debe mantenerse húmedo para evitar descargas electrostáticas.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✗ Incorrecto. Tanto el etilenglicol (anticongelante) como los poliglicoles (líquido de frenos) son extremadamente tóxicos para el medio acuático (ODS 6). Un vertido incontrolado contamina miles de metros cúbicos de agua dulce.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;Porque los glicoles son contaminantes hidrológicos agudos que destruyen los lechos bacterianos de las depuradoras y pueden inutilizar acuíferos enteros de agua dulce para consumo humano.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text>&lt;p&gt;✓ ¡Correcto! Tanto el etilenglicol (anticongelante) como los poliglicoles (líquido de frenos) son extremadamente tóxicos para el medio acuático (ODS 6). Un vertido incontrolado contamina miles de metros cúbicos de agua dulce.&lt;/p&gt;</text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

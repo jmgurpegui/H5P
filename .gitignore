@@ -1,0 +1,19 @@
+# Archivo y backups históricos de cursos anteriores
+_archivo_cursos_anteriores/
+
+# Paquetes compilados generados
+*.h5p
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
