@@ -3,6 +3,7 @@ _archivo_cursos_anteriores/
 
 # Paquetes compilados generados
 *.h5p
+*.zip
 
 # Python
 __pycache__/
