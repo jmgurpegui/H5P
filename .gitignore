@@ -1,9 +1,12 @@
 # Archivo y backups históricos de cursos anteriores
 _archivo_cursos_anteriores/
 
-# Paquetes compilados generados
-*.h5p
-*.zip
+# Archivos de vídeo pesados (alojados en YouTube o Mediateca EducaMadrid según estándar)
+*.mp4
+*.webm
+*.mkv
+*.avi
+*.mov
 
 # Python
 __pycache__/
@@ -18,3 +21,15 @@ env/
 Thumbs.db
 .vscode/
 .idea/
+
+# Ficheros comprimidos temporales
+*.zip
+*.tar.gz
+
+# Paquetes .h5p temporales (se preservan los paquetes certificados precompilados)
+*.h5p
+!Plantilla_Curso_Modelo_EducaMadrid.h5p
+!Curso_Esquemas_Electricos_Automocion.h5p
+!plantilla/Plantilla_Curso_Modelo_EducaMadrid.h5p
+!EsquemasElectricosAutomocion/Curso_Esquemas_Electricos_Automocion.h5p
+!.agents/skills/h5p-educamadrid/examples/Plantilla_Curso_Modelo_EducaMadrid.h5p

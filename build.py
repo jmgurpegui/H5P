@@ -1,35 +1,72 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Compilador Maestro de Cursos H5P para EducaMadrid y Moodle.
-Ejecuta la compilación desde la plantilla modular:
-- Separación de Contenidos (HTML) y Evaluación (Moodle XML)
-- Formato InteractiveBook 1.7 + QuestionSet 1.20
-- Compatible 100% con teléfonos móviles y tablets (progressType: textual)
-- Sin opción de ver soluciones durante la realización del cuestionario
+Compilador y Validador Maestro de Cursos H5P para EducaMadrid y Moodle.
+Proporciona acceso unificado a los generadores certificados y al validador oficial.
 
 Uso:
-    python3 build.py                                # Compila plantilla_curso_h5p/curso_config.json
-    python3 build.py ruta/a/otro_curso_config.json  # Compila una configuración personalizada
+    python3 build.py                     # Compila y valida el curso modelo de la plantilla oficial
+    python3 build.py esquemas            # Compila y valida el curso de Interpretación de Esquemas Eléctricos
+    python3 build.py validar <pkg.h5p>   # Valida cualquier paquete H5P según normativa EducaMadrid
 """
 
 import os
 import sys
+import subprocess
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_DIR = os.path.join(BASE_DIR, "plantilla_curso_h5p")
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+PLANTILLA_DIR = os.path.join(ROOT_DIR, "plantilla")
+ESQUEMAS_DIR = os.path.join(ROOT_DIR, "EsquemasElectricosAutomocion")
+VALIDADOR = os.path.join(PLANTILLA_DIR, "validar_h5p_educamadrid.py")
 
-sys.path.insert(0, TEMPLATE_DIR)
+def compilar_plantilla():
+    print("=" * 60)
+    print(">>> Compilando Curso Modelo desde plantilla...")
+    print("=" * 60)
+    script = os.path.join(PLANTILLA_DIR, "generar_curso_plantilla.py")
+    ret = subprocess.call([sys.executable, script])
+    if ret != 0:
+        sys.exit(ret)
 
-from build_desde_plantilla import compilar_curso_desde_plantilla
+def compilar_esquemas():
+    print("=" * 60)
+    print(">>> Compilando Curso: Esquemas Eléctricos de Automoción...")
+    print("=" * 60)
+    script = os.path.join(ESQUEMAS_DIR, "generar_curso_esquemas.py")
+    ret = subprocess.call([sys.executable, script])
+    if ret != 0:
+        sys.exit(ret)
+
+def validar_paquete(paquete_path):
+    print("=" * 60)
+    print(f">>> Validando paquete H5P: {paquete_path}")
+    print("=" * 60)
+    ret = subprocess.call([sys.executable, VALIDADOR, paquete_path])
+    if ret != 0:
+        sys.exit(ret)
 
 def main():
-    config_file = sys.argv[1] if len(sys.argv) > 1 else os.path.join(TEMPLATE_DIR, "curso_config.json")
-    if not os.path.isfile(config_file):
-        print(f"Error: No se encontró el archivo de configuración: {config_file}")
+    if len(sys.argv) == 1:
+        compilar_plantilla()
+    elif sys.argv[1].lower() in ["plantilla", "modelo"]:
+        compilar_plantilla()
+    elif sys.argv[1].lower() in ["esquemas", "automocion"]:
+        compilar_esquemas()
+    elif sys.argv[1].lower() in ["todos", "all"]:
+        compilar_plantilla()
+        print("\n")
+        compilar_esquemas()
+    elif sys.argv[1].lower() in ["validar", "valida", "check"]:
+        if len(sys.argv) < 3:
+            print("Uso: python3 build.py validar <ruta_al_paquete.h5p>")
+            sys.exit(1)
+        validar_paquete(sys.argv[2])
+    elif sys.argv[1].endswith(".h5p"):
+        validar_paquete(sys.argv[1])
+    else:
+        print(f"Opción no reconocida: {sys.argv[1]}")
+        print(__doc__)
         sys.exit(1)
-
-    compilar_curso_desde_plantilla(config_file)
 
 if __name__ == "__main__":
     main()

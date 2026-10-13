@@ -1,0 +1,91 @@
+# Los 5 Pilares Pedagógicos de Aprendizaje Activo en H5P
+
+Este documento establece la metodología pedagógica obligatoria para el diseño de Unidades de Trabajo y cursos interactivos en **EducaMadrid** y entornos **Moodle**.
+
+---
+
+## Esquema General del Modelo de Aprendizaje Activo
+
+```
+[1. Participación Constante] ➔ [2. Andamiaje en 4 Fases] ➔ [3. Retroalimentación Explicada] ➔ [4. Gamificación Didáctica] ➔ [5. Trazabilidad xAPI en Moodle]
+```
+
+---
+
+## Pilar 1: Participación Constante del Estudiante y Enriquecimiento Multimedia
+
+### El Problema de la Lectura Pasiva
+Los contenidos virtuales que consisten en largos muros de texto estático o reproducción pasiva de vídeos lineales presentan bajas tasas de retención y desconexión cognitiva.
+
+### La Solución Activa
+En cada pantalla o sección del curso, el alumno debe interactuar directamente con el contenido:
+1. **Manipulación de Conceptos con Arrastre (`H5P.DragText 1.10`)**:
+   - El estudiante arrastra palabras, magnitudes o unidades para completar fórmulas o relaciones lógicas.
+   - Activa la memoria motriz y la toma activa de decisiones.
+2. **Imágenes Técnicas Enriquecidas (`H5P.ImageHotspots 1.10`)**:
+   - En lugar de esquemas estáticos, los diagramas de taller se enriquecen con puntos interactivos de inspección.
+   - El estudiante pulsa sobre componentes para explorar su función técnica, rangos de medición o precauciones.
+3. **Vídeos Interactivos con Paradas Reflexivas (`H5P.InteractiveVideo 1.27`)**:
+   - Vídeos alojados en la Mediateca de EducaMadrid con interrupciones automáticas que formulan preguntas clave antes de permitir continuar.
+
+---
+
+## Pilar 2: Estructuración Pedagógica Integrada (Andamiaje en 4 Fases)
+
+### Contenedor Unificado
+En lugar de dispersar recursos en el aula virtual de Moodle (un enlace web, un PDF, un foro y un cuestionario suelto), todo el itinerario se integra en un contenedor único y modular:
+* **`H5P.InteractiveBook 1.7`**: Contenedor principal con menú lateral de navegación y seguimiento de progreso.
+* **`H5P.Column 1.16`**: Contenedor obligatorio de cada capítulo o unidad temática.
+
+### La Secuencia Didáctica Progresiva en 4 Fases
+Cada capítulo o tema debe estructurarse obligatoriamente bajo esta progresión:
+
+1. **Fase 1: Presentación Motivadora y Activación de Conocimientos Previos**:
+   - Cabecera con insignia de módulo y banner destacado (`.tech-hero`).
+   - Reto detonante inicial o dinamización lúdica para activar los esquemas mentales previos del alumno.
+2. **Fase 2: Explicación Interactiva y Enriquecimiento**:
+   - Exposición técnica concisa (máximo 2-3 párrafos seguidos).
+   - Fórmulas matemáticas en HTML semántico + Unicode (<sub>, <sup>, `.tech-formula`).
+   - Recursos visuales enriquecidos con hotspots interactivos.
+3. **Fase 3: Práctica Guiada Activa y Exploración de Taller**:
+   - Actividades de arrastre de términos técnicos (`H5P.DragText`).
+   - Retos prácticos de taller y resolución de problemas reales (`.tech-challenge`).
+   - Listas de cotejo táctiles para verificación procedimental (`.tech-checklist`).
+   - Paneles colapsables (`H5P.Accordion`) para desglosar protocolos extensos.
+4. **Fase 4: Evaluación Formativa Reflexiva**:
+   - Pausa activa de comprensión (`.tech-checkpoint`).
+   - Autocomprobaciones formativas (`H5P.MultiChoice`, `H5P.TrueFalse`) con retroalimentación razonada inmediata.
+
+---
+
+## Pilar 3: Retroalimentación Inmediata y Explicada
+
+### Corrección Automática y Autorregulación
+El alumno comprueba sus respuestas al instante mediante el botón "Comprobar", recibiendo feedback en el momento exacto en que mantiene activa su hipótesis mental.
+
+### Justificación Pedagógica en Cada Opción
+Queda prohibido el feedback genérico ("Correcto" o "Incorrecto"):
+* **En la opción correcta**: Explica el principio físico, eléctrico o normativo que justifica técnicamente por qué es la solución idónea.
+* **En las opciones incorrectas**: Explica con precisión el error conceptual o de cálculo cometido (ej. *"Has calculado la potencia en lugar de la caída de tensión"*, *"Olvidaste atenuar la sonda de osciloscopio provocando sobretensión"*).
+* **Pistas orientativas (`tips`)**: Consejos pedagógicos previos que orientan la reflexión sin anticipar la respuesta.
+* **El Error como Palanca de Aprendizaje**: Configuración obligatoria con `enableRetry: true` y `enableSolutionsButton: true`.
+
+---
+
+## Pilar 4: Gamificación Estratégica con Propósito Didáctico
+
+* **Dinamización lúdica planificada**: Dinámicas de juego (arrastre de términos `DragText`, juegos de memoria `MemoryGame`, emparejamientos y crucigramas) diseñadas para activar la motivación y la agilidad mental.
+* **Integración curricular orgánica**: La gamificación no es un adorno superfluo; forma parte de los objetivos de la unidad (ej. identificar simbología normalizada en un tiempo límite o emparejar magnitudes con sus unidades de medida).
+
+---
+
+## Pilar 5: Integración con la Evaluación y Trazabilidad en Moodle
+
+### 1. Modalidad Didáctica Pura (Recomendada para Estudio y Taller)
+* Paquete H5P interactivo con autocomprobaciones formativas intercaladas para consulta y práctica activa autónoma en tablet/móvil.
+* La evaluación sumativa oficial se gestiona mediante cuestionarios nativos de Moodle generados con archivos **Moodle XML** (con preguntas prácticas, imágenes embebidas en base64 y retroalimentaciones justificadas).
+* **Ventaja**: No muestra pantallas de puntuación vacías ni bloquea el avance del alumno.
+
+### 2. Modalidad Sumativa con Trazabilidad xAPI Integrada
+* Paquete H5P con módulo `H5P.QuestionSet 1.20` en el último capítulo (con muestreo aleatorio `poolSize: 20` sobre una base de 50 preguntas).
+* Publicado obligatoriamente como **Actividad H5P Nativa** en Moodle (`mod_h5p`), conectando las sentencias xAPI (`completed`, `answered`, `score.raw`) directamente con la tabla del Calificador (`mdl_grade_grades`).
