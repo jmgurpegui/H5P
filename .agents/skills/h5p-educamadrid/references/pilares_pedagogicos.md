@@ -108,3 +108,6 @@ Para garantizar que el 100% de los alumnos registren su trabajo y cuenten con un
      - Persistencia directa en base de datos Moodle sin depender de iframes ni xAPI.
      - Guardado automático pregunta a pregunta, navegación libre/secuencial y límite de tiempo.
      - Registro garantizado en el Libro de Calificaciones (`Gradebook`) para el 100% de los estudiantes.
+   - **Normas de Redacción Psicométrica y Formato Limpio**:
+     - Prohibición de patrones o sesgo de longitud (*Length Bias*): la opción correcta no debe ser la más larga por defecto.
+     - **Sin etiquetas `<p>` ni `</p>` innecesarias (Norma Picuino / Test)**: Enunciados, respuestas y retroalimentaciones deben redactarse en texto limpio y directo sin etiquetas `<p>...</p>`, preservando únicamente marcado semántico inline (`<strong>`, `<sub>`, `<sup>`, `<code>`) cuando sea técnicamente imprescindible ([https://github.com/picuino/test](https://github.com/picuino/test)).

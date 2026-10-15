@@ -10,10 +10,10 @@
       <text>EE_P01_Metodologia_Cuatro_Estados</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Durante la diagnosis eléctrica de un circuito de inyección o alumbrado, ¿cuáles son los cuatro estados fundamentales que puede presentar un conductor o componente?&lt;/p&gt;]]></text>
+      <text><![CDATA[Durante la diagnosis eléctrica de un circuito de inyección o alumbrado, ¿cuáles son los cuatro estados fundamentales que puede presentar un conductor o componente?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;La metodología de los 4 estados es la base del diagnóstico técnico sin sustitución empírica de piezas.&lt;/p&gt;]]></text>
+      <text><![CDATA[La metodología de los 4 estados es la base del diagnóstico técnico sin sustitución empírica de piezas.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -51,10 +51,10 @@
       <text>EE_P02_Caida_Tension_Admisible</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En una línea de potencia de automoción (alimentación de bombas o relés), ¿cuál es la caída de tensión parásita máxima admisible bajo carga real de trabajo?&lt;/p&gt;]]></text>
+      <text><![CDATA[En una línea de potencia de automoción (alimentación de bombas o relés), ¿cuál es la caída de tensión parásita máxima admisible bajo carga real de trabajo?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Vcaída = I × R. Debe medirse siempre en circuito cerrado con los consumidores encendidos.&lt;/p&gt;]]></text>
+      <text><![CDATA[Vcaída = I × R. Debe medirse siempre en circuito cerrado con los consumidores encendidos.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -92,10 +92,10 @@
       <text>EE_P03_Tecnica_Back_Probing</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la técnica reglamentaria y segura para medir tensiones o señales con multímetro/osciloscopio en un conector sin dañar el cableado?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Cuál es la técnica reglamentaria y segura para medir tensiones o señales con multímetro/osciloscopio en un conector sin dañar el cableado?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El back-probing con agujas flexibles preserva la estanqueidad de los conectores modulares de automoción.&lt;/p&gt;]]></text>
+      <text><![CDATA[El back-probing con agujas flexibles preserva la estanqueidad de los conectores modulares de automoción.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -133,10 +133,10 @@
       <text>EE_P04_Borne_30_DIN</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Según la norma DIN 72552 de codificación de bornes en el automóvil, ¿qué indica el Borne 30?&lt;/p&gt;]]></text>
+      <text><![CDATA[Según la norma DIN 72552 de codificación de bornes en el automóvil, ¿qué indica el Borne 30?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Borne 30 = Positivo directo batería. En esquemas alemanes suele ser de color rojo (RT).&lt;/p&gt;]]></text>
+      <text><![CDATA[Borne 30 = Positivo directo batería. En esquemas alemanes suele ser de color rojo (RT).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -174,10 +174,10 @@
       <text>EE_P05_Borne_15_DIN</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué función cumple la línea señalizada como Borne 15 en los esquemas eléctricos normalizados?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Qué función cumple la línea señalizada como Borne 15 en los esquemas eléctricos normalizados?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Borne 15 = Positivo conmutado (+15). En esquemas alemanes suele ser negro (SW) o amarillo/negro.&lt;/p&gt;]]></text>
+      <text><![CDATA[Borne 15 = Positivo conmutado (+15). En esquemas alemanes suele ser negro (SW) o amarillo/negro.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -215,10 +215,10 @@
       <text>EE_P06_Borne_31_DIN</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué representa el Borne 31 en la normalización internacional de esquemas eléctricos?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Qué representa el Borne 31 en la normalización internacional de esquemas eléctricos?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Borne 31 = Retorno a masa. En fabricantes alemanes siempre se identifica con color marrón (BR).&lt;/p&gt;]]></text>
+      <text><![CDATA[Borne 31 = Retorno a masa. En fabricantes alemanes siempre se identifica con color marrón (BR).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -256,10 +256,10 @@
       <text>EE_P07_Borne_50_DIN</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Al girar la llave de contacto a la posición START (arranque), ¿qué borne DIN recibe alimentación temporal de excitación?&lt;/p&gt;]]></text>
+      <text><![CDATA[Al girar la llave de contacto a la posición START (arranque), ¿qué borne DIN recibe alimentación temporal de excitación?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Borne 50 = Mando de arranque activado por clausor o por relé gobernado por la ECU.&lt;/p&gt;]]></text>
+      <text><![CDATA[Borne 50 = Mando de arranque activado por clausor o por relé gobernado por la ECU.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -297,10 +297,10 @@
       <text>EE_P08_Borne_X_Accesorios</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué comportamiento característico tiene la línea de Borne X (o borne 75) en los vehículos modernos?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Qué comportamiento característico tiene la línea de Borne X (o borne 75) en los vehículos modernos?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Borne X / 75 = Línea de accesorios con descarga en arranque.&lt;/p&gt;]]></text>
+      <text><![CDATA[Borne X / 75 = Línea de accesorios con descarga en arranque.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -338,10 +338,10 @@
       <text>EE_P09_Rele_Bornes_Control</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En un relé electromagnético automotriz estándar de 4 o 5 patillas, ¿qué bornes corresponden a los extremos de la bobina de excitación?&lt;/p&gt;]]></text>
+      <text><![CDATA[En un relé electromagnético automotriz estándar de 4 o 5 patillas, ¿qué bornes corresponden a los extremos de la bobina de excitación?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;85 (generalmente masa o mando por transistor) y 86 (positivo de mando).&lt;/p&gt;]]></text>
+      <text><![CDATA[85 (generalmente masa o mando por transistor) y 86 (positivo de mando).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -379,10 +379,10 @@
       <text>EE_P10_Rele_Bornes_Potencia</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué bornes de un relé normalizado DIN conectan el circuito de potencia que alimenta directamente a los consumidores (faros, bomba de combustible, luneta térmica)?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Qué bornes de un relé normalizado DIN conectan el circuito de potencia que alimenta directamente a los consumidores (faros, bomba de combustible, luneta térmica)?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;30 = Entrada potencia / 87 = Salida normalmente abierta hacia consumidor.&lt;/p&gt;]]></text>
+      <text><![CDATA[30 = Entrada potencia / 87 = Salida normalmente abierta hacia consumidor.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -420,10 +420,10 @@
       <text>EE_P11_Diodo_Supresor_Transitorios</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la finalidad de instalar un diodo supresor de transitorios en paralelo inverso entre los bornes 85 y 86 de la bobina de un relé?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Cuál es la finalidad de instalar un diodo supresor de transitorios en paralelo inverso entre los bornes 85 y 86 de la bobina de un relé?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El diodo supresor es vital cuando los relés son excitados por módulos electrónicos (BCM, ECU, SAM).&lt;/p&gt;]]></text>
+      <text><![CDATA[El diodo supresor es vital cuando los relés son excitados por módulos electrónicos (BCM, ECU, SAM).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -461,10 +461,10 @@
       <text>EE_P12_Colorimetria_Alemana</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En la documentación técnica de fabricantes alemanes (Grupo VAG, BMW, Mercedes-Benz, Porsche), ¿qué significado tienen los colores de cable MARRÓN (BR / Braun) y ROJO (RT / Rot)?&lt;/p&gt;]]></text>
+      <text><![CDATA[En la documentación técnica de fabricantes alemanes (Grupo VAG, BMW, Mercedes-Benz, Porsche), ¿qué significado tienen los colores de cable MARRÓN (BR / Braun) y ROJO (RT / Rot)?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Marrón (BR) = Borne 31 (Masa). Rojo (RT) = Borne 30 (+ permanente).&lt;/p&gt;]]></text>
+      <text><![CDATA[Marrón (BR) = Borne 31 (Masa). Rojo (RT) = Borne 30 (+ permanente).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -502,10 +502,10 @@
       <text>EE_P13_Mercedes_Modulos_SAM</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En los esquemas de Mercedes-Benz, ¿qué designación reciben las cajas de fusibles y módulos inteligentes de adquisición de señales, y qué letra identifica los puntos de masa?&lt;/p&gt;]]></text>
+      <text><![CDATA[En los esquemas de Mercedes-Benz, ¿qué designación reciben las cajas de fusibles y módulos inteligentes de adquisición de señales, y qué letra identifica los puntos de masa?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Mercedes: SAM (Signal Acquisition Module), N = calculadores, W = masas, X = conectores.&lt;/p&gt;]]></text>
+      <text><![CDATA[Mercedes: SAM (Signal Acquisition Module), N = calculadores, W = masas, X = conectores.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -543,10 +543,10 @@
       <text>EE_P14_Ford_Nomenclatura_Circuitos</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En un esquema unifilar de Ford, en el código de cable '91-PG30A 0.75 BK/WH', ¿qué indican '0.75' y 'BK/WH'?&lt;/p&gt;]]></text>
+      <text><![CDATA[En un esquema unifilar de Ford, en el código de cable '91-PG30A 0.75 BK/WH', ¿qué indican '0.75' y 'BK/WH'?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Sección en mm² + Código de color en inglés internacional (BK=Black, WH=White, RD=Red, etc.).&lt;/p&gt;]]></text>
+      <text><![CDATA[Sección en mm² + Código de color en inglés internacional (BK=Black, WH=White, RD=Red, etc.).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -584,10 +584,10 @@
       <text>EE_P15_Renault_Sistema_Numerico</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la particularidad del sistema de numeración universal de componentes en los esquemas eléctricos de Renault?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Cuál es la particularidad del sistema de numeración universal de componentes en los esquemas eléctricos de Renault?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Renault: 120 = Inyección, 645 = UCH (habitáculo), 597 = UPC (motor), 103 = Alternador.&lt;/p&gt;]]></text>
+      <text><![CDATA[Renault: 120 = Inyección, 645 = UCH (habitáculo), 597 = UPC (motor), 103 = Alternador.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -625,10 +625,10 @@
       <text>EE_P16_Renault_Conectores_Colores</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En la documentación técnica de Renault, ¿qué indican las abreviaturas 'BA', 'GR', 'NO' y 'MR' al lado de un conector modular?&lt;/p&gt;]]></text>
+      <text><![CDATA[En la documentación técnica de Renault, ¿qué indican las abreviaturas 'BA', 'GR', 'NO' y 'MR' al lado de un conector modular?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;BA=Blanc, GR=Gris, NO=Noir, MR=Marron, JA=Jaune (Amarillo), VE=Vert (Verde), RG=Rouge (Rojo).&lt;/p&gt;]]></text>
+      <text><![CDATA[BA=Blanc, GR=Gris, NO=Noir, MR=Marron, JA=Jaune (Amarillo), VE=Vert (Verde), RG=Rouge (Rojo).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -666,10 +666,10 @@
       <text>EE_P17_BMW_ISTA_Conectores</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En el sistema de esquemas interactivos de BMW (ISTA / WDS), ¿con qué letra se identifican unívocamente todos los conectores eléctricos?&lt;/p&gt;]]></text>
+      <text><![CDATA[En el sistema de esquemas interactivos de BMW (ISTA / WDS), ¿con qué letra se identifican unívocamente todos los conectores eléctricos?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;BMW: X = Conectores (X13*1V, X11004), A = Centralitas, B = Sensores, Y = Actuador, F = Fusible, K = Relé.&lt;/p&gt;]]></text>
+      <text><![CDATA[BMW: X = Conectores (X13*1V, X11004), A = Centralitas, B = Sensores, Y = Actuador, F = Fusible, K = Relé.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -707,10 +707,10 @@
       <text>EE_P18_TF_Desconexion_Bateria_Masa</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Al desconectar la batería del vehículo antes de una intervención eléctrica compleja en el taller, debe retirarse siempre en primer lugar el borne NEGATIVO (-) para evitar riesgos de cortocircuito con la herramienta contra la carrocería.&lt;/p&gt;]]></text>
+      <text><![CDATA[Al desconectar la batería del vehículo antes de una intervención eléctrica compleja en el taller, debe retirarse siempre en primer lugar el borne NEGATIVO (-) para evitar riesgos de cortocircuito con la herramienta contra la carrocería.]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Regla de oro de seguridad en taller: Desconectar primero el negativo (-) / Conectar último el negativo (-).&lt;/p&gt;]]></text>
+      <text><![CDATA[Regla de oro de seguridad en taller: Desconectar primero el negativo (-) / Conectar último el negativo (-).]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -733,10 +733,10 @@
       <text>EE_P19_TF_Atenuacion_Sonda_Osciloscopio</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Al medir la señal de mando de un inyector inductivo common-rail o de gasolina con el osciloscopio, es obligatorio utilizar una sonda atenuadora 10:1 o 20:1 para proteger el canal de entrada contra picos inductivos que pueden superar los 80 V.&lt;/p&gt;]]></text>
+      <text><![CDATA[Al medir la señal de mando de un inyector inductivo common-rail o de gasolina con el osciloscopio, es obligatorio utilizar una sonda atenuadora 10:1 o 20:1 para proteger el canal de entrada contra picos inductivos que pueden superar los 80 V.]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Proteger siempre el osciloscopio con atenuador al medir inyectores, solenoides o electroválvulas PWM.&lt;/p&gt;]]></text>
+      <text><![CDATA[Proteger siempre el osciloscopio con atenuador al medir inyectores, solenoides o electroválvulas PWM.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -759,10 +759,10 @@
       <text>EE_P20_Matching_Bornes_DIN72552</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Relaciona cada borne normalizado según la norma DIN 72552 con su circuito correspondiente en el vehículo:&lt;/p&gt;]]></text>
+      <text><![CDATA[Relaciona cada borne normalizado según la norma DIN 72552 con su circuito correspondiente en el vehículo:]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;La normalización DIN 72552 es el lenguaje común de los esquemas eléctricos en todo el mundo.&lt;/p&gt;]]></text>
+      <text><![CDATA[La normalización DIN 72552 es el lenguaje común de los esquemas eléctricos en todo el mundo.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>

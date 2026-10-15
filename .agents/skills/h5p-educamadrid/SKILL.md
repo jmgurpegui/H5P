@@ -68,20 +68,21 @@ Diseña el contenido asegurando la participación constante del estudiante (cons
    - *Fase 4*: Evaluación formativa (preguntas con feedback razonado inmediato).
 3. **Retroalimentación explicada**: Toda opción de respuesta justifica técnicamente por qué es válida o en qué consiste el fallo (`chosenFeedback`).
 4. **Gamificación estratégica**: Dinamización lúdica integrada orgánicamente en el tema.
-71: 5. **Desacoplamiento Formativo H5P + Sumativo Moodle XML**:
-72:    - **Cursos H5P 100% Formativos**: Para evitar fallos en el registro de calificaciones ("No intentado" o pérdida de sentencias xAPI en móviles por bloqueo de cookies o iframes) y problemas de arrastre táctil en smartphones, **está prohibido incluir actividades puntuables o de arrastre (`MultiChoice`, `DragText`, `TrueFalse`, `QuestionSet`) dentro de los paquetes H5P de producción**.
-73:    - **Fase 4 de Andamiaje**: Concluye con un bloque didáctico de síntesis y derivación directa al Cuestionario Moodle XML (`create_moodle_quiz_referral`).
-74:    - **Finalización en Moodle**: El recurso H5P se configura con **"El estudiante debe ver esta actividad para completarla"** (100% fiable para todos los alumnos).
-75:    - **Evaluación Sumativa Oficial**: Se canaliza a través de **Cuestionarios Moodle (`mod_quiz`)** a partir del banco de preguntas XML generado con `moodle_xml_builder.py`.
-76:    - **Regla Psicométrica contra Patrones y Sesgo de Longitud (*Length Bias*)**:
-77:      * Queda estrictamente prohibido que la respuesta correcta sea sistemáticamente la más extensa o detallada.
-78:      * La opción correcta y los distractores deben mantener una longitud y estructura sintáctica homogénea (±15-20% de caracteres).
-79:      * Alternar deliberadamente qué alternativa es la más larga o concisa (en algunas preguntas la correcta debe ser la más breve; en otras, los distractores deben ser más desarrollados).
-80:      * Los distractores deben poseer alta plausibilidad y rigor técnico idéntico a la correcta.
-81:      * Las justificaciones explicativas pertenecen a la retroalimentación (`<feedback>`), no al cuerpo de la alternativa (`<answer>`).
-82:      * Activar siempre `<shuffleanswers>1</shuffleanswers>` y alternar la posición de las claves de respuesta.
-83: 
-84: ### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
+5. **Desacoplamiento Formativo H5P + Sumativo Moodle XML**:
+   - **Cursos H5P 100% Formativos**: Para evitar fallos en el registro de calificaciones ("No intentado" o pérdida de sentencias xAPI en móviles por bloqueo de cookies o iframes) y problemas de arrastre táctil en smartphones, **está prohibido incluir actividades puntuables o de arrastre (`MultiChoice`, `DragText`, `TrueFalse`, `QuestionSet`) dentro de los paquetes H5P de producción**.
+   - **Fase 4 de Andamiaje**: Concluye con un bloque didáctico de síntesis y derivación directa al Cuestionario Moodle XML (`create_moodle_quiz_referral`).
+   - **Finalización en Moodle**: El recurso H5P se configura con **"El estudiante debe ver esta actividad para completarla"** (100% fiable para todos los alumnos).
+   - **Evaluación Sumativa Oficial**: Se canaliza a través de **Cuestionarios Moodle (`mod_quiz`)** a partir del banco de preguntas XML generado con `moodle_xml_builder.py`.
+   - **Regla Psicométrica contra Patrones y Sesgo de Longitud (*Length Bias*)**:
+     * Queda estrictamente prohibido que la respuesta correcta sea sistemáticamente la más extensa o detallada.
+     * La opción correcta y los distractores deben mantener una longitud y estructura sintáctica homogénea (±15-20% de caracteres).
+     * Alternar deliberadamente qué alternativa es la más larga o concisa (en algunas preguntas la correcta debe ser la más breve; en otras, los distractores deben ser más desarrollados).
+     * Los distractores deben poseer alta plausibilidad y rigor técnico idéntico a la correcta.
+     * Las justificaciones explicativas pertenecen a la retroalimentación (`<feedback>`), no al cuerpo de la alternativa (`<answer>`).
+     * Activar siempre `<shuffleanswers>1</shuffleanswers>` y alternar la posición de las claves de respuesta.
+     * **Sin etiquetas `<p>` ni `</p>` innecesarias (Norma Picuino / Test)**: Las preguntas de test XML no necesitan `<p>` ni `</p>`. El texto del enunciado (`<questiontext>`), opciones (`<answer>`) y retroalimentaciones (`<feedback>`) deben redactarse en texto limpio y directo sin envoltorios `<p>...</p>`, preservando únicamente formato inline (`<strong>`, `<sub>`, `<sup>`, `<code>`) cuando sea técnicamente indispensable (referencia técnica: [https://github.com/picuino/test](https://github.com/picuino/test)).
+
+### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
 85: Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):
 86: * **Whitelist estricta**: Cero archivos `.html` y cero `.svg` en `content/`. Diagramas rasterizados a **PNG** o **JPEG**.
 87: * **Fórmulas sin LaTeX**: Prohibido usar `$ ... $`. Usar HTML semántico y Unicode (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).

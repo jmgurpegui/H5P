@@ -13,6 +13,10 @@
    - Las explicaciones detalladas y razonadas pertenecen a la etiqueta `<feedback>`, no al texto visible de la opción `<answer>`.
 4. **Aleatorización**:
    - Activar siempre `<shuffleanswers>1</shuffleanswers>` y alternar la posición de la respuesta correcta en el archivo XML.
+5. **Sin etiquetas `<p>` y `</p>` innecesarias (Norma Picuino / Test)**:
+   - Las preguntas de test XML no necesitan `<p>` ni `</p>`.
+   - El texto del enunciado (`<questiontext>`), opciones de respuesta (`<answer>`) y retroalimentaciones (`<feedback>`) deben redactarse en texto limpio y directo sin envoltorios `<p>...</p>`, evitando espaciados y desajustes visuales indeseados en la interfaz de Moodle. Se preserva únicamente marcado semántico inline (`<strong>`, `<sub>`, `<sup>`, `<code>`) cuando sea técnicamente imprescindible.
+   - Norma técnica oficial de referencia: https://github.com/picuino/test.
 
 ## Cursos H5P 100% Formativos y Desacoplados (Arquitectura Oficial EducaMadrid)
 

@@ -128,6 +128,8 @@ Para garantizar que **el 100% de los alumnos registre la realización de los con
    * **Plausibilidad de distractores**: Los distractores deben formularse con el mismo nivel de rigor técnico y estructura sintáctica.
    * **Aislamiento de la justificación**: Las explicaciones detalladas deben ubicarse en la etiqueta `<feedback>`, no en el texto de la opción `<answer>`.
    * **Barajado**: Usar `<shuffleanswers>1</shuffleanswers>` y alternar las posiciones de las opciones en el XML.
+   * **Sin etiquetas `<p>` ni `</p>` innecesarias (Norma Picuino / Test)**:
+     Las preguntas de test XML no necesitan `<p>` ni `</p>`. El texto del enunciado (`<questiontext>`), opciones de respuesta (`<answer>`) y retroalimentaciones (`<feedback>`) deben redactarse en texto limpio y directo sin envoltorios `<p>...</p>`, evitando espaciados y desajustes visuales indeseados en la interfaz de Moodle (referencia técnica oficial: [https://github.com/picuino/test](https://github.com/picuino/test)). Se preserva únicamente marcado semántico inline (`<strong>`, `<sub>`, `<sup>`, `<code>`) cuando sea técnicamente imprescindible.
 
 ---
 
@@ -332,3 +334,4 @@ El validador de Moodle XML certifica:
 2. Opciones de respuesta con fracciones equilibradas (100% en correctas).
 3. Retroalimentación pedagógica explicada para aciertos y fallos.
 4. Control psicométrico de sesgo de longitud (auditoría de homogeneidad y alerta si la opción correcta es sistemáticamente la más extensa).
+5. Limpieza de etiquetas `<p>` y `</p>` redundantes según la norma [https://github.com/picuino/test](https://github.com/picuino/test).

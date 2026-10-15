@@ -10,10 +10,10 @@
       <text>P01_Desacoplamiento_Evaluacion</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.&lt;/p&gt;]]></text>
+      <text><![CDATA[El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -51,10 +51,10 @@
       <text>P02_Contraste_WCAG_AAA</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?&lt;/p&gt;]]></text>
+      <text><![CDATA[Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo.&lt;/p&gt;]]></text>
+      <text><![CDATA[El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -92,10 +92,10 @@
       <text>P03_Whitelist_Moodle_Seguridad</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.&lt;/p&gt;]]></text>
+      <text><![CDATA[H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -133,10 +133,10 @@
       <text>P04_Andamiaje_Cuatro_Fases</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua.&lt;/p&gt;]]></text>
+      <text><![CDATA[El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -174,10 +174,10 @@
       <text>P05_Touch_Targets_Moviles</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?&lt;/p&gt;]]></text>
+      <text><![CDATA[Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets &gt;= 44x44 px.&lt;/p&gt;]]></text>
+      <text><![CDATA[Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets &gt;= 44x44 px.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -215,10 +215,10 @@
       <text>P06_Formulas_HTML_Semantico</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla.&lt;/p&gt;]]></text>
+      <text><![CDATA[El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -256,10 +256,10 @@
       <text>P07_TF_Inyeccion_Estilos_CSS</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Es una práctica correcta insertar etiquetas &amp;lt;style&amp;gt; dentro de los bloques de contenido de H5P para aplicar estilos personalizados?&lt;/p&gt;]]></text>
+      <text><![CDATA[¿Es una práctica correcta insertar etiquetas &amp;lt;style&amp;gt; dentro de los bloques de contenido de H5P para aplicar estilos personalizados?]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;La inyección en librerías base previene fugas de código y unifica el tema visual.&lt;/p&gt;]]></text>
+      <text><![CDATA[La inyección en librerías base previene fugas de código y unifica el tema visual.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -282,10 +282,10 @@
       <text>P08_TF_Menu_Table_Of_Contents_Movil</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Para optimizar la visualización en dispositivos móviles, se recomienda configurar 'defaultTableOfContents: false' en InteractiveBook para evitar que el índice lateral cubra el contenido al abrir el curso.&lt;/p&gt;]]></text>
+      <text><![CDATA[Para optimizar la visualización en dispositivos móviles, se recomienda configurar 'defaultTableOfContents: false' en InteractiveBook para evitar que el índice lateral cubra el contenido al abrir el curso.]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas.&lt;/p&gt;]]></text>
+      <text><![CDATA[El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -308,10 +308,10 @@
       <text>P09_TF_Error_Como_Palanca</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.&lt;/p&gt;]]></text>
+      <text><![CDATA[En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento.&lt;/p&gt;]]></text>
+      <text><![CDATA[La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -334,10 +334,10 @@
       <text>P10_Emparejamiento_Fases_Andamiaje</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:&lt;/p&gt;]]></text>
+      <text><![CDATA[Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa.&lt;/p&gt;]]></text>
+      <text><![CDATA[Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa.]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>

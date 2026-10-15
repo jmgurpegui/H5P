@@ -732,7 +732,7 @@ def generar_evaluacion_modelo_xml(output_xml_path):
     # P1: Desacoplamiento de H5P y XML (Opciones equilibradas ~100-130 caracteres)
     builder.add_multichoice(
         "P01_Desacoplamiento_Evaluacion",
-        "<p>¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?</p>",
+        "¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?",
         [
             {
                 "text": "Garantizar el registro infalible en Moodle y evitar pérdidas de sentencias xAPI o bloqueos en móviles.",
@@ -755,13 +755,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "Incorrecto. Aunque el XML es ligero, el motivo primordial es la robustez en el registro de calificaciones (mdl_grade_grades)."
             }
         ],
-        general_feedback="<p>El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.</p>"
+        general_feedback="El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle."
     )
 
     # P2: Contraste WCAG 2.1 AAA (Opciones equilibradas ~80-100 caracteres)
     builder.add_multichoice(
         "P02_Contraste_WCAG_AAA",
-        "<p>Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?</p>",
+        "Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?",
         [
             {
                 "text": "Al menos 7:1 para garantizar lectura sin fatiga visual en cualquier soporte.",
@@ -784,13 +784,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "Incorrecto. El contraste debe certificarse matemáticamente mediante luminancia relativa."
             }
         ],
-        general_feedback="<p>El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo.</p>"
+        general_feedback="El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo."
     )
 
     # P3: Whitelist de Moodle (Distractor más largo ~61 caracteres, correcta ~54 caracteres)
     builder.add_multichoice(
         "P03_Whitelist_Moodle_Seguridad",
-        "<p>¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?</p>",
+        "¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?",
         [
             {
                 "text": "Archivos vectoriales .svg y documentos locales .html.",
@@ -813,13 +813,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "Incorrecto. content.json es el núcleo semántico indispensable del paquete H5P."
             }
         ],
-        general_feedback="<p>H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.</p>"
+        general_feedback="H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial."
     )
 
     # P4: Andamiaje pedagógico (Opciones equilibradas ~80-100 caracteres)
     builder.add_multichoice(
         "P04_Andamiaje_Cuatro_Fases",
-        "<p>¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?</p>",
+        "¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?",
         [
             {
                 "text": "1. Motivación activa ➔ 2. Explicación ➔ 3. Práctica guiada ➔ 4. Autocomprobación.",
@@ -842,13 +842,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "Incorrecto. Este enfoque fragmentado dispersa la atención del estudiante; el modelo oficial unifica la secuencia."
             }
         ],
-        general_feedback="<p>El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua.</p>"
+        general_feedback="El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua."
     )
 
     # P5: Touch targets en dispositivos móviles (Correcta es la más corta ~62 caracteres, distractores ~74 caracteres)
     builder.add_multichoice(
         "P05_Touch_Targets_Moviles",
-        "<p>Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?</p>",
+        "Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?",
         [
             {
                 "text": "44 x 44 píxeles como dimensión ergonómica mínima (WCAG 2.5.5).",
@@ -871,13 +871,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes del texto."
             }
         ],
-        general_feedback="<p>Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets >= 44x44 px.</p>"
+        general_feedback="Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets >= 44x44 px."
     )
 
     # P6: Fórmulas matemáticas (Distractores más largos ~103 caracteres, correcta ~101 caracteres)
     builder.add_multichoice(
         "P06_Formulas_HTML_Semantico",
-        "<p>¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?</p>",
+        "¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?",
         [
             {
                 "text": "Porque H5P.AdvancedText no incorpora MathJax por defecto y mostraría el código fuente sin formatear.",
@@ -900,50 +900,50 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "Incorrecto. El texto plano no añade peso, el fallo es puramente visual y de renderizado."
             }
         ],
-        general_feedback="<p>El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla.</p>"
+        general_feedback="El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla."
     )
 
     # P7: Verdadero / Falso - Inyección de estilos
     builder.add_truefalse(
         "P07_TF_Inyeccion_Estilos_CSS",
-        "<p>¿Es una práctica correcta insertar etiquetas &lt;style&gt; dentro de los bloques de contenido de H5P para aplicar estilos personalizados?</p>",
+        "¿Es una práctica correcta insertar etiquetas &lt;style&gt; dentro de los bloques de contenido de H5P para aplicar estilos personalizados?",
         False,
         feedback_true="Incorrecto. El sanitizador de H5P elimina las etiquetas &lt;style&gt; pero expone el código CSS como texto plano residual visible en pantalla (CSS leakage).",
         feedback_false="¡Correcto! Es falso. Los estilos accesibles deben inyectarse limpiamente en las hojas de estilo de las librerías base (h5p-interactive-book.css y h5p-column.css).",
-        general_feedback="<p>La inyección en librerías base previene fugas de código y unifica el tema visual.</p>"
+        general_feedback="La inyección en librerías base previene fugas de código y unifica el tema visual."
     )
 
     # P8: Verdadero / Falso - Menú en móviles
     builder.add_truefalse(
         "P08_TF_Menu_Table_Of_Contents_Movil",
-        "<p>Para optimizar la visualización en dispositivos móviles, se recomienda configurar 'defaultTableOfContents: false' en InteractiveBook para evitar que el índice lateral cubra el contenido al abrir el curso.</p>",
+        "Para optimizar la visualización en dispositivos móviles, se recomienda configurar 'defaultTableOfContents: false' en InteractiveBook para evitar que el índice lateral cubra el contenido al abrir el curso.",
         True,
         feedback_true="¡Correcto! Al configurar defaultTableOfContents: false, el estudiante ve directamente la portada y el tema en su teléfono, pudiendo desplegar el menú táctilmente cuando lo desee.",
         feedback_false="Incorrecto. Si defaultTableOfContents es true, el menú ocupa toda la pantalla en smartphones y bloquea la visualización del contenido.",
-        general_feedback="<p>El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas.</p>"
+        general_feedback="El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas."
     )
 
     # P9: Verdadero / Falso - El error formativo
     builder.add_truefalse(
         "P09_TF_Error_Como_Palanca",
-        "<p>En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.</p>",
+        "En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.",
         True,
         feedback_true="¡Correcto! El Aprendizaje Activo convierte el error en una oportunidad formativa y no en un elemento punitivo.",
         feedback_false="Incorrecto. Bloquear reintentos en actividades formativas genera frustración y contradice los pilares pedagógicos.",
-        general_feedback="<p>La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento.</p>"
+        general_feedback="La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento."
     )
 
     # P10: Emparejamiento - Fases del Andamiaje
     builder.add_matching(
         "P10_Emparejamiento_Fases_Andamiaje",
-        "<p>Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:</p>",
+        "Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:",
         [
             ("Fase 1: Activación y Motivación", "Reto detonante inicial y cabecera institucional (.tech-hero)"),
             ("Fase 2: Explicación Interactiva", "Teoría concisa, fórmulas semánticas y puntos de inspección (ImageHotspots)"),
             ("Fase 3: Práctica Guiada Activa", "Arrastre de magnitudes (DragText), retos de taller y checklists táctiles"),
             ("Fase 4: Evaluación Formativa", "Autocomprobación con retroalimentación razonada inmediata (.tech-checkpoint)")
         ],
-        general_feedback="<p>Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa.</p>"
+        general_feedback="Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa."
     )
 
     builder.save_xml(output_xml_path)

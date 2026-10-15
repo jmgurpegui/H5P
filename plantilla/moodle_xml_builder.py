@@ -18,6 +18,22 @@ from xml.dom import minidom
 import html
 import re
 
+def strip_outer_p(text):
+    """
+    Elimina etiquetas <p> y </p> innecesarias que envuelven enunciados, opciones o retroalimentación.
+    Norma técnica oficial (https://github.com/picuino/test):
+    Las preguntas de test XML no necesitan <p> y </p>.
+    """
+    if not text:
+        return ""
+    text = str(text).strip()
+    match = re.match(r'^\s*<p>(.*)</p>\s*$', text, flags=re.DOTALL | re.IGNORECASE)
+    if match:
+        inner = match.group(1).strip()
+        if "<p>" not in inner.lower() and "</p>" not in inner.lower():
+            return inner
+    return text
+
 class MoodleXMLBuilder:
     """Constructor programático de bancos de preguntas Moodle XML."""
 
@@ -41,9 +57,16 @@ class MoodleXMLBuilder:
         self.questions.append({
             "type": "multichoice",
             "name": name,
-            "text": question_text,
-            "options": options,
-            "general_feedback": general_feedback,
+            "text": strip_outer_p(question_text),
+            "options": [
+                {
+                    "text": strip_outer_p(opt.get("text", "")),
+                    "fraction": opt.get("fraction", 0),
+                    "feedback": strip_outer_p(opt.get("feedback", ""))
+                }
+                for opt in options
+            ],
+            "general_feedback": strip_outer_p(general_feedback),
             "single": single,
             "shuffle": shuffle,
             "penalty": penalty
@@ -54,11 +77,11 @@ class MoodleXMLBuilder:
         self.questions.append({
             "type": "truefalse",
             "name": name,
-            "text": question_text,
+            "text": strip_outer_p(question_text),
             "is_correct": bool(is_correct),
-            "feedback_true": feedback_true,
-            "feedback_false": feedback_false,
-            "general_feedback": general_feedback
+            "feedback_true": strip_outer_p(feedback_true),
+            "feedback_false": strip_outer_p(feedback_false),
+            "general_feedback": strip_outer_p(general_feedback)
         })
 
     def add_matching(self, name, question_text, pairs, general_feedback="", shuffle=True):
@@ -69,9 +92,9 @@ class MoodleXMLBuilder:
         self.questions.append({
             "type": "matching",
             "name": name,
-            "text": question_text,
-            "pairs": pairs,
-            "general_feedback": general_feedback,
+            "text": strip_outer_p(question_text),
+            "pairs": [(strip_outer_p(c), strip_outer_p(a)) for c, a in pairs],
+            "general_feedback": strip_outer_p(general_feedback),
             "shuffle": shuffle
         })
 
@@ -94,15 +117,17 @@ class MoodleXMLBuilder:
             name_text = ET.SubElement(name_elem, "text")
             name_text.text = q["name"]
 
-            # Enunciado (HTML semántico)
+            # Enunciado (sin <p> innecesarios según https://github.com/picuino/test)
+            clean_q_text = strip_outer_p(q['text'])
             qt_elem = ET.SubElement(q_elem, "questiontext", format="html")
             qt_text = ET.SubElement(qt_elem, "text")
-            qt_text.text = f"<![CDATA[{q['text']}]]>"
+            qt_text.text = f"<![CDATA[{clean_q_text}]]>"
 
             # Retroalimentación general
+            clean_gf = strip_outer_p(q.get('general_feedback', ''))
             gf_elem = ET.SubElement(q_elem, "generalfeedback", format="html")
             gf_text = ET.SubElement(gf_elem, "text")
-            gf_text.text = f"<![CDATA[{q.get('general_feedback', '')}]]>"
+            gf_text.text = f"<![CDATA[{clean_gf}]]>" if clean_gf else ""
 
             # Configuración específica por tipo
             if q["type"] == "multichoice":
@@ -117,11 +142,13 @@ class MoodleXMLBuilder:
                     frac = str(opt.get("fraction", 0))
                     ans_elem = ET.SubElement(q_elem, "answer", fraction=frac, format="html")
                     ans_text = ET.SubElement(ans_elem, "text")
-                    ans_text.text = f"<![CDATA[{opt['text']}]]>"
+                    clean_opt = strip_outer_p(opt['text'])
+                    ans_text.text = f"<![CDATA[{clean_opt}]]>"
                     
                     fb_elem = ET.SubElement(ans_elem, "feedback", format="html")
                     fb_text = ET.SubElement(fb_elem, "text")
-                    fb_text.text = f"<![CDATA[{opt.get('feedback', '')}]]>"
+                    clean_fb = strip_outer_p(opt.get('feedback', ''))
+                    fb_text.text = f"<![CDATA[{clean_fb}]]>" if clean_fb else ""
 
             elif q["type"] == "truefalse":
                 ET.SubElement(q_elem, "defaultgrade").text = "1.0000000"
@@ -132,13 +159,15 @@ class MoodleXMLBuilder:
                 ans_true = ET.SubElement(q_elem, "answer", fraction="100" if q["is_correct"] else "0", format="moodle_auto_format")
                 ET.SubElement(ans_true, "text").text = "true"
                 fb_true = ET.SubElement(ans_true, "feedback", format="html")
-                ET.SubElement(fb_true, "text").text = f"<![CDATA[{q.get('feedback_true', '')}]]>"
+                clean_fb_t = strip_outer_p(q.get('feedback_true', ''))
+                ET.SubElement(fb_true, "text").text = f"<![CDATA[{clean_fb_t}]]>" if clean_fb_t else ""
 
                 # Opción False
                 ans_false = ET.SubElement(q_elem, "answer", fraction="0" if q["is_correct"] else "100", format="moodle_auto_format")
                 ET.SubElement(ans_false, "text").text = "false"
                 fb_false = ET.SubElement(ans_false, "feedback", format="html")
-                ET.SubElement(fb_false, "text").text = f"<![CDATA[{q.get('feedback_false', '')}]]>"
+                clean_fb_f = strip_outer_p(q.get('feedback_false', ''))
+                ET.SubElement(fb_false, "text").text = f"<![CDATA[{clean_fb_f}]]>" if clean_fb_f else ""
 
             elif q["type"] == "matching":
                 ET.SubElement(q_elem, "defaultgrade").text = "1.0000000"
@@ -149,9 +178,11 @@ class MoodleXMLBuilder:
                 for concept, answer in q["pairs"]:
                     sub_elem = ET.SubElement(q_elem, "subquestion", format="html")
                     sub_text = ET.SubElement(sub_elem, "text")
-                    sub_text.text = f"<![CDATA[{concept}]]>"
+                    clean_concept = strip_outer_p(concept)
+                    sub_text.text = f"<![CDATA[{clean_concept}]]>"
                     ans_elem = ET.SubElement(sub_elem, "answer")
-                    ET.SubElement(ans_elem, "text").text = answer
+                    clean_ans = strip_outer_p(answer)
+                    ET.SubElement(ans_elem, "text").text = clean_ans
 
         rough_string = ET.tostring(quiz, encoding="utf-8")
         # Deshacer escape de CDATA generado por ElementTree
@@ -219,6 +250,7 @@ def validar_moodle_xml(xml_path):
     tipos_detectados = {}
     multichoice_count = 0
     correct_is_longest_count = 0
+    redundant_p_count = 0
 
     for idx, q in enumerate(eval_questions, 1):
         q_type = q.get("type")
@@ -230,6 +262,10 @@ def validar_moodle_xml(xml_path):
         q_text = q.find("questiontext/text")
         if q_text is None or not (q_text.text or "").strip():
             errores.append(f"Pregunta #{idx} ('{q_name}'): Enunciado vacío.")
+        else:
+            raw_qt = q_text.text.replace("<![CDATA[", "").replace("]]>", "").strip()
+            if raw_qt.startswith("<p>") and raw_qt.endswith("</p>") and raw_qt.count("<p>") == 1:
+                redundant_p_count += 1
 
         # Validación por tipo
         if q_type == "multichoice":
@@ -241,8 +277,18 @@ def validar_moodle_xml(xml_path):
             if not any(f >= 99.9 for f in fracciones):
                 errores.append(f"Pregunta #{idx} ('{q_name}'): No tiene ninguna opción correcta con fracción 100%.")
 
-            # Feedback de aprendizaje activo
-            sin_feedback = [a for a in answers if a.find("feedback/text") is None or not (a.find("feedback/text").text or "").strip()]
+            # Feedback de aprendizaje activo y control de <p>
+            sin_feedback = []
+            for a in answers:
+                fb_node = a.find("feedback/text")
+                if fb_node is None or not (fb_node.text or "").strip():
+                    sin_feedback.append(a)
+                txt_node = a.find("text")
+                if txt_node is not None and txt_node.text:
+                    raw_a = txt_node.text.replace("<![CDATA[", "").replace("]]>", "").strip()
+                    if raw_a.startswith("<p>") and raw_a.endswith("</p>") and raw_a.count("<p>") == 1:
+                        redundant_p_count += 1
+
             if sin_feedback:
                 advertencias.append(f"Pregunta #{idx} ('{q_name}'): {len(sin_feedback)} opción(es) sin feedback razonado.")
 
@@ -274,6 +320,10 @@ def validar_moodle_xml(xml_path):
                 errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 2 pares de emparejamiento.")
 
     print(f"✓ Tipos de preguntas certificados: {tipos_detectados}")
+    if redundant_p_count == 0:
+        print(f"✓ Formato XML limpio (sin <p> ni </p> redundantes, norma https://github.com/picuino/test): Certificado.")
+    else:
+        advertencias.append(f"Se detectaron {redundant_p_count} etiquetas <p>...</p> redundantes en el XML. En preguntas de test XML no se necesitan etiquetas <p> y </p> (norma https://github.com/picuino/test).")
 
     # Reporte psicométrico de sesgo de longitud
     if multichoice_count > 0:
