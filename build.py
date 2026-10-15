@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Compilador y Validador Maestro de Cursos H5P para EducaMadrid y Moodle.
-Proporciona acceso unificado a los generadores certificados y al validador oficial.
+Compilador y Validador Maestro de Cursos H5P y Evaluación Moodle XML para EducaMadrid.
+Proporciona acceso unificado a los generadores certificados, temas responsive y validadores.
 
 Uso:
-    python3 build.py                     # Compila y valida el curso modelo de la plantilla oficial
-    python3 build.py esquemas            # Compila y valida el curso de Interpretación de Esquemas Eléctricos
-    python3 build.py validar <pkg.h5p>   # Valida cualquier paquete H5P según normativa EducaMadrid
+    python3 build.py                     # Compila y valida el curso modelo H5P y su banco Moodle XML
+    python3 build.py esquemas            # Compila y valida el curso de Esquemas Eléctricos y su XML
+    python3 build.py todos               # Compila y valida todos los cursos del repositorio
+    python3 build.py xml                 # Valida todos los bancos de preguntas Moodle XML
+    python3 build.py css                 # Inyecta limpiamente los estilos responsive en librerías base
+    python3 build.py validar <pkg.h5p>   # Valida un paquete H5P según normativa EducaMadrid
+    python3 build.py validar <banco.xml> # Valida un banco Moodle XML oficial
 """
 
 import os
@@ -17,11 +21,13 @@ import subprocess
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 PLANTILLA_DIR = os.path.join(ROOT_DIR, "plantilla")
 ESQUEMAS_DIR = os.path.join(ROOT_DIR, "EsquemasElectricosAutomocion")
-VALIDADOR = os.path.join(PLANTILLA_DIR, "validar_h5p_educamadrid.py")
+VALIDADOR_H5P = os.path.join(PLANTILLA_DIR, "validar_h5p_educamadrid.py")
+VALIDADOR_XML = os.path.join(PLANTILLA_DIR, "moodle_xml_builder.py")
+INJECT_CSS = os.path.join(PLANTILLA_DIR, "append_css_to_libraries.py")
 
 def compilar_plantilla():
     print("=" * 60)
-    print(">>> Compilando Curso Modelo desde plantilla...")
+    print(">>> Compilando Curso Modelo y Banco Moodle XML (Plantilla)...")
     print("=" * 60)
     script = os.path.join(PLANTILLA_DIR, "generar_curso_plantilla.py")
     ret = subprocess.call([sys.executable, script])
@@ -30,20 +36,46 @@ def compilar_plantilla():
 
 def compilar_esquemas():
     print("=" * 60)
-    print(">>> Compilando Curso: Esquemas Eléctricos de Automoción...")
+    print(">>> Compilando Curso y Banco Moodle XML: Esquemas Eléctricos...")
     print("=" * 60)
     script = os.path.join(ESQUEMAS_DIR, "generar_curso_esquemas.py")
     ret = subprocess.call([sys.executable, script])
     if ret != 0:
         sys.exit(ret)
 
-def validar_paquete(paquete_path):
+def inyectar_css():
+    print("=" * 60)
+    print(">>> Inyectando estilos responsive oficiales en librerías base...")
+    print("=" * 60)
+    ret = subprocess.call([sys.executable, INJECT_CSS])
+    if ret != 0:
+        sys.exit(ret)
+
+def validar_paquete_h5p(paquete_path):
     print("=" * 60)
     print(f">>> Validando paquete H5P: {paquete_path}")
     print("=" * 60)
-    ret = subprocess.call([sys.executable, VALIDADOR, paquete_path])
+    ret = subprocess.call([sys.executable, VALIDADOR_H5P, paquete_path])
     if ret != 0:
         sys.exit(ret)
+
+def validar_banco_xml(xml_path):
+    print("=" * 60)
+    print(f">>> Validando Banco Moodle XML: {xml_path}")
+    print("=" * 60)
+    ret = subprocess.call([sys.executable, VALIDADOR_XML, xml_path])
+    if ret != 0:
+        sys.exit(ret)
+
+def validar_todos_xml():
+    xml_files = [
+        os.path.join(PLANTILLA_DIR, "evaluacion_modelo_moodle.xml"),
+        os.path.join(ESQUEMAS_DIR, "evaluacion_esquemas_electricos.xml")
+    ]
+    for xf in xml_files:
+        if os.path.exists(xf):
+            validar_banco_xml(xf)
+            print("")
 
 def main():
     if len(sys.argv) == 1:
@@ -56,13 +88,23 @@ def main():
         compilar_plantilla()
         print("\n")
         compilar_esquemas()
+    elif sys.argv[1].lower() in ["xml", "evaluacion"]:
+        validar_todos_xml()
+    elif sys.argv[1].lower() in ["css", "estilos"]:
+        inyectar_css()
     elif sys.argv[1].lower() in ["validar", "valida", "check"]:
         if len(sys.argv) < 3:
-            print("Uso: python3 build.py validar <ruta_al_paquete.h5p>")
+            print("Uso: python3 build.py validar <ruta_a_archivo.h5p_o_xml>")
             sys.exit(1)
-        validar_paquete(sys.argv[2])
+        target = sys.argv[2]
+        if target.endswith(".xml"):
+            validar_banco_xml(target)
+        else:
+            validar_paquete_h5p(target)
     elif sys.argv[1].endswith(".h5p"):
-        validar_paquete(sys.argv[1])
+        validar_paquete_h5p(sys.argv[1])
+    elif sys.argv[1].endswith(".xml"):
+        validar_banco_xml(sys.argv[1])
     else:
         print(f"Opción no reconocida: {sys.argv[1]}")
         print(__doc__)

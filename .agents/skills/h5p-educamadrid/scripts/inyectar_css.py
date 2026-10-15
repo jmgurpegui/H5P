@@ -36,20 +36,18 @@ for p in target_paths:
         with open(p, 'r', encoding='utf-8', errors='ignore') as f:
             content = f.read()
 
-        # Limpiar cualquier inyección previa de versiones anteriores
+        # Limpiar cualquier inyección previa de versiones anteriores de forma segura
         if MARKER_START in content:
             parts = content.split(MARKER_START)
             clean_content = parts[0].rstrip()
             if MARKER_END in parts[1]:
-                clean_content += parts[1].split(MARKER_END)[1]
+                clean_content += parts[1].split(MARKER_END)[1].rstrip()
         elif '/* === EDUCAMADRID' in content:
             clean_content = content.split('/* === EDUCAMADRID')[0].rstrip()
-        elif '/* ==========================================================================' in content:
-            clean_content = content.split('/* ==========================================================================')[0].rstrip()
         else:
             clean_content = content.rstrip()
 
-        # Guardar contenido base + nuevo bloque inyectado
+        # Guardar contenido base intacto + nuevo bloque responsive inyectado
         new_content = clean_content + injected_block
         with open(p, 'w', encoding='utf-8') as f:
             f.write(new_content)

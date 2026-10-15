@@ -11,12 +11,15 @@ Garantiza el cumplimiento de las normativas de seguridad institucional, la **int
 ```text
 H5P/
 ├── REQUISITOS_CURSOS_H5P_EDUCAMADRID.md      # Especificación oficial EducaMadrid (Técnica, Pedagógica y Accesibilidad)
+├── build.py                                  # Script maestro de compilación, inyección CSS y validación
 ├── plantilla/                                # Toolkit y plantilla técnica maestra
 │   ├── REQUISITOS_CURSOS_H5P_EDUCAMADRID.md  # Especificación técnica oficial, los 5 pilares y accesibilidad
 │   ├── generar_curso_plantilla.py            # Generador y plantilla de código con helpers de los 5 pilares
 │   ├── validar_h5p_educamadrid.py            # Validador de certificación EducaMadrid (whitelist, CSS, a11y)
-│   ├── estilos_educamadrid.css               # Hoja de estilos accesible (WCAG AAA, táctil, fórmulas)
-│   ├── append_css_to_libraries.py            # Inyector limpio de CSS en librerías base
+│   ├── moodle_xml_builder.py                 # Generador y validador de bancos de preguntas Moodle XML
+│   ├── evaluacion_modelo_moodle.xml          # Banco de preguntas modelo sumativo para Moodle (10 preguntas)
+│   ├── estilos_educamadrid.css               # Hoja de estilos accesible y responsive (WCAG AAA, táctil, fórmulas)
+│   ├── append_css_to_libraries.py            # Inyector limpio de CSS en librerías base (preserva 1.646 líneas)
 │   ├── logo2026.png                          # Logotipo institucional oficial con transparencia (Comunidad de Madrid)
 │   ├── logo2026.bmp                          # Logotipo complementario en formato BMP
 │   ├── CC.png                                # Logotipo oficial Creative Commons
@@ -25,6 +28,7 @@ H5P/
 │
 ├── EsquemasElectricosAutomocion/             # Caso de éxito real: Curso interactivo de Formación Profesional
 │   ├── Curso_Esquemas_Electricos_Automocion.h5p # Paquete H5P certificado listo para el Aula Virtual (2.0 MB)
+│   ├── evaluacion_esquemas_electricos.xml    # Banco sumativo oficial Moodle XML para el curso (20 preguntas)
 │   ├── generar_curso_esquemas.py             # Script generador maestro con 4 capítulos y 13 actividades
 │   ├── images/                               # Esquemas eléctricos y diagramas rasterizados de alta resolución
 │   └── README.md                             # Guía curricular, unidades didácticas y normativa DIN
@@ -36,10 +40,10 @@ H5P/
     └── skills/
         └── h5p-educamadrid/                  # Skill oficial para Agentes de IA (Gemini / Antigravity)
             ├── SKILL.md                      # Manual operativo con progressive disclosure
-            ├── scripts/                      # Scripts ejecutables (generar, validar, inyectar)
+            ├── scripts/                      # Scripts ejecutables (generar, validar, inyectar, moodle_xml)
             ├── resources/                    # Logos oficiales (2026, CC) y estilos CSS accesibles
             ├── references/                   # Documentación modular (pedagogía, técnica, a11y, entrevista)
-            └── examples/                     # Implementaciones de referencia y paquete .h5p
+            └── examples/                     # Implementaciones de referencia, paquete .h5p y banco .xml
 ```
 
 ---
@@ -56,58 +60,47 @@ H5P/
    - Pistas orientativas (`tips`) y reintentos ilimitados para aprender del error.
 4. **Gamificación Estratégica con Propósito Didáctico**:
    - Dinamización lúdica planificada (arrastre de magnitudes, juegos de memoria, retos) integrada orgánicamente en la narrativa técnica.
-5. **Integración con la Evaluación y Trazabilidad en Moodle**:
-   - Publicación como **Actividad H5P Nativa** para registrar calificaciones y progreso vía xAPI en el Calificador (`mdl_grade_grades`).
-   - Incrustaciones para práctica autónoma y actividades nativas para evaluación sumativa.
+5. **Desacoplamiento Pedagógico: H5P Formativo + Moodle XML Sumativo**:
+   - **Solución al error de registro en Moodle ("No intentado")**: En navegadores móviles y redes móviles, exigir calificación dentro del iframe H5P provoca pérdidas de eventos xAPI. Se establece la separación oficial:
+     - **H5P Formativo**: Se sube al aula virtual configurando la finalización de actividad con **"El estudiante debe ver esta actividad para completarla"** (sin requerir calificación). Garantiza el 100% de éxito en el registro de finalización.
+     - **Moodle XML Sumativo**: Las pruebas evaluativas con nota oficial para el Calificador se gestionan mediante **Cuestionarios nativos de Moodle (`mod_quiz`)**, importando los archivos Moodle XML provistos (`plantilla/evaluacion_modelo_moodle.xml` y `EsquemasElectricosAutomocion/evaluacion_esquemas_electricos.xml`).
 
 ---
 
-## 🚀 Cómo Crear un Nuevo Curso H5P
+## 🚀 Cómo Crear y Compilar Cursos con `build.py`
 
-1. **Completar la Entrevista Inicial de Diagnóstico**:
-   Antes de generar el código, definir o confirmar:
-   * **Tema del contenido**: Título y conceptos nucleares.
-   * **Asignatura y Nivel**: Ej. 2º Bachillerato - Historia de España / 1º CFGM Electromecánica.
-   * **Tipo de actividad**: Interactive Book (4 fases), Question Set, Drag the Words, Image Hotspots.
-   * **Cantidad de ítems**: Preguntas, huecos arrastrables, puntos de inspección o capítulos.
-   * **Nivel cognitivo (Bloom)**: Recordar, Comprender, Aplicar, Analizar, Evaluar.
-   * **Retroalimentación**: Formativa explicada con pistas / Sumativa con xAPI.
-   * **Recursos multimedia**: Imágenes PNG/JPG, vídeos Mediateca EducaMadrid o simuladores.
+El script maestro [`build.py`](build.py) centraliza todas las operaciones de compilación, inyección y validación:
 
-2. **Editar o duplicar el script de plantilla**:
-   Abre [`plantilla/generar_curso_plantilla.py`](plantilla/generar_curso_plantilla.py) y construye los temas con los helpers homologados:
-   * `create_header_logo()`: Cabecera oficial accesible con `logo2026.png`.
-   * `create_text_section(html, titulo)`: Texto de alto contraste con fórmulas semánticas.
-   * `create_drag_text_activity(desc, texto, distractores, titulo)`: Arrastre interactivo de términos y magnitudes.
-   * `create_image_hotspots(img, puntos, titulo, alt)`: Esquema interactivo con puntos de inspección.
-   * `create_multichoice_question(preg, opciones, titulo)`: Autocomprobación activa con justificación razonada en cada opción.
-   * `create_true_false_question(preg, valor, titulo)`: Validación rápida de seguridad o axiomas técnicos.
-   * `create_checkpoint_section(titulo, intro)`: Pausa activa visual de comprensión.
-   * `create_active_challenge(titulo, escenario, pasos)`: Reto de diagnosis y toma de decisiones.
-   * `create_checklist_section(titulo, items)`: Lista de verificación táctil accesible (≥44px).
-   * `create_accordion(paneles, titulo)`: Desplegables de protocolos de taller.
-   * `create_simulation_box(titulo, desc, boton, url)`: Enlace directo a laboratorios y simuladores virtuales.
-   * `create_didactic_sequence_chapter(...)`: Ensamblado del capítulo en 4 fases de andamiaje.
+```bash
+# Compilar y certificar el curso modelo de la plantilla
+python3 build.py
 
-3. **Compilar y validar paquetes con `build.py`**:
-   ```bash
-   # Compilar y certificar el curso modelo de la plantilla
-   python3 build.py
+# Compilar y certificar el curso completo de Esquemas Eléctricos
+python3 build.py esquemas
 
-   # Compilar y certificar el curso completo de Esquemas Eléctricos
-   python3 build.py esquemas
+# Compilar todos los cursos del repositorio
+python3 build.py todos
 
-   # Compilar todos los cursos del repositorio
-   python3 build.py todos
+# Validar todos los bancos de preguntas Moodle XML del repositorio
+python3 build.py xml
 
-   # Validar cualquier paquete .h5p existente
-   python3 build.py validar <ruta_al_paquete.h5p>
-   ```
+# Inyectar estilos CSS accesibles y responsive en las librerías base
+python3 build.py css
 
-4. **Validación manual directa**:
-   ```bash
-   python3 plantilla/validar_h5p_educamadrid.py <nombre_paquete.h5p>
-   ```
+# Validar cualquier paquete .h5p existente
+python3 build.py validar <ruta_al_paquete.h5p>
+```
+
+---
+
+## 📱 Optimización para Dispositivos Móviles
+
+Para garantizar una experiencia visual y funcional impecable en smartphones y tablets (desde 360px de ancho):
+1. **Cajón lateral cerrado por defecto (`defaultTableOfContents: false`)**: Impide que el menú lateral ocupe el 100% de la pantalla al abrir el recurso en móviles.
+2. **Progreso textual (`progressType: "textual"`)**: Sustituye la hilera de círculos (que se solapan o desbordan) por texto adaptativo "Página X de Y".
+3. **Contenedores de ancho flexible**: `max-width: 100%` y `box-sizing: border-box` en todos los contenedores `.h5p-interactive-book`, tarjetas (`.tech-card`) y héroes (`.tech-hero`).
+4. **Desplazamiento táctil suave**: Bloques de fórmulas (`.tech-formula-block`) y tablas (`.tech-table`) configurados con `overflow-x: auto` y `-webkit-overflow-scrolling: touch`.
+5. **Objetivos táctiles adaptados**: Todos los botones y selectores interactivos cuentan con un área mínima de **44 × 44 px** según directrices WCAG 2.1 AAA.
 
 ---
 

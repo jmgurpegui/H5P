@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/top/Plantilla Oficial EducaMadrid - Evaluacion Sumativa</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>P01_Desacoplamiento_Evaluacion</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Para asegurar que el 100% del alumnado registre la realización de los contenidos por visualización en Moodle, evitando que fallos de sentencias xAPI, bloqueos de iframes o notas de corte anulen el seguimiento.]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz).]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque las actividades H5P no permiten formular preguntas de evaluación.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. H5P dispone de MultiChoice y QuestionSet, pero las sentencias xAPI dependen de conexión estable y cookies de terceros que a menudo fallan en móviles.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque Moodle prohíbe el uso de actividades interactivas en Formación Profesional.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Moodle integra H5P nativamente, pero el calificador xAPI no es recomendable como único filtro de superación.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque los archivos XML ocupan menos ancho de banda que un paquete comprimido.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Aunque el XML es ligero, el motivo primordial es la robustez en el registro de calificaciones (mdl_grade_grades).]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>P02_Contraste_WCAG_AAA</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Al menos 7:1 (alcanzando &gt; 13:1 con texto Slate 900 #0f172a sobre blanco).]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Al menos 4.5:1.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. 4.5:1 es el umbral mínimo del nivel AA, pero el estándar técnico oficial EducaMadrid adopta el estándar superior AAA (&gt;= 7:1).]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Al menos 3:1.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. 3:1 solo es admisible para texto de gran tamaño (&gt;= 24px) o componentes de interfaz de usuario en nivel AA.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Cualquier combinación que incluya un color corporativo.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El contraste debe certificarse matemáticamente mediante luminancia relativa.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>P03_Whitelist_Moodle_Seguridad</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Archivos vectoriales .svg y documentos locales .html.]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! Moodle bloquea archivos SVG y HTML locales en content/ para neutralizar ataques de inyección de código malicioso (Stored XSS). Todos los diagramas deben rasterizarse a PNG o JPEG.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Archivos de imagen .png y .jpg.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. PNG y JPEG son formatos plenamente admitidos y recomendados por la whitelist oficial.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Archivos de audio .mp3 y tipografías .woff2.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El audio y las fuentes web forman parte de la lista blanca admitida.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Archivos de metadatos .json.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. content.json es el núcleo semántico indispensable del paquete H5P.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>P04_Andamiaje_Cuatro_Fases</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[1. Activación/Motivación ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[1. Examen final ➔ 2. Lectura lineal ➔ 3. Descanso ➔ 4. Entrega de notas.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El andamiaje pedagógico exige preparación y práctica antes de la evaluación.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[1. Práctica autónoma ➔ 2. Dudas en foro ➔ 3. Examen sumativo ➔ 4. Repetición.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. La práctica sin andamiaje ni explicación previa genera frustración y abandono.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[1. Visualización de vídeo ➔ 2. Lectura de PDF ➔ 3. Cuestionario externo ➔ 4. Tarea.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Este enfoque fragmentado dispersa la atención del estudiante; el modelo oficial unifica la secuencia.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>P05_Touch_Targets_Moviles</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets &gt;= 44x44 px.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[44 x 44 píxeles (WCAG 2.5.5).]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! 44 x 44 px es el tamaño mínimo ergonómico para interacción táctil con el pulgar o dedos enguantados.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[20 x 20 píxeles.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Un botón de 20x20 px provoca toques accidentales y fallos constantes en pantallas pequeñas.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[12 x 12 píxeles.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Incumple totalmente las pautas de accesibilidad móvil.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El ancho del texto sin márgenes adicionales.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes del texto.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>P06_Formulas_HTML_Semantico</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Porque el componente H5P.AdvancedText no incluye MathJax por defecto y mostraría el código fuente sin procesar.]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! Se debe utilizar siempre HTML semántico y Unicode (&lt;sub&gt;, &lt;sup&gt;, .tech-formula), asegurando renderizado inmediato y accesible.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque LaTeX es un formato exclusivo de sistemas Windows.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. LaTeX es multiplataforma, pero requiere motores de renderizado que no residen en el sandbox de H5P.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque las fórmulas matemáticas están prohibidas en las Aulas Virtuales.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Las fórmulas son esenciales en enseñanzas técnicas y científicas.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Porque incrementa el peso del paquete en más de 50 MB.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El texto plano no añade peso, el fallo es puramente visual y de renderizado.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>P07_TF_Inyeccion_Estilos_CSS</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;¿Es una práctica correcta insertar etiquetas &amp;lt;style&amp;gt; dentro de los bloques de contenido de H5P para aplicar estilos personalizados?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;La inyección en librerías base previene fugas de código y unifica el tema visual.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El sanitizador de H5P elimina las etiquetas &amp;lt;style&amp;gt; pero expone el código CSS como texto plano residual visible en pantalla (CSS leakage).]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! Es falso. Los estilos accesibles deben inyectarse limpiamente en las hojas de estilo de las librerías base (h5p-interactive-book.css y h5p-column.css).]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>P08_TF_Menu_Table_Of_Contents_Movil</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;Para optimizar la visualización en dispositivos móviles, se recomienda configurar 'defaultTableOfContents: false' en InteractiveBook para evitar que el índice lateral cubra el contenido al abrir el curso.&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! Al configurar defaultTableOfContents: false, el estudiante ve directamente la portada y el tema en su teléfono, pudiendo desplegar el menú táctilmente cuando lo desee.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Si defaultTableOfContents es true, el menú ocupa toda la pantalla en smartphones y bloquea la visualización del contenido.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>P09_TF_Error_Como_Palanca</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! El Aprendizaje Activo convierte el error en una oportunidad formativa y no en un elemento punitivo.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Bloquear reintentos en actividades formativas genera frustración y contradice los pilares pedagógicos.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="matching">
+    <name>
+      <text>P10_Emparejamiento_Fases_Andamiaje</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>1</shuffleanswers>
+    <subquestion format="html">
+      <text><![CDATA[Fase 1: Activación y Motivación]]></text>
+      <answer>
+        <text>Reto detonante inicial y cabecera institucional (.tech-hero)</text>
+      </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[Fase 2: Explicación Interactiva]]></text>
+      <answer>
+        <text>Teoría concisa, fórmulas semánticas y puntos de inspección (ImageHotspots)</text>
+      </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[Fase 3: Práctica Guiada Activa]]></text>
+      <answer>
+        <text>Arrastre de magnitudes (DragText), retos de taller y checklists táctiles</text>
+      </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[Fase 4: Evaluación Formativa]]></text>
+      <answer>
+        <text>Autocomprobación con retroalimentación razonada inmediata (.tech-checkpoint)</text>
+      </answer>
+    </subquestion>
+  </question>
+</quiz>

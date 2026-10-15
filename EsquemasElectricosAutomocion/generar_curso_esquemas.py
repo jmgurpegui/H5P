@@ -1113,9 +1113,9 @@ def build_h5p_course(output_path):
         },
         "chapters": chapters,
         "behaviour": {
-            "defaultTableOfContents": True,
+            "defaultTableOfContents": False,
             "progressIndicators": True,
-            "progressType": "dots"
+            "progressType": "textual"
         }
     }
 
@@ -1168,9 +1168,553 @@ def build_h5p_course(output_path):
                         mod = importlib.util.module_from_spec(spec)
                         spec.loader.exec_module(mod)
                         mod.validate_h5p(output_path)
-                        return
+                        break
+
+def generar_evaluacion_esquemas_xml(output_xml_path):
+    """Genera y valida el banco oficial de preguntas Moodle XML de Esquemas Eléctricos del Automóvil."""
+    try:
+        from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
+    except ImportError:
+        sys.path.insert(0, PLANTILLA_DIR)
+        from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
+
+    builder = MoodleXMLBuilder("Esquemas Electricos del Automovil - Evaluacion Sumativa Oficial")
+
+    # 1. Metodología deductiva
+    builder.add_multichoice(
+        "EE_P01_Metodologia_Cuatro_Estados",
+        "<p>Durante la diagnosis eléctrica de un circuito de inyección o alumbrado, ¿cuáles son los cuatro estados fundamentales que puede presentar un conductor o componente?</p>",
+        [
+            {
+                "text": "Circuito abierto (R = ∞), cortocircuito a masa (R ≈ 0 Ω), cortocircuito a positivo y caída de tensión parásita por resistencia indebida.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Cualquier avería eléctrica automotriz se clasifica rigurosamente en uno de estos 4 estados para deducir la causa raíz."
+            },
+            {
+                "text": "Circuito directo, circuito alterno, circuito mixto y circuito trifásico.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Esos son tipos de corriente o topologías de red, no estados de diagnóstico de averías."
+            },
+            {
+                "text": "Circuito cerrado, fusible fundido, relé activado y batería descargada.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Esos son síntomas o condiciones puntuales de componentes, no la clasificación analítica de un circuito."
+            },
+            {
+                "text": "Resistencia baja, resistencia media, resistencia alta y resistencia infinita.",
+                "fraction": 0,
+                "feedback": "Incorrecto. No distingue entre fallos a masa, cortocircuitos a positivo o caídas de tensión bajo carga."
+            }
+        ],
+        general_feedback="<p>La metodología de los 4 estados es la base del diagnóstico técnico sin sustitución empírica de piezas.</p>"
+    )
+
+    # 2. Caída de tensión admisible
+    builder.add_multichoice(
+        "EE_P02_Caida_Tension_Admisible",
+        "<p>En una línea de potencia de automoción (alimentación de bombas o relés), ¿cuál es la caída de tensión parásita máxima admisible bajo carga real de trabajo?</p>",
+        [
+            {
+                "text": "Menor o igual a 0.2 V (o un máximo de 0.5 V en circuitos de muy alta intensidad como el motor de arranque).",
+                "fraction": 100,
+                "feedback": "¡Correcto! Una caída de tensión mayor a 0.2 V en cables de alimentación o masa revela corrosión, terminal flojo o sulfatación en empalmes."
+            },
+            {
+                "text": "Entre 1.5 V y 3.0 V.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Una caída de 1.5 V a 3 V provocaría mal funcionamiento de calculadores o pérdida de potencia en actuadores."
+            },
+            {
+                "text": "Exactamente 0.000 V sin importar la longitud del cable.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Todo conductor real de cobre presenta una mínima resistencia óhmica (R = ρ·L/S)."
+            },
+            {
+                "text": "El 50% de la tensión nominal de la batería.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Eso equivaldría a dejar el componente con solo 6 V, inutilizándolo."
+            }
+        ],
+        general_feedback="<p>Vcaída = I × R. Debe medirse siempre en circuito cerrado con los consumidores encendidos.</p>"
+    )
+
+    # 3. Back-probing
+    builder.add_multichoice(
+        "EE_P03_Tecnica_Back_Probing",
+        "<p>¿Cuál es la técnica reglamentaria y segura para medir tensiones o señales con multímetro/osciloscopio en un conector sin dañar el cableado?</p>",
+        [
+            {
+                "text": "Técnica de agujas traseras (back-probing) insertadas con suavidad por el retén de goma posterior del conector, prohibiendo perforar el aislante.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Perforar el aislante con pinzas cocodrilo o alfileres destruye la estanqueidad, permitiendo la entrada de humedad que oxida el cobre internamente."
+            },
+            {
+                "text": "Perforar el aislante de PVC con la punta del polímetro para llegar directamente al filamento.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Esta práctica provoca corrosión galvánica verde oculta (*cobre sulfatado*) con averías intermitentes graves."
+            },
+            {
+                "text": "Cortar el cable, medir el extremo pelado y volver a unirlo con cinta aislante común.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Rompe la integridad del mazo y altera las secciones y apantallamientos de la red CAN."
+            },
+            {
+                "text": "Desconectar siempre la centralita con el motor en marcha para medir en las clavijas delanteras.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Desconectar una ECU bajo tensión genera picos inductivos que pueden quemar sus etapas de potencia."
+            }
+        ],
+        general_feedback="<p>El back-probing con agujas flexibles preserva la estanqueidad de los conectores modulares de automoción.</p>"
+    )
+
+    # 4. Borne 30 DIN 72552
+    builder.add_multichoice(
+        "EE_P04_Borne_30_DIN",
+        "<p>Según la norma DIN 72552 de codificación de bornes en el automóvil, ¿qué indica el Borne 30?</p>",
+        [
+            {
+                "text": "Alimentación positiva permanente directa de batería (tensión constante con o sin llave de contacto).",
+                "fraction": 100,
+                "feedback": "¡Correcto! El Borne 30 mantiene alimentados componentes que requieren memoria permanente (ECU, reloj, cierres o alarmas)."
+            },
+            {
+                "text": "Masa del chasis y polo negativo de la batería.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La masa del chasis según DIN 72552 es el Borne 31."
+            },
+            {
+                "text": "Positivo bajo llave de contacto (ignición activada).",
+                "fraction": 0,
+                "feedback": "Incorrecto. El positivo tras llave de contacto es el Borne 15."
+            },
+            {
+                "text": "Mando del motor de arranque.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El mando de activación del arranque es el Borne 50."
+            }
+        ],
+        general_feedback="<p>Borne 30 = Positivo directo batería. En esquemas alemanes suele ser de color rojo (RT).</p>"
+    )
+
+    # 5. Borne 15 DIN 72552
+    builder.add_multichoice(
+        "EE_P05_Borne_15_DIN",
+        "<p>¿Qué función cumple la línea señalizada como Borne 15 en los esquemas eléctricos normalizados?</p>",
+        [
+            {
+                "text": "Positivo conmutado tras llave de contacto (activa calculadores, cuadro de instrumentos y encendido en posición IGNITION).",
+                "fraction": 100,
+                "feedback": "¡Correcto! El Borne 15 solo suministra 12 V cuando la llave está en posición de contacto/marcha (KL 15)."
+            },
+            {
+                "text": "Positivo permanente que nunca se desconecta.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Ese es el Borne 30."
+            },
+            {
+                "text": "Retorno de masa directa a carrocería.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La masa es el Borne 31."
+            },
+            {
+                "text": "Línea de alta tensión hacia las bujías.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Las líneas de alta tensión se identifican como 4 o 4a en bobinas clásicas."
+            }
+        ],
+        general_feedback="<p>Borne 15 = Positivo conmutado (+15). En esquemas alemanes suele ser negro (SW) o amarillo/negro.</p>"
+    )
+
+    # 6. Borne 31 DIN 72552
+    builder.add_multichoice(
+        "EE_P06_Borne_31_DIN",
+        "<p>¿Qué representa el Borne 31 en la normalización internacional de esquemas eléctricos?</p>",
+        [
+            {
+                "text": "Línea de retorno a masa conectada al polo negativo de la batería y al chasis/carrocería.",
+                "fraction": 100,
+                "feedback": "¡Correcto! El Borne 31 cierra el circuito de todos los consumidores de vuelta al polo negativo."
+            },
+            {
+                "text": "Positivo de arranque para el solenoide.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El solenoide de arranque es el Borne 50."
+            },
+            {
+                "text": "Salida de potencia de relé hacia faros.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Las salidas de relé son los bornes 87 u 87a."
+            },
+            {
+                "text": "Tensión de carga del alternador (B+).",
+                "fraction": 0,
+                "feedback": "Incorrecto. La salida del alternador a batería es B+ o Borne 30."
+            }
+        ],
+        general_feedback="<p>Borne 31 = Retorno a masa. En fabricantes alemanes siempre se identifica con color marrón (BR).</p>"
+    )
+
+    # 7. Borne 50 DIN 72552
+    builder.add_multichoice(
+        "EE_P07_Borne_50_DIN",
+        "<p>Al girar la llave de contacto a la posición START (arranque), ¿qué borne DIN recibe alimentación temporal de excitación?</p>",
+        [
+            {
+                "text": "Borne 50 (excita la bobina del relé/solenoide de arranque para engranar el bendix y conectar el motor eléctrico).",
+                "fraction": 100,
+                "feedback": "¡Correcto! El Borne 50 solo tiene 12 V durante los segundos en que se acciona el arranque."
+            },
+            {
+                "text": "Borne 30.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El Borne 30 es permanente y siempre tiene 12 V."
+            },
+            {
+                "text": "Borne 31.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Borne 31 es masa permanente."
+            },
+            {
+                "text": "Borne X / 75.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El Borne X precisamente se desconecta durante el arranque para reservar batería."
+            }
+        ],
+        general_feedback="<p>Borne 50 = Mando de arranque activado por clausor o por relé gobernado por la ECU.</p>"
+    )
+
+    # 8. Borne X / 75
+    builder.add_multichoice(
+        "EE_P08_Borne_X_Accesorios",
+        "<p>¿Qué comportamiento característico tiene la línea de Borne X (o borne 75) en los vehículos modernos?</p>",
+        [
+            {
+                "text": "Alimenta consumidores secundarios (limpiaparabrisas, climatizador, luces de cruce) y se DESCONECTA automáticamente durante el arranque para preservar la corriente de batería.",
+                "fraction": 100,
+                "feedback": "¡Correcto! El relé de descarga de contacto X apaga elementos pesados para que el motor de arranque disponga del 100% de la energía disponible en la batería."
+            },
+            {
+                "text": "Permanece encendido permanentemente incluso con el vehículo cerrado con llave.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Eso descargaría la batería rápidamente."
+            },
+            {
+                "text": "Solo funciona cuando el vehículo supera los 50 km/h.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Es un circuito eléctrico de confort gestionado por llave o calculador de carrocería."
+            },
+            {
+                "text": "Es la línea exclusiva de comunicación multiplexada del bus CAN.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El bus CAN utiliza líneas de par trenzado CAN-H y CAN-L, no Borne X."
+            }
+        ],
+        general_feedback="<p>Borne X / 75 = Línea de accesorios con descarga en arranque.</p>"
+    )
+
+    # 9. Relé 85 y 86
+    builder.add_multichoice(
+        "EE_P09_Rele_Bornes_Control",
+        "<p>En un relé electromagnético automotriz estándar de 4 o 5 patillas, ¿qué bornes corresponden a los extremos de la bobina de excitación?</p>",
+        [
+            {
+                "text": "Bornes 85 y 86.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Los bornes 85 y 86 alimentan el electroimán interno que desplaza el inducido móvil de potencia."
+            },
+            {
+                "text": "Bornes 30 y 87.",
+                "fraction": 0,
+                "feedback": "Incorrecto. 30 y 87 son los contactos del circuito de potencia (alta corriente)."
+            },
+            {
+                "text": "Bornes 15 y 31.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Son bornes de alimentación del vehículo, no las designaciones de las patillas del relé."
+            },
+            {
+                "text": "Bornes 87 y 87a.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Son las salidas normalmente abierta (NO) y normalmente cerrada (NC) del contacto de potencia."
+            }
+        ],
+        general_feedback="<p>85 (generalmente masa o mando por transistor) y 86 (positivo de mando).</p>"
+    )
+
+    # 10. Relé 30 y 87
+    builder.add_multichoice(
+        "EE_P10_Rele_Bornes_Potencia",
+        "<p>¿Qué bornes de un relé normalizado DIN conectan el circuito de potencia que alimenta directamente a los consumidores (faros, bomba de combustible, luneta térmica)?</p>",
+        [
+            {
+                "text": "Borne 30 (entrada de potencia protegida por fusible) y Borne 87 (salida de potencia hacia el consumidor cuando el relé se activa).",
+                "fraction": 100,
+                "feedback": "¡Correcto! El contacto 30-87 soporta intensidades de 20 A a 40 A, conmutadas por la débil corriente de la bobina (aprox. 150-200 mA)."
+            },
+            {
+                "text": "Bornes 85 y 86.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Son los bornes de la bobina de control."
+            },
+            {
+                "text": "Bornes 50 y 31.",
+                "fraction": 0,
+                "feedback": "Incorrecto. 50 es arranque y 31 es masa."
+            },
+            {
+                "text": "Bornes 15 y 85.",
+                "fraction": 0,
+                "feedback": "Incorrecto. No forman un par de conmutación de potencia."
+            }
+        ],
+        general_feedback="<p>30 = Entrada potencia / 87 = Salida normalmente abierta hacia consumidor.</p>"
+    )
+
+    # 11. Diodo supresor en relés
+    builder.add_multichoice(
+        "EE_P11_Diodo_Supresor_Transitorios",
+        "<p>¿Cuál es la finalidad de instalar un diodo supresor de transitorios en paralelo inverso entre los bornes 85 y 86 de la bobina de un relé?</p>",
+        [
+            {
+                "text": "Neutralizar el pico de alta tensión de autoinducción (fuerza contraelectromotriz) generado al desconectar la bobina, protegiendo el transistor de la centralita que la gobierna.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Al cortar la corriente en un inductor, la tensión puede elevarse bruscamente a 70-100 V con polaridad invertida. El diodo la deriva en bucle seguro."
+            },
+            {
+                "text": "Aumentar la velocidad del motor de arranque.",
+                "fraction": 0,
+                "feedback": "Incorrecto. No tiene relación con el par del motor de arranque."
+            },
+            {
+                "text": "Evitar que el relé consuma corriente cuando está activado.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La bobina sigue consumiendo corriente según la ley de Ohm (I = V/R)."
+            },
+            {
+                "text": "Permitir conectar el relé con polaridad invertida sin que sufra daños.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Al revés: si se invierte la polaridad con diodo, se provoca un cortocircuito directo que quema el fusible o el transistor."
+            }
+        ],
+        general_feedback="<p>El diodo supresor es vital cuando los relés son excitados por módulos electrónicos (BCM, ECU, SAM).</p>"
+    )
+
+    # 12. Colorimetría alemana
+    builder.add_multichoice(
+        "EE_P12_Colorimetria_Alemana",
+        "<p>En la documentación técnica de fabricantes alemanes (Grupo VAG, BMW, Mercedes-Benz, Porsche), ¿qué significado tienen los colores de cable MARRÓN (BR / Braun) y ROJO (RT / Rot)?</p>",
+        [
+            {
+                "text": "MARRÓN es siempre masa (Borne 31) y ROJO es positivo permanente directo de batería (Borne 30).",
+                "fraction": 100,
+                "feedback": "¡Correcto! Es una regla invariable en el esquema alemán: Brown (BR) = Masa / Rot (RT) = Positivo (+30)."
+            },
+            {
+                "text": "MARRÓN es positivo permanente y ROJO es masa.",
+                "fraction": 0,
+                "feedback": "Incorrecto. ¡Peligro de cortocircuito! Nunca confundir la norma alemana donde el marrón es masa directa."
+            },
+            {
+                "text": "MARRÓN es señal de sensor y ROJO es altavoz de audio.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Son las dos líneas maestras de potencia del vehículo."
+            },
+            {
+                "text": "Ambos colores se alternan indistintamente según el modelo.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La colorimetría alemana sigue una estricta normalización DIN."
+            }
+        ],
+        general_feedback="<p>Marrón (BR) = Borne 31 (Masa). Rojo (RT) = Borne 30 (+ permanente).</p>"
+    )
+
+    # 13. Mercedes-Benz SAM
+    builder.add_multichoice(
+        "EE_P13_Mercedes_Modulos_SAM",
+        "<p>En los esquemas de Mercedes-Benz, ¿qué designación reciben las cajas de fusibles y módulos inteligentes de adquisición de señales, y qué letra identifica los puntos de masa?</p>",
+        [
+            {
+                "text": "Módulos SAM (N10/1 delantero, N10/2 trasero) y la letra 'W' para puntos de masa de carrocería (ej. W10, W16/5).",
+                "fraction": 100,
+                "feedback": "¡Correcto! N = Módulos de control / W = Conexiones de masa de chasis en la nomenclatura Mercedes-Benz."
+            },
+            {
+                "text": "Módulos UCH y la letra 'M' para masas.",
+                "fraction": 0,
+                "feedback": "Incorrecto. UCH es la denominación exclusiva de Renault."
+            },
+            {
+                "text": "Módulos BCM y la letra 'G' para masas.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La letra 'G' para masas corresponde a Ford."
+            },
+            {
+                "text": "Módulos BSI y la letra 'E' para masas.",
+                "fraction": 0,
+                "feedback": "Incorrecto. BSI es la arquitectura del grupo Stellantis / PSA."
+            }
+        ],
+        general_feedback="<p>Mercedes: SAM (Signal Acquisition Module), N = calculadores, W = masas, X = conectores.</p>"
+    )
+
+    # 14. Ford Nomenclatura
+    builder.add_multichoice(
+        "EE_P14_Ford_Nomenclatura_Circuitos",
+        "<p>En un esquema unifilar de Ford, en el código de cable '91-PG30A 0.75 BK/WH', ¿qué indican '0.75' y 'BK/WH'?</p>",
+        [
+            {
+                "text": "0.75 mm² de sección de conductor de cobre, con aislamiento de color base NEGRO (BK) y traza secundaria BLANCA (WH).",
+                "fraction": 100,
+                "feedback": "¡Correcto! En Ford la primera sigla es el color predominante del cable y la segunda es la línea de traza identificativa."
+            },
+            {
+                "text": "0.75 amperios de intensidad y color blanco puro.",
+                "fraction": 0,
+                "feedback": "Incorrecto. 0.75 es la sección transversal del hilo conductor en milímetros cuadrados."
+            },
+            {
+                "text": "0.75 voltios de caída de tensión y cable blindado coaxial.",
+                "fraction": 0,
+                "feedback": "Incorrecto. BK/WH representa Black/White en inglés internacional."
+            },
+            {
+                "text": "0.75 metros de longitud total del mazo.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Los esquemas no indican la longitud física del cable sino su calibre geométrico."
+            }
+        ],
+        general_feedback="<p>Sección en mm² + Código de color en inglés internacional (BK=Black, WH=White, RD=Red, etc.).</p>"
+    )
+
+    # 15. Renault Sistema Numérico
+    builder.add_multichoice(
+        "EE_P15_Renault_Sistema_Numerico",
+        "<p>¿Cuál es la particularidad del sistema de numeración universal de componentes en los esquemas eléctricos de Renault?</p>",
+        [
+            {
+                "text": "Cada componente técnico tiene un número invariable asignado: 120 (calculador inyección), 645 (UCH), 597 (caja fusibles motor UPC), 103 (alternador), 163 (motor de arranque).",
+                "fraction": 100,
+                "feedback": "¡Correcto! En Renault no importa el modelo de vehículo (Clio, Megane, Master); el número 120 siempre identifica el calculador de motor."
+            },
+            {
+                "text": "Los componentes se numeran por orden aleatorio de montaje en la cadena de producción.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Renault utiliza una enciclopedia numérica universal fija."
+            },
+            {
+                "text": "Los números indican los voltios exactos que tolera cada componente.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Son códigos unívocos de identificación topográfica."
+            },
+            {
+                "text": "Solo se numeran los fusibles, el resto de componentes se escribe con nombres en francés.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Todos los calculadores, motores y sensores poseen código numérico estándar."
+            }
+        ],
+        general_feedback="<p>Renault: 120 = Inyección, 645 = UCH (habitáculo), 597 = UPC (motor), 103 = Alternador.</p>"
+    )
+
+    # 16. Renault Colores Conectores
+    builder.add_multichoice(
+        "EE_P16_Renault_Conectores_Colores",
+        "<p>En la documentación técnica de Renault, ¿qué indican las abreviaturas 'BA', 'GR', 'NO' y 'MR' al lado de un conector modular?</p>",
+        [
+            {
+                "text": "El color plástico del conector en francés: BA (Blanc / Blanco), GR (Gris), NO (Noir / Negro) y MR (Marron / Marrón).",
+                "fraction": 100,
+                "feedback": "¡Correcto! En Renault los conectores de las centralitas son modulares de 16, 32 o 48 vías identificados por su color físico para evitar errores de inserción."
+            },
+            {
+                "text": "El nivel de seguridad eléctrica: Bajo, Grave, Nocivo y Mortal.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Hacen referencia exclusiva al color visual de la carcasa del conector."
+            },
+            {
+                "text": "El tipo de comunicación: Básico, Gradual, Normal y Multiplexado.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La comunicación se especifica por el protocolo (CAN, LIN, K-Line)."
+            },
+            {
+                "text": "Las iniciales de las marcas colaboradoras de la alianza automotriz.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Son nombres de colores en francés."
+            }
+        ],
+        general_feedback="<p>BA=Blanc, GR=Gris, NO=Noir, MR=Marron, JA=Jaune (Amarillo), VE=Vert (Verde), RG=Rouge (Rojo).</p>"
+    )
+
+    # 17. BMW ISTA
+    builder.add_multichoice(
+        "EE_P17_BMW_ISTA_Conectores",
+        "<p>En el sistema de esquemas interactivos de BMW (ISTA / WDS), ¿con qué letra se identifican unívocamente todos los conectores eléctricos?</p>",
+        [
+            {
+                "text": "Con la letra 'X' seguida de un número de 4 a 5 dígitos (por ejemplo, X11004 para el conector de la luneta térmica o X18284 para el módulo de carrocería).",
+                "fraction": 100,
+                "feedback": "¡Correcto! En BMW la 'X' designa cualquier conector, permitiendo localizar en el visor 3D el pinout y su fotografía real."
+            },
+            {
+                "text": "Con la letra 'B' de Bavarian.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La letra 'B' en BMW designa sensores de magnitud física (B = Sensor)."
+            },
+            {
+                "text": "Con la letra 'C' de Conector.",
+                "fraction": 0,
+                "feedback": "Incorrecto. En BMW la convención de ingeniería alemana fija 'X' para conexiones desmontables."
+            },
+            {
+                "text": "Con la letra 'J' de Joint.",
+                "fraction": 0,
+                "feedback": "Incorrecto. 'J' no es la nomenclatura de conector en ISTA."
+            }
+        ],
+        general_feedback="<p>BMW: X = Conector, A = Centralita, B = Sensor, Y = Actuador, F = Fusible, K = Relé.</p>"
+    )
+
+    # 18. TF Desconexión Batería
+    builder.add_truefalse(
+        "EE_P18_TF_Desconexion_Bateria_Masa",
+        "<p>Al desconectar la batería del vehículo antes de una intervención eléctrica compleja en el taller, debe retirarse siempre en primer lugar el borne NEGATIVO (-) para evitar riesgos de cortocircuito con la herramienta contra la carrocería.</p>",
+        True,
+        feedback_true="¡Correcto! Si la llave metálica toca la chapa mientras se afloja el borne negativo, no ocurre nada porque ambos tienen el mismo potencial (0 V). En cambio, si se afloja primero el positivo y la herramienta toca masa, se produce un cortocircuito violento con chispazo.",
+        feedback_false="Incorrecto. Retirar primero el borne positivo supone un riesgo crítico de cortocircuito accidental con la herramienta sobre el chasis.",
+        general_feedback="<p>Regla de oro de seguridad en taller: Desconectar primero el negativo (-) / Conectar último el negativo (-).</p>"
+    )
+
+    # 19. TF Osciloscopio Inyectores
+    builder.add_truefalse(
+        "EE_P19_TF_Atenuacion_Sonda_Osciloscopio",
+        "<p>Al medir la señal de mando de un inyector inductivo common-rail o de gasolina con el osciloscopio, es obligatorio utilizar una sonda atenuadora 10:1 o 20:1 para proteger el canal de entrada contra picos inductivos que pueden superar los 80 V.</p>",
+        True,
+        feedback_true="¡Correcto! Al cerrarse el inyector, la bobina genera un pico de tensión inducida de hasta 80-100 V. Si se mide con escala directa 1:1 en un canal limitado a 20 o 50 V, se destruye el conversor analógico-digital (ADC) del osciloscopio.",
+        feedback_false="Incorrecto. Omitir la sonda atenuadora en cargas inductivas provoca la avería irreversible de la tarjeta de adquisición del osciloscopio.",
+        general_feedback="<p>Proteger siempre el osciloscopio con atenuador al medir inyectores, solenoides o electroválvulas PWM.</p>"
+    )
+
+    # 20. Matching Bornes DIN
+    builder.add_matching(
+        "EE_P20_Matching_Bornes_DIN72552",
+        "<p>Relaciona cada borne normalizado según la norma DIN 72552 con su circuito correspondiente en el vehículo:</p>",
+        [
+            ("Borne 30", "Positivo directo permanente de batería (+12V constante)"),
+            ("Borne 15", "Positivo conmutado tras llave de contacto (ignición)"),
+            ("Borne 31", "Retorno de masa directa a negativo y carrocería"),
+            ("Borne 50", "Mando de activación del motor de arranque (posición START)")
+        ],
+        general_feedback="<p>La normalización DIN 72552 es el lenguaje común de los esquemas eléctricos en todo el mundo.</p>"
+    )
+
+    builder.save_xml(output_xml_path)
+    validar_moodle_xml(output_xml_path)
 
 
 if __name__ == '__main__':
     dest_pkg = os.path.join(SCRIPT_DIR, "Curso_Esquemas_Electricos_Automocion.h5p")
     build_h5p_course(dest_pkg)
+    
+    # Generar y certificar el banco sumativo Moodle XML oficial
+    xml_path = os.path.join(SCRIPT_DIR, "evaluacion_esquemas_electricos.xml")
+    generar_evaluacion_esquemas_xml(xml_path)
+

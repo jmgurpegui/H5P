@@ -77,12 +77,45 @@ La creación de recursos H5P de calidad superior en Formación Profesional y ens
 * **Dinamización lúdica planificada**: Incorporar mecánicas lúdicas (arrastre de términos `DragText`, juegos de memoria `MemoryGame`, emparejamiento de magnitudes) para activar conocimientos previos al inicio de la lección, romper la monotonía o realizar cierres atractivos.
 * **Integración curricular orgánica**: La gamificación no es un adorno superficial aislado; forma parte orgánica de la narrativa técnica de la unidad (ej. "Reto previo: empareja cada magnitud con su unidad antes de conectar el osciloscopio").
 
-### Pilar 5: Integración con la Evaluación y Trazabilidad en Moodle
-* **Sincronización con el Libro de Calificaciones (`Gradebook`)**:
-  * Para registrar calificaciones oficiales, intentos y analíticas de aprendizaje, el paquete debe publicarse en Moodle como **Actividad H5P Nativa** (`mod_h5p`), enviando sentencias xAPI (`completed`, `answered`, puntuación `result.score.raw` y `result.score.max`) hacia `mdl_grade_grades`.
-* **Diferenciación estricta de formatos**:
-  * **Incrustaciones (`iframe` o enlaces en libro/página)**: Para consulta, estudio autónomo a pie de taller y autocomprobación formativa no sumativa.
-  * **Actividades H5P Nativas**: Para cursos con módulo evaluable integrado (`H5P.QuestionSet 1.20`) o cuestionarios oficiales generados con Moodle XML.
+### Pilar 5: Desacoplamiento de Formación (H5P) y Evaluación Oficial (Moodle XML)
+
+#### El Problema de la Trazabilidad y Calificaciones en H5P
+En Moodle / EducaMadrid, vincular la finalización de un paquete H5P complejo a una calificación de aprobado o sentencias xAPI genera frecuentes bloqueos para el alumnado:
+* **Fuga de sentencias xAPI**: En dispositivos móviles (especialmente iOS/Safari y Chrome Android), las restricciones de cookies de terceros, bloqueos de iframes o microcortes de red provocan que las sentencias xAPI (`completed`, `passed`) no lleguen al servidor Moodle.
+* **Sobreescritura por puntaje de dominio**: Si Moodle tiene activado *"El puntaje de dominio anula el estado"* (*Mastery score overrides status*), un estudiante que complete la lectura y práctica pero no supere el corte de un cuestionario interno figura como **"No intentado"** o **"No superado"**, anulando su progreso formativo.
+
+#### La Solución Oficial Homologada: Arquitectura Dual Desacoplada
+Para garantizar que **el 100% de los alumnos registre la realización de los contenidos sin errores**, separamos estrictamente la experiencia formativa de la evaluación sumativa:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  1. CONTENIDO EDUCATIVO Y PRÁCTICA ACTIVA (H5P INTERACTIVO) │
+│  - Paquete .h5p en H5P.InteractiveBook 1.7                  │
+│  - Andamiaje en 4 fases, retos y autocomprobación formativa │
+│  - Finalización Moodle: "El estudiante debe VER la          │
+│    actividad para completarla" (100% FIABLE)                │
+└─────────────────────────────────────────────────────────────┘
+                              +
+┌─────────────────────────────────────────────────────────────┐
+│  2. EVALUACIÓN SUMATIVA OFICIAL (CUESTIONARIO MOODLE XML)   │
+│  - Banco oficial exportado en formato Moodle XML (<quiz>)   │
+│  - Cuestionario nativo de Moodle (mod_quiz)                 │
+│  - Intentos, temporizador y registro en mdl_grade_grades    │
+│  - Soporte offline y app móvil Moodle sin fallos de xAPI    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+1. **Configuración en el Aula Virtual (EducaMadrid)**:
+   * **Actividad H5P (`mod_h5p`)**: Subir el archivo `.h5p`. En la sección *Finalización de actividad*, seleccionar:
+     * *Rastreo de finalización*: **Mostrar la actividad como completada cuando se cumplan las condiciones**.
+     * *Requerir ver*: **El estudiante debe ver esta actividad para completarla**.
+     * *Requerir calificación*: **Desmarcado**.
+     *(Esto garantiza el tic verde de realización a todo alumno que trabaje el tema).*
+   * **Cuestionario de Evaluación (`mod_quiz`)**:
+     * Importar el archivo XML del curso (*Banco de preguntas -> Importar -> Moodle XML*).
+     * Crear el cuestionario sumativo oficial (*Añadir cuestionario*), asignando calificación para aprobar (ej. 5.0).
+     * En *Finalización de actividad*: Marcar **El estudiante debe recibir una calificación para completar esta actividad** y/o calificación de aprobado.
+     *(Moodle almacena los intentos directamente en base de datos nativa con fiabilidad total).*
 
 ---
 
@@ -200,7 +233,7 @@ El manifiesto `h5p.json` debe declarar **todas** las dependencias en `preloadedD
 
 ---
 
-## 8. Guía de Accesibilidad Universal y Legibilidad de Textos (WCAG 2.1 AA / AAA)
+## 8. Guía de Accesibilidad Universal y Adaptación Móvil (WCAG 2.1 AAA & Smartphones)
 
 * **Ratios de Contraste Cromático de Textos**:
   * Cuerpo de texto: `#0f172a` (Slate 900) sobre fondo blanco con ratio **> 13:1**.
@@ -212,40 +245,62 @@ El manifiesto `h5p.json` debe declarar **todas** las dependencias en `preloadedD
 * **Objetivos Táctiles**: Tamaño mínimo de **44 x 44 px** en botones y elementos interactivos para uso fluido con guantes en taller.
 * **Textos Alternativos (`alt`)**: Toda imagen técnica exige descripción funcional del circuito u oscilograma.
 
+### 8.1. Reglas Técnicas de Visualización en Dispositivos Móviles (Smartphones y Tablets)
+Para resolver los reportes de mala visualización o desbordamiento en teléfonos móviles de los estudiantes:
+1. **Contención de Viewport**: Declaración universal `box-sizing: border-box` en todos los componentes para evitar que padding o bordes sobrepasen el 100% del ancho de la pantalla.
+2. **Fórmulas y Tablas sin Desbordamiento**: Tanto `.tech-formula-block` como `.table-responsive` cuentan con scroll horizontal táctil suave (`-webkit-overflow-scrolling: touch; overflow-x: auto; max-width: 100%;`).
+3. **Imágenes Flexibles**: Las ilustraciones técnicas escalan con `max-width: 100% !important; height: auto !important; object-fit: contain;`.
+4. **Menú Lateral No Intrusivo**: En `H5P.InteractiveBook 1.7`, se configura `"defaultTableOfContents": false`. Esto evita que el cajón del índice cubra toda la pantalla al abrir el libro en un teléfono de 360-390 px de ancho. El estudiante puede abrir el menú pulsando el botón flotante en cualquier momento.
+5. **Indicadores Textuales**: En lugar de puntos de progreso diminutos que desbordan la pantalla (`progressType: "dots"`), se emplea formato textual accesible (`progressType: "textual"`).
+6. **Librerías Base Íntegras**: Se inyectan las hojas de estilo sin truncar los 1.646 estilos base de `H5P.InteractiveBook-1.7` encargados del comportamiento responsive del contenedor.
+
 ---
 
-## 9. Catálogo de Helpers en `plantilla/generar_curso_plantilla.py`
+## 9. Catálogo de Helpers y Herramientas
 
-| Función Helper | Librería / Componente | Propósito Pedagógico y Técnico |
+| Función / Herramienta | Módulo / Script | Propósito Pedagógico y Técnico |
 | :--- | :--- | :--- |
 | `create_header_logo()` | `H5P.Image 1.1` | Inserta cabecera institucional oficial con alt text accesible. |
 | `create_text_section(html, titulo)` | `H5P.AdvancedText 1.1` | Bloques de texto técnico de alto contraste y fórmulas semánticas. |
-| `create_drag_text_activity(desc, texto, distractores, titulo)` | `H5P.DragText 1.10` | Manipulación y arrastre de conceptos técnicos a sus huecos. |
-| `create_image_hotspots(img, puntos, titulo, alt)` | `H5P.ImageHotspots 1.10` | Enriquecimiento interactivo de imágenes con puntos de inspección. |
-| `create_multichoice_question(preg, opciones, titulo)` | `H5P.MultiChoice 1.16` | Autocomprobación activa con justificación razonada en cada opción. |
-| `create_true_false_question(preg, valor, titulo)` | `H5P.TrueFalse 1.8` | Validación ágil de reglas críticas de seguridad y criterios técnicos. |
-| `create_checkpoint_section(titulo, intro)` | `.tech-checkpoint` | Pausa activa visual que predispone a la autocomprobación formativa. |
-| `create_active_challenge(titulo, escenario, pasos)` | `.tech-challenge` | Reto práctico de taller y toma de decisiones ante averías. |
-| `create_checklist_section(titulo, items)` | `.tech-checklist` | Lista de verificación táctil accesible (touch targets ≥44px). |
+| `create_drag_text_activity(...)` | `H5P.DragText 1.10` | Manipulación y arrastre de conceptos técnicos a sus huecos. |
+| `create_image_hotspots(img, puntos, ...)`| `H5P.ImageHotspots 1.10` | Enriquecimiento interactivo de imágenes con puntos de inspección. |
+| `create_multichoice_question(...)` | `H5P.MultiChoice 1.16` | Autocomprobación activa con justificación razonada en cada opción. |
+| `create_true_false_question(...)` | `H5P.TrueFalse 1.8` | Validación ágil de reglas críticas de seguridad y criterios técnicos. |
+| `create_checkpoint_section(...)` | `.tech-checkpoint` | Pausa activa visual que predispone a la autocomprobación formativa. |
+| `create_active_challenge(...)` | `.tech-challenge` | Reto práctico de taller y toma de decisiones ante averías. |
+| `create_checklist_section(...)` | `.tech-checklist` | Lista de verificación táctil accesible (touch targets ≥44px). |
 | `create_accordion(paneles, titulo)` | `H5P.Accordion 1.0` | Desplegables colapsables para protocolos extensos de taller. |
-| `create_simulation_box(titulo, desc, btn, url)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales interactivos. |
+| `create_simulation_box(...)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales interactivos. |
 | `create_didactic_sequence_chapter(...)` | `H5P.Column 1.16` | Ensambla un capítulo completo bajo la secuencia de andamiaje de 4 fases. |
+| `MoodleXMLBuilder` | `moodle_xml_builder.py` | Generador oficial de bancos de preguntas Moodle XML con retroalimentación. |
+| `validar_moodle_xml(xml)` | `moodle_xml_builder.py` | Validador y certificador automático de bancos de preguntas Moodle XML. |
 
 ---
 
-## 10. Verificación Automatizada con `validar_h5p_educamadrid.py`
+## 10. Verificación Automatizada y Flujo de Trabajo
 
-Antes de subir cualquier paquete a Moodle, certificar su cumplimiento mediante:
-
+### Compilación y Validación de Paquetes
 ```bash
-python3 plantilla/validar_h5p_educamadrid.py <nombre_paquete.h5p>
+# Compilar todo el ecosistema (H5P Formativo + Moodle XML Sumativo)
+python3 build.py todos
+
+# Validar paquetes H5P
+python3 build.py validar <nombre_paquete.h5p>
+
+# Validar bancos Moodle XML
+python3 build.py xml
 ```
 
-El script certifica automáticamente:
+El validador de H5P certifica:
 1. Whitelist estricta en `content/` (cero `.html`, cero `.svg`).
 2. Clausura física completa de las 16 librerías en la raíz del ZIP.
 3. Anidamiento reglamentario en `H5P.Column 1.16`.
 4. Metadatos obligatorios UUIDv4 y `metadata.title`.
 5. Ausencia de etiquetas `<style>` y delimitadores LaTeX crudos `$`.
-6. Detección y contabilización de actividades de Aprendizaje Activo (`MultiChoice`, `TrueFalse`, `DragText`, `ImageHotspots`, `QuestionSet`).
+6. Detección y contabilización de actividades de Aprendizaje Activo.
 7. Cumplimiento de accesibilidad básica (atributos `alt` no vacíos).
+
+El validador de Moodle XML certifica:
+1. Conformidad con esquema estándar `<quiz>`.
+2. Opciones de respuesta con fracciones equilibradas (100% en correctas).
+3. Retroalimentación pedagógica explicada para aciertos y fallos.

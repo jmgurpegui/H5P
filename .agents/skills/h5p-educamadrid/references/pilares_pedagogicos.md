@@ -79,13 +79,30 @@ Queda prohibido el feedback genérico ("Correcto" o "Incorrecto"):
 
 ---
 
-## Pilar 5: Integración con la Evaluación y Trazabilidad en Moodle
+## Pilar 5: Desacoplamiento Pedagógico: H5P Formativo y Evaluación Sumativa Moodle XML
 
-### 1. Modalidad Didáctica Pura (Recomendada para Estudio y Taller)
-* Paquete H5P interactivo con autocomprobaciones formativas intercaladas para consulta y práctica activa autónoma en tablet/móvil.
-* La evaluación sumativa oficial se gestiona mediante cuestionarios nativos de Moodle generados con archivos **Moodle XML** (con preguntas prácticas, imágenes embebidas en base64 y retroalimentaciones justificadas).
-* **Ventaja**: No muestra pantallas de puntuación vacías ni bloquea el avance del alumno.
+### 1. Diagnóstico del Error de Registro en Moodle ("No intentado" / Pérdida de xAPI)
+En aulas virtuales Moodle y EducaMadrid, cuando se exige una calificación dentro de un contenedor H5P (`InteractiveBook` o `Column`) para marcar la actividad como completada, se producen fallos recurrentes de registro en el alumnado:
+* **Pérdida de eventos xAPI en navegadores móviles**: En smartphones (Safari iOS, Chrome Android), las restricciones de almacenamiento de terceros en `iframe` (*Third-Party Cookies / Storage Partitioning*) y los cortes intermitentes de red provocan que las sentencias `answered` o `completed` no lleguen al LRS de Moodle.
+* **El puntaje de dominio anula el estado**: Si el alumno omite una sola pregunta formativa intercalada o no pulsa el botón final de envío en la última página, Moodle marca la actividad con estado **"No intentado"**, privándole del progreso de finalización.
 
-### 2. Modalidad Sumativa con Trazabilidad xAPI Integrada
-* Paquete H5P con módulo `H5P.QuestionSet 1.20` en el último capítulo (con muestreo aleatorio `poolSize: 20` sobre una base de 50 preguntas).
-* Publicado obligatoriamente como **Actividad H5P Nativa** en Moodle (`mod_h5p`), conectando las sentencias xAPI (`completed`, `answered`, `score.raw`) directamente con la tabla del Calificador (`mdl_grade_grades`).
+### 2. La Arquitectura Desacoplada Oficial (100% Confiabilidad)
+
+Para garantizar que el 100% de los alumnos registren su trabajo y cuenten con una experiencia fluida en cualquier dispositivo:
+
+1. **Paquete H5P (Didáctico y Formativo)**:
+   - Se concibe como material de estudio interactivo, consulta técnica y práctica guiada con andamiaje en 4 fases.
+   - Cuenta con autocomprobaciones con reintentos ilimitados (`enableRetry: true`) y justificación razonada en cada opción para aprender del error.
+   - **Configuración de Finalización en Moodle**:
+     - *Rastreo de finalización*: "Mostrar la actividad como completada cuando se cumplan las condiciones".
+     - *Condición de finalización*: **"El estudiante debe ver esta actividad para completarla"** (marcada).
+     - *Requerir calificación*: **Desactivada**.
+     - *Aprobado obligatorio*: **Desactivado**.
+
+2. **Cuestionario Sumativo Moodle Nativo (Banco Moodle XML)**:
+   - La evaluación oficial calificable se traslada a la herramienta nativa de Moodle (**Cuestionario / `mod_quiz`**).
+   - El profesorado importa el banco de preguntas estandarizado en formato **Moodle XML** (`plantilla/evaluacion_modelo_moodle.xml` o generado con `plantilla/moodle_xml_builder.py`).
+   - **Ventajas críticas**:
+     - Persistencia directa en base de datos Moodle sin depender de iframes ni xAPI.
+     - Guardado automático pregunta a pregunta, navegación libre/secuencial y límite de tiempo.
+     - Registro garantizado en el Libro de Calificaciones (`Gradebook`) para el 100% de los estudiantes.

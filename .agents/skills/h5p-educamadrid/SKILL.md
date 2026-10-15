@@ -18,11 +18,12 @@ Este skill capacita al agente para diseñar, maquetar, validar y empaquetar curs
 ├── scripts/                  # Scripts ejecutables y herramientas automatizadas
 │   ├── generar_curso.py      # Generador y compilador de cursos H5P llave en mano
 │   ├── validar_h5p.py        # Validador y certificador oficial EducaMadrid / Moodle
-│   └── inyectar_css.py       # Inyector limpio de hojas de estilo en librerías base
+│   ├── inyectar_css.py       # Inyector limpio de hojas de estilo en librerías base
+│   └── moodle_xml_builder.py # Generador y validador de bancos de preguntas Moodle XML
 ├── resources/                # Recursos y plantillas de diseño
 │   ├── logo2026.png / .bmp   # Logotipo institucional oficial Comunidad de Madrid
 │   ├── CC.png                # Logotipo oficial de licencia Creative Commons
-│   └── estilos_educamadrid.css # Hoja de estilos accesible (WCAG AAA)
+│   └── estilos_educamadrid.css # Hoja de estilos accesible y responsive (WCAG AAA)
 ├── references/               # Documentación técnica y pedagógica detallada
 │   ├── entrevista_diagnostica.md # Protocolo de preguntas clave iniciales
 │   ├── pilares_pedagogicos.md # Los 5 pilares de aprendizaje activo y andamiaje
@@ -30,7 +31,8 @@ Este skill capacita al agente para diseñar, maquetar, validar y empaquetar curs
 │   └── accesibilidad_wcag.md # Directrices WCAG 2.1 AA/AAA y diseño inclusivo
 └── examples/                 # Implementaciones de referencia
     ├── curso_modelo_ejemplo.py # Código fuente de referencia para generar cursos
-    └── Plantilla_Curso_Modelo_EducaMadrid.h5p # Paquete modelo precompilado
+    ├── Plantilla_Curso_Modelo_EducaMadrid.h5p # Paquete modelo precompilado
+    └── evaluacion_modelo_moodle.xml # Banco Moodle XML de evaluación sumativa
 ```
 
 ---
@@ -52,7 +54,7 @@ Antes de generar código, confirma o solicita los **7 parámetros clave** (consu
 - Tipo de actividad H5P: [Interactive Book (4 fases) / Question Set / Drag the Words / Image Hotspots / True-False]
 - Cantidad de ítems: [Ej. 2 capítulos con 10 preguntas / 8 huecos de arrastre / 4 puntos de inspección]
 - Nivel cognitivo (Bloom): [Recordar / Comprender / Aplicar / Analizar / Evaluar]
-- Estrategia de Retroalimentación: [Formativa con pistas y explicaciones razonadas / Sumativa xAPI]
+- Estrategia de Retroalimentación: [Formativa con pistas y explicaciones razonadas / Sumativa en Moodle XML]
 - Recursos Multimedia: [Imágenes PNG/JPG disponibles, vídeos en Mediateca EducaMadrid]
 ```
 
@@ -66,13 +68,19 @@ Diseña el contenido asegurando la participación constante del estudiante (cons
    - *Fase 4*: Evaluación formativa (preguntas con feedback razonado inmediato).
 3. **Retroalimentación explicada**: Toda opción de respuesta justifica técnicamente por qué es válida o en qué consiste el fallo (`chosenFeedback`).
 4. **Gamificación estratégica**: Dinamización lúdica integrada orgánicamente en el tema.
-5. **Trazabilidad xAPI**: Publicación como Actividad Nativa para registrar notas en Moodle (`mdl_grade_grades`).
+5. **Desacoplamiento Formativo H5P + Sumativo Moodle XML**:
+   - Para evitar errores de rastreo ("No intentado" en móviles por pérdida de sentencias xAPI en iframes), el H5P se configura en Moodle con la condición de finalización **"El estudiante debe ver esta actividad para completarla"** (sin nota requerida).
+   - La evaluación sumativa oficial se gestiona mediante un **Cuestionario Moodle nativo (`mod_quiz`)** a partir del banco de preguntas exportado con `moodle_xml_builder.py`.
 
-### Paso 3: Reglas Técnicas y Accesibilidad Universal
+### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
 Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):
 * **Whitelist estricta**: Cero archivos `.html` y cero `.svg` en `content/`. Diagramas rasterizados a **PNG** o **JPEG**.
 * **Fórmulas sin LaTeX**: Prohibido usar `$ ... $`. Usar HTML semántico y Unicode (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).
 * **Cero etiquetas `<style>` en HTML**: Estilos inyectados en librerías base para evitar fugas de código CSS en pantalla.
+* **Diseño Responsive para Móviles**:
+  - `behaviour.defaultTableOfContents: false` en `InteractiveBook` para evitar que el índice tape la pantalla en móviles.
+  - `behaviour.progressType: "textual"` para evitar desbordamientos de círculos de progreso en pantallas estrechas (≤480px).
+  - Tablas y fórmulas envueltas con desplazamiento horizontal táctil suave (`overflow-x: auto; -webkit-overflow-scrolling: touch;`).
 * **Contraste WCAG AAA**: Texto Slate 900 (`#0f172a`) sobre blanco (> 13:1), insignias y alertas con ratios > 7:1 a 9:1.
 * **Objetivos táctiles**: Botones y elementos interactivos con tamaño mínimo de **44 x 44 px**.
 * **Textos alternativos `alt`**: Toda imagen técnica exige descripción funcional obligatoria.

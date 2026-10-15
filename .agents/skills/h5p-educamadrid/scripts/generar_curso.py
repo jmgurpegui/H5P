@@ -637,9 +637,9 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
         },
         "chapters": chapters,
         "behaviour": {
-            "defaultTableOfContents": True,
+            "defaultTableOfContents": False,
             "progressIndicators": True,
-            "progressType": "dots"
+            "progressType": "textual"
         }
     }
 
