@@ -22,25 +22,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Circuito abierto (R = ∞), cortocircuito a masa (R ≈ 0 Ω), cortocircuito a positivo y caída de tensión parásita por resistencia indebida.]]></text>
+      <text><![CDATA[Circuito abierto, cortocircuito a masa, cortocircuito a positivo y caída de tensión por resistencia indebida.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Cualquier avería eléctrica automotriz se clasifica rigurosamente en uno de estos 4 estados para deducir la causa raíz.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Circuito directo, circuito alterno, circuito mixto y circuito trifásico.]]></text>
+      <text><![CDATA[Circuito en corriente continua pura, circuito alterno rectificado, circuito mixto serie-paralelo y circuito trifásico del alternador.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Esos son tipos de corriente o topologías de red, no estados de diagnóstico de averías.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Circuito cerrado, fusible fundido, relé activado y batería descargada.]]></text>
+      <text><![CDATA[Circuito cerrado funcional, fusible de protección fundido por sobrecarga térmica, relé excitado y batería con densidad química baja.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Esos son síntomas o condiciones puntuales de componentes, no la clasificación analítica de un circuito.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Resistencia baja, resistencia media, resistencia alta y resistencia infinita.]]></text>
+      <text><![CDATA[Resistencia de aislamiento baja, resistencia de contacto media, resistencia de carga nominal y circuito abierto con valor infinito.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No distingue entre fallos a masa, cortocircuitos a positivo o caídas de tensión bajo carga.]]></text>
       </feedback>
@@ -63,25 +63,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Menor o igual a 0.2 V (o un máximo de 0.5 V en circuitos de muy alta intensidad como el motor de arranque).]]></text>
+      <text><![CDATA[Menor o igual a 0.2 V (o máximo 0.5 V en arranque).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Una caída de tensión mayor a 0.2 V en cables de alimentación o masa revela corrosión, terminal flojo o sulfatación en empalmes.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 1.5 V y 3.0 V.]]></text>
+      <text><![CDATA[Entre 1.5 V y 3.0 V en cualquier línea de alimentación protegida por fusible estándar.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Una caída de 1.5 V a 3 V provocaría mal funcionamiento de calculadores o pérdida de potencia en actuadores.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Exactamente 0.000 V sin importar la longitud del cable.]]></text>
+      <text><![CDATA[Exactamente 0.000 V independientemente de la longitud del cable o la corriente de carga.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Todo conductor real de cobre presenta una mínima resistencia óhmica (R = ρ·L/S).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[El 50% de la tensión nominal de la batería.]]></text>
+      <text><![CDATA[Hasta un 50% de la tensión nominal de la batería medida en vacío con motor detenido.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Eso equivaldría a dejar el componente con solo 6 V, inutilizándolo.]]></text>
       </feedback>
@@ -104,25 +104,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Técnica de agujas traseras (back-probing) insertadas con suavidad por el retén de goma posterior del conector, prohibiendo perforar el aislante.]]></text>
+      <text><![CDATA[Técnica de agujas traseras (back-probing) insertadas por el retén de goma posterior.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Perforar el aislante con pinzas cocodrilo o alfileres destruye la estanqueidad, permitiendo la entrada de humedad que oxida el cobre internamente.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Perforar el aislante de PVC con la punta del polímetro para llegar directamente al filamento.]]></text>
+      <text><![CDATA[Perforar el aislante de PVC del cable con pinzas de cocodrilo afiladas para hacer contacto directo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Esta práctica provoca corrosión galvánica verde oculta (*cobre sulfatado*) con averías intermitentes graves.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Cortar el cable, medir el extremo pelado y volver a unirlo con cinta aislante común.]]></text>
+      <text><![CDATA[Seccionar transversalmente el conductor para medir en el extremo pelado y empalmar con cinta aislante.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Rompe la integridad del mazo y altera las secciones y apantallamientos de la red CAN.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Desconectar siempre la centralita con el motor en marcha para medir en las clavijas delanteras.]]></text>
+      <text><![CDATA[Desconectar el mazo de cables del calculador con el motor en marcha y medir directamente en las clavijas.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Desconectar una ECU bajo tensión genera picos inductivos que pueden quemar sus etapas de potencia.]]></text>
       </feedback>
@@ -145,25 +145,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Alimentación positiva permanente directa de batería (tensión constante con o sin llave de contacto).]]></text>
+      <text><![CDATA[Alimentación positiva permanente directa de batería (+Bat).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El Borne 30 mantiene alimentados componentes que requieren memoria permanente (ECU, reloj, cierres o alarmas).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Masa del chasis y polo negativo de la batería.]]></text>
+      <text><![CDATA[Línea de retorno a masa del chasis conectada al polo negativo de la batería del vehículo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La masa del chasis según DIN 72552 es el Borne 31.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Positivo bajo llave de contacto (ignición activada).]]></text>
+      <text><![CDATA[Positivo bajo llave de contacto que solo suministra corriente en posición de encendido.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El positivo tras llave de contacto es el Borne 15.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Mando del motor de arranque.]]></text>
+      <text><![CDATA[Línea de excitación temporal que activa el solenoide del motor de arranque al girar la llave.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El mando de activación del arranque es el Borne 50.]]></text>
       </feedback>
@@ -186,25 +186,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Positivo conmutado tras llave de contacto (activa calculadores, cuadro de instrumentos y encendido en posición IGNITION).]]></text>
+      <text><![CDATA[Positivo conmutado tras llave de contacto (ignición activada).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El Borne 15 solo suministra 12 V cuando la llave está en posición de contacto/marcha (KL 15).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Positivo permanente que nunca se desconecta.]]></text>
+      <text><![CDATA[Alimentación positiva permanente directa desde el borne positivo de la batería sin fusible previo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Ese es el Borne 30.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Retorno de masa directa a carrocería.]]></text>
+      <text><![CDATA[Retorno de masa general hacia el borne negativo de batería y a los puntos estructurales del chasis.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La masa es el Borne 31.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Línea de alta tensión hacia las bujías.]]></text>
+      <text><![CDATA[Línea de alta tensión secundaria generada por la bobina de encendido hacia las bujías del motor.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Las líneas de alta tensión se identifican como 4 o 4a en bobinas clásicas.]]></text>
       </feedback>
@@ -227,25 +227,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Línea de retorno a masa conectada al polo negativo de la batería y al chasis/carrocería.]]></text>
+      <text><![CDATA[Línea de retorno a masa conectada al polo negativo y al chasis.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El Borne 31 cierra el circuito de todos los consumidores de vuelta al polo negativo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Positivo de arranque para el solenoide.]]></text>
+      <text><![CDATA[Tensión de carga rectificada suministrada por el alternador hacia la batería del automóvil.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El solenoide de arranque es el Borne 50.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Salida de potencia de relé hacia faros.]]></text>
+      <text><![CDATA[Salida conmutada de potencia del relé para alimentar faros de carretera y luneta térmica.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Las salidas de relé son los bornes 87 u 87a.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Tensión de carga del alternador (B+).]]></text>
+      <text><![CDATA[Línea de excitación positiva enviada al solenoide del motor de arranque durante el encendido.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La salida del alternador a batería es B+ o Borne 30.]]></text>
       </feedback>
@@ -268,25 +268,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Borne 50 (excita la bobina del relé/solenoide de arranque para engranar el bendix y conectar el motor eléctrico).]]></text>
+      <text><![CDATA[Borne 50 (excita el solenoide de arranque durante el giro de llave).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El Borne 50 solo tiene 12 V durante los segundos en que se acciona el arranque.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Borne 30.]]></text>
+      <text><![CDATA[Borne 30, suministrando corriente permanente ininterrumpida directamente desde la batería.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El Borne 30 es permanente y siempre tiene 12 V.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Borne 31.]]></text>
+      <text><![CDATA[Borne 31, cerrando el circuito de masa exclusivo para el motor eléctrico del motor de arranque.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Borne 31 es masa permanente.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Borne X / 75.]]></text>
+      <text><![CDATA[Borne X / 75, derivando corriente auxiliar a los accesorios de confort durante la fase de arranque.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El Borne X precisamente se desconecta durante el arranque para reservar batería.]]></text>
       </feedback>
@@ -309,25 +309,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Alimenta consumidores secundarios (limpiaparabrisas, climatizador, luces de cruce) y se DESCONECTA automáticamente durante el arranque para preservar la corriente de batería.]]></text>
+      <text><![CDATA[Alimenta accesorios y se desconecta en el arranque para reservar batería.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El relé de descarga de contacto X apaga elementos pesados para que el motor de arranque disponga del 100% de la energía disponible en la batería.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Permanece encendido permanentemente incluso con el vehículo cerrado con llave.]]></text>
+      <text><![CDATA[Permanece conectado de forma continua incluso con la llave de contacto retirada del vehículo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Eso descargaría la batería rápidamente.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Solo funciona cuando el vehículo supera los 50 km/h.]]></text>
+      <text><![CDATA[Suministra alimentación auxiliar exclusivamente cuando el vehículo supera los 50 km/h de velocidad.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Es un circuito eléctrico de confort gestionado por llave o calculador de carrocería.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Es la línea exclusiva de comunicación multiplexada del bus CAN.]]></text>
+      <text><![CDATA[Constituye el canal principal de comunicación digital multiplexada para las centralitas del bus CAN.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El bus CAN utiliza líneas de par trenzado CAN-H y CAN-L, no Borne X.]]></text>
       </feedback>
@@ -391,25 +391,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Borne 30 (entrada de potencia protegida por fusible) y Borne 87 (salida de potencia hacia el consumidor cuando el relé se activa).]]></text>
+      <text><![CDATA[Borne 30 (entrada de potencia) y Borne 87 (salida al consumidor).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El contacto 30-87 soporta intensidades de 20 A a 40 A, conmutadas por la débil corriente de la bobina (aprox. 150-200 mA).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Bornes 85 y 86.]]></text>
+      <text><![CDATA[Bornes 85 y 86, que forman el circuito de control de baja intensidad de la bobina electromagnética.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Son los bornes de la bobina de control.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Bornes 50 y 31.]]></text>
+      <text><![CDATA[Bornes 50 y 31, que comunican directamente el solenoide del motor de arranque con la masa del chasis.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 50 es arranque y 31 es masa.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Bornes 15 y 85.]]></text>
+      <text><![CDATA[Bornes 15 y 85, que enlazan el positivo de contacto con el transistor de conmutación de la centralita.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No forman un par de conmutación de potencia.]]></text>
       </feedback>
@@ -432,25 +432,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Neutralizar el pico de alta tensión de autoinducción (fuerza contraelectromotriz) generado al desconectar la bobina, protegiendo el transistor de la centralita que la gobierna.]]></text>
+      <text><![CDATA[Neutralizar el pico de alta tensión inductiva al desconectar la bobina.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Al cortar la corriente en un inductor, la tensión puede elevarse bruscamente a 70-100 V con polaridad invertida. El diodo la deriva en bucle seguro.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Aumentar la velocidad del motor de arranque.]]></text>
+      <text><![CDATA[Aumentar la velocidad de giro y el par mecánico del motor de arranque durante el encendido del motor.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No tiene relación con el par del motor de arranque.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Evitar que el relé consuma corriente cuando está activado.]]></text>
+      <text><![CDATA[Evitar que la bobina consuma corriente eléctrica cuando el relé se encuentra plenamente activado.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La bobina sigue consumiendo corriente según la ley de Ohm (I = V/R).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Permitir conectar el relé con polaridad invertida sin que sufra daños.]]></text>
+      <text><![CDATA[Permitir la conexión accidental del relé con polaridad invertida sin causar daños al bobinado interno.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Al revés: si se invierte la polaridad con diodo, se provoca un cortocircuito directo que quema el fusible o el transistor.]]></text>
       </feedback>
@@ -473,25 +473,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[MARRÓN es siempre masa (Borne 31) y ROJO es positivo permanente directo de batería (Borne 30).]]></text>
+      <text><![CDATA[MARRÓN es masa (Borne 31) y ROJO es positivo permanente (Borne 30).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Es una regla invariable en el esquema alemán: Brown (BR) = Masa / Rot (RT) = Positivo (+30).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[MARRÓN es positivo permanente y ROJO es masa.]]></text>
+      <text><![CDATA[MARRÓN es positivo conmutado bajo llave y ROJO es línea de masa conectada directamente al chasis.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. ¡Peligro de cortocircuito! Nunca confundir la norma alemana donde el marrón es masa directa.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[MARRÓN es señal de sensor y ROJO es altavoz de audio.]]></text>
+      <text><![CDATA[MARRÓN es señal analógica de sensor y ROJO es canal de audio para los altavoces del habitáculo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Son las dos líneas maestras de potencia del vehículo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Ambos colores se alternan indistintamente según el modelo.]]></text>
+      <text><![CDATA[Ambos colores se alternan de forma indistinta según la serie y año de fabricación del fabricante.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La colorimetría alemana sigue una estricta normalización DIN.]]></text>
       </feedback>
@@ -514,25 +514,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Módulos SAM (N10/1 delantero, N10/2 trasero) y la letra 'W' para puntos de masa de carrocería (ej. W10, W16/5).]]></text>
+      <text><![CDATA[Módulos SAM (N10/1, N10/2) y la letra 'W' para masas de carrocería.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! N = Módulos de control / W = Conexiones de masa de chasis en la nomenclatura Mercedes-Benz.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Módulos UCH y la letra 'M' para masas.]]></text>
+      <text><![CDATA[Módulos UCH para el habitáculo del vehículo y la letra 'M' para identificar las tomas de masa.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. UCH es la denominación exclusiva de Renault.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Módulos BCM y la letra 'G' para masas.]]></text>
+      <text><![CDATA[Módulos BCM para las luces y carrocería y la letra 'G' para señalizar los puntos de toma a masa.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La letra 'G' para masas corresponde a Ford.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Módulos BSI y la letra 'E' para masas.]]></text>
+      <text><![CDATA[Módulos BSI con arquitectura multiplexada y la letra 'E' para definir las conexiones a carrocería.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. BSI es la arquitectura del grupo Stellantis / PSA.]]></text>
       </feedback>
@@ -555,25 +555,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[0.75 mm² de sección de conductor de cobre, con aislamiento de color base NEGRO (BK) y traza secundaria BLANCA (WH).]]></text>
+      <text><![CDATA[0.75 mm² de sección de cobre; color base NEGRO (BK) y traza BLANCA (WH).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! En Ford la primera sigla es el color predominante del cable y la segunda es la línea de traza identificativa.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[0.75 amperios de intensidad y color blanco puro.]]></text>
+      <text><![CDATA[0.75 amperios de intensidad máxima admisible y aislamiento monocromático de color blanco puro.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 0.75 es la sección transversal del hilo conductor en milímetros cuadrados.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[0.75 voltios de caída de tensión y cable blindado coaxial.]]></text>
+      <text><![CDATA[0.75 voltios de caída de tensión teórica y cable con apantallamiento trenzado contra parásitos.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. BK/WH representa Black/White en inglés internacional.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[0.75 metros de longitud total del mazo.]]></text>
+      <text><![CDATA[0.75 metros de longitud geométrica de cableado desde el conector hasta el punto de empalme.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Los esquemas no indican la longitud física del cable sino su calibre geométrico.]]></text>
       </feedback>
@@ -596,25 +596,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Cada componente técnico tiene un número invariable asignado: 120 (calculador inyección), 645 (UCH), 597 (caja fusibles motor UPC), 103 (alternador), 163 (motor de arranque).]]></text>
+      <text><![CDATA[Cada componente técnico tiene un número universal fijo (120=inyección, 645=UCH).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! En Renault no importa el modelo de vehículo (Clio, Megane, Master); el número 120 siempre identifica el calculador de motor.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Los componentes se numeran por orden aleatorio de montaje en la cadena de producción.]]></text>
+      <text><![CDATA[Los números se asignan por orden aleatorio de montaje según la secuencia en la cadena de producción.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Renault utiliza una enciclopedia numérica universal fija.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Los números indican los voltios exactos que tolera cada componente.]]></text>
+      <text><![CDATA[Cada número indica la tensión máxima en voltios que tolera el aislamiento del componente en trabajo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Son códigos unívocos de identificación topográfica.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Solo se numeran los fusibles, el resto de componentes se escribe con nombres en francés.]]></text>
+      <text><![CDATA[Solo se numeran los fusibles de la caja de fusibles, designándose el resto con nombres en francés.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Todos los calculadores, motores y sensores poseen código numérico estándar.]]></text>
       </feedback>
@@ -637,25 +637,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[El color plástico del conector en francés: BA (Blanc / Blanco), GR (Gris), NO (Noir / Negro) y MR (Marron / Marrón).]]></text>
+      <text><![CDATA[El color plástico del conector en francés: Blanco (BA), Gris (GR), Negro (NO), Marrón (MR).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! En Renault los conectores de las centralitas son modulares de 16, 32 o 48 vías identificados por su color físico para evitar errores de inserción.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[El nivel de seguridad eléctrica: Bajo, Grave, Nocivo y Mortal.]]></text>
+      <text><![CDATA[El nivel de riesgo eléctrico homologado para los operarios del taller: Bajo, Grave, Nocivo y Mortal.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Hacen referencia exclusiva al color visual de la carcasa del conector.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[El tipo de comunicación: Básico, Gradual, Normal y Multiplexado.]]></text>
+      <text><![CDATA[El tipo de bus de datos utilizado en el conector: Básico (BA), Gradual (GR), Normal (NO) y Rápido (MR).]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La comunicación se especifica por el protocolo (CAN, LIN, K-Line).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Las iniciales de las marcas colaboradoras de la alianza automotriz.]]></text>
+      <text><![CDATA[Las iniciales de las plantas de fabricación de la alianza automotriz donde se ensambló cada componente.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Son nombres de colores en francés.]]></text>
       </feedback>
@@ -669,7 +669,7 @@
       <text><![CDATA[&lt;p&gt;En el sistema de esquemas interactivos de BMW (ISTA / WDS), ¿con qué letra se identifican unívocamente todos los conectores eléctricos?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;BMW: X = Conector, A = Centralita, B = Sensor, Y = Actuador, F = Fusible, K = Relé.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;BMW: X = Conectores (X13*1V, X11004), A = Centralitas, B = Sensores, Y = Actuador, F = Fusible, K = Relé.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -678,27 +678,27 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Con la letra 'X' seguida de un número de 4 a 5 dígitos (por ejemplo, X11004 para el conector de la luneta térmica o X18284 para el módulo de carrocería).]]></text>
+      <text><![CDATA[Con la letra 'X' seguida de un número de identificación (ej. X11004).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! En BMW la 'X' designa cualquier conector, permitiendo localizar en el visor 3D el pinout y su fotografía real.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Con la letra 'B' de Bavarian.]]></text>
+      <text><![CDATA[Con la letra 'B' seguida del modelo de la carrocería y el código del año de homologación del chasis.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La letra 'B' en BMW designa sensores de magnitud física (B = Sensor).]]></text>
+        <text><![CDATA[Incorrecto. En BMW la 'B' se reserva para sensores (transductores), no para conectores.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Con la letra 'C' de Conector.]]></text>
+      <text><![CDATA[Con la letra 'C' de conector y dos dígitos indicando la cantidad de cables alojados en el interior.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. En BMW la convención de ingeniería alemana fija 'X' para conexiones desmontables.]]></text>
+        <text><![CDATA[Incorrecto. La designación estándar alemana de conectores de interconexión es 'X'.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Con la letra 'J' de Joint.]]></text>
+      <text><![CDATA[Con la letra 'W' de cableado seguida de la letra identificativa del módulo electrónico correspondiente.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 'J' no es la nomenclatura de conector en ISTA.]]></text>
+        <text><![CDATA[Incorrecto. 'W' en algunos sistemas alemanes designa mazo de cables o masa (en Mercedes).]]></text>
       </feedback>
     </answer>
   </question>

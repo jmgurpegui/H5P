@@ -688,13 +688,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
 
     builder = MoodleXMLBuilder("Plantilla Oficial EducaMadrid - Evaluacion Sumativa")
 
-    # P1: Desacoplamiento de H5P y XML (Opciones equilibradas ~130 caracteres)
+    # P1: Desacoplamiento de H5P y XML (Opciones equilibradas ~100-130 caracteres)
     builder.add_multichoice(
         "P01_Desacoplamiento_Evaluacion",
         "<p>¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?</p>",
         [
             {
-                "text": "Garantizar el registro infalible de visualización en Moodle y evitar pérdidas de sentencias xAPI o bloqueos de iframes en móviles.",
+                "text": "Garantizar el registro infalible en Moodle y evitar pérdidas de sentencias xAPI o bloqueos en móviles.",
                 "fraction": 100,
                 "feedback": "¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz)."
             },
@@ -717,13 +717,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.</p>"
     )
 
-    # P2: Contraste WCAG 2.1 AAA (Opciones equilibradas ~100 caracteres)
+    # P2: Contraste WCAG 2.1 AAA (Opciones equilibradas ~80-100 caracteres)
     builder.add_multichoice(
         "P02_Contraste_WCAG_AAA",
         "<p>Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?</p>",
         [
             {
-                "text": "Al menos 7:1 para garantizar lectura sin fatiga visual (alcanzando > 13:1 con Slate 900 sobre blanco).",
+                "text": "Al menos 7:1 para garantizar lectura sin fatiga visual en cualquier soporte.",
                 "fraction": 100,
                 "feedback": "¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles."
             },
@@ -775,13 +775,13 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.</p>"
     )
 
-    # P4: Andamiaje pedagógico (Opciones equilibradas ~100 caracteres)
+    # P4: Andamiaje pedagógico (Opciones equilibradas ~80-100 caracteres)
     builder.add_multichoice(
         "P04_Andamiaje_Cuatro_Fases",
         "<p>¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?</p>",
         [
             {
-                "text": "1. Motivación activa ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.",
+                "text": "1. Motivación activa ➔ 2. Explicación ➔ 3. Práctica guiada ➔ 4. Autocomprobación.",
                 "fraction": 100,
                 "feedback": "¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje."
             },

@@ -22,7 +22,7 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Garantizar el registro infalible de visualización en Moodle y evitar pérdidas de sentencias xAPI o bloqueos de iframes en móviles.]]></text>
+      <text><![CDATA[Garantizar el registro infalible en Moodle y evitar pérdidas de sentencias xAPI o bloqueos en móviles.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz).]]></text>
       </feedback>
@@ -63,7 +63,7 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Al menos 7:1 para garantizar lectura sin fatiga visual (alcanzando &gt; 13:1 con Slate 900 sobre blanco).]]></text>
+      <text><![CDATA[Al menos 7:1 para garantizar lectura sin fatiga visual en cualquier soporte.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles.]]></text>
       </feedback>
@@ -145,7 +145,7 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[1. Motivación activa ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.]]></text>
+      <text><![CDATA[1. Motivación activa ➔ 2. Explicación ➔ 3. Práctica guiada ➔ 4. Autocomprobación.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje.]]></text>
       </feedback>
