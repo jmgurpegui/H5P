@@ -21,6 +21,7 @@ import subprocess
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 PLANTILLA_DIR = os.path.join(ROOT_DIR, "plantilla")
 ESQUEMAS_DIR = os.path.join(ROOT_DIR, "EsquemasElectricosAutomocion")
+ALUMBRADO_DIR = os.path.join(ROOT_DIR, "CircuitosAlumbrado")
 VALIDADOR_H5P = os.path.join(PLANTILLA_DIR, "validar_h5p_educamadrid.py")
 VALIDADOR_XML = os.path.join(PLANTILLA_DIR, "moodle_xml_builder.py")
 INJECT_CSS = os.path.join(PLANTILLA_DIR, "append_css_to_libraries.py")
@@ -39,6 +40,15 @@ def compilar_esquemas():
     print(">>> Compilando Curso y Banco Moodle XML: Esquemas Eléctricos...")
     print("=" * 60)
     script = os.path.join(ESQUEMAS_DIR, "generar_curso_esquemas.py")
+    ret = subprocess.call([sys.executable, script])
+    if ret != 0:
+        sys.exit(ret)
+
+def compilar_alumbrado():
+    print("=" * 60)
+    print(">>> Compilando Curso y Banco Moodle XML: Circuitos de Alumbrado...")
+    print("=" * 60)
+    script = os.path.join(ALUMBRADO_DIR, "generar_curso_alumbrado.py")
     ret = subprocess.call([sys.executable, script])
     if ret != 0:
         sys.exit(ret)
@@ -70,7 +80,8 @@ def validar_banco_xml(xml_path):
 def validar_todos_xml():
     xml_files = [
         os.path.join(PLANTILLA_DIR, "evaluacion_modelo_moodle.xml"),
-        os.path.join(ESQUEMAS_DIR, "evaluacion_esquemas_electricos.xml")
+        os.path.join(ESQUEMAS_DIR, "evaluacion_esquemas_electricos.xml"),
+        os.path.join(ALUMBRADO_DIR, "evaluacion_circuitos_alumbrado.xml")
     ]
     for xf in xml_files:
         if os.path.exists(xf):
@@ -84,10 +95,14 @@ def main():
         compilar_plantilla()
     elif sys.argv[1].lower() in ["esquemas", "automocion"]:
         compilar_esquemas()
+    elif sys.argv[1].lower() in ["alumbrado", "luces", "iluminacion"]:
+        compilar_alumbrado()
     elif sys.argv[1].lower() in ["todos", "all"]:
         compilar_plantilla()
         print("\n")
         compilar_esquemas()
+        print("\n")
+        compilar_alumbrado()
     elif sys.argv[1].lower() in ["xml", "evaluacion"]:
         validar_todos_xml()
     elif sys.argv[1].lower() in ["css", "estilos"]:

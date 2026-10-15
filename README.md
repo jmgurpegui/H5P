@@ -33,6 +33,14 @@ H5P/
 │   ├── images/                               # Esquemas eléctricos y diagramas rasterizados de alta resolución
 │   └── README.md                             # Guía curricular, unidades didácticas y normativa DIN
 │
+├── CircuitosAlumbrado/                       # Curso técnico: Circuitos de Alumbrado y Señalización del Vehículo
+│   ├── Curso_Circuitos_Alumbrado_Automocion.h5p # Paquete H5P certificado listo para EducaMadrid (6.9 MB)
+│   ├── evaluacion_circuitos_alumbrado.xml    # Banco sumativo oficial Moodle XML (25 preguntas)
+│   ├── generar_curso_alumbrado.py            # Generador maestro con 5 capítulos y 15 epígrafes técnicos
+│   ├── generar_imagenes.py                   # Generador de esquemas electrotécnicos e infografías HD
+│   ├── images/                               # Diagramas técnicos rasterizados (proyector DE, regloscopio, relés)
+│   └── README.md                             # Guía didáctica, epígrafes 6.1 a 6.15 y configuración Moodle
+│
 ├── h5p_builder/
 │   └── h5p-libraries/                        # Repositorio maestro de librerías oficiales H5P homologadas
 │
@@ -63,7 +71,7 @@ H5P/
 5. **Desacoplamiento Pedagógico: H5P Formativo + Moodle XML Sumativo**:
    - **Solución al error de registro en Moodle ("No intentado")**: En navegadores móviles y redes móviles, exigir calificación dentro del iframe H5P provoca pérdidas de eventos xAPI. Se establece la separación oficial:
      - **H5P Formativo**: Se sube al aula virtual configurando la finalización de actividad con **"El estudiante debe ver esta actividad para completarla"** (sin requerir calificación). Garantiza el 100% de éxito en el registro de finalización.
-     - **Moodle XML Sumativo**: Las pruebas evaluativas con nota oficial para el Calificador se gestionan mediante **Cuestionarios nativos de Moodle (`mod_quiz`)**, importando los archivos Moodle XML provistos (`plantilla/evaluacion_modelo_moodle.xml` y `EsquemasElectricosAutomocion/evaluacion_esquemas_electricos.xml`).
+      - **Moodle XML Sumativo**: Las pruebas evaluativas con nota oficial para el Calificador se gestionan mediante **Cuestionarios nativos de Moodle (`mod_quiz`)**, importando los archivos Moodle XML provistos (`plantilla/evaluacion_modelo_moodle.xml`, `EsquemasElectricosAutomocion/evaluacion_esquemas_electricos.xml` y `CircuitosAlumbrado/evaluacion_circuitos_alumbrado.xml`).
 
 ---
 
@@ -77,6 +85,9 @@ python3 build.py
 
 # Compilar y certificar el curso completo de Esquemas Eléctricos
 python3 build.py esquemas
+
+# Compilar y certificar el curso completo de Circuitos de Alumbrado y Señalización
+python3 build.py alumbrado
 
 # Compilar todos los cursos del repositorio
 python3 build.py todos
