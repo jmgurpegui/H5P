@@ -117,6 +117,14 @@ Para garantizar que **el 100% de los alumnos registre la realización de los con
      * En *Finalización de actividad*: Marcar **El estudiante debe recibir una calificación para completar esta actividad** y/o calificación de aprobado.
      *(Moodle almacena los intentos directamente en base de datos nativa con fiabilidad total).*
 
+2. **Requisitos Psicométricos y Prevención del Sesgo de Longitud en Cuestionarios XML**:
+   * **Prohibición de patrones**: Queda prohibido cualquier patrón o pista formal que revele la respuesta correcta sin conocimiento del contenido.
+   * **Erradicación del sesgo de longitud (*Length Bias*)**: La opción correcta **NUNCA** debe ser sistemáticamente la más extensa. Las opciones deben ser homogéneas en número de caracteres y palabras (±15-20%).
+   * **Alternancia deliberada**: En el cómputo del banco, alternar deliberadamente preguntas donde la correcta sea más breve, homogénea o más larga. El porcentaje de preguntas donde la correcta es la más larga no debe exceder el 35-40%.
+   * **Plausibilidad de distractores**: Los distractores deben formularse con el mismo nivel de rigor técnico y estructura sintáctica.
+   * **Aislamiento de la justificación**: Las explicaciones detalladas deben ubicarse en la etiqueta `<feedback>`, no en el texto de la opción `<answer>`.
+   * **Barajado**: Usar `<shuffleanswers>1</shuffleanswers>` y alternar las posiciones de las opciones en el XML.
+
 ---
 
 ## 3. Normativa Técnica y Seguridad del Paquete `.h5p`
@@ -319,3 +327,4 @@ El validador de Moodle XML certifica:
 1. Conformidad con esquema estándar `<quiz>`.
 2. Opciones de respuesta con fracciones equilibradas (100% en correctas).
 3. Retroalimentación pedagógica explicada para aciertos y fallos.
+4. Control psicométrico de sesgo de longitud (auditoría de homogeneidad y alerta si la opción correcta es sistemáticamente la más extensa).

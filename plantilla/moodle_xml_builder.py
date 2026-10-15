@@ -16,6 +16,7 @@ import sys
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import html
+import re
 
 class MoodleXMLBuilder:
     """Constructor programático de bancos de preguntas Moodle XML."""
@@ -216,6 +217,8 @@ def validar_moodle_xml(xml_path):
     errores = []
     advertencias = []
     tipos_detectados = {}
+    multichoice_count = 0
+    correct_is_longest_count = 0
 
     for idx, q in enumerate(eval_questions, 1):
         q_type = q.get("type")
@@ -243,6 +246,23 @@ def validar_moodle_xml(xml_path):
             if sin_feedback:
                 advertencias.append(f"Pregunta #{idx} ('{q_name}'): {len(sin_feedback)} opción(es) sin feedback razonado.")
 
+            # Control psicométrico de longitud (prevención de length bias)
+            opts_len = []
+            for a in answers:
+                txt_node = a.find("text")
+                raw_val = txt_node.text if txt_node is not None else ""
+                clean_val = re.sub(r'<[^>]+>', '', raw_val.replace("<![CDATA[", "").replace("]]>", "")).strip()
+                clean_val = html.unescape(clean_val)
+                frac = float(a.get("fraction", 0))
+                opts_len.append((len(clean_val), frac))
+
+            if opts_len:
+                multichoice_count += 1
+                max_len = max(l for l, _ in opts_len)
+                correct_is_longest = any(f >= 99.9 and l == max_len for l, f in opts_len)
+                if correct_is_longest:
+                    correct_is_longest_count += 1
+
         elif q_type == "truefalse":
             answers = q.findall("answer")
             if len(answers) != 2:
@@ -254,6 +274,13 @@ def validar_moodle_xml(xml_path):
                 errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 2 pares de emparejamiento.")
 
     print(f"✓ Tipos de preguntas certificados: {tipos_detectados}")
+
+    # Reporte psicométrico de sesgo de longitud
+    if multichoice_count > 0:
+        pct_longest = (correct_is_longest_count / multichoice_count) * 100
+        print(f"✓ Análisis psicométrico (sesgo de longitud): {correct_is_longest_count}/{multichoice_count} ({pct_longest:.1f}%) preguntas multichoice tienen la opción correcta como la más larga.")
+        if multichoice_count >= 3 and pct_longest > 50.0:
+            advertencias.append(f"Alerta Psicométrica (Sesgo de Longitud): En el {pct_longest:.1f}% de las preguntas multichoice ({correct_is_longest_count}/{multichoice_count}), la respuesta correcta es la más larga. Equilibre la extensión de los distractores para evitar patrones predecibles.")
 
     if advertencias:
         print(f"\n⚠️  {len(advertencias)} ADVERTENCIA(S):")

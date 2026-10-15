@@ -688,28 +688,28 @@ def generar_evaluacion_modelo_xml(output_xml_path):
 
     builder = MoodleXMLBuilder("Plantilla Oficial EducaMadrid - Evaluacion Sumativa")
 
-    # P1: Desacoplamiento de H5P y XML
+    # P1: Desacoplamiento de H5P y XML (Opciones equilibradas ~130 caracteres)
     builder.add_multichoice(
         "P01_Desacoplamiento_Evaluacion",
         "<p>¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?</p>",
         [
             {
-                "text": "Para asegurar que el 100% del alumnado registre la realización de los contenidos por visualización en Moodle, evitando que fallos de sentencias xAPI, bloqueos de iframes o notas de corte anulen el seguimiento.",
+                "text": "Garantizar el registro infalible de visualización en Moodle y evitar pérdidas de sentencias xAPI o bloqueos de iframes en móviles.",
                 "fraction": 100,
                 "feedback": "¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz)."
             },
             {
-                "text": "Porque las actividades H5P no permiten formular preguntas de evaluación.",
+                "text": "Cumplir la normativa que prohíbe evaluar contenidos interactivos directamente en los módulos técnicos de Formación Profesional.",
                 "fraction": 0,
                 "feedback": "Incorrecto. H5P dispone de MultiChoice y QuestionSet, pero las sentencias xAPI dependen de conexión estable y cookies de terceros que a menudo fallan en móviles."
             },
             {
-                "text": "Porque Moodle prohíbe el uso de actividades interactivas en Formación Profesional.",
+                "text": "Reducir el tamaño de descarga del paquete H5P en el navegador y minimizar el consumo de ancho de banda en servidores EducaMadrid.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Moodle integra H5P nativamente, pero el calificador xAPI no es recomendable como único filtro de superación."
             },
             {
-                "text": "Porque los archivos XML ocupan menos ancho de banda que un paquete comprimido.",
+                "text": "Impedir que el alumnado repita las actividades formativas más de una vez durante el transcurso del curso académico en el aula.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Aunque el XML es ligero, el motivo primordial es la robustez en el registro de calificaciones (mdl_grade_grades)."
             }
@@ -717,28 +717,28 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.</p>"
     )
 
-    # P2: Contraste WCAG 2.1 AAA
+    # P2: Contraste WCAG 2.1 AAA (Opciones equilibradas ~100 caracteres)
     builder.add_multichoice(
         "P02_Contraste_WCAG_AAA",
         "<p>Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?</p>",
         [
             {
-                "text": "Al menos 7:1 (alcanzando > 13:1 con texto Slate 900 #0f172a sobre blanco).",
+                "text": "Al menos 7:1 para garantizar lectura sin fatiga visual (alcanzando > 13:1 con Slate 900 sobre blanco).",
                 "fraction": 100,
                 "feedback": "¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles."
             },
             {
-                "text": "Al menos 4.5:1.",
+                "text": "Al menos 4.5:1 exigido exclusivamente para textos estándar en nivel de conformidad intermedio AA.",
                 "fraction": 0,
                 "feedback": "Incorrecto. 4.5:1 es el umbral mínimo del nivel AA, pero el estándar técnico oficial EducaMadrid adopta el estándar superior AAA (>= 7:1)."
             },
             {
-                "text": "Al menos 3:1.",
+                "text": "Al menos 3:1 válido únicamente para componentes interactivos de gran escala y tipografías decorativas.",
                 "fraction": 0,
                 "feedback": "Incorrecto. 3:1 solo es admisible para texto de gran tamaño (>= 24px) o componentes de interfaz de usuario en nivel AA."
             },
             {
-                "text": "Cualquier combinación que incluya un color corporativo.",
+                "text": "Cualquier valor numérico libre siempre que se mantengan los colores corporativos de la institución.",
                 "fraction": 0,
                 "feedback": "Incorrecto. El contraste debe certificarse matemáticamente mediante luminancia relativa."
             }
@@ -746,7 +746,7 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo.</p>"
     )
 
-    # P3: Whitelist de Moodle
+    # P3: Whitelist de Moodle (Distractor más largo ~61 caracteres, correcta ~54 caracteres)
     builder.add_multichoice(
         "P03_Whitelist_Moodle_Seguridad",
         "<p>¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?</p>",
@@ -757,17 +757,17 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "¡Correcto! Moodle bloquea archivos SVG y HTML locales en content/ para neutralizar ataques de inyección de código malicioso (Stored XSS). Todos los diagramas deben rasterizarse a PNG o JPEG."
             },
             {
-                "text": "Archivos de imagen .png y .jpg.",
+                "text": "Archivos de mapa de bits comprimidos en formato .png y .jpg.",
                 "fraction": 0,
                 "feedback": "Incorrecto. PNG y JPEG son formatos plenamente admitidos y recomendados por la whitelist oficial."
             },
             {
-                "text": "Archivos de audio .mp3 y tipografías .woff2.",
+                "text": "Grabaciones de audio en .mp3 y tipografías web .woff2.",
                 "fraction": 0,
                 "feedback": "Incorrecto. El audio y las fuentes web forman parte de la lista blanca admitida."
             },
             {
-                "text": "Archivos de metadatos .json.",
+                "text": "Estructuras de metadatos del paquete en formato .json.",
                 "fraction": 0,
                 "feedback": "Incorrecto. content.json es el núcleo semántico indispensable del paquete H5P."
             }
@@ -775,28 +775,28 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.</p>"
     )
 
-    # P4: Andamiaje pedagógico
+    # P4: Andamiaje pedagógico (Opciones equilibradas ~100 caracteres)
     builder.add_multichoice(
         "P04_Andamiaje_Cuatro_Fases",
         "<p>¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?</p>",
         [
             {
-                "text": "1. Activación/Motivación ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.",
+                "text": "1. Motivación activa ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.",
                 "fraction": 100,
                 "feedback": "¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje."
             },
             {
-                "text": "1. Examen final ➔ 2. Lectura lineal ➔ 3. Descanso ➔ 4. Entrega de notas.",
+                "text": "1. Examen inicial ➔ 2. Lectura lineal teórica ➔ 3. Descanso pautado ➔ 4. Entrega de informe final.",
                 "fraction": 0,
                 "feedback": "Incorrecto. El andamiaje pedagógico exige preparación y práctica antes de la evaluación."
             },
             {
-                "text": "1. Práctica autónoma ➔ 2. Dudas en foro ➔ 3. Examen sumativo ➔ 4. Repetición.",
+                "text": "1. Práctica de taller ➔ 2. Dudas en el foro ➔ 3. Examen sumativo ➔ 4. Repetición de la evaluación.",
                 "fraction": 0,
                 "feedback": "Incorrecto. La práctica sin andamiaje ni explicación previa genera frustración y abandono."
             },
             {
-                "text": "1. Visualización de vídeo ➔ 2. Lectura de PDF ➔ 3. Cuestionario externo ➔ 4. Tarea.",
+                "text": "1. Visionado de vídeo ➔ 2. Descarga de manual ➔ 3. Cuestionario externo ➔ 4. Calificación final.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Este enfoque fragmentado dispersa la atención del estudiante; el modelo oficial unifica la secuencia."
             }
@@ -804,28 +804,28 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua.</p>"
     )
 
-    # P5: Touch targets en dispositivos móviles
+    # P5: Touch targets en dispositivos móviles (Correcta es la más corta ~62 caracteres, distractores ~74 caracteres)
     builder.add_multichoice(
         "P05_Touch_Targets_Moviles",
         "<p>Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?</p>",
         [
             {
-                "text": "44 x 44 píxeles (WCAG 2.5.5).",
+                "text": "44 x 44 píxeles como dimensión ergonómica mínima (WCAG 2.5.5).",
                 "fraction": 100,
                 "feedback": "¡Correcto! 44 x 44 px es el tamaño mínimo ergonómico para interacción táctil con el pulgar o dedos enguantados."
             },
             {
-                "text": "20 x 20 píxeles.",
+                "text": "Al menos 60 x 60 píxeles obligatorios exclusivamente en pantallas grandes.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Un botón de 20x20 px provoca toques accidentales y fallos constantes en pantallas pequeñas."
             },
             {
-                "text": "12 x 12 píxeles.",
+                "text": "Un máximo de 24 x 24 píxeles para aprovechar el espacio útil de pantalla.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Incumple totalmente las pautas de accesibilidad móvil."
             },
             {
-                "text": "El ancho del texto sin márgenes adicionales.",
+                "text": "El ancho estricto del texto visible sin necesidad de márgenes de toque.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes del texto."
             }
@@ -833,28 +833,28 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="<p>Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets >= 44x44 px.</p>"
     )
 
-    # P6: Fórmulas matemáticas
+    # P6: Fórmulas matemáticas (Distractores más largos ~103 caracteres, correcta ~101 caracteres)
     builder.add_multichoice(
         "P06_Formulas_HTML_Semantico",
         "<p>¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?</p>",
         [
             {
-                "text": "Porque el componente H5P.AdvancedText no incluye MathJax por defecto y mostraría el código fuente sin procesar.",
+                "text": "Porque H5P.AdvancedText no incorpora MathJax por defecto y mostraría el código fuente sin formatear.",
                 "fraction": 100,
                 "feedback": "¡Correcto! Se debe utilizar siempre HTML semántico y Unicode (<sub>, <sup>, .tech-formula), asegurando renderizado inmediato y accesible."
             },
             {
-                "text": "Porque LaTeX es un formato exclusivo de sistemas Windows.",
+                "text": "Porque el compilador de LaTeX genera incompatibilidades críticas con los sistemas operativos móviles.",
                 "fraction": 0,
                 "feedback": "Incorrecto. LaTeX es multiplataforma, pero requiere motores de renderizado que no residen en el sandbox de H5P."
             },
             {
-                "text": "Porque las fórmulas matemáticas están prohibidas en las Aulas Virtuales.",
+                "text": "Porque la sintaxis matemática LaTeX vulnera los protocolos de seguridad de datos del servidor Moodle.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Las fórmulas son esenciales en enseñanzas técnicas y científicas."
             },
             {
-                "text": "Porque incrementa el peso del paquete en más de 50 MB.",
+                "text": "Porque su procesamiento incrementa exponencialmente el peso del archivo comprimido superando la cuota.",
                 "fraction": 0,
                 "feedback": "Incorrecto. El texto plano no añade peso, el fallo es puramente visual y de renderizado."
             }

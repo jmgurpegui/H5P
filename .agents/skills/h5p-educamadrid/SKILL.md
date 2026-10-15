@@ -71,6 +71,13 @@ Diseña el contenido asegurando la participación constante del estudiante (cons
 5. **Desacoplamiento Formativo H5P + Sumativo Moodle XML**:
    - Para evitar errores de rastreo ("No intentado" en móviles por pérdida de sentencias xAPI en iframes), el H5P se configura en Moodle con la condición de finalización **"El estudiante debe ver esta actividad para completarla"** (sin nota requerida).
    - La evaluación sumativa oficial se gestiona mediante un **Cuestionario Moodle nativo (`mod_quiz`)** a partir del banco de preguntas exportado con `moodle_xml_builder.py`.
+   - **Regla Psicométrica contra Patrones y Sesgo de Longitud (*Length Bias*)**:
+     * Queda estrictamente prohibido que la respuesta correcta sea sistemáticamente la más extensa o detallada.
+     * La opción correcta y los distractores deben mantener una longitud y estructura sintáctica homogénea (±15-20% de caracteres).
+     * Alternar deliberadamente qué alternativa es la más larga o concisa (en algunas preguntas la correcta debe ser la más breve; en otras, los distractores deben ser más desarrollados).
+     * Los distractores deben poseer alta plausibilidad y rigor técnico idéntico a la correcta.
+     * Las justificaciones explicativas pertenecen a la retroalimentación (`<feedback>`), no al cuerpo de la alternativa (`<answer>`).
+     * Activar siempre `<shuffleanswers>1</shuffleanswers>` y alternar la posición de las claves de respuesta.
 
 ### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
 Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):

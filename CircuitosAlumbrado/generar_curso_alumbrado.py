@@ -1213,10 +1213,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P01_MC_Corte_Asimetrico_15",
         "<p>En la normativa europea ECE para faros de cruce, ¿cuál es la razón técnica y geométrica de la elevación a 15° en el lado derecho de la línea de corte claro-oscuro?</p>",
         [
-            {"text": "Aumentar el alcance visual sobre el arcén derecho y las señales de tráfico hasta 75 metros, manteniendo recortado el lado izquierdo para evitar el deslumbramiento a los conductores que circulan en sentido contrario.", "fraction": 100, "feedback": "¡Correcto! En países con circulación por la derecha, el corte a 15° optimiza la seguridad sin deslumbrar."},
-            {"text": "Compensar la inclinación de la carrocería en curvas cerradas a la derecha.", "fraction": 0, "feedback": "Incorrecto. Para la iluminación en curva se emplean sistemas direccionales dinámicos o luces de giro (cornering)."},
-            {"text": "Permitir que la lámpara halógena opere con menor temperatura en el lado izquierdo.", "fraction": 0, "feedback": "Incorrecto. La temperatura depende del filamento y el diseño del bulbo, no del corte óptico."},
-            {"text": "Facilitar el reglaje manual sin necesidad de regloscopio.", "fraction": 0, "feedback": "Incorrecto. El regloscopio es estrictamente necesario para ajustar tanto la horizontal como el ángulo a 15°."}
+            {"text": "Aumentar el alcance visual hacia el arcén derecho y las señales sin deslumbrar a los vehículos en sentido contrario.", "fraction": 100, "feedback": "¡Correcto! En países con circulación por la derecha, el corte a 15° optimiza la seguridad sin deslumbrar."},
+            {"text": "Compensar el balanceo dinámico y la inclinación de la carrocería en curvas cerradas a la derecha según el reglamento ECE R48.", "fraction": 0, "feedback": "Incorrecto. Para la iluminación en curva se emplean sistemas direccionales dinámicos o luces de giro (cornering)."},
+            {"text": "Reducir la carga térmica sobre la parábola reflectora izquierda para evitar la degradación prematura del policarbonato exterior.", "fraction": 0, "feedback": "Incorrecto. La temperatura depende del filamento y el diseño del bulbo, no del corte óptico."},
+            {"text": "Facilitar el alineado visual rápido sobre una pared de taller a 10 metros sin requerir regloscopio óptico de alineación.", "fraction": 0, "feedback": "Incorrecto. El regloscopio es estrictamente necesario para ajustar tanto la horizontal como el ángulo a 15°."}
         ],
         general_feedback="<p>Normativa ECE R112/R98: Haz asimétrico a 15° hacia el arcén derecho.</p>"
     )
@@ -1226,10 +1226,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P02_MC_Proyector_Elipsoidal_DE",
         "<p>¿En qué punto geométrico del proyector elipsoidal DE (tres elipsoides) se ubica el diafragma obturador que genera la línea de corte claro-oscuro?</p>",
         [
-            {"text": "En el segundo foco geométrico (F2) del reflector elipsoidal, donde convergen los rayos reflejados antes de atravesar la lente convergente.", "fraction": 100, "feedback": "¡Correcto! La lámpara se ubica en F1 y el diafragma en F2."},
-            {"text": "En el primer foco geométrico (F1), justo en el centro de la descarga de gas.", "fraction": 0, "feedback": "Incorrecto. En F1 se sitúa la fuente luminosa (filamento, arco de xenón o chip LED)."},
-            {"text": "En la superficie exterior de la lente de policarbonato.", "fraction": 0, "feedback": "Incorrecto. La lente exterior es transparente y lisa."},
-            {"text": "En el interior del casquillo metálico del conector.", "fraction": 0, "feedback": "Incorrecto. El diafragma es un componente óptico interno."}
+            {"text": "En el segundo foco geométrico (F2) del reflector, donde convergen los rayos antes de la lente.", "fraction": 100, "feedback": "¡Correcto! La lámpara se ubica en F1 y el diafragma en F2."},
+            {"text": "En el primer foco geométrico (F1), coincidiendo exactamente con el arco de plasma o filamento luminoso de la bombilla.", "fraction": 0, "feedback": "Incorrecto. En F1 se sitúa la fuente luminosa (filamento, arco de xenón o chip LED)."},
+            {"text": "En la cara exterior de la lente plano-convexa convergente para polarizar verticalmente el haz emitido hacia la calzada.", "fraction": 0, "feedback": "Incorrecto. La lente exterior es transparente y lisa."},
+            {"text": "En la base metálica del casquillo portalámparas para disipar el calor generado por conducción térmica hacia el chasis.", "fraction": 0, "feedback": "Incorrecto. El diafragma es un componente óptico interno."}
         ],
         general_feedback="<p>Proyector elipsoidal DE: F1 = Lámpara, F2 = Diafragma obturador, Lente = Proyección invertida.</p>"
     )
@@ -1249,10 +1249,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P04_MC_Umbral_2000lm_Regulacion",
         "<p>Según el Reglamento europeo ECE R48, ¿a partir de qué flujo luminoso es obligatorio que el vehículo incorpore sistema de limpieza de faros (lavafaros) y regulación automática del alcance luminoso?</p>",
         [
-            {"text": "A partir de 2.000 lúmenes por proyector (como en las lámparas de xenón de 35W con 3.200 lm).", "fraction": 100, "feedback": "¡Correcto! Por debajo de 2.000 lm (ej. xenón D8S de 25W o LED estándar) están exentos."},
-            {"text": "A partir de 1.000 lúmenes.", "fraction": 0, "feedback": "Incorrecto. Las lámparas halógenas H7 emiten unos 1.500 lm y no requieren lavafaros."},
-            {"text": "A partir de 5.000 lúmenes.", "fraction": 0, "feedback": "Incorrecto. 5.000 lm es una cifra muy superior a la permitida en automoción."},
-            {"text": "Únicamente en faros con tecnología láser.", "fraction": 0, "feedback": "Incorrecto. Aplica a cualquier fuente que supere 2.000 lm."}
+            {"text": "A partir de 2.000 lúmenes por proyector.", "fraction": 100, "feedback": "¡Correcto! Por debajo de 2.000 lm (ej. xenón D8S de 25W o LED estándar) están exentos."},
+            {"text": "A partir de 1.000 lúmenes en cualquier lámpara halógena convencional tipo H4 o H7.", "fraction": 0, "feedback": "Incorrecto. Las lámparas halógenas H7 emiten unos 1.500 lm y no requieren lavafaros."},
+            {"text": "A partir de 3.500 lúmenes exclusivamente en proyectores matriciales adaptativos LED.", "fraction": 0, "feedback": "Incorrecto. El límite reglamentario general es de 2.000 lm."},
+            {"text": "A partir de 5.000 lúmenes únicamente en faros equipados con módulos de luz láser.", "fraction": 0, "feedback": "Incorrecto. 5.000 lm es una cifra muy superior a la permitida en automoción."}
         ],
         general_feedback="<p>ECE R48: Flujo > 2.000 lm exige regulación automática y lavafaros.</p>"
     )
@@ -1273,9 +1273,9 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "<p>¿Cuál es la cadencia de parpadeo reglamentaria que debe mantener el sistema de intermitencia de dirección en todo momento según la normativa internacional?</p>",
         [
             {"text": "Entre 60 y 120 destellos por minuto (1 a 2 Hz).", "fraction": 100, "feedback": "¡Correcto! Es el intervalo legal exacto fijado por ECE R48."},
-            {"text": "Entre 30 y 60 destellos por minuto.", "fraction": 0, "feedback": "Incorrecto. Una cadencia tan lenta retrasaría la advertencia de maniobra."},
-            {"text": "Exactamente 180 destellos por minuto.", "fraction": 0, "feedback": "Incorrecto. 180 ppm es una cadencia anómala que indica bombilla fundida."},
-            {"text": "Entre 20 y 40 destellos por minuto.", "fraction": 0, "feedback": "Incorrecto. Demasiado lento e inseguro."}
+            {"text": "Entre 30 y 50 destellos por minuto para evitar sobrecalentar el filamento de las lámparas.", "fraction": 0, "feedback": "Incorrecto. Una cadencia tan lenta retrasaría la advertencia de maniobra."},
+            {"text": "Exactamente 180 destellos por minuto en condiciones normales de carga sin bombillas fundidas.", "fraction": 0, "feedback": "Incorrecto. 180 ppm es una cadencia anómala que indica bombilla fundida."},
+            {"text": "Entre 150 y 240 destellos por minuto para maximizar la percepción visual de otros conductores.", "fraction": 0, "feedback": "Incorrecto. Demasiado rápido y no homologado."}
         ],
         general_feedback="<p>Frecuencia de intermitencia normalizada: 60 - 120 pulsaciones por minuto.</p>"
     )
@@ -1295,10 +1295,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P08_MC_Modulacion_PWM_Pilotos",
         "<p>¿Qué tecnología electrónica permite que un mismo grupo óptico LED o bombilla realice la función de luz de posición (4W) y luz de freno (21W) sobre el mismo filamento o chip?</p>",
         [
-            {"text": "Modulación por Ancho de Pulso (PWM), variando el ciclo de trabajo (duty cycle) para regular la tensión eficaz y el brillo emitido.", "fraction": 100, "feedback": "¡Correcto! Al 15-20% genera luz de posición y al 100% luz de freno."},
-            {"text": "Un transformador electromagnético reductor de 230V a 12V.", "fraction": 0, "feedback": "Incorrecto. En continua de 12V no se usan transformadores convencionales."},
-            {"text": "Una resistencia variable accionada mecánicamente por el pedal de acelerador.", "fraction": 0, "feedback": "Incorrecto. Se gestiona de forma electrónica digital por la BCM."},
-            {"text": "Un divisor resistivo térmico que disipa la energía en forma de calor.", "fraction": 0, "feedback": "Incorrecto. Sería altamente ineficiente y provocaría sobrecalentamiento."}
+            {"text": "Modulación por Ancho de Pulso (PWM), variando el ciclo de trabajo del circuito.", "fraction": 100, "feedback": "¡Correcto! Al 15-20% genera luz de posición y al 100% luz de freno."},
+            {"text": "Un transformador elevador electromagnético que convierte los 12 V continuos de la batería en pulsos alternos.", "fraction": 0, "feedback": "Incorrecto. En continua de 12V no se usan transformadores convencionales."},
+            {"text": "Un reóstato o divisor de tensión resistivo que disipa la potencia sobrante en forma de calor hacia el chasis.", "fraction": 0, "feedback": "Incorrecto. Se gestiona de forma electrónica digital por la BCM."},
+            {"text": "Un relé bimetálico temporizado con lámina térmica que conmuta periódicamente entre filamentos en milisegundos.", "fraction": 0, "feedback": "Incorrecto. Sería altamente ineficiente y provocaría sobrecalentamiento."}
         ],
         general_feedback="<p>PWM: Control eficiente de potencia luminosa variando el tiempo de conducción.</p>"
     )
@@ -1308,10 +1308,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P09_MC_Separacion_Antiniebla_Freno",
         "<p>Según el Reglamento ECE R48, ¿cuál es la distancia física mínima obligatoria que debe existir entre la superficie iluminada del piloto antiniebla trasero y la luz de freno?</p>",
         [
-            {"text": "100 mm (10 cm).", "fraction": 100, "feedback": "¡Correcto! Impide que la intensa luz del antiniebla enmascare la señal de parada."},
-            {"text": "25 mm (2,5 cm).", "fraction": 0, "feedback": "Incorrecto. Demasiado cerca; confundiría al conductor trasero."},
-            {"text": "500 mm (50 cm).", "fraction": 0, "feedback": "Incorrecto. No cabría en turismos compactos."},
-            {"text": "No existe separación mínima reglamentada.", "fraction": 0, "feedback": "Incorrecto. La separación de 10 cm es mandatoria en homologación europea."}
+            {"text": "100 mm (10 cm) entre los bordes iluminados de ambas ópticas.", "fraction": 100, "feedback": "¡Correcto! Impide que la intensa luz del antiniebla enmascare la señal de parada."},
+            {"text": "25 mm (2,5 cm) en cualquier tipo de óptica o piloto trasero.", "fraction": 0, "feedback": "Incorrecto. Demasiado cerca; confundiría al conductor trasero."},
+            {"text": "500 mm (50 cm) respecto a la luz de freno más cercana.", "fraction": 0, "feedback": "Incorrecto. No cabría en turismos compactos."},
+            {"text": "No existe distancia mínima reglamentada en la normativa ECE.", "fraction": 0, "feedback": "Incorrecto. La separación de 10 cm es mandatoria en homologación europea."}
         ],
         general_feedback="<p>ECE R48: Separación mínima de 10 cm entre antiniebla trasero y luz de freno.</p>"
     )
@@ -1321,10 +1321,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P10_MC_Intensidad_Antiniebla_Trasero",
         "<p>¿Cuál es el rango de intensidad luminosa normalizado en Europa para los pilotos antiniebla traseros?</p>",
         [
-            {"text": "Entre 150 y 300 candelas.", "fraction": 100, "feedback": "¡Correcto! Es una luz de gran penetración visual para niebla densa."},
-            {"text": "Entre 4 y 10 candelas.", "fraction": 0, "feedback": "Incorrecto. Ese es el rango de una luz de posición ordinaria."},
-            {"text": "Entre 20.000 y 50.000 candelas.", "fraction": 0, "feedback": "Incorrecto. Esa intensidad corresponde a los faros de cruce o carretera."},
-            {"text": "Exactamente 1.000 candelas.", "fraction": 0, "feedback": "Incorrecto. Deslumbraría masivamente a los vehículos cercanos."}
+            {"text": "Entre 150 y 300 candelas de alta penetración.", "fraction": 100, "feedback": "¡Correcto! Es una luz de gran penetración visual para niebla densa."},
+            {"text": "Entre 4 y 10 candelas, idéntico a una luz de posición ordinaria.", "fraction": 0, "feedback": "Incorrecto. Ese es el rango de una luz de posición ordinaria."},
+            {"text": "Entre 1.500 y 3.000 candelas, similar al haz de cruce principal.", "fraction": 0, "feedback": "Incorrecto. Esa intensidad corresponde a proyectores delanteros."},
+            {"text": "Más de 20.000 candelas para proyectar el haz a varios kilómetros.", "fraction": 0, "feedback": "Incorrecto. Deslumbraría masivamente a los vehículos cercanos."}
         ],
         general_feedback="<p>Piloto antiniebla trasero: 150 a 300 candelas de alta penetración.</p>"
     )
@@ -1334,10 +1334,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P11_MC_Caida_Tension_Faros_Principales",
         "<p>En el circuito de alimentación de los faros principales de cruce y carretera, ¿cuál es la caída de tensión máxima admisible en la línea positiva para evitar pérdidas severas de flujo luminoso?</p>",
         [
-            {"text": "ΔV ≤ 0,3 V (o máximo 0,5 V en condiciones extremas).", "fraction": 100, "feedback": "¡Correcto! Una pérdida de 0,5V reduce el flujo un 15%; 1V de caída lo reduce un 28%."},
-            {"text": "ΔV ≤ 2,5 V.", "fraction": 0, "feedback": "Incorrecto. A 2,5V de caída el faro apenas emitiría una luz amarillenta inútil."},
-            {"text": "ΔV ≤ 4,0 V.", "fraction": 0, "feedback": "Incorrecto. Inadmisible en una red automotriz de 12V."},
-            {"text": "No importa la caída mientras el fusible no se funda.", "fraction": 0, "feedback": "Incorrecto. La eficacia luminosa depende drásticamente de la tensión en bornes."}
+            {"text": "ΔV ≤ 0,3 V (máximo 0,5 V en condiciones críticas).", "fraction": 100, "feedback": "¡Correcto! Una pérdida de 0,5V reduce el flujo un 15%; 1V de caída lo reduce un 28%."},
+            {"text": "ΔV ≤ 1,5 V sin que afecte perceptiblemente al flujo luminoso emitido por la bombilla.", "fraction": 0, "feedback": "Incorrecto. A 1,5V de caída el faro apenas emitiría una luz amarillenta inútil."},
+            {"text": "ΔV ≤ 2,5 V admisible siempre que la tensión en los bornes de batería supere los 12,6 V.", "fraction": 0, "feedback": "Incorrecto. Inadmisible en una red automotriz de 12V."},
+            {"text": "No existe límite de caída mientras el fusible de protección del circuito no se funda.", "fraction": 0, "feedback": "Incorrecto. La eficacia luminosa depende drásticamente de la tensión en bornes."}
         ],
         general_feedback="<p>Criterio de cálculo en automoción: ΔV ≤ 0,3V en faros principales.</p>"
     )
@@ -1347,10 +1347,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P12_MC_Calculo_Intensidad_Halogena",
         "<p>¿Cuál es la corriente eléctrica que consumen dos lámparas halógenas H7 de 55 W cada una conectadas en paralelo a una batería de 12 V?</p>",
         [
-            {"text": "Aproximadamente 9,17 A (P_total = 110 W; I = 110 / 12 = 9,166 A).", "fraction": 100, "feedback": "¡Correcto! I = P / V = (55 + 55) / 12 = 9,17 A."},
-            {"text": "4,58 A.", "fraction": 0, "feedback": "Incorrecto. 4,58 A es el consumo de una sola bombilla."},
-            {"text": "18,33 A.", "fraction": 0, "feedback": "Incorrecto. Has multiplicado la potencia por dos erróneamente."},
-            {"text": "1,2 A.", "fraction": 0, "feedback": "Incorrecto. Revisa la Ley de Joule: I = P / V."}
+            {"text": "Aproximadamente 9,17 A (P = 110 W; I = 110 / 12).", "fraction": 100, "feedback": "¡Correcto! I = P / V = (55 + 55) / 12 = 9,17 A."},
+            {"text": "Exactamente 4,58 A, pues la intensidad calculada se divide entre las dos bombillas.", "fraction": 0, "feedback": "Incorrecto. 4,58 A es el consumo de una sola bombilla."},
+            {"text": "Exactamente 18,33 A, al multiplicar la potencia por dos por el factor de resistencia.", "fraction": 0, "feedback": "Incorrecto. Has multiplicado la potencia por dos erróneamente."},
+            {"text": "Aproximadamente 1,20 A, aplicando la impedancia reactiva del filamento en corriente continua.", "fraction": 0, "feedback": "Incorrecto. Revisa la Ley de Joule: I = P / V."}
         ],
         general_feedback="<p>I = P_total / V = 110 W / 12 V = 9,17 A.</p>"
     )
@@ -1360,10 +1360,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P13_MC_Inclinacion_Regloscopio_Turismos",
         "<p>¿Cuál es el porcentaje de inclinación o caída descendente reglamentaria del haz de cruce para un turismo estándar en el regloscopio?</p>",
         [
-            {"text": "Entre el -1,0% y el -1,5% (generalmente -1,2% marcado en el proyector).", "fraction": 100, "feedback": "¡Correcto! Equivale a descender entre 25 y 37,5 cm a una distancia de 25 metros."},
-            {"text": "0,0% perfectamente horizontal.", "fraction": 0, "feedback": "Incorrecto. Un haz horizontal causaría deslumbramiento con el cabeceo del vehículo."},
-            {"text": "Entre el -3,5% y el -5,0%.", "fraction": 0, "feedback": "Incorrecto. Ese valor se reserva para camiones pesados muy elevados."},
-            {"text": "+1,5% ascendente.", "fraction": 0, "feedback": "Incorrecto. Provocaría un deslumbramiento masivo ilegal."}
+            {"text": "Entre el -1,0% y el -1,5% (generalmente -1,2%).", "fraction": 100, "feedback": "¡Correcto! Equivale a descender entre 25 y 37,5 cm a una distancia de 25 metros."},
+            {"text": "0,0% perfectamente horizontal y paralelo al suelo para maximizar el alcance en carretera.", "fraction": 0, "feedback": "Incorrecto. Un haz horizontal causaría deslumbramiento con el cabeceo del vehículo."},
+            {"text": "Entre el -3,5% y el -5,0% para garantizar que el haz no deslumbre bajo ninguna circunstancia.", "fraction": 0, "feedback": "Incorrecto. Ese valor se reserva para camiones pesados muy elevados."},
+            {"text": "+1,5% con inclinación ascendente hacia arriba para mejorar la visibilidad de los paneles informativos.", "fraction": 0, "feedback": "Incorrecto. Provocaría un deslumbramiento masivo ilegal."}
         ],
         general_feedback="<p>Regloscopio en turismos: Inclinación descendente de -1,0% a -1,5%.</p>"
     )
@@ -1373,10 +1373,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P14_MC_Efecto_Desreglaje_Deslumbramiento",
         "<p>Según los estudios de fotometría vial del RACE, ¿qué consecuencia tiene un desajuste de tan solo +1% hacia arriba en el reglaje de los faros de cruce?</p>",
         [
-            {"text": "Multiplica por 20 el nivel de deslumbramiento hacia los conductores que circulan en sentido contrario.", "fraction": 100, "feedback": "¡Correcto! Eleva la línea de corte directamente hacia los ojos del conductor que viene de frente."},
-            {"text": "Reduce el consumo de la batería un 20%.", "fraction": 0, "feedback": "Incorrecto. El reglaje mecánico no modifica la potencia eléctrica."},
-            {"text": "Duplica la vida útil de la lámpara halógena.", "fraction": 0, "feedback": "Incorrecto. La durabilidad depende del filamento y la tensión."},
-            {"text": "No produce ningún efecto apreciable en carretera.", "fraction": 0, "feedback": "Incorrecto. Es una de las causas principales de siniestralidad nocturna."}
+            {"text": "Multiplica por 20 el nivel de deslumbramiento a los conductores en sentido contrario.", "fraction": 100, "feedback": "¡Correcto! Eleva la línea de corte directamente hacia los ojos del conductor que viene de frente."},
+            {"text": "Disminuye la temperatura de trabajo del reflector parabólico prolongando la vida útil del bulbo.", "fraction": 0, "feedback": "Incorrecto. El reglaje mecánico no modifica la potencia eléctrica."},
+            {"text": "Reduce el consumo eléctrico del alternador un 15% al elevar la tensión eficaz en los bornes.", "fraction": 0, "feedback": "Incorrecto. La durabilidad depende del filamento y la tensión."},
+            {"text": "No genera ningún efecto mensurable sobre el campo visual nocturno ni sobre la seguridad vial.", "fraction": 0, "feedback": "Incorrecto. Es una de las causas principales de siniestralidad nocturna."}
         ],
         general_feedback="<p>Desreglaje +1% arriba = Deslumbramiento x20 / Desreglaje -2,5% abajo = Pérdida 50% alcance.</p>"
     )
@@ -1387,9 +1387,9 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "<p>Al diagnosticar una masa deficiente (Línea 31) en el casquillo de un faro con el voltímetro digital bajo carga, ¿cuál es el valor máximo admisible de caída de tensión?</p>",
         [
             {"text": "V_masa ≤ 0,1 V (idealmente < 0,05 V).", "fraction": 100, "feedback": "¡Correcto! Una lectura superior indica óxido, sulfatación o terminal flojo en el chasis."},
-            {"text": "V_masa ≤ 1,5 V.", "fraction": 0, "feedback": "Incorrecto. 1,5V de caída en masa provocaría una pérdida crítica de luminosidad."},
-            {"text": "V_masa = 12,0 V.", "fraction": 0, "feedback": "Incorrecto. 12V en masa indicaría una interrupción total del circuito (circuito abierto)."},
-            {"text": "No se puede medir la masa con voltímetro.", "fraction": 0, "feedback": "Incorrecto. La medición de caída de tensión en masa en paralelo es el método estrella de taller."}
+            {"text": "V_masa ≤ 1,5 V, ya que la masa metálica tolera mayores fluctuaciones que el positivo.", "fraction": 0, "feedback": "Incorrecto. 1,5V de caída en masa provocaría una pérdida crítica de luminosidad."},
+            {"text": "V_masa = 12,0 V en condiciones normales de funcionamiento continuo con el motor encendido.", "fraction": 0, "feedback": "Incorrecto. 12V en masa indicaría una interrupción total del circuito (circuito abierto)."},
+            {"text": "La caída de tensión en masa no puede medirse con voltímetro al no circular corriente positiva.", "fraction": 0, "feedback": "Incorrecto. La medición de caída de tensión en masa en paralelo es el método estrella de taller."}
         ],
         general_feedback="<p>Límite metrológico en masa: V_masa ≤ 0,1V bajo carga.</p>"
     )
@@ -1399,10 +1399,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P16_MC_Chequeo_Frio_BCM",
         "<p>¿En qué consiste el procedimiento de 'chequeo en frío' que realiza la unidad BCM sobre las lámparas del vehículo?</p>",
         [
-            {"text": "En enviar microimpulsos de tensión de muy corta duración con la lámpara apagada para verificar la continuidad eléctrica del filamento sin llegar a encenderlo.", "fraction": 100, "feedback": "¡Correcto! Si no hay retorno de corriente, registra el fallo en el cuadro antes de accionar el mando."},
-            {"text": "En enfriar el faro mediante ventiladores antes de encenderlo.", "fraction": 0, "feedback": "Incorrecto. La refrigeración es térmica, no un protocolo de chequeo eléctrico."},
-            {"text": "En medir la temperatura ambiental del paragolpes.", "fraction": 0, "feedback": "Incorrecto. Es una prueba eléctrica de diagnóstico de lámpara."},
-            {"text": "En desconectar la batería cuando hace frío.", "fraction": 0, "feedback": "Incorrecto. No tiene relación técnica."}
+            {"text": "Envía microimpulsos breves con la bombilla apagada para medir continuidad sin encenderla.", "fraction": 100, "feedback": "¡Correcto! Si no hay retorno de corriente, registra el fallo en el cuadro antes de accionar el mando."},
+            {"text": "Activa ventiladores de refrigeración dentro de la carcasa del faro antes de arrancar el motor.", "fraction": 0, "feedback": "Incorrecto. La refrigeración es térmica, no un protocolo de chequeo eléctrico."},
+            {"text": "Mide la temperatura ambiente exterior mediante una sonda en el paragolpes para regular el haz.", "fraction": 0, "feedback": "Incorrecto. Es una prueba eléctrica de diagnóstico de lámpara."},
+            {"text": "Desconecta preventivamente la alimentación de Línea 30 cuando la temperatura baja de 0 °C.", "fraction": 0, "feedback": "Incorrecto. No tiene relación técnica."}
         ],
         general_feedback="<p>Chequeo en frío: Microimpulsos para medir continuidad con la lámpara apagada.</p>"
     )
@@ -1432,10 +1432,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P19_MC_Sensores_Inclinacion_Suspension",
         "<p>¿Qué sensores y componentes integran el sistema de regulación automática dinámica del alcance luminoso en faros de xenón o LED de alta gama?</p>",
         [
-            {"text": "Sensores de nivel (inductivos o resistivos) en los ejes delantero y trasero unidos por bieletas a la suspensión, calculador electrónico y servomotores paso a paso en los faros.", "fraction": 100, "feedback": "¡Correcto! Miden la inclinación de la carrocería en milisegundos compensando carga, aceleraciones y frenadas."},
-            {"text": "Un acelerómetro en el salpicadero y cables mecánicos Bowden hasta los reflectores.", "fraction": 0, "feedback": "Incorrecto. Los cables mecánicos corresponden a reguladores manuales arcaicos."},
-            {"text": "Cámaras ultrasónicas en las llantas de las cuatro ruedas.", "fraction": 0, "feedback": "Incorrecto. Se emplean sensores de ángulo en los brazos de suspensión."},
-            {"text": "Un barómetro que mide la presión de inflado de los neumáticos.", "fraction": 0, "feedback": "Incorrecto. Eso corresponde al sistema TPMS de presión de neumáticos."}
+            {"text": "Sensores de nivel en ejes delantero y trasero con bieletas, calculador y servomotores.", "fraction": 100, "feedback": "¡Correcto! Miden la inclinación de la carrocería en milisegundos compensando carga, aceleraciones y frenadas."},
+            {"text": "Un giróscopo electrónico en el cuadro de mandos con cables mecánicos tipo Bowden hasta los faros.", "fraction": 0, "feedback": "Incorrecto. Los cables mecánicos corresponden a reguladores manuales arcaicos."},
+            {"text": "Cuatro sensores piezoeléctricos de presión integrados en los neumáticos coordinados por la red CAN.", "fraction": 0, "feedback": "Incorrecto. Se emplean sensores de ángulo en los brazos de suspensión."},
+            {"text": "Cámaras de visión infrarroja montadas en los pasos de rueda conectadas directamente a los balastros.", "fraction": 0, "feedback": "Incorrecto. Eso corresponde al sistema TPMS de presión de neumáticos."}
         ],
         general_feedback="<p>Regulación automática dinámica: Sensores de altura en suspensión + Calculador + Motores paso a paso.</p>"
     )
@@ -1445,10 +1445,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P20_MC_Luces_Curvas_Estatica_Dinamica",
         "<p>¿Cuál es la diferencia técnica entre la luz de giro estática (cornering light) y la luz de curvas dinámica (faros direccionales)?</p>",
         [
-            {"text": "La luz estática enciende a baja velocidad (<40 km/h) el antiniebla o lámpara lateral al poner el intermitente; la luz dinámica hace pivotar el proyector principal horizontalmente hasta 15° mediante un motor paso a paso.", "fraction": 100, "feedback": "¡Correcto! La estática ilumina cruces y giros cerrados; la dinámica acompaña el trazado de la carretera en velocidad."},
-            {"text": "La luz estática solo funciona de día y la dinámica de noche.", "fraction": 0, "feedback": "Incorrecto. Ambas están diseñadas para conducción nocturna o túneles."},
-            {"text": "La luz dinámica sustituye a las luces de freno traseras.", "fraction": 0, "feedback": "Incorrecto. Son sistemas frontales de visibilidad de calzada."},
-            {"text": "No existe diferencia; son dos nombres comerciales para el mismo sistema.", "fraction": 0, "feedback": "Incorrecto. Son arquitecturas electromecánicas completamente distintas."}
+            {"text": "La luz estática enciende una lámpara lateral a baja velocidad; la dinámica gira el proyector en carretera.", "fraction": 100, "feedback": "¡Correcto! La estática ilumina cruces y giros cerrados; la dinámica acompaña el trazado de la carretera en velocidad."},
+            {"text": "La luz estática opera exclusivamente en horario diurno y la luz dinámica solo se activa al conectar las luces de carretera.", "fraction": 0, "feedback": "Incorrecto. Ambas están diseñadas para conducción nocturna o túneles."},
+            {"text": "La luz estática sustituye a los faros antiniebla delanteros y la luz dinámica modifica la altura de los pilotos traseros.", "fraction": 0, "feedback": "Incorrecto. Son sistemas frontales de visibilidad de calzada."},
+            {"text": "Ambas denominaciones corresponden al mismo actuador electromecánico sin que existan diferencias técnicas en su funcionamiento.", "fraction": 0, "feedback": "Incorrecto. Son arquitecturas electromecánicas completamente distintas."}
         ],
         general_feedback="<p>Luz de giro estática = Lámpara lateral a baja velocidad / Luz dinámica = Pivotado de lente en carretera.</p>"
     )
@@ -1468,10 +1468,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P22_MC_Color_Marcha_Atras_AR",
         "<p>En el marco reglamentario internacional vigente, ¿de qué color debe ser obligatoriamente la luz de marcha atrás (código AR)?</p>",
         [
-            {"text": "Color blanco continuo.", "fraction": 100, "feedback": "¡Correcto! Advierte de la maniobra de retroceso e ilumina el entorno posterior."},
-            {"text": "Color ámbar fijo.", "fraction": 0, "feedback": "Incorrecto. Aunque fue admitido en algunos países en el siglo XX, hoy es blanco estricto."},
-            {"text": "Color rojo de alta intensidad.", "fraction": 0, "feedback": "Incorrecto. El rojo se reserva para posición, freno y antiniebla trasero."},
-            {"text": "Color azul intermitente.", "fraction": 0, "feedback": "Incorrecto. El azul está reservado a vehículos de policía y emergencias."}
+            {"text": "Color blanco continuo reglamentario.", "fraction": 100, "feedback": "¡Correcto! Advierte de la maniobra de retroceso e ilumina el entorno posterior."},
+            {"text": "Color ámbar intermitente con frecuencia de 1 a 2 Hz.", "fraction": 0, "feedback": "Incorrecto. Aunque fue admitido en algunos países en el siglo XX, hoy es blanco estricto."},
+            {"text": "Color rojo fijo de alta luminosidad similar al antiniebla.", "fraction": 0, "feedback": "Incorrecto. El rojo se reserva para posición, freno y antiniebla trasero."},
+            {"text": "Color azul continuo reservado para maniobras de retroceso.", "fraction": 0, "feedback": "Incorrecto. El azul está reservado a vehículos de policía y emergencias."}
         ],
         general_feedback="<p>Luz de marcha atrás AR: Color blanco continuo obligatorio.</p>"
     )
@@ -1507,10 +1507,10 @@ def generar_evaluacion_alumbrado_xml(output_xml_path):
         "ALUM_P25_MC_Seguridad_Alta_Tension_Xenon",
         "<p>Durante la manipulación o sustitución de una lámpara de xenón en el taller, ¿por qué es obligatorio desconectar la batería o el conector del faro antes de intervenir?</p>",
         [
-            {"text": "Porque el cebador o transformador de encendido genera un pico de alta tensión de 20.000 a 30.000 V (20-30 kV) que supone riesgo mortal de electrocución.", "fraction": 100, "feedback": "¡Correcto! El arco eléctrico inicial requiere hasta 30 kV para ionizar el gas xenón."},
-            {"text": "Para evitar que el gas xenón se escape a la atmósfera.", "fraction": 0, "feedback": "Incorrecto. La ampolla de cuarzo es hermética y no se abre."},
-            {"text": "Porque la bombilla de xenón funciona con imanes de neodimio permanentes.", "fraction": 0, "feedback": "Incorrecto. No contiene imanes."},
-            {"text": "Para resetear el cuentakilómetros del vehículo.", "fraction": 0, "feedback": "Incorrecto. No tiene relación con el odómetro."}
+            {"text": "El cebador genera picos de 20 a 30 kV con riesgo de descarga mortal.", "fraction": 100, "feedback": "¡Correcto! El arco eléctrico inicial requiere hasta 30 kV para ionizar el gas xenón."},
+            {"text": "Para evitar que el gas xenón comprimido se fugue a la atmósfera al abrir la óptica.", "fraction": 0, "feedback": "Incorrecto. La ampolla de cuarzo es hermética y no se abre."},
+            {"text": "Porque el balastro electrónico contiene imanes permanentes que alteran la brújula del GPS.", "fraction": 0, "feedback": "Incorrecto. No contiene imanes."},
+            {"text": "Para reiniciar el contador interno de horas de encendido registrado en el cuadro de mandos.", "fraction": 0, "feedback": "Incorrecto. No tiene relación con el odómetro."}
         ],
         general_feedback="<p>Seguridad en faros de descarga: Pico de cebado de 20 a 30 kV. Desconectar siempre la alimentación antes de intervenir.</p>"
     )

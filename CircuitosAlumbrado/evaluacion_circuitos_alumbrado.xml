@@ -22,25 +22,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Aumentar el alcance visual sobre el arcén derecho y las señales de tráfico hasta 75 metros, manteniendo recortado el lado izquierdo para evitar el deslumbramiento a los conductores que circulan en sentido contrario.]]></text>
+      <text><![CDATA[Aumentar el alcance visual hacia el arcén derecho y las señales sin deslumbrar a los vehículos en sentido contrario.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! En países con circulación por la derecha, el corte a 15° optimiza la seguridad sin deslumbrar.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Compensar la inclinación de la carrocería en curvas cerradas a la derecha.]]></text>
+      <text><![CDATA[Compensar el balanceo dinámico y la inclinación de la carrocería en curvas cerradas a la derecha según el reglamento ECE R48.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Para la iluminación en curva se emplean sistemas direccionales dinámicos o luces de giro (cornering).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Permitir que la lámpara halógena opere con menor temperatura en el lado izquierdo.]]></text>
+      <text><![CDATA[Reducir la carga térmica sobre la parábola reflectora izquierda para evitar la degradación prematura del policarbonato exterior.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La temperatura depende del filamento y el diseño del bulbo, no del corte óptico.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Facilitar el reglaje manual sin necesidad de regloscopio.]]></text>
+      <text><![CDATA[Facilitar el alineado visual rápido sobre una pared de taller a 10 metros sin requerir regloscopio óptico de alineación.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El regloscopio es estrictamente necesario para ajustar tanto la horizontal como el ángulo a 15°.]]></text>
       </feedback>
@@ -63,25 +63,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[En el segundo foco geométrico (F2) del reflector elipsoidal, donde convergen los rayos reflejados antes de atravesar la lente convergente.]]></text>
+      <text><![CDATA[En el segundo foco geométrico (F2) del reflector, donde convergen los rayos antes de la lente.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! La lámpara se ubica en F1 y el diafragma en F2.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[En el primer foco geométrico (F1), justo en el centro de la descarga de gas.]]></text>
+      <text><![CDATA[En el primer foco geométrico (F1), coincidiendo exactamente con el arco de plasma o filamento luminoso de la bombilla.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. En F1 se sitúa la fuente luminosa (filamento, arco de xenón o chip LED).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[En la superficie exterior de la lente de policarbonato.]]></text>
+      <text><![CDATA[En la cara exterior de la lente plano-convexa convergente para polarizar verticalmente el haz emitido hacia la calzada.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La lente exterior es transparente y lisa.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[En el interior del casquillo metálico del conector.]]></text>
+      <text><![CDATA[En la base metálica del casquillo portalámparas para disipar el calor generado por conducción térmica hacia el chasis.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El diafragma es un componente óptico interno.]]></text>
       </feedback>
@@ -130,27 +130,27 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[A partir de 2.000 lúmenes por proyector (como en las lámparas de xenón de 35W con 3.200 lm).]]></text>
+      <text><![CDATA[A partir de 2.000 lúmenes por proyector.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Por debajo de 2.000 lm (ej. xenón D8S de 25W o LED estándar) están exentos.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[A partir de 1.000 lúmenes.]]></text>
+      <text><![CDATA[A partir de 1.000 lúmenes en cualquier lámpara halógena convencional tipo H4 o H7.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Las lámparas halógenas H7 emiten unos 1.500 lm y no requieren lavafaros.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[A partir de 5.000 lúmenes.]]></text>
+      <text><![CDATA[A partir de 3.500 lúmenes exclusivamente en proyectores matriciales adaptativos LED.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 5.000 lm es una cifra muy superior a la permitida en automoción.]]></text>
+        <text><![CDATA[Incorrecto. El límite reglamentario general es de 2.000 lm.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Únicamente en faros con tecnología láser.]]></text>
+      <text><![CDATA[A partir de 5.000 lúmenes únicamente en faros equipados con módulos de luz láser.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Aplica a cualquier fuente que supere 2.000 lm.]]></text>
+        <text><![CDATA[Incorrecto. 5.000 lm es una cifra muy superior a la permitida en automoción.]]></text>
       </feedback>
     </answer>
   </question>
@@ -203,21 +203,21 @@
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 30 y 60 destellos por minuto.]]></text>
+      <text><![CDATA[Entre 30 y 50 destellos por minuto para evitar sobrecalentar el filamento de las lámparas.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Una cadencia tan lenta retrasaría la advertencia de maniobra.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Exactamente 180 destellos por minuto.]]></text>
+      <text><![CDATA[Exactamente 180 destellos por minuto en condiciones normales de carga sin bombillas fundidas.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 180 ppm es una cadencia anómala que indica bombilla fundida.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 20 y 40 destellos por minuto.]]></text>
+      <text><![CDATA[Entre 150 y 240 destellos por minuto para maximizar la percepción visual de otros conductores.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Demasiado lento e inseguro.]]></text>
+        <text><![CDATA[Incorrecto. Demasiado rápido y no homologado.]]></text>
       </feedback>
     </answer>
   </question>
@@ -264,25 +264,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Modulación por Ancho de Pulso (PWM), variando el ciclo de trabajo (duty cycle) para regular la tensión eficaz y el brillo emitido.]]></text>
+      <text><![CDATA[Modulación por Ancho de Pulso (PWM), variando el ciclo de trabajo del circuito.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Al 15-20% genera luz de posición y al 100% luz de freno.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un transformador electromagnético reductor de 230V a 12V.]]></text>
+      <text><![CDATA[Un transformador elevador electromagnético que convierte los 12 V continuos de la batería en pulsos alternos.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. En continua de 12V no se usan transformadores convencionales.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Una resistencia variable accionada mecánicamente por el pedal de acelerador.]]></text>
+      <text><![CDATA[Un reóstato o divisor de tensión resistivo que disipa la potencia sobrante en forma de calor hacia el chasis.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Se gestiona de forma electrónica digital por la BCM.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un divisor resistivo térmico que disipa la energía en forma de calor.]]></text>
+      <text><![CDATA[Un relé bimetálico temporizado con lámina térmica que conmuta periódicamente entre filamentos en milisegundos.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Sería altamente ineficiente y provocaría sobrecalentamiento.]]></text>
       </feedback>
@@ -305,25 +305,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[100 mm (10 cm).]]></text>
+      <text><![CDATA[100 mm (10 cm) entre los bordes iluminados de ambas ópticas.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Impide que la intensa luz del antiniebla enmascare la señal de parada.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[25 mm (2,5 cm).]]></text>
+      <text><![CDATA[25 mm (2,5 cm) en cualquier tipo de óptica o piloto trasero.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Demasiado cerca; confundiría al conductor trasero.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[500 mm (50 cm).]]></text>
+      <text><![CDATA[500 mm (50 cm) respecto a la luz de freno más cercana.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No cabría en turismos compactos.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No existe separación mínima reglamentada.]]></text>
+      <text><![CDATA[No existe distancia mínima reglamentada en la normativa ECE.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La separación de 10 cm es mandatoria en homologación europea.]]></text>
       </feedback>
@@ -346,25 +346,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Entre 150 y 300 candelas.]]></text>
+      <text><![CDATA[Entre 150 y 300 candelas de alta penetración.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Es una luz de gran penetración visual para niebla densa.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 4 y 10 candelas.]]></text>
+      <text><![CDATA[Entre 4 y 10 candelas, idéntico a una luz de posición ordinaria.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Ese es el rango de una luz de posición ordinaria.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 20.000 y 50.000 candelas.]]></text>
+      <text><![CDATA[Entre 1.500 y 3.000 candelas, similar al haz de cruce principal.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Esa intensidad corresponde a los faros de cruce o carretera.]]></text>
+        <text><![CDATA[Incorrecto. Esa intensidad corresponde a proyectores delanteros.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Exactamente 1.000 candelas.]]></text>
+      <text><![CDATA[Más de 20.000 candelas para proyectar el haz a varios kilómetros.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Deslumbraría masivamente a los vehículos cercanos.]]></text>
       </feedback>
@@ -387,25 +387,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[ΔV ≤ 0,3 V (o máximo 0,5 V en condiciones extremas).]]></text>
+      <text><![CDATA[ΔV ≤ 0,3 V (máximo 0,5 V en condiciones críticas).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Una pérdida de 0,5V reduce el flujo un 15%; 1V de caída lo reduce un 28%.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[ΔV ≤ 2,5 V.]]></text>
+      <text><![CDATA[ΔV ≤ 1,5 V sin que afecte perceptiblemente al flujo luminoso emitido por la bombilla.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. A 2,5V de caída el faro apenas emitiría una luz amarillenta inútil.]]></text>
+        <text><![CDATA[Incorrecto. A 1,5V de caída el faro apenas emitiría una luz amarillenta inútil.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[ΔV ≤ 4,0 V.]]></text>
+      <text><![CDATA[ΔV ≤ 2,5 V admisible siempre que la tensión en los bornes de batería supere los 12,6 V.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Inadmisible en una red automotriz de 12V.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No importa la caída mientras el fusible no se funda.]]></text>
+      <text><![CDATA[No existe límite de caída mientras el fusible de protección del circuito no se funda.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La eficacia luminosa depende drásticamente de la tensión en bornes.]]></text>
       </feedback>
@@ -428,25 +428,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Aproximadamente 9,17 A (P_total = 110 W; I = 110 / 12 = 9,166 A).]]></text>
+      <text><![CDATA[Aproximadamente 9,17 A (P = 110 W; I = 110 / 12).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! I = P / V = (55 + 55) / 12 = 9,17 A.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[4,58 A.]]></text>
+      <text><![CDATA[Exactamente 4,58 A, pues la intensidad calculada se divide entre las dos bombillas.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 4,58 A es el consumo de una sola bombilla.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[18,33 A.]]></text>
+      <text><![CDATA[Exactamente 18,33 A, al multiplicar la potencia por dos por el factor de resistencia.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Has multiplicado la potencia por dos erróneamente.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[1,2 A.]]></text>
+      <text><![CDATA[Aproximadamente 1,20 A, aplicando la impedancia reactiva del filamento en corriente continua.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Revisa la Ley de Joule: I = P / V.]]></text>
       </feedback>
@@ -469,25 +469,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Entre el -1,0% y el -1,5% (generalmente -1,2% marcado en el proyector).]]></text>
+      <text><![CDATA[Entre el -1,0% y el -1,5% (generalmente -1,2%).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Equivale a descender entre 25 y 37,5 cm a una distancia de 25 metros.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[0,0% perfectamente horizontal.]]></text>
+      <text><![CDATA[0,0% perfectamente horizontal y paralelo al suelo para maximizar el alcance en carretera.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Un haz horizontal causaría deslumbramiento con el cabeceo del vehículo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre el -3,5% y el -5,0%.]]></text>
+      <text><![CDATA[Entre el -3,5% y el -5,0% para garantizar que el haz no deslumbre bajo ninguna circunstancia.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Ese valor se reserva para camiones pesados muy elevados.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[+1,5% ascendente.]]></text>
+      <text><![CDATA[+1,5% con inclinación ascendente hacia arriba para mejorar la visibilidad de los paneles informativos.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Provocaría un deslumbramiento masivo ilegal.]]></text>
       </feedback>
@@ -510,25 +510,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Multiplica por 20 el nivel de deslumbramiento hacia los conductores que circulan en sentido contrario.]]></text>
+      <text><![CDATA[Multiplica por 20 el nivel de deslumbramiento a los conductores en sentido contrario.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Eleva la línea de corte directamente hacia los ojos del conductor que viene de frente.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Reduce el consumo de la batería un 20%.]]></text>
+      <text><![CDATA[Disminuye la temperatura de trabajo del reflector parabólico prolongando la vida útil del bulbo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El reglaje mecánico no modifica la potencia eléctrica.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Duplica la vida útil de la lámpara halógena.]]></text>
+      <text><![CDATA[Reduce el consumo eléctrico del alternador un 15% al elevar la tensión eficaz en los bornes.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La durabilidad depende del filamento y la tensión.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No produce ningún efecto apreciable en carretera.]]></text>
+      <text><![CDATA[No genera ningún efecto mensurable sobre el campo visual nocturno ni sobre la seguridad vial.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Es una de las causas principales de siniestralidad nocturna.]]></text>
       </feedback>
@@ -557,19 +557,19 @@
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[V_masa ≤ 1,5 V.]]></text>
+      <text><![CDATA[V_masa ≤ 1,5 V, ya que la masa metálica tolera mayores fluctuaciones que el positivo.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 1,5V de caída en masa provocaría una pérdida crítica de luminosidad.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[V_masa = 12,0 V.]]></text>
+      <text><![CDATA[V_masa = 12,0 V en condiciones normales de funcionamiento continuo con el motor encendido.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 12V en masa indicaría una interrupción total del circuito (circuito abierto).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No se puede medir la masa con voltímetro.]]></text>
+      <text><![CDATA[La caída de tensión en masa no puede medirse con voltímetro al no circular corriente positiva.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La medición de caída de tensión en masa en paralelo es el método estrella de taller.]]></text>
       </feedback>
@@ -592,25 +592,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[En enviar microimpulsos de tensión de muy corta duración con la lámpara apagada para verificar la continuidad eléctrica del filamento sin llegar a encenderlo.]]></text>
+      <text><![CDATA[Envía microimpulsos breves con la bombilla apagada para medir continuidad sin encenderla.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Si no hay retorno de corriente, registra el fallo en el cuadro antes de accionar el mando.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[En enfriar el faro mediante ventiladores antes de encenderlo.]]></text>
+      <text><![CDATA[Activa ventiladores de refrigeración dentro de la carcasa del faro antes de arrancar el motor.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La refrigeración es térmica, no un protocolo de chequeo eléctrico.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[En medir la temperatura ambiental del paragolpes.]]></text>
+      <text><![CDATA[Mide la temperatura ambiente exterior mediante una sonda en el paragolpes para regular el haz.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Es una prueba eléctrica de diagnóstico de lámpara.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[En desconectar la batería cuando hace frío.]]></text>
+      <text><![CDATA[Desconecta preventivamente la alimentación de Línea 30 cuando la temperatura baja de 0 °C.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No tiene relación técnica.]]></text>
       </feedback>
@@ -685,25 +685,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Sensores de nivel (inductivos o resistivos) en los ejes delantero y trasero unidos por bieletas a la suspensión, calculador electrónico y servomotores paso a paso en los faros.]]></text>
+      <text><![CDATA[Sensores de nivel en ejes delantero y trasero con bieletas, calculador y servomotores.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Miden la inclinación de la carrocería en milisegundos compensando carga, aceleraciones y frenadas.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un acelerómetro en el salpicadero y cables mecánicos Bowden hasta los reflectores.]]></text>
+      <text><![CDATA[Un giróscopo electrónico en el cuadro de mandos con cables mecánicos tipo Bowden hasta los faros.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Los cables mecánicos corresponden a reguladores manuales arcaicos.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Cámaras ultrasónicas en las llantas de las cuatro ruedas.]]></text>
+      <text><![CDATA[Cuatro sensores piezoeléctricos de presión integrados en los neumáticos coordinados por la red CAN.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Se emplean sensores de ángulo en los brazos de suspensión.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un barómetro que mide la presión de inflado de los neumáticos.]]></text>
+      <text><![CDATA[Cámaras de visión infrarroja montadas en los pasos de rueda conectadas directamente a los balastros.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Eso corresponde al sistema TPMS de presión de neumáticos.]]></text>
       </feedback>
@@ -726,25 +726,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[La luz estática enciende a baja velocidad (&lt;40 km/h) el antiniebla o lámpara lateral al poner el intermitente; la luz dinámica hace pivotar el proyector principal horizontalmente hasta 15° mediante un motor paso a paso.]]></text>
+      <text><![CDATA[La luz estática enciende una lámpara lateral a baja velocidad; la dinámica gira el proyector en carretera.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! La estática ilumina cruces y giros cerrados; la dinámica acompaña el trazado de la carretera en velocidad.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[La luz estática solo funciona de día y la dinámica de noche.]]></text>
+      <text><![CDATA[La luz estática opera exclusivamente en horario diurno y la luz dinámica solo se activa al conectar las luces de carretera.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Ambas están diseñadas para conducción nocturna o túneles.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[La luz dinámica sustituye a las luces de freno traseras.]]></text>
+      <text><![CDATA[La luz estática sustituye a los faros antiniebla delanteros y la luz dinámica modifica la altura de los pilotos traseros.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Son sistemas frontales de visibilidad de calzada.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No existe diferencia; son dos nombres comerciales para el mismo sistema.]]></text>
+      <text><![CDATA[Ambas denominaciones corresponden al mismo actuador electromecánico sin que existan diferencias técnicas en su funcionamiento.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Son arquitecturas electromecánicas completamente distintas.]]></text>
       </feedback>
@@ -793,25 +793,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Color blanco continuo.]]></text>
+      <text><![CDATA[Color blanco continuo reglamentario.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Advierte de la maniobra de retroceso e ilumina el entorno posterior.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Color ámbar fijo.]]></text>
+      <text><![CDATA[Color ámbar intermitente con frecuencia de 1 a 2 Hz.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Aunque fue admitido en algunos países en el siglo XX, hoy es blanco estricto.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Color rojo de alta intensidad.]]></text>
+      <text><![CDATA[Color rojo fijo de alta luminosidad similar al antiniebla.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El rojo se reserva para posición, freno y antiniebla trasero.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Color azul intermitente.]]></text>
+      <text><![CDATA[Color azul continuo reservado para maniobras de retroceso.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El azul está reservado a vehículos de policía y emergencias.]]></text>
       </feedback>
@@ -912,25 +912,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Porque el cebador o transformador de encendido genera un pico de alta tensión de 20.000 a 30.000 V (20-30 kV) que supone riesgo mortal de electrocución.]]></text>
+      <text><![CDATA[El cebador genera picos de 20 a 30 kV con riesgo de descarga mortal.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El arco eléctrico inicial requiere hasta 30 kV para ionizar el gas xenón.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Para evitar que el gas xenón se escape a la atmósfera.]]></text>
+      <text><![CDATA[Para evitar que el gas xenón comprimido se fugue a la atmósfera al abrir la óptica.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La ampolla de cuarzo es hermética y no se abre.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque la bombilla de xenón funciona con imanes de neodimio permanentes.]]></text>
+      <text><![CDATA[Porque el balastro electrónico contiene imanes permanentes que alteran la brújula del GPS.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No contiene imanes.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Para resetear el cuentakilómetros del vehículo.]]></text>
+      <text><![CDATA[Para reiniciar el contador interno de horas de encendido registrado en el cuadro de mandos.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. No tiene relación con el odómetro.]]></text>
       </feedback>

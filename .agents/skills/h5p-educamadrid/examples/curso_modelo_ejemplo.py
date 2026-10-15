@@ -100,10 +100,10 @@ def create_column_wrapper(library_str, params_dict, title_str="Sección"):
         "useSeparator": "auto"
     }
 
-def resolve_institutional_logo(preferred_name="logo2026.bmp", search_dirs=None):
+def resolve_institutional_logo(preferred_name="logo2026.png", search_dirs=None):
     """
     Localiza y resuelve metadatos del logotipo institucional 2026.
-    Soporta extensiones admitidas por la whitelist de Moodle: .bmp, .png, .jpg / .jpeg.
+    Soporta extensiones admitidas por la whitelist de Moodle: .png, .jpg / .jpeg, .bmp.
     Detecta automáticamente dimensiones (width, height) y tipo MIME adecuado.
     """
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -121,7 +121,7 @@ def resolve_institutional_logo(preferred_name="logo2026.bmp", search_dirs=None):
     candidates = []
     if preferred_name:
         candidates.append(preferred_name)
-    for name in ['logo2026.bmp', 'logo2026.png', 'logo2026.jpg', 'logo2026.jpeg']:
+    for name in ['logo2026.png', 'logo2026.jpg', 'logo2026.jpeg', 'logo2026.bmp']:
         if name not in candidates:
             candidates.append(name)
 
@@ -158,8 +158,8 @@ def resolve_institutional_logo(preferred_name="logo2026.bmp", search_dirs=None):
 
     return {
         "src_path": found_path,
-        "filename": found_filename or "logo2026.bmp",
-        "rel_path": f"images/{found_filename or 'logo2026.bmp'}",
+        "filename": found_filename or "logo2026.png",
+        "rel_path": f"images/{found_filename or 'logo2026.png'}",
         "mime": mime_type,
         "width": width,
         "height": height,
@@ -637,9 +637,9 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
         },
         "chapters": chapters,
         "behaviour": {
-            "defaultTableOfContents": True,
+            "defaultTableOfContents": False,
             "progressIndicators": True,
-            "progressType": "dots"
+            "progressType": "textual"
         }
     }
 
@@ -678,6 +678,236 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
 # =========================================================================
 # EJEMPLO MAESTRO: CURSO MODELO QUE INTEGRA LOS 5 PILARES PEDAGÓGICOS
 # =========================================================================
+def generar_evaluacion_modelo_xml(output_xml_path):
+    """Genera y valida el banco de preguntas Moodle XML oficial desacoplado de la plantilla."""
+    try:
+        from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
+    except ImportError:
+        sys.path.insert(0, PLANTILLA_DIR)
+        from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
+
+    builder = MoodleXMLBuilder("Plantilla Oficial EducaMadrid - Evaluacion Sumativa")
+
+    # P1: Desacoplamiento de H5P y XML (Opciones equilibradas ~130 caracteres)
+    builder.add_multichoice(
+        "P01_Desacoplamiento_Evaluacion",
+        "<p>¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?</p>",
+        [
+            {
+                "text": "Garantizar el registro infalible de visualización en Moodle y evitar pérdidas de sentencias xAPI o bloqueos de iframes en móviles.",
+                "fraction": 100,
+                "feedback": "¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz)."
+            },
+            {
+                "text": "Cumplir la normativa que prohíbe evaluar contenidos interactivos directamente en los módulos técnicos de Formación Profesional.",
+                "fraction": 0,
+                "feedback": "Incorrecto. H5P dispone de MultiChoice y QuestionSet, pero las sentencias xAPI dependen de conexión estable y cookies de terceros que a menudo fallan en móviles."
+            },
+            {
+                "text": "Reducir el tamaño de descarga del paquete H5P en el navegador y minimizar el consumo de ancho de banda en servidores EducaMadrid.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Moodle integra H5P nativamente, pero el calificador xAPI no es recomendable como único filtro de superación."
+            },
+            {
+                "text": "Impedir que el alumnado repita las actividades formativas más de una vez durante el transcurso del curso académico en el aula.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Aunque el XML es ligero, el motivo primordial es la robustez en el registro de calificaciones (mdl_grade_grades)."
+            }
+        ],
+        general_feedback="<p>El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle.</p>"
+    )
+
+    # P2: Contraste WCAG 2.1 AAA (Opciones equilibradas ~100 caracteres)
+    builder.add_multichoice(
+        "P02_Contraste_WCAG_AAA",
+        "<p>Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?</p>",
+        [
+            {
+                "text": "Al menos 7:1 para garantizar lectura sin fatiga visual (alcanzando > 13:1 con Slate 900 sobre blanco).",
+                "fraction": 100,
+                "feedback": "¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles."
+            },
+            {
+                "text": "Al menos 4.5:1 exigido exclusivamente para textos estándar en nivel de conformidad intermedio AA.",
+                "fraction": 0,
+                "feedback": "Incorrecto. 4.5:1 es el umbral mínimo del nivel AA, pero el estándar técnico oficial EducaMadrid adopta el estándar superior AAA (>= 7:1)."
+            },
+            {
+                "text": "Al menos 3:1 válido únicamente para componentes interactivos de gran escala y tipografías decorativas.",
+                "fraction": 0,
+                "feedback": "Incorrecto. 3:1 solo es admisible para texto de gran tamaño (>= 24px) o componentes de interfaz de usuario en nivel AA."
+            },
+            {
+                "text": "Cualquier valor numérico libre siempre que se mantengan los colores corporativos de la institución.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El contraste debe certificarse matemáticamente mediante luminancia relativa."
+            }
+        ],
+        general_feedback="<p>El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo.</p>"
+    )
+
+    # P3: Whitelist de Moodle (Distractor más largo ~61 caracteres, correcta ~54 caracteres)
+    builder.add_multichoice(
+        "P03_Whitelist_Moodle_Seguridad",
+        "<p>¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?</p>",
+        [
+            {
+                "text": "Archivos vectoriales .svg y documentos locales .html.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Moodle bloquea archivos SVG y HTML locales en content/ para neutralizar ataques de inyección de código malicioso (Stored XSS). Todos los diagramas deben rasterizarse a PNG o JPEG."
+            },
+            {
+                "text": "Archivos de mapa de bits comprimidos en formato .png y .jpg.",
+                "fraction": 0,
+                "feedback": "Incorrecto. PNG y JPEG son formatos plenamente admitidos y recomendados por la whitelist oficial."
+            },
+            {
+                "text": "Grabaciones de audio en .mp3 y tipografías web .woff2.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El audio y las fuentes web forman parte de la lista blanca admitida."
+            },
+            {
+                "text": "Estructuras de metadatos del paquete en formato .json.",
+                "fraction": 0,
+                "feedback": "Incorrecto. content.json es el núcleo semántico indispensable del paquete H5P."
+            }
+        ],
+        general_feedback="<p>H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial.</p>"
+    )
+
+    # P4: Andamiaje pedagógico (Opciones equilibradas ~100 caracteres)
+    builder.add_multichoice(
+        "P04_Andamiaje_Cuatro_Fases",
+        "<p>¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?</p>",
+        [
+            {
+                "text": "1. Motivación activa ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje."
+            },
+            {
+                "text": "1. Examen inicial ➔ 2. Lectura lineal teórica ➔ 3. Descanso pautado ➔ 4. Entrega de informe final.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El andamiaje pedagógico exige preparación y práctica antes de la evaluación."
+            },
+            {
+                "text": "1. Práctica de taller ➔ 2. Dudas en el foro ➔ 3. Examen sumativo ➔ 4. Repetición de la evaluación.",
+                "fraction": 0,
+                "feedback": "Incorrecto. La práctica sin andamiaje ni explicación previa genera frustración y abandono."
+            },
+            {
+                "text": "1. Visionado de vídeo ➔ 2. Descarga de manual ➔ 3. Cuestionario externo ➔ 4. Calificación final.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Este enfoque fragmentado dispersa la atención del estudiante; el modelo oficial unifica la secuencia."
+            }
+        ],
+        general_feedback="<p>El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua.</p>"
+    )
+
+    # P5: Touch targets en dispositivos móviles (Correcta es la más corta ~62 caracteres, distractores ~74 caracteres)
+    builder.add_multichoice(
+        "P05_Touch_Targets_Moviles",
+        "<p>Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?</p>",
+        [
+            {
+                "text": "44 x 44 píxeles como dimensión ergonómica mínima (WCAG 2.5.5).",
+                "fraction": 100,
+                "feedback": "¡Correcto! 44 x 44 px es el tamaño mínimo ergonómico para interacción táctil con el pulgar o dedos enguantados."
+            },
+            {
+                "text": "Al menos 60 x 60 píxeles obligatorios exclusivamente en pantallas grandes.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Un botón de 20x20 px provoca toques accidentales y fallos constantes en pantallas pequeñas."
+            },
+            {
+                "text": "Un máximo de 24 x 24 píxeles para aprovechar el espacio útil de pantalla.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Incumple totalmente las pautas de accesibilidad móvil."
+            },
+            {
+                "text": "El ancho estricto del texto visible sin necesidad de márgenes de toque.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes del texto."
+            }
+        ],
+        general_feedback="<p>Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets >= 44x44 px.</p>"
+    )
+
+    # P6: Fórmulas matemáticas (Distractores más largos ~103 caracteres, correcta ~101 caracteres)
+    builder.add_multichoice(
+        "P06_Formulas_HTML_Semantico",
+        "<p>¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?</p>",
+        [
+            {
+                "text": "Porque H5P.AdvancedText no incorpora MathJax por defecto y mostraría el código fuente sin formatear.",
+                "fraction": 100,
+                "feedback": "¡Correcto! Se debe utilizar siempre HTML semántico y Unicode (<sub>, <sup>, .tech-formula), asegurando renderizado inmediato y accesible."
+            },
+            {
+                "text": "Porque el compilador de LaTeX genera incompatibilidades críticas con los sistemas operativos móviles.",
+                "fraction": 0,
+                "feedback": "Incorrecto. LaTeX es multiplataforma, pero requiere motores de renderizado que no residen en el sandbox de H5P."
+            },
+            {
+                "text": "Porque la sintaxis matemática LaTeX vulnera los protocolos de seguridad de datos del servidor Moodle.",
+                "fraction": 0,
+                "feedback": "Incorrecto. Las fórmulas son esenciales en enseñanzas técnicas y científicas."
+            },
+            {
+                "text": "Porque su procesamiento incrementa exponencialmente el peso del archivo comprimido superando la cuota.",
+                "fraction": 0,
+                "feedback": "Incorrecto. El texto plano no añade peso, el fallo es puramente visual y de renderizado."
+            }
+        ],
+        general_feedback="<p>El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla.</p>"
+    )
+
+    # P7: Verdadero / Falso - Inyección de estilos
+    builder.add_truefalse(
+        "P07_TF_Inyeccion_Estilos_CSS",
+        "<p>¿Es una práctica correcta insertar etiquetas &lt;style&gt; dentro de los bloques de contenido de H5P para aplicar estilos personalizados?</p>",
+        False,
+        feedback_true="Incorrecto. El sanitizador de H5P elimina las etiquetas &lt;style&gt; pero expone el código CSS como texto plano residual visible en pantalla (CSS leakage).",
+        feedback_false="¡Correcto! Es falso. Los estilos accesibles deben inyectarse limpiamente en las hojas de estilo de las librerías base (h5p-interactive-book.css y h5p-column.css).",
+        general_feedback="<p>La inyección en librerías base previene fugas de código y unifica el tema visual.</p>"
+    )
+
+    # P8: Verdadero / Falso - Menú en móviles
+    builder.add_truefalse(
+        "P08_TF_Menu_Table_Of_Contents_Movil",
+        "<p>Para optimizar la visualización en dispositivos móviles, se recomienda configurar 'defaultTableOfContents: false' en InteractiveBook para evitar que el índice lateral cubra el contenido al abrir el curso.</p>",
+        True,
+        feedback_true="¡Correcto! Al configurar defaultTableOfContents: false, el estudiante ve directamente la portada y el tema en su teléfono, pudiendo desplegar el menú táctilmente cuando lo desee.",
+        feedback_false="Incorrecto. Si defaultTableOfContents es true, el menú ocupa toda la pantalla en smartphones y bloquea la visualización del contenido.",
+        general_feedback="<p>El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas.</p>"
+    )
+
+    # P9: Verdadero / Falso - El error formativo
+    builder.add_truefalse(
+        "P09_TF_Error_Como_Palanca",
+        "<p>En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.</p>",
+        True,
+        feedback_true="¡Correcto! El Aprendizaje Activo convierte el error en una oportunidad formativa y no en un elemento punitivo.",
+        feedback_false="Incorrecto. Bloquear reintentos en actividades formativas genera frustración y contradice los pilares pedagógicos.",
+        general_feedback="<p>La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento.</p>"
+    )
+
+    # P10: Emparejamiento - Fases del Andamiaje
+    builder.add_matching(
+        "P10_Emparejamiento_Fases_Andamiaje",
+        "<p>Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:</p>",
+        [
+            ("Fase 1: Activación y Motivación", "Reto detonante inicial y cabecera institucional (.tech-hero)"),
+            ("Fase 2: Explicación Interactiva", "Teoría concisa, fórmulas semánticas y puntos de inspección (ImageHotspots)"),
+            ("Fase 3: Práctica Guiada Activa", "Arrastre de magnitudes (DragText), retos de taller y checklists táctiles"),
+            ("Fase 4: Evaluación Formativa", "Autocomprobación con retroalimentación razonada inmediata (.tech-checkpoint)")
+        ],
+        general_feedback="<p>Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa.</p>"
+    )
+
+    builder.save_xml(output_xml_path)
+    validar_moodle_xml(output_xml_path)
+
 if __name__ == '__main__':
     ejemplo_pkg = os.path.join(PLANTILLA_DIR, "Plantilla_Curso_Modelo_EducaMadrid.h5p")
 
@@ -862,6 +1092,7 @@ if __name__ == '__main__':
 
     capitulos = [capitulo_0, capitulo_1]
 
+    # 6. Compilar paquete H5P interactivo (Modalidad Formativa)
     build_h5p_package(
         output_path=ejemplo_pkg,
         title="Plantilla Oficial de Curso Interactivo EducaMadrid",
@@ -870,7 +1101,11 @@ if __name__ == '__main__':
         chapters=capitulos
     )
 
-    # Validar automáticamente la plantilla generada
+    # 7. Generar Banco de Preguntas Oficial Moodle XML (Modalidad Sumativa Desacoplada)
+    eval_xml_path = os.path.join(PLANTILLA_DIR, "evaluacion_modelo_moodle.xml")
+    generar_evaluacion_modelo_xml(eval_xml_path)
+
+    # 8. Validar automáticamente el paquete H5P generado
     try:
         from validar_h5p import validate_h5p
         validate_h5p(ejemplo_pkg)
@@ -889,3 +1124,4 @@ if __name__ == '__main__':
                         spec.loader.exec_module(mod)
                         mod.validate_h5p(ejemplo_pkg)
                         break
+

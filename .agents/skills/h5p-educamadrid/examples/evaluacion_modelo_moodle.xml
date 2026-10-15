@@ -22,25 +22,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Para asegurar que el 100% del alumnado registre la realización de los contenidos por visualización en Moodle, evitando que fallos de sentencias xAPI, bloqueos de iframes o notas de corte anulen el seguimiento.]]></text>
+      <text><![CDATA[Garantizar el registro infalible de visualización en Moodle y evitar pérdidas de sentencias xAPI o bloqueos de iframes en móviles.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque las actividades H5P no permiten formular preguntas de evaluación.]]></text>
+      <text><![CDATA[Cumplir la normativa que prohíbe evaluar contenidos interactivos directamente en los módulos técnicos de Formación Profesional.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. H5P dispone de MultiChoice y QuestionSet, pero las sentencias xAPI dependen de conexión estable y cookies de terceros que a menudo fallan en móviles.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque Moodle prohíbe el uso de actividades interactivas en Formación Profesional.]]></text>
+      <text><![CDATA[Reducir el tamaño de descarga del paquete H5P en el navegador y minimizar el consumo de ancho de banda en servidores EducaMadrid.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Moodle integra H5P nativamente, pero el calificador xAPI no es recomendable como único filtro de superación.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque los archivos XML ocupan menos ancho de banda que un paquete comprimido.]]></text>
+      <text><![CDATA[Impedir que el alumnado repita las actividades formativas más de una vez durante el transcurso del curso académico en el aula.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Aunque el XML es ligero, el motivo primordial es la robustez en el registro de calificaciones (mdl_grade_grades).]]></text>
       </feedback>
@@ -63,25 +63,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Al menos 7:1 (alcanzando &gt; 13:1 con texto Slate 900 #0f172a sobre blanco).]]></text>
+      <text><![CDATA[Al menos 7:1 para garantizar lectura sin fatiga visual (alcanzando &gt; 13:1 con Slate 900 sobre blanco).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Al menos 4.5:1.]]></text>
+      <text><![CDATA[Al menos 4.5:1 exigido exclusivamente para textos estándar en nivel de conformidad intermedio AA.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 4.5:1 es el umbral mínimo del nivel AA, pero el estándar técnico oficial EducaMadrid adopta el estándar superior AAA (&gt;= 7:1).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Al menos 3:1.]]></text>
+      <text><![CDATA[Al menos 3:1 válido únicamente para componentes interactivos de gran escala y tipografías decorativas.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. 3:1 solo es admisible para texto de gran tamaño (&gt;= 24px) o componentes de interfaz de usuario en nivel AA.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Cualquier combinación que incluya un color corporativo.]]></text>
+      <text><![CDATA[Cualquier valor numérico libre siempre que se mantengan los colores corporativos de la institución.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El contraste debe certificarse matemáticamente mediante luminancia relativa.]]></text>
       </feedback>
@@ -110,19 +110,19 @@
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Archivos de imagen .png y .jpg.]]></text>
+      <text><![CDATA[Archivos de mapa de bits comprimidos en formato .png y .jpg.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. PNG y JPEG son formatos plenamente admitidos y recomendados por la whitelist oficial.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Archivos de audio .mp3 y tipografías .woff2.]]></text>
+      <text><![CDATA[Grabaciones de audio en .mp3 y tipografías web .woff2.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El audio y las fuentes web forman parte de la lista blanca admitida.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Archivos de metadatos .json.]]></text>
+      <text><![CDATA[Estructuras de metadatos del paquete en formato .json.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. content.json es el núcleo semántico indispensable del paquete H5P.]]></text>
       </feedback>
@@ -145,25 +145,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[1. Activación/Motivación ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.]]></text>
+      <text><![CDATA[1. Motivación activa ➔ 2. Explicación interactiva ➔ 3. Práctica guiada ➔ 4. Autocomprobación formativa.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[1. Examen final ➔ 2. Lectura lineal ➔ 3. Descanso ➔ 4. Entrega de notas.]]></text>
+      <text><![CDATA[1. Examen inicial ➔ 2. Lectura lineal teórica ➔ 3. Descanso pautado ➔ 4. Entrega de informe final.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El andamiaje pedagógico exige preparación y práctica antes de la evaluación.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[1. Práctica autónoma ➔ 2. Dudas en foro ➔ 3. Examen sumativo ➔ 4. Repetición.]]></text>
+      <text><![CDATA[1. Práctica de taller ➔ 2. Dudas en el foro ➔ 3. Examen sumativo ➔ 4. Repetición de la evaluación.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. La práctica sin andamiaje ni explicación previa genera frustración y abandono.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[1. Visualización de vídeo ➔ 2. Lectura de PDF ➔ 3. Cuestionario externo ➔ 4. Tarea.]]></text>
+      <text><![CDATA[1. Visionado de vídeo ➔ 2. Descarga de manual ➔ 3. Cuestionario externo ➔ 4. Calificación final.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Este enfoque fragmentado dispersa la atención del estudiante; el modelo oficial unifica la secuencia.]]></text>
       </feedback>
@@ -186,25 +186,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[44 x 44 píxeles (WCAG 2.5.5).]]></text>
+      <text><![CDATA[44 x 44 píxeles como dimensión ergonómica mínima (WCAG 2.5.5).]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! 44 x 44 px es el tamaño mínimo ergonómico para interacción táctil con el pulgar o dedos enguantados.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[20 x 20 píxeles.]]></text>
+      <text><![CDATA[Al menos 60 x 60 píxeles obligatorios exclusivamente en pantallas grandes.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Un botón de 20x20 px provoca toques accidentales y fallos constantes en pantallas pequeñas.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[12 x 12 píxeles.]]></text>
+      <text><![CDATA[Un máximo de 24 x 24 píxeles para aprovechar el espacio útil de pantalla.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Incumple totalmente las pautas de accesibilidad móvil.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[El ancho del texto sin márgenes adicionales.]]></text>
+      <text><![CDATA[El ancho estricto del texto visible sin necesidad de márgenes de toque.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes del texto.]]></text>
       </feedback>
@@ -227,25 +227,25 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Porque el componente H5P.AdvancedText no incluye MathJax por defecto y mostraría el código fuente sin procesar.]]></text>
+      <text><![CDATA[Porque H5P.AdvancedText no incorpora MathJax por defecto y mostraría el código fuente sin formatear.]]></text>
       <feedback format="html">
         <text><![CDATA[¡Correcto! Se debe utilizar siempre HTML semántico y Unicode (&lt;sub&gt;, &lt;sup&gt;, .tech-formula), asegurando renderizado inmediato y accesible.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque LaTeX es un formato exclusivo de sistemas Windows.]]></text>
+      <text><![CDATA[Porque el compilador de LaTeX genera incompatibilidades críticas con los sistemas operativos móviles.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. LaTeX es multiplataforma, pero requiere motores de renderizado que no residen en el sandbox de H5P.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque las fórmulas matemáticas están prohibidas en las Aulas Virtuales.]]></text>
+      <text><![CDATA[Porque la sintaxis matemática LaTeX vulnera los protocolos de seguridad de datos del servidor Moodle.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. Las fórmulas son esenciales en enseñanzas técnicas y científicas.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Porque incrementa el peso del paquete en más de 50 MB.]]></text>
+      <text><![CDATA[Porque su procesamiento incrementa exponencialmente el peso del archivo comprimido superando la cuota.]]></text>
       <feedback format="html">
         <text><![CDATA[Incorrecto. El texto plano no añade peso, el fallo es puramente visual y de renderizado.]]></text>
       </feedback>
