@@ -45,6 +45,19 @@ EducaMadrid no descarga librerías dinámicamente si el usuario carece de privil
   * `H5P.Transition`: 1.0
   * `jQuery.ui`: 1.10
 
+### Metadatos de Autoría en `h5p.json` (`authors` y `role`)
+Si se declara `authors`, cada elemento de la lista debe incluir obligatoriamente las claves `name` y `role`:
+```json
+"authors": [
+  {
+    "name": "Profesorado de Automoción",
+    "role": "Author"
+  }
+]
+```
+> [!CAUTION]
+> Omitir `"role"` en `authors` provoca el rechazo inmediato en Moodle: *"La propiedad requerida role está faltando de h5p.json. El archivo principal h5p.json no es válido"*.
+
 ---
 
 ## 3. Prevención de Pantalla en Blanco (*White Screen of Death*)

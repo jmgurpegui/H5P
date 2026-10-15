@@ -362,7 +362,7 @@ def create_chapter(title, sections):
             "title": title,
             "contentType": "Column",
             "license": "CC BY-SA",
-            "authors": [{"name": "Departamento de Formación Profesional"}]
+            "authors": [{"name": "Departamento de Formación Profesional", "role": "Author"}]
         },
         "params": {
             "title": title,
@@ -653,7 +653,7 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
         "mainLibrary": "H5P.InteractiveBook",
         "embedTypes": ["div"],
         "license": "CC BY-SA",
-        "authors": [{"name": "Profesorado de Formación Profesional y Tecnología"}],
+        "authors": [{"name": "Profesorado de Formación Profesional y Tecnología", "role": "Author"}],
         "preloadedDependencies": HOMOLOGATED_DEPENDENCIES
     }
 

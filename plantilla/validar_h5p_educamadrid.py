@@ -90,6 +90,25 @@ def validate_h5p(file_path):
                     h5p_meta = json.loads(zf.read('h5p.json').decode('utf-8'))
                     print(f"✓ h5p.json encontrado. Título: '{h5p_meta.get('title')}'")
                     print(f"  Librería principal: {h5p_meta.get('mainLibrary')}")
+
+                    # Validar especificación de autores en h5p.json (Requisito estricto Moodle/H5P)
+                    h5p_authors = h5p_meta.get('authors')
+                    if h5p_authors is not None:
+                        if not isinstance(h5p_authors, list):
+                            errors.append("h5p.json: La propiedad 'authors' debe ser una lista de autores.")
+                        else:
+                            for a_idx, author in enumerate(h5p_authors):
+                                if not isinstance(author, dict):
+                                    errors.append(f"h5p.json: authors[{a_idx}] debe ser un objeto con 'name' y 'role'.")
+                                else:
+                                    if not author.get('role'):
+                                        errors.append(
+                                            f"h5p.json: La propiedad requerida 'role' está faltando en authors[{a_idx}] ('{author.get('name', 'sin nombre')}'). "
+                                            "Moodle rechazará el paquete con el error: 'La propiedad requerida role está faltando de h5p.json / El archivo principal h5p.json no es válido'. "
+                                            "Valores válidos: 'Author', 'Editor', 'Licensee', 'Originator', 'Other'."
+                                        )
+                                    if not author.get('name'):
+                                        errors.append(f"h5p.json: authors[{a_idx}] carece del campo obligatorio 'name'.")
                 except Exception as e:
                     errors.append(f"Error parseando h5p.json: {e}")
                     h5p_meta = {}
@@ -133,6 +152,16 @@ def validate_h5p(file_path):
                             # Validar metadata.title
                             if not chap.get('metadata', {}).get('title'):
                                 errors.append(f"Capítulo {i+1}: Falta 'metadata.title'. El menú lateral de navegación no mostrará este tema.")
+
+                            # Validar metadata.authors si existe
+                            chap_authors = chap.get('metadata', {}).get('authors')
+                            if chap_authors is not None and isinstance(chap_authors, list):
+                                for a_idx, c_author in enumerate(chap_authors):
+                                    if isinstance(c_author, dict) and not c_author.get('role'):
+                                        errors.append(
+                                            f"Capítulo {i+1}: La propiedad requerida 'role' está faltando en metadata.authors[{a_idx}] ('{c_author.get('name', 'sin nombre')}'). "
+                                            "Debe incluir 'role': 'Author'."
+                                        )
 
                             col_params = chap.get('params', {})
                             items = col_params.get('content', [])

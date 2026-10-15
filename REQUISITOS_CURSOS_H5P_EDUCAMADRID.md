@@ -168,6 +168,21 @@ Para compilar cursos compatibles, deben incluirse exactamente las siguientes ver
 #### Clausura Completa de Dependencias en `h5p.json`
 El manifiesto `h5p.json` debe declarar **todas** las dependencias en `preloadedDependencies` y sus carpetas deben estar físicamente presentes en la raíz del archivo ZIP.
 
+#### Metadatos de Autoría Obligatorios (`authors` y `role`)
+Si se incluye el campo `authors` en `h5p.json` o en los metadatos de los capítulos (`metadata.authors`), cada entrada de autor **debe ser obligatoriamente un objeto con las propiedades `name` y `role`**:
+```json
+"authors": [
+  {
+    "name": "Departamento de Formación Profesional - Automoción",
+    "role": "Author"
+  }
+]
+```
+> [!WARNING]
+> Si se omite la clave `"role"` en algún autor (ej. `[{"name": "..."}]`), el validador oficial de Moodle/EducaMadrid bloqueará la subida del paquete con el error:  
+> **«La propiedad requerida role está faltando de h5p.json. El archivo principal h5p.json no es válido.»**  
+> Valores válidos según la especificación H5P: `"Author"`, `"Editor"`, `"Licensee"`, `"Originator"`, `"Other"`.
+
 ---
 
 ## 4. Visualización de Fórmulas Matemáticas y Magnitudes Eléctricas

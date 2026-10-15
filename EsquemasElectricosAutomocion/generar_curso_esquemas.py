@@ -330,7 +330,7 @@ def create_didactic_sequence_chapter(title, phase1_intro, phase2_theory, phase3_
             "title": title,
             "contentType": "Column",
             "license": "CC BY-SA",
-            "authors": [{"name": "Departamento de Formación Profesional - Automoción"}]
+            "authors": [{"name": "Departamento de Formación Profesional - Automoción", "role": "Author"}]
         },
         "params": {
             "title": title,
@@ -1129,7 +1129,8 @@ def build_h5p_course(output_path):
         "mainLibrary": "H5P.InteractiveBook",
         "embedTypes": ["iframe"],
         "license": "CC BY-SA",
-        "preloadedDependencies": HOMOLOGATED_DEPENDENCIES
+        "preloadedDependencies": HOMOLOGATED_DEPENDENCIES,
+        "authors": [{"name": "Departamento de Formación Profesional - Automoción", "role": "Author"}]
     }
 
     with open(os.path.join(build_dir, 'h5p.json'), 'w', encoding='utf-8') as f:
