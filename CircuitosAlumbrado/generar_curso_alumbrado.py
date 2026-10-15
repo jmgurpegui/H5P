@@ -56,6 +56,7 @@ HOMOLOGATED_DEPENDENCIES = [
     {"machineName": "H5P.AdvancedText", "majorVersion": 1, "minorVersion": 1},
     {"machineName": "H5P.Accordion", "majorVersion": 1, "minorVersion": 0},
     {"machineName": "H5P.Image", "majorVersion": 1, "minorVersion": 1},
+    {"machineName": "H5P.Video", "majorVersion": 1, "minorVersion": 6},
     {"machineName": "jQuery.ui", "majorVersion": 1, "minorVersion": 10},
     {"machineName": "H5P.Column", "majorVersion": 1, "minorVersion": 16},
     {"machineName": "H5P.InteractiveBook", "majorVersion": 1, "minorVersion": 7}
@@ -126,8 +127,19 @@ def create_header_logo():
         "alt": logo["alt"]
     }, "Cabecera Institucional EducaMadrid")
 
-def create_image_section(rel_path, alt_text, title="Imagen Técnica", width=1200, height=680):
-    """Crea un bloque nativo H5P.Image 1.1 homologado con alt text descriptivo obligatorio."""
+def create_image_section(rel_path, alt_text, title="Imagen Técnica", width=None, height=None):
+    """Crea un bloque nativo H5P.Image 1.1 homologado con alt text descriptivo obligatorio y dimensiones automáticas."""
+    if width is None or height is None:
+        local_path = os.path.join(SCRIPT_DIR, rel_path)
+        if os.path.exists(local_path):
+            try:
+                from PIL import Image
+                with Image.open(local_path) as img:
+                    width, height = img.size
+            except Exception:
+                width, height = (1200, 680)
+        else:
+            width, height = (1200, 680)
     return create_column_wrapper("H5P.Image 1.1", {
         "contentName": "Image",
         "file": {
@@ -139,6 +151,25 @@ def create_image_section(rel_path, alt_text, title="Imagen Técnica", width=1200
         },
         "alt": alt_text,
         "title": title
+    }, title)
+
+def create_video_section(video_url, title="Vídeo Técnico Demostrativo"):
+    """Crea un bloque nativo H5P.Video 1.6 homologado para incrustación de vídeo técnico."""
+    return create_column_wrapper("H5P.Video 1.6", {
+        "sources": [
+            {
+                "path": video_url,
+                "mime": "video/YouTube"
+            }
+        ],
+        "visuals": {
+            "fit": True,
+            "controls": True
+        },
+        "playback": {
+            "autoplay": False,
+            "loop": False
+        }
     }, title)
 
 def create_text_section(html_content, title="Bloque Didáctico"):
@@ -343,7 +374,7 @@ def build_chapter_1():
         "images/figura_marcado_lampara_h7.png",
         "Figura 5.38: Ejemplo de inscripción y marcado de homologación en casquillo de lámpara H7 de Osram",
         "Marcado Reglamentario en Casquillo de Lámpara H7",
-        870, 430
+        894, 894
     ))
 
     sections.append(create_text_section("""
@@ -404,7 +435,7 @@ def build_chapter_1():
         "images/esquema_alumbrado_reles.png",
         "Esquema eléctrico normalizado DIN con relés para alumbrado de cruce 56b y carretera 56a",
         "Circuito de Alumbrado con Relés Normalizados DIN",
-        1200, 680
+        335, 597
     ))
 
     # 3. Protocolo Técnico de Taller
@@ -487,7 +518,7 @@ def build_chapter_2():
         "images/esquema_intermitencia_warning.png",
         "Esquema eléctrico normalizado de intermitencia y conmutador de luces de emergencia con relé DIN 49, 49a y masa 31",
         "Circuito Eléctrico de Intermitencia y Emergencia (Warning)",
-        1200, 680
+        496, 618
     ))
 
     sections.append(create_text_section("""
@@ -537,15 +568,25 @@ def build_chapter_2():
     sections.append(create_text_section("""
     <div class="tech-card">
       <div class="tech-card-badge"><i class="fa fa-microchip"></i> TECNOLOGÍA LED Y LÁSER</div>
-      <h3 style="color:#0f172a; margin-top:0.5rem;">2.4 Faros Matrix LED e Iluminación Láser de Alta Eficiencia</h3>
+      <h3 style="color:#0f172a; margin-top:0.5rem;">2.4 Faros Full LED, Matrix LED e Iluminación Láser de Alta Eficiencia</h3>
       <p style="color:#1e293b; line-height:1.6;">
-        Los faros <strong>Matrix LED</strong> emplean matrices de diodos controlados individualmente mediante multiplexado por la unidad electrónica. Al circular de noche, la cámara frontal detecta otros vehículos y apaga selectivamente solo los ledes que deslumbrarían al conductor contrario, manteniendo iluminado el resto de la escena.
+        La tecnología LED para faros principales se basa en módulos multichip de alta potencia sobre sustratos cerámicos, refrigerados activamente.
+      </p>
+      <p style="color:#1e293b; line-height:1.6;">
+        Los faros <strong>Matrix LED</strong> emplean matrices de diodos controlados individualmente mediante multiplexado por la unidad electrónica. Al circular de noche, la cámara frontal detecta otros vehículos y apaga selectivamente solo los ledes que deslumbrarían al conductor contrario, manteniendo iluminado el resto de la escena con luz de carretera ininterrumpida.
       </p>
       <p style="color:#1e293b; line-height:1.6;">
         Los <strong>faros láser</strong> alcanzan hasta <strong>600 metros</strong> de proyección (el doble que un LED convencional). Tres diodos láser emiten luz azul monocromática que atraviesa un prisma y una lente de fósforo fluorescente, convirtiéndola en luz blanca pura (5.500 K) extremadamente brillante y segura.
       </p>
     </div>
     """, "Matrix LED y Láser"))
+
+    sections.append(create_image_section(
+        "images/figura_tecnologia_faros_led.png",
+        "Evolución y módulos de tecnología de faros Full LED para automoción: matriz de ledes, disipador térmico y proyectores elipsoidales",
+        "Tecnología y Módulos de Faros LED en Automoción",
+        2560, 1439
+    ))
 
     sections.append(create_image_section(
         "images/figura_despiece_faro_matrix_led.png",
@@ -559,6 +600,21 @@ def build_chapter_2():
         "Figura 5.109: Comparativa de alcance fotométrico entre haz halógeno, cruce LED, carretera LED y luz láser (600 m)",
         "Alcance Fotométrico Comparativo de Tecnologías de Iluminación",
         1160, 290
+    ))
+
+    sections.append(create_text_section("""
+    <div class="tech-card">
+      <div class="tech-card-badge"><i class="fa fa-video-camera"></i> VÍDEO TÉCNICO DE REFERENCIA · HELLA TECH WORLD</div>
+      <h3 style="color:#0f172a; margin-top:0.5rem;">Vídeo Demostrativo de Taller: Sustitución y Calibración de Faro Matrix LED</h3>
+      <p style="color:#1e293b; line-height:1.6;">
+        En este vídeo técnico oficial del canal de referencia <strong>HELLA TECH WORLD</strong> (fabricante líder en iluminación automotriz), se demuestra el protocolo completo de sustitución de un faro Matrix LED en taller, incluyendo precauciones electrostáticas (ESD), verificación de buses y codificación de unidades de control:
+      </p>
+    </div>
+    """, "Vídeo HELLA Matrix LED"))
+
+    sections.append(create_video_section(
+        "https://www.youtube.com/watch?v=wAoESig-TzQ",
+        "HELLA TECH WORLD: Sustitución de un faro Matrix LED"
     ))
 
     # 3. Protocolos de Taller
@@ -644,7 +700,7 @@ def build_chapter_3():
         "images/figura_despiece_lamparas_xenon.png",
         "Figuras 5.15, 5.16, 5.17: Despiece y familias de lámparas de xenón para automoción (D1, D2, D3, D4)",
         "Familias y Casquillos de Lámparas de Xenón (D1S/D2S)",
-        1160, 450
+        1600, 1297
     ))
 
     sections.append(create_text_section("""
@@ -670,14 +726,14 @@ def build_chapter_3():
         "images/figura_componentes_faro_xenon.png",
         "Figura 5.52: Despiece y componentes de un faro de xenón (lámpara, transformador, UCE, servomotor de regulación y lavafaros)",
         "Componentes Integrados en un Faro de Xenón",
-        840, 555
+        379, 422
     ))
 
     sections.append(create_image_section(
         "images/figura_esquema_electrico_xenon.png",
         "Figura 5.54: Esquema eléctrico simplificado de alimentación de una lámpara de xenón con cable apantallado",
         "Esquema Eléctrico de Alta Tensión en Faro de Xenón",
-        910, 330
+        487, 630
     ))
 
     sections.append(create_image_section(
@@ -850,7 +906,22 @@ def build_chapter_4():
         "images/regloscopio_ajuste_faros.png",
         "Pantalla de proyección del regloscopio a 25 metros con cotas de inclinación de -1.0% a -1.5%",
         "Ajuste y Calibración de Faros en Regloscopio Óptico",
-        1200, 680
+        722, 480
+    ))
+
+    sections.append(create_text_section("""
+    <div class="tech-card">
+      <div class="tech-card-badge"><i class="fa fa-video-camera"></i> VÍDEO TÉCNICO DE REFERENCIA · CESVIMAP</div>
+      <h3 style="color:#0f172a; margin-top:0.5rem;">Metrología en Taller: Proceso de Ajuste y Reglaje de Faros con Regloscopio Digital</h3>
+      <p style="color:#1e293b; line-height:1.6;">
+        En esta demostración técnica del canal de referencia <strong>CESVIMAP</strong> (Centro de Experimentación y Seguridad Vial, referencia nacional en Formación Profesional de Automoción), se muestra el método real de taller: alineación por visor láser con el eje del vehículo, calibración de la cámara digital y ajuste de tornillos de altura y deriva según tolerancias de homologación:
+      </p>
+    </div>
+    """, "Vídeo CESVIMAP Regloscopio"))
+
+    sections.append(create_video_section(
+        "https://www.youtube.com/watch?v=r1aLt-3YiRE",
+        "CESVIMAP: Ajuste y Reglaje de Faros con Regloscopio Digital"
     ))
 
     # 3. Protocolos de Taller
@@ -963,7 +1034,7 @@ def build_chapter_5():
         "images/figura_comprobacion_piloto_taller.png",
         "Figuras 5.127, 5.128, 5.129: Práctica de taller de comprobación de terminales y pistas de conexión de un piloto trasero con polímetro y alimentación",
         "Comprobación de Pistas y Terminales de Piloto Trasero en Taller",
-        1180, 1140
+        401, 498
     ))
 
     sections.append(create_text_section("""
@@ -1006,7 +1077,7 @@ def build_chapter_5():
         "images/diagnosis_caida_tension.png",
         "Guía metrológica de medición de caída de tensión en línea positiva y masa con voltímetro en carga",
         "Método Metrológico de Caída de Tensión en Taller",
-        1200, 680
+        399, 501
     ))
 
     # 3. Protocolos de Taller
@@ -1041,9 +1112,9 @@ def build_chapter_5():
 # =========================================================================
 
 def build_h5p_course(destination_h5p_path):
-    """Compila físicamente el paquete .h5p con sus 16 librerías homologadas."""
+    """Compila físicamente el paquete .h5p con sus librerías homologadas."""
     print(f"📦 Compilando curso H5P en: {destination_h5p_path}")
-    print(f"📁 Copiando 16 librerías base desde: {LIB_DIR}")
+    print(f"📁 Copiando {len(HOMOLOGATED_DEPENDENCIES)} librerías base desde: {LIB_DIR}")
 
     temp_build_dir = os.path.join(SCRIPT_DIR, "temp_h5p_build")
     if os.path.exists(temp_build_dir):
