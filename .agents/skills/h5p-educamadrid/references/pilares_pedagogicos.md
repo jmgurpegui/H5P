@@ -85,14 +85,16 @@ Queda prohibido el feedback genérico ("Correcto" o "Incorrecto"):
 En aulas virtuales Moodle y EducaMadrid, cuando se exige una calificación dentro de un contenedor H5P (`InteractiveBook` o `Column`) para marcar la actividad como completada, se producen fallos recurrentes de registro en el alumnado:
 * **Pérdida de eventos xAPI en navegadores móviles**: En smartphones (Safari iOS, Chrome Android), las restricciones de almacenamiento de terceros en `iframe` (*Third-Party Cookies / Storage Partitioning*) y los cortes intermitentes de red provocan que las sentencias `answered` o `completed` no lleguen al LRS de Moodle.
 * **El puntaje de dominio anula el estado**: Si el alumno omite una sola pregunta formativa intercalada o no pulsa el botón final de envío en la última página, Moodle marca la actividad con estado **"No intentado"**, privándole del progreso de finalización.
+* **Problemas ergonómicos en móviles con `DragText`**: En pantallas táctiles de smartphones, los elementos de arrastre colisionan con el scroll vertical de la página y las etiquetas resultan diminutas para interacción táctil con los dedos.
 
-### 2. La Arquitectura Desacoplada Oficial (100% Confiabilidad)
+### 2. La Arquitectura Desacoplada Oficial (100% Confiabilidad y Ergonomía Móvil)
 
 Para garantizar que el 100% de los alumnos registren su trabajo y cuenten con una experiencia fluida en cualquier dispositivo:
 
-1. **Paquete H5P (Didáctico y Formativo)**:
-   - Se concibe como material de estudio interactivo, consulta técnica y práctica guiada con andamiaje en 4 fases.
-   - Cuenta con autocomprobaciones con reintentos ilimitados (`enableRetry: true`) y justificación razonada en cada opción para aprender del error.
+1. **Paquete H5P (100% Formativo e Ilustrado)**:
+   - Se concibe exclusivamente como material de estudio interactivo, esquemas HD, puntos de inspección táctil (`ImageHotspots`), checklists táctiles (`tech-checklist`) y retos de taller.
+   - **Prohibido incluir actividades puntuables o de arrastre** (`MultiChoice`, `DragText`, `TrueFalse`, `QuestionSet`) dentro de los paquetes de producción para evitar caídas de trazabilidad xAPI y fallos táctiles en smartphones.
+   - La Fase 4 concluye con síntesis de unidad y remisión al Cuestionario Moodle XML (`create_moodle_quiz_referral`).
    - **Configuración de Finalización en Moodle**:
      - *Rastreo de finalización*: "Mostrar la actividad como completada cuando se cumplan las condiciones".
      - *Condición de finalización*: **"El estudiante debe ver esta actividad para completarla"** (marcada).

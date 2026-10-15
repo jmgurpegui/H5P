@@ -233,6 +233,12 @@ def create_drag_text_activity(task_description_html, text_field_str, distractors
     text_field_str: Las palabras a arrastrar se encierran entre asteriscos (ej. '*intensidad*').
                     Se pueden incluir pistas con dos puntos (ej. '*tensión:voltaje en voltios*').
     distractors_str: Palabras de distracción incorrectas entre asteriscos (ej. '*potencia* *vatio*').
+
+    NOTA DE ARQUITECTURA EDUCAMADRID (DESACOPLAMIENTO OBLIGATORIO):
+    En cursos estándar de producción para Moodle/EducaMadrid, NO se deben incrustar actividades DragText
+    dentro del paquete H5P para evitar problemas de interacción táctil y scrolls involuntarios en smartphones,
+    así como fallos de registro de calificaciones xAPI. Toda la evaluación práctica y sumativa se realiza
+    mediante cuestionarios Moodle XML (mod_quiz). Se preserva esta función como referencia o para módulos locales.
     """
     params = {
         "taskDescription": f"<p>{task_description_html}</p>",
@@ -334,6 +340,31 @@ def create_simulation_box(title, description, button_text, url):
     """
     return create_text_section(html, f"Simulador: {title}")
 
+def create_moodle_quiz_referral(chapter_num, title, summary_html):
+    """
+    Genera una tarjeta de síntesis y derivación directa al Cuestionario Oficial Sumativo Moodle XML.
+    Alineado con el Pilar 5: Desacoplamiento de Formación (H5P) y Evaluación Oficial (Moodle XML)
+    para garantizar 100% de fiabilidad en la trazabilidad y calificaciones del alumnado sin fallos xAPI en móviles.
+    """
+    html = f"""
+    <div class="tech-checkpoint">
+      <div class="tech-checkpoint-badge"><i class="fa fa-graduation-cap"></i> SÍNTESIS DE UNIDAD Y EVALUACIÓN</div>
+      <h3 style="margin-top:0.5rem; color:#0f172a; font-size:1.3rem;">Capítulo {chapter_num}: {title}</h3>
+      <div style="color:#1e293b; line-height:1.6; margin-bottom:1rem;">{summary_html}</div>
+      <div class="alert-box alert-success" style="border-left: 4px solid #16a34a; background: #f0fdf4; padding: 1.1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <strong style="color: #15803d; font-size: 1.1rem; display: block; margin-bottom: 0.4rem;">
+          <i class="fa fa-check-circle"></i> Unidad Formativa Completada
+        </strong>
+        <p style="color: #166534; margin: 0; line-height: 1.6; font-size: 0.95rem;">
+          Has revisado todos los contenidos técnicos, esquemas y protocolos de este capítulo. 
+          Para registrar tu calificación oficial de evaluación con validez académica y certificar tu progreso, accede al 
+          <strong>Cuestionario Oficial de Evaluación en Moodle</strong> (módulo <code>mod_quiz</code>).
+        </p>
+      </div>
+    </div>
+    """
+    return create_text_section(html, f"Síntesis Capítulo {chapter_num}")
+
 # =========================================================================
 # 3. PILAR 2: ESTRUCTURACIÓN PEDAGÓGICA INTEGRADA (ANDAMIAJE)
 # =========================================================================
@@ -341,10 +372,10 @@ def create_simulation_box(title, description, button_text, url):
 def create_didactic_sequence_chapter(title, phase1_intro, phase2_theory_interactive, phase3_guided_practice, phase4_formative_eval):
     """
     Construye un capítulo modular con la secuencia pedagógica progresiva completa de 4 fases:
-    - Fase 1 (Motivación): Activación de conocimientos previos / Reto inicial / Gamificación.
+    - Fase 1 (Motivación): Activación de conocimientos previos / Reto inicial.
     - Fase 2 (Explicación): Teoría interactiva con enriquecimiento multimedia (Image Hotspots / Fórmulas).
-    - Fase 3 (Práctica Guiada): Exploración activa (DragText / Retos de taller / Checklists / Acordeones).
-    - Fase 4 (Evaluación Formativa): Autocomprobación reflexiva con retroalimentación inmediata y explicada.
+    - Fase 3 (Práctica Guiada): Exploración activa (Retos de taller / Checklists táctiles / Acordeones).
+    - Fase 4 (Consolidación / Evaluación): Síntesis de unidad y remisión al Cuestionario Moodle XML.
     """
     sections = [create_header_logo()]
     sections.extend(phase1_intro)
@@ -386,6 +417,12 @@ def create_multichoice_question(question_html, answers, title="Autocomprobación
           "tip": "Pista orientativa que guía el razonamiento..."
         }
       ]
+
+    NOTA DE ARQUITECTURA EDUCAMADRID (DESACOPLAMIENTO OBLIGATORIO):
+    En cursos estándar de producción, la evaluación (formativa o sumativa con calificación) NO se incrusta
+    dentro del paquete H5P para evitar fallos de registro de calificaciones (xAPI) y bloqueos en dispositivos
+    móviles. Toda evaluación oficial se gestiona mediante cuestionarios Moodle XML (mod_quiz). Se preserva esta
+    función como referencia para módulos locales o paquetes específicos.
     """
     formatted_answers = []
     for a in answers:
@@ -467,6 +504,10 @@ def create_multichoice_question(question_html, answers, title="Autocomprobación
 def create_true_false_question(question_html, is_correct, title="Verificación Rápida", tip="", feedback_correct="", feedback_wrong=""):
     """
     Genera una pregunta rápida de Verdadero/Falso H5P.TrueFalse 1.8 para fijar axiomas o criterios de seguridad.
+
+    NOTA DE ARQUITECTURA EDUCAMADRID (DESACOPLAMIENTO OBLIGATORIO):
+    En cursos estándar de producción, no se deben incluir preguntas TrueFalse internas dentro del InteractiveBook
+    para evitar anomalías de finalización xAPI en Moodle y navegadores móviles. La evaluación se realiza mediante Moodle XML.
     """
     correct_str = "true" if is_correct else "false"
 
@@ -962,14 +1003,12 @@ if __name__ == '__main__':
         )
     ]
 
-    # Fase 4: Evaluación formativa inmediata con retroalimentación explicada
+    # Fase 4: Consolidación pedagógica y derivación a evaluación oficial Moodle XML
     c0_fase4_evaluacion = [
-        create_true_false_question(
-            question_html="¿Es seguro conectar directamente una sonda de osciloscopio 1X sin atenuación a un circuito de potencia donde pueden inducirse picos superiores a 300 V?",
-            is_correct=False,
-            title="Autocomprobación 1: Seguridad en Medición",
-            feedback_correct="¡Correcto! Una sonda 1X no atenúa la señal e introduciría 300 V directamente en el convertidor analógico del equipo, provocando su destrucción inmediata y severo riesgo para el operario.",
-            feedback_wrong="Incorrecto. Una sonda 1X somete el canal de entrada a la totalidad de la tensión sin atenuar. Debe emplearse siempre una sonda atenuadora 10X o 20X con categoría de seguridad CAT III o superior."
+        create_moodle_quiz_referral(
+            0,
+            "Seguridad y Desenergización",
+            "<p>Has analizado los protocolos obligatorios de desenergización en alta tensión y la regla crítica de cálculo de protección para osciloscopios y multímetros de taller. La verificación formal de conocimientos y el registro oficial en el Libro de Calificaciones se efectúan a través del cuestionario oficial Moodle XML.</p>"
         )
     ]
 
@@ -982,22 +1021,27 @@ if __name__ == '__main__':
     )
 
     # ---------------------------------------------------------------------
-    # CAPÍTULO 1: MEDIDAS ELÉCTRICAS, ARRASTRE DE ELEMENTOS Y DIAGNOSIS
+    # CAPÍTULO 1: MEDIDAS ELÉCTRICAS, RELACIONES Y DIAGNOSIS
     # ---------------------------------------------------------------------
-    # Fase 1: Motivación y activación lúdica previa (Gamificación didáctica)
+    # Fase 1: Motivación y activación conceptual
     c1_fase1_intro = [
         create_checkpoint_section(
             title="Activación de Conceptos: Relaciones de Magnitudes",
-            intro_text="Antes de calcular caídas de tensión en el taller, demuestra que dominas la correlación entre magnitudes, unidades y fórmulas fundamentales arrastrando cada término a su lugar.",
-            badge_text="Activación Previa Gamificada"
+            intro_text="Antes de diagnosticar caídas de tensión y fallos de alimentación en el taller, repasa los fundamentos conceptuales y las relaciones matemáticas clave que rigen los circuitos de potencia.",
+            badge_text="Activación de Conceptos Clave"
         ),
-        # Dinamización lúdica: Actividad de arrastre de términos (Pilar 1 y 4)
-        create_drag_text_activity(
-            task_description_html="Arrastra cada término técnico y unidad al hueco correspondiente de la definición:",
-            text_field_str="La Ley de Ohm establece que la diferencia de potencial o *tensión:Medida en voltios* es igual al producto de la *intensidad:Flujo de corriente* por la *resistencia:Oposición al paso de electrones*. En el Sistema Internacional, la resistencia se mide en *ohmios* y la frecuencia en *hercios*.",
-            distractors_str="*vatios* *faradios* *julios*",
-            title="Actividad Interactiva: Arrastre de Magnitudes y Unidades"
-        )
+        create_text_section("""
+        <div class="tech-card">
+          <div class="tech-card-badge"><i class="fa fa-bolt"></i> RECORDATORIO CONCEPTUAL</div>
+          <h4 style="margin-top:0.4rem; color:#0f172a;">Parámetros Eléctricos Críticos en Diagnosis</h4>
+          <ul style="margin:0; padding-left:1.2rem; color:#1e293b; line-height:1.7;">
+            <li><strong>Diferencia de Potencial (Tensión - V):</strong> Medida en voltios (V). Fuerza impulsora de las cargas.</li>
+            <li><strong>Intensidad de Corriente (I):</strong> Medida en amperios (A). Caudal de electrones que atraviesa un conductor.</li>
+            <li><strong>Resistencia Eléctrica (R):</strong> Medida en ohmios (Ω). Oposición al flujo eléctrico; las resistencias parásitas provocan pérdidas térmicas inadmisibles.</li>
+            <li><strong>Frecuencia de Señal (f):</strong> Medida en hercios (Hz). Ciclos por segundo en señales periódicas, inductivas y de sensores Hall.</li>
+          </ul>
+        </div>
+        """, "Recordatorio de Magnitudes")
     ]
 
     # Fase 2: Explicación técnica interactiva con fórmulas semánticas
@@ -1047,38 +1091,12 @@ if __name__ == '__main__':
         )
     ]
 
-    # Fase 4: Evaluación formativa reflexiva con retroalimentación explicada en cada opción
+    # Fase 4: Consolidación pedagógica y derivación a evaluación oficial Moodle XML
     c1_fase4_evaluacion = [
-        create_checkpoint_section(
-            title="Pausa Activa de Comprensión: Demuestra tu Criterio Numérico",
-            intro_text="Responde a la siguiente autocomprobación formativa para verificar si sabes calcular con soltura la caída de tensión en una línea real de vehículo.",
-            badge_text="Autocomprobación Formativa"
-        ),
-        create_multichoice_question(
-            question_html="Si una bomba de combustible demanda <strong>8 A</strong> en pleno funcionamiento y el borne positivo presenta una resistencia parásita por corrosión de <strong>0.5 Ω</strong>, ¿cuál será la caída de tensión en dicho borne y qué tensión recibirá la bomba si la batería entrega 12.6 V?",
-            answers=[
-                {
-                    "text": "Caída de 4.0 V; la bomba recibe 8.6 V.",
-                    "correct": True,
-                    "chosenFeedback": "¡Exacto! Aplicando la Ley de Ohm: ΔV = 8 A × 0.5 Ω = 4.0 V. Por tanto, V_bomba = 12.6 V − 4.0 V = 8.6 V. Una pérdida crítica que provocará caída de presión y fallos graves de inyección.",
-                    "tip": "Aplica la Ley de Ohm: ΔV = I × R, y luego resta dicha caída a la tensión de la batería."
-                },
-                {
-                    "text": "Caída de 2.0 V; la bomba recibe 10.6 V.",
-                    "correct": False,
-                    "chosenFeedback": "Incorrecto. 8 A × 0.5 Ω = 4.0 V, no 2.0 V. Revisa la multiplicación de la corriente por la resistencia.",
-                    "tip": "Multiplica 8 por 0.5 con atención."
-                },
-                {
-                    "text": "Caída de 0.5 V; la bomba recibe 12.1 V.",
-                    "correct": False,
-                    "chosenFeedback": "Incorrecto. 0.5 Ω es el valor óhmico de la resistencia parásita, no los voltios de caída. Debes multiplicar la resistencia por los 8 amperios de intensidad.",
-                    "tip": "No confundas el valor de la resistencia (Ω) con la caída de tensión producida (V)."
-                }
-            ],
-            title="Autocomprobación Formativa: Caída de Tensión y Diagnóstico",
-            single_point=True,
-            randomize=True
+        create_moodle_quiz_referral(
+            1,
+            "Medición, Relaciones y Diagnóstico",
+            "<p>Has completado el análisis de la Ley de Ohm aplicada a caídas de tensión parásitas, verificación bajo consumo real con multímetro y protocolos de comprobación de líneas de alimentación. Para registrar tu evaluación oficial en el Libro de Calificaciones, realiza el cuestionario Moodle XML correspondiente.</p>"
         )
     ]
 

@@ -68,50 +68,50 @@ Diseña el contenido asegurando la participación constante del estudiante (cons
    - *Fase 4*: Evaluación formativa (preguntas con feedback razonado inmediato).
 3. **Retroalimentación explicada**: Toda opción de respuesta justifica técnicamente por qué es válida o en qué consiste el fallo (`chosenFeedback`).
 4. **Gamificación estratégica**: Dinamización lúdica integrada orgánicamente en el tema.
-5. **Desacoplamiento Formativo H5P + Sumativo Moodle XML**:
-   - Para evitar errores de rastreo ("No intentado" en móviles por pérdida de sentencias xAPI en iframes), el H5P se configura en Moodle con la condición de finalización **"El estudiante debe ver esta actividad para completarla"** (sin nota requerida).
-   - La evaluación sumativa oficial se gestiona mediante un **Cuestionario Moodle nativo (`mod_quiz`)** a partir del banco de preguntas exportado con `moodle_xml_builder.py`.
-   - **Regla Psicométrica contra Patrones y Sesgo de Longitud (*Length Bias*)**:
-     * Queda estrictamente prohibido que la respuesta correcta sea sistemáticamente la más extensa o detallada.
-     * La opción correcta y los distractores deben mantener una longitud y estructura sintáctica homogénea (±15-20% de caracteres).
-     * Alternar deliberadamente qué alternativa es la más larga o concisa (en algunas preguntas la correcta debe ser la más breve; en otras, los distractores deben ser más desarrollados).
-     * Los distractores deben poseer alta plausibilidad y rigor técnico idéntico a la correcta.
-     * Las justificaciones explicativas pertenecen a la retroalimentación (`<feedback>`), no al cuerpo de la alternativa (`<answer>`).
-     * Activar siempre `<shuffleanswers>1</shuffleanswers>` y alternar la posición de las claves de respuesta.
-
-### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
-Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):
-* **Whitelist estricta**: Cero archivos `.html` y cero `.svg` en `content/`. Diagramas rasterizados a **PNG** o **JPEG**.
-* **Fórmulas sin LaTeX**: Prohibido usar `$ ... $`. Usar HTML semántico y Unicode (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).
-* **Cero etiquetas `<style>` en HTML**: Estilos inyectados en librerías base para evitar fugas de código CSS en pantalla.
-* **Diseño Responsive para Móviles**:
-  - `behaviour.defaultTableOfContents: false` en `InteractiveBook` para evitar que el índice tape la pantalla en móviles.
-  - `behaviour.progressType: "textual"` para evitar desbordamientos de círculos de progreso en pantallas estrechas (≤480px).
-  - Tablas y fórmulas envueltas con desplazamiento horizontal táctil suave (`overflow-x: auto; -webkit-overflow-scrolling: touch;`).
-* **Contraste WCAG AAA**: Texto Slate 900 (`#0f172a`) sobre blanco (> 13:1), insignias y alertas con ratios > 7:1 a 9:1.
-* **Objetivos táctiles**: Botones y elementos interactivos con tamaño mínimo de **44 x 44 px**.
-* **Textos alternativos `alt`**: Toda imagen técnica exige descripción funcional obligatoria.
-* **Anidamiento en `H5P.Column`**: Todo elemento debe envolverse con `{"content": ..., "useSeparator": "auto"}` y contar con `subContentId` (UUIDv4) y `metadata.title`.
-
----
-
-## 🛠️ Catálogo de Helpers en `scripts/generar_curso.py`
-
-| Función Helper | Librería / Módulo | Utilidad en el Diseño |
-| :--- | :--- | :--- |
-| `create_header_logo()` | `H5P.Image 1.1` | Inserta cabecera institucional oficial con resolución dinámica de logo (`.bmp`, `.png`, `.jpg`). |
-| `create_text_section(html, titulo)` | `H5P.AdvancedText 1.1` | Bloques de texto técnico de alto contraste y fórmulas semánticas. |
-| `create_drag_text_activity(desc, texto, distractores, titulo)` | `H5P.DragText 1.10` | Manipulación y arrastre interactivo de conceptos a sus casillas. |
-| `create_image_hotspots(img, puntos, titulo, alt)` | `H5P.ImageHotspots 1.10` | Enriquecimiento interactivo de imágenes con puntos de inspección. |
-| `create_multichoice_question(preg, opciones, titulo)` | `H5P.MultiChoice 1.16` | Autocomprobación activa con justificación pedagógica en cada opción. |
-| `create_true_false_question(preg, valor, titulo)` | `H5P.TrueFalse 1.8` | Validación rápida de reglas de seguridad o criterios técnicos. |
-| `create_checkpoint_section(titulo, intro)` | `.tech-checkpoint` | Pausa activa visual que predispone a la autocomprobación. |
-| `create_active_challenge(titulo, escenario, pasos)` | `.tech-challenge` | Reto práctico de taller y toma de decisiones ante averías. |
-| `create_checklist_section(titulo, items)` | `.tech-checklist` | Lista de cotejo táctil accesible (touch targets ≥44px). |
-| `create_accordion(paneles, titulo)` | `H5P.Accordion 1.0` | Paneles desplegables colapsables para protocolos extensos. |
-| `create_simulation_box(titulo, desc, btn, url)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales. |
-| `create_didactic_sequence_chapter(...)` | `H5P.Column 1.16` | Ensamblado del capítulo en la secuencia progresiva de 4 fases. |
-| `build_h5p_package(...)` | Empaquetador | Compila físicamente el archivo `.h5p` con sus 16 librerías. |
+71: 5. **Desacoplamiento Formativo H5P + Sumativo Moodle XML**:
+72:    - **Cursos H5P 100% Formativos**: Para evitar fallos en el registro de calificaciones ("No intentado" o pérdida de sentencias xAPI en móviles por bloqueo de cookies o iframes) y problemas de arrastre táctil en smartphones, **está prohibido incluir actividades puntuables o de arrastre (`MultiChoice`, `DragText`, `TrueFalse`, `QuestionSet`) dentro de los paquetes H5P de producción**.
+73:    - **Fase 4 de Andamiaje**: Concluye con un bloque didáctico de síntesis y derivación directa al Cuestionario Moodle XML (`create_moodle_quiz_referral`).
+74:    - **Finalización en Moodle**: El recurso H5P se configura con **"El estudiante debe ver esta actividad para completarla"** (100% fiable para todos los alumnos).
+75:    - **Evaluación Sumativa Oficial**: Se canaliza a través de **Cuestionarios Moodle (`mod_quiz`)** a partir del banco de preguntas XML generado con `moodle_xml_builder.py`.
+76:    - **Regla Psicométrica contra Patrones y Sesgo de Longitud (*Length Bias*)**:
+77:      * Queda estrictamente prohibido que la respuesta correcta sea sistemáticamente la más extensa o detallada.
+78:      * La opción correcta y los distractores deben mantener una longitud y estructura sintáctica homogénea (±15-20% de caracteres).
+79:      * Alternar deliberadamente qué alternativa es la más larga o concisa (en algunas preguntas la correcta debe ser la más breve; en otras, los distractores deben ser más desarrollados).
+80:      * Los distractores deben poseer alta plausibilidad y rigor técnico idéntico a la correcta.
+81:      * Las justificaciones explicativas pertenecen a la retroalimentación (`<feedback>`), no al cuerpo de la alternativa (`<answer>`).
+82:      * Activar siempre `<shuffleanswers>1</shuffleanswers>` y alternar la posición de las claves de respuesta.
+83: 
+84: ### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
+85: Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):
+86: * **Whitelist estricta**: Cero archivos `.html` y cero `.svg` en `content/`. Diagramas rasterizados a **PNG** o **JPEG**.
+87: * **Fórmulas sin LaTeX**: Prohibido usar `$ ... $`. Usar HTML semántico y Unicode (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).
+88: * **Cero etiquetas `<style>` en HTML**: Estilos inyectados en librerías base para evitar fugas de código CSS en pantalla.
+89: * **Diseño Responsive para Móviles**:
+90:   - `behaviour.defaultTableOfContents: false` en `InteractiveBook` para evitar que el índice tape la pantalla en móviles.
+91:   - `behaviour.progressType: "textual"` para evitar desbordamientos de círculos de progreso en pantallas estrechas (≤480px).
+92:   - Tablas y fórmulas envueltas con desplazamiento horizontal táctil suave (`overflow-x: auto; -webkit-overflow-scrolling: touch;`).
+93: * **Contraste WCAG AAA**: Texto Slate 900 (`#0f172a`) sobre blanco (> 13:1), insignias y alertas con ratios > 7:1 a 9:1.
+94: * **Objetivos táctiles**: Botones y elementos interactivos con tamaño mínimo de **44 x 44 px**.
+95: * **Textos alternativos `alt`**: Toda imagen técnica exige descripción funcional obligatoria.
+96: * **Anidamiento en `H5P.Column`**: Todo elemento debe envolverse con `{"content": ..., "useSeparator": "auto"}` y contar con `subContentId` (UUIDv4) y `metadata.title`.
+97: 
+98: ---
+99: 
+100: ## 🛠️ Catálogo de Helpers en `scripts/generar_curso.py`
+101: 
+102: | Función Helper | Librería / Módulo | Utilidad en el Diseño |
+103: | :--- | :--- | :--- |
+104: | `create_header_logo()` | `H5P.Image 1.1` | Inserta cabecera institucional oficial con resolución dinámica de logo (`.bmp`, `.png`, `.jpg`). |
+105: | `create_text_section(html, titulo)` | `H5P.AdvancedText 1.1` | Bloques de texto técnico de alto contraste y fórmulas semánticas. |
+106: | `create_image_hotspots(img, puntos, titulo, alt)` | `H5P.ImageHotspots 1.10` | Enriquecimiento interactivo de imágenes con puntos de inspección táctiles. |
+107: | `create_moodle_quiz_referral(num, titulo, resumen)` | `.tech-checkpoint` | Tarjeta de síntesis de unidad y derivación oficial a evaluación en Moodle XML. |
+108: | `create_checkpoint_section(titulo, intro)` | `.tech-checkpoint` | Pausa activa visual y recordatorio conceptual de unidad. |
+109: | `create_active_challenge(titulo, escenario, pasos)` | `.tech-challenge` | Reto práctico de taller y toma de decisiones ante averías. |
+110: | `create_checklist_section(titulo, items)` | `.tech-checklist` | Lista de cotejo táctil accesible (touch targets ≥44px). |
+111: | `create_accordion(paneles, titulo)` | `H5P.Accordion 1.0` | Paneles desplegables colapsables para protocolos extensos. |
+112: | `create_simulation_box(titulo, desc, btn, url)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales. |
+113: | `create_didactic_sequence_chapter(...)` | `H5P.Column 1.16` | Ensamblado del capítulo en la secuencia progresiva de 4 fases. |
+114: | `build_h5p_package(...)` | Empaquetador | Compila físicamente el archivo `.h5p` con sus 16 librerías. |
 
 ---
 

@@ -7,13 +7,13 @@
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P01_MC_Corte_Asimetrico_15</text>
+      <text>ALUM_P01_MC_Luces_Diurnas_DRL</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En la normativa europea ECE para faros de cruce, ¿cuál es la razón técnica y geométrica de la elevación a 15° en el lado derecho de la línea de corte claro-oscuro?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;¿Cuál es la función técnica primordial de las luces de conducción diurna (DRL) y cuál es su normativa de funcionamiento al activar las luces de cruce?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Normativa ECE R112/R98: Haz asimétrico a 15° hacia el arcén derecho.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Reglamento ECE R48: Las luces DRL (código RL) mejoran la visibilidad diurna y deben apagarse o conmutar a función de posición al activar el alumbrado nocturno.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -22,21 +22,62 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Aumentar el alcance visual hacia el arcén derecho y las señales sin deslumbrar a los vehículos en sentido contrario.]]></text>
+      <text><![CDATA[Hacer visible el vehículo durante el día; deben atenuarse o apagarse al conectar el alumbrado de cruce.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! En países con circulación por la derecha, el corte a 15° optimiza la seguridad sin deslumbrar.]]></text>
+        <text><![CDATA[¡Correcto! La normativa ECE R48 exige que las luces DRL aumenten la visibilidad frontal de día y se desactiven o reduzcan su intensidad lumínica al encender la luz de cruce para no provocar deslumbramientos.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Compensar el balanceo dinámico y la inclinación de la carrocería en curvas cerradas a la derecha según el reglamento ECE R48.]]></text>
+      <text><![CDATA[Aumentar la visibilidad lejana del conductor sobre la calzada tanto de día como de noche sin desconectarse.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Para la iluminación en curva se emplean sistemas direccionales dinámicos o luces de giro (cornering).]]></text>
+        <text><![CDATA[Incorrecto. Las luces DRL son de señalización (para ser visto), no para ver el asfalto nocturno.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Reducir la carga térmica sobre la parábola reflectora izquierda para evitar la degradación prematura del policarbonato exterior.]]></text>
+      <text><![CDATA[Reemplazar a los faros antiniebla delanteros cuando el vehículo circula a velocidades inferiores a 50 km/h.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La temperatura depende del filamento y el diseño del bulbo, no del corte óptico.]]></text>
+        <text><![CDATA[Incorrecto. Las luces diurnas carecen de la fotometría rasante antiniebla.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Iluminar el cuadro de mandos y los pilotos de posición traseros de manera ininterrumpida.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. De día, la normativa habitual sólo exige encendido frontal; de hecho, los pilotos traseros suelen permanecer apagados.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>ALUM_P02_MC_Haz_Asimetrico_15_Grados</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;¿Por qué el haz de luz de cruce según la normativa europea ECE presenta una inclinación asimétrica ascendente de 15 grados hacia el lado derecho?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;Óptica europea: El corte horizontal izquierdo evita el deslumbramiento; la elevación a 15° derecha asegura la visibilidad de señales y arcenes.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Para alumbrar a mayor distancia el arcén derecho y las señales sin deslumbrar a los vehículos en sentido contrario.]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! En países con circulación por la derecha, los 15° amplían la visibilidad de peatones y señales hasta 75 metros por el arcén sin deslumbrar al carril opuesto.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Compensar la inclinación que adopta la carrocería en curvas pronunciadas tomadas a alta velocidad en autopistas.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. La inclinación asimétrica de 15° es un diseño óptico fijo para tramos rectos y curvos.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Permitir que las lámparas halógenas de cruce disipen el calor concentrado hacia la parte superior del proyector.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El diseño del haz responde estrictamente a requerimientos fotométricos viales.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
@@ -46,56 +87,15 @@
       </feedback>
     </answer>
   </question>
-  <question type="multichoice">
-    <name>
-      <text>ALUM_P02_MC_Proyector_Elipsoidal_DE</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿En qué punto geométrico del proyector elipsoidal DE (tres elipsoides) se ubica el diafragma obturador que genera la línea de corte claro-oscuro?&lt;/p&gt;]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Proyector elipsoidal DE: F1 = Lámpara, F2 = Diafragma obturador, Lente = Proyección invertida.&lt;/p&gt;]]></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.3333333</penalty>
-    <hidden>0</hidden>
-    <single>true</single>
-    <shuffleanswers>1</shuffleanswers>
-    <answernumbering>abc</answernumbering>
-    <answer fraction="100" format="html">
-      <text><![CDATA[En el segundo foco geométrico (F2) del reflector, donde convergen los rayos antes de la lente.]]></text>
-      <feedback format="html">
-        <text><![CDATA[¡Correcto! La lámpara se ubica en F1 y el diafragma en F2.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[En el primer foco geométrico (F1), coincidiendo exactamente con el arco de plasma o filamento luminoso de la bombilla.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. En F1 se sitúa la fuente luminosa (filamento, arco de xenón o chip LED).]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[En la cara exterior de la lente plano-convexa convergente para polarizar verticalmente el haz emitido hacia la calzada.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. La lente exterior es transparente y lisa.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[En la base metálica del casquillo portalámparas para disipar el calor generado por conducción térmica hacia el chasis.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. El diafragma es un componente óptico interno.]]></text>
-      </feedback>
-    </answer>
-  </question>
   <question type="truefalse">
     <name>
-      <text>ALUM_P03_TF_Bixenon_Solenoide</text>
+      <text>ALUM_P03_TF_Luces_Posicion_Obligatorias</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En un sistema de faros Bixenón con un único proyector elipsoidal por lado, el cambio de luz de cruce a luz de carretera se efectúa mediante un solenoide electromecánico que abate la pantalla obturadora para permitir el paso del 100% del haz luminoso.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Es legalmente obligatorio que las luces de posición delanteras y traseras permanezcan encendidas simultáneamente cada vez que se activan las luces de cruce o de carretera.&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Bixenón: Pantalla levantada = Cruce asimétrico / Pantalla abatida = Carretera total.&lt;/p&gt;]]></text>
+      <text/>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -103,25 +103,25 @@
     <answer fraction="100" format="moodle_auto_format">
       <text>true</text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Una única lámpara de xenón realiza ambas funciones abatiendo la pantalla con un electroimán en milisegundos.]]></text>
+        <text><![CDATA[¡Correcto! La normativa de seguridad vial exige que el contorno y presencia del vehículo estén permanentemente señalizados cuando el alumbrado principal está operativo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
       <text>false</text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Los proyectores Bixenón emplean una pantalla móvil gobernada por solenoide o motor eléctrico.]]></text>
+        <text><![CDATA[Incorrecto. Las luces de posición deben activarse automáticamente con el alumbrado de cruce y carretera para garantizar la visibilidad del vehículo en caso de fallo de una bombilla principal.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P04_MC_Umbral_2000lm_Regulacion</text>
+      <text>ALUM_P04_MC_Encendido_Automatico_Sensor_Luz</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Según el Reglamento europeo ECE R48, ¿a partir de qué flujo luminoso es obligatorio que el vehículo incorpore sistema de limpieza de faros (lavafaros) y regulación automática del alcance luminoso?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;En los sistemas de encendido automático de luces, ¿qué tipo de sensor y principio físico se utiliza comúnmente para detectar la caída de luminosidad exterior?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;ECE R48: Flujo &gt; 2.000 lm exige regulación automática y lavafaros.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;El sensor crepuscular emplea elementos optoelectrónicos (fotodiodos o fototransistores) ubicados habitualmente junto al retrovisor interior.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -130,39 +130,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[A partir de 2.000 lúmenes por proyector.]]></text>
+      <text><![CDATA[Un fototransistor o fotorresistencia LDR en el parabrisas que detecta la radiación óptica ambiental.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Por debajo de 2.000 lm (ej. xenón D8S de 25W o LED estándar) están exentos.]]></text>
+        <text><![CDATA[¡Correcto! El sensor óptico crepuscular mide la iluminancia ambiental; al descender de un umbral prefijado, la BCM activa los relés de cruce y posición.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[A partir de 1.000 lúmenes en cualquier lámpara halógena convencional tipo H4 o H7.]]></text>
+      <text><![CDATA[Un termistor NTC colocado junto a la rejilla del radiador que detecta el enfriamiento súbito nocturno.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Las lámparas halógenas H7 emiten unos 1.500 lm y no requieren lavafaros.]]></text>
+        <text><![CDATA[Incorrecto. La temperatura ambiental no determina la luminosidad exterior.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[A partir de 3.500 lúmenes exclusivamente en proyectores matriciales adaptativos LED.]]></text>
+      <text><![CDATA[Un sensor piezoeléctrico de presión ubicado en la suspensión delantera que detecta la inclinación de la carrocería.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. El límite reglamentario general es de 2.000 lm.]]></text>
+        <text><![CDATA[Incorrecto. La suspensión equipa sensores de nivel para regular faros, no para encenderlos.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[A partir de 5.000 lúmenes únicamente en faros equipados con módulos de luz láser.]]></text>
+      <text><![CDATA[Un transductor capacitivo alojado en el pedal del freno que evalúa la frecuencia de pisada del conductor.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 5.000 lm es una cifra muy superior a la permitida en automoción.]]></text>
+        <text><![CDATA[Incorrecto. No tiene relación con las condiciones fotométricas ambientales.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="truefalse">
     <name>
-      <text>ALUM_P05_TF_DRL_Tuneles_Peligro</text>
+      <text>ALUM_P05_TF_Antiniebla_Delantero_Uso</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Al circular en condiciones de baja visibilidad o en túneles con las Luces de Conducción Diurna (DRL) encendidas, los pilotos de posición traseros permanecen apagados, creando un grave riesgo de colisión por alcance en la parte posterior del vehículo.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Los faros antiniebla delanteros emiten un haz ancho y plano, situado a baja altura, diseñado para evitar el efecto de 'pared blanca' por reflexión de la luz en las gotas de niebla en suspensión.&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Seguridad con DRL: No sustituyen a la luz de cruce; la zaga permanece apagada.&lt;/p&gt;]]></text>
+      <text/>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -170,25 +170,25 @@
     <answer fraction="100" format="moodle_auto_format">
       <text>true</text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Las DRL solo activan proyectores delanteros. De noche o en túneles se debe conectar el alumbrado de cruce para iluminar la zaga.]]></text>
+        <text><![CDATA[¡Correcto! La niebla se disipa unos centímetros sobre el asfalto; un haz bajo y rasante penetra por debajo de la capa de niebla sin rebotar en los ojos del conductor.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
       <text>false</text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La normativa ECE R87 no enciende las luces traseras con las DRL, dejando la zaga completamente a oscuras.]]></text>
+        <text><![CDATA[Incorrecto. Precisamente su colocación baja y su apertura angular ancha permiten iluminar los arcenes por debajo de la capa de condensación de la niebla.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P06_MC_Cadencia_Intermitencia_Reglamentaria</text>
+      <text>ALUM_P06_MC_Enclavamiento_Antiniebla_Trasero</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la cadencia de parpadeo reglamentaria que debe mantener el sistema de intermitencia de dirección en todo momento según la normativa internacional?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;¿Qué condición eléctrica y normativa de seguridad debe cumplirse para que pueda encenderse el piloto antiniebla trasero?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Frecuencia de intermitencia normalizada: 60 - 120 pulsaciones por minuto.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;El interbloqueo legal exige luces principales encendidas antes de alimentar el antiniebla trasero, señalizado con testigo amarillo en el cuadro.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -197,39 +197,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Entre 60 y 120 destellos por minuto (1 a 2 Hz).]]></text>
+      <text><![CDATA[Tener previamente activadas las luces de cruce, carretera o faros antiniebla delanteros.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Es el intervalo legal exacto fijado por ECE R48.]]></text>
+        <text><![CDATA[¡Correcto! La normativa europea prohíbe activar el antiniebla trasero sólo con posición, para evitar deslumbrar a los vehículos precedentes en condiciones normales.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 30 y 50 destellos por minuto para evitar sobrecalentar el filamento de las lámparas.]]></text>
+      <text><![CDATA[Circular obligatoriamente a una velocidad superior a 80 km/h en vías rápidas o autopistas.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Una cadencia tan lenta retrasaría la advertencia de maniobra.]]></text>
+        <text><![CDATA[Incorrecto. En niebla densa la velocidad debe reducirse drásticamente; la restricción es puramente eléctrica y de mando.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Exactamente 180 destellos por minuto en condiciones normales de carga sin bombillas fundidas.]]></text>
+      <text><![CDATA[Engranar la marcha atrás para verificar que no existen obstáculos detrás del vehículo.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 180 ppm es una cadencia anómala que indica bombilla fundida.]]></text>
+        <text><![CDATA[Incorrecto. La marcha atrás y el antiniebla trasero son circuitos completamente independientes.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 150 y 240 destellos por minuto para maximizar la percepción visual de otros conductores.]]></text>
+      <text><![CDATA[Desconectar totalmente el sistema de climatización y el desempañador térmico de la luneta trasera.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Demasiado rápido y no homologado.]]></text>
+        <text><![CDATA[Incorrecto. Los sistemas de desempañado son esenciales con niebla y operan en paralelo.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="truefalse">
     <name>
-      <text>ALUM_P07_TF_Warning_Linea_30</text>
+      <text>ALUM_P07_TF_Distancia_Minima_Antiniebla_Freno</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;El circuito de las luces de emergencia (warning) se alimenta permanentemente desde la Línea 30 (+Bat) para garantizar su accionamiento inmediato incluso con el motor apagado y la llave de contacto retirada.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Según la normativa europea ECE R48, es obligatorio que exista una separación física mínima de 10 cm entre la luz de freno y el piloto antiniebla trasero.&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Línea 30 directa de batería: Garantiza funcionamiento permanente del warning.&lt;/p&gt;]]></text>
+      <text/>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -237,25 +237,25 @@
     <answer fraction="100" format="moodle_auto_format">
       <text>true</text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! La señalización de peligro debe estar operativa en cualquier situación de avería o inmovilización del vehículo.]]></text>
+        <text><![CDATA[¡Correcto! Debido a que ambas emiten luz roja de alta intensidad (150-300 cd en el antiniebla), una separación menor impediría percibir cuándo frena el vehículo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
       <text>false</text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. El warning se conecta a Línea 30 directa de batería precisamente para no depender de la llave.]]></text>
+        <text><![CDATA[Incorrecto. La norma exige un mínimo de 10 cm entre los bordes iluminantes para asegurar la legibilidad de la maniobra de frenado en condiciones de niebla.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P08_MC_Modulacion_PWM_Pilotos</text>
+      <text>ALUM_P08_MC_Cadencia_Intermitencias_Averia</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué tecnología electrónica permite que un mismo grupo óptico LED o bombilla realice la función de luz de posición (4W) y luz de freno (21W) sobre el mismo filamento o chip?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;¿Cuál es la frecuencia reglamentaria de destello de los intermitentes y qué efecto visual advierte al conductor de que una de las bombillas de 21 W se ha fundido?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;PWM: Control eficiente de potencia luminosa variando el tiempo de conducción.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Frecuencia estándar: 1,5 Hz ± 0,5 Hz (60-120 dpm). El aumento al doble de frecuencia es el método normativo de detección de lámpara fundida.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -264,39 +264,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Modulación por Ancho de Pulso (PWM), variando el ciclo de trabajo del circuito.]]></text>
+      <text><![CDATA[60 a 120 destellos/minuto; al fundirse una bombilla, la cadencia del lado afectado se duplica de forma automática.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Al 15-20% genera luz de posición y al 100% luz de freno.]]></text>
+        <text><![CDATA[¡Correcto! El Reglamento ECE R48 fija entre 1 y 2 Hz (60-120 dpm). El relé o la BCM detecta la reducción de corriente y duplica la frecuencia como aviso inmediato.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un transformador elevador electromagnético que convierte los 12 V continuos de la batería en pulsos alternos.]]></text>
+      <text><![CDATA[30 a 60 destellos/minuto; la cadencia disminuye a la mitad para evitar sobrecalentar las bombillas operativas.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. En continua de 12V no se usan transformadores convencionales.]]></text>
+        <text><![CDATA[Incorrecto. Una cadencia menor no cumple la normativa europea y retrasaría la percepción del giro.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un reóstato o divisor de tensión resistivo que disipa la potencia sobrante en forma de calor hacia el chasis.]]></text>
+      <text><![CDATA[120 a 180 destellos/minuto; los indicadores se apagan por completo al fundirse cualquiera de las bombillas.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Se gestiona de forma electrónica digital por la BCM.]]></text>
+        <text><![CDATA[Incorrecto. La función de aviso legal es el parpadeo acelerado, no el apagado completo del circuito.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un relé bimetálico temporizado con lámina térmica que conmuta periódicamente entre filamentos en milisegundos.]]></text>
+      <text><![CDATA[Frecuencia fija de 240 destellos/minuto constante que nunca varía independientemente de la carga conectada.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Sería altamente ineficiente y provocaría sobrecalentamiento.]]></text>
+        <text><![CDATA[Incorrecto. 240 dpm causaría confusión visual y los circuitos tradicionales aumentan su frecuencia precisamente ante la pérdida de una bombilla.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P09_MC_Separacion_Antiniebla_Freno</text>
+      <text>ALUM_P09_MC_Circuito_Emergencia_Warning</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Según el Reglamento ECE R48, ¿cuál es la distancia física mínima obligatoria que debe existir entre la superficie iluminada del piloto antiniebla trasero y la luz de freno?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;En el circuito de intermitencia y luces de emergencia, ¿por qué el conmutador de warning se alimenta directamente de la Línea 30 (+Bat) en lugar de la Línea 15 (+Contacto)?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;ECE R48: Separación mínima de 10 cm entre antiniebla trasero y luz de freno.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Seguridad vial: Las luces de emergencia deben operar en cualquier circunstancia, exigiendo conexión directa a batería permanente (borne 30).&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -305,39 +305,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[100 mm (10 cm) entre los bordes iluminados de ambas ópticas.]]></text>
+      <text><![CDATA[Para permitir la señalización de peligro ininterrumpida con el vehículo estacionado y el motor apagado sin llave.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Impide que la intensa luz del antiniebla enmascare la señal de parada.]]></text>
+        <text><![CDATA[¡Correcto! Un vehículo averiado o detenido en el arcén debe poder señalizar su emergencia con las llaves quitadas y el conductor fuera del vehículo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[25 mm (2,5 cm) en cualquier tipo de óptica o piloto trasero.]]></text>
+      <text><![CDATA[Evitar interferencias parásitas en la señal CAN-Bus de la unidad de control del motor durante el arranque.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Demasiado cerca; confundiría al conductor trasero.]]></text>
+        <text><![CDATA[Incorrecto. El warning es un elemento de seguridad pasiva independiente de la red motopropulsora.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[500 mm (50 cm) respecto a la luz de freno más cercana.]]></text>
+      <text><![CDATA[Garantizar que los cuatro intermitentes funcionen con mayor voltaje y brillo del que suministra el alternador.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. No cabría en turismos compactos.]]></text>
+        <text><![CDATA[Incorrecto. La tensión de batería (12,6V) es menor que la del alternador en marcha (14,2V).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No existe distancia mínima reglamentada en la normativa ECE.]]></text>
+      <text><![CDATA[Alimentar un circuito secundario de carga rápida para la batería de respaldo de la llamada de emergencia eCall.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La separación de 10 cm es mandatoria en homologación europea.]]></text>
+        <text><![CDATA[Incorrecto. El pulsador de warning no gestiona la recarga de módulos telemáticos.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P10_MC_Intensidad_Antiniebla_Trasero</text>
+      <text>ALUM_P10_MC_Modulacion_PWM_Pilotos</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es el rango de intensidad luminosa normalizado en Europa para los pilotos antiniebla traseros?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;En vehículos modernos con electrónica de carrocería (BCM), ¿cómo se consigue que una misma tira de ledes o bombilla de un polo funcione como luz de posición y de freno?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Piloto antiniebla trasero: 150 a 300 candelas de alta penetración.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Control PWM: Varía el tiempo de encendido relativo (Duty Cycle) para regular la iluminancia aparente sin pérdidas resistivas.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -346,39 +346,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Entre 150 y 300 candelas de alta penetración.]]></text>
+      <text><![CDATA[Modulando el ancho de pulso (PWM): ciclo de trabajo del 15-20% para posición y 100% para luz de freno.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Es una luz de gran penetración visual para niebla densa.]]></text>
+        <text><![CDATA[¡Correcto! La modulación PWM ajusta el valor eficaz de tensión reduciendo el ciclo de trabajo para posición y entregando el 100% continuo al pisar el freno.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 4 y 10 candelas, idéntico a una luz de posición ordinaria.]]></text>
+      <text><![CDATA[Conmutando la polaridad de los cables para invertir el sentido de circulación de la corriente en los diodos.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Ese es el rango de una luz de posición ordinaria.]]></text>
+        <text><![CDATA[Incorrecto. Los diodos LED solo conducen en polarización directa; invertir la polaridad los apagaría por completo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre 1.500 y 3.000 candelas, similar al haz de cruce principal.]]></text>
+      <text><![CDATA[Intercalando una resistencia calefactora cerámica en serie dentro del mazo de cables del maletero.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Esa intensidad corresponde a proyectores delanteros.]]></text>
+        <text><![CDATA[Incorrecto. Las resistencias fijas disipan calor innecesario y han sido sustituidas por transistores MOSFET con PWM.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Más de 20.000 candelas para proyectar el haz a varios kilómetros.]]></text>
+      <text><![CDATA[Aumentando la frecuencia de la red CAN-Bus de carrocería desde 125 kbps hasta 500 kbps durante la frenada.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Deslumbraría masivamente a los vehículos cercanos.]]></text>
+        <text><![CDATA[Incorrecto. La velocidad de transmisión del bus no altera la luminosidad física de un emisor óptico.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P11_MC_Caida_Tension_Faros_Principales</text>
+      <text>ALUM_P11_MC_Tercera_Luz_Freno_S3</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En el circuito de alimentación de los faros principales de cruce y carretera, ¿cuál es la caída de tensión máxima admisible en la línea positiva para evitar pérdidas severas de flujo luminoso?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;¿Qué código de homologación identifica a la tercera luz de freno central elevada y qué tolerancia de desvío permite la normativa en portones asimétricos?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Criterio de cálculo en automoción: ΔV ≤ 0,3V en faros principales.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Tercera luz de freno: Homologación S3 (ECE R48), posición elevada sobre el plano horizontal de las luces de freno principales S1/S2.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -387,39 +387,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[ΔV ≤ 0,3 V (máximo 0,5 V en condiciones críticas).]]></text>
+      <text><![CDATA[Código S3; la normativa tolera hasta un máximo de 15 cm de desvío respecto al eje central del vehículo.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Una pérdida de 0,5V reduce el flujo un 15%; 1V de caída lo reduce un 28%.]]></text>
+        <text><![CDATA[¡Correcto! La tercera luz de freno (CHMSL) se homologa como S3 y debe ser central, con una tolerancia de 15 cm en vehículos con puertas traseras asimétricas.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[ΔV ≤ 1,5 V sin que afecte perceptiblemente al flujo luminoso emitido por la bombilla.]]></text>
+      <text><![CDATA[Código RL; debe situarse estrictamente en el centro exacto sin tolerarse ningún milímetro de desviación.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. A 1,5V de caída el faro apenas emitiría una luz amarillenta inútil.]]></text>
+        <text><![CDATA[Incorrecto. RL corresponde a luces de conducción diurna (Daytime Running Lights).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[ΔV ≤ 2,5 V admisible siempre que la tensión en los bornes de batería supere los 12,6 V.]]></text>
+      <text><![CDATA[Código AR; permite situarla indistintamente en el lado izquierdo o derecho según el país de comercialización.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Inadmisible en una red automotriz de 12V.]]></text>
+        <text><![CDATA[Incorrecto. AR identifica a las luces de marcha atrás.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No existe límite de caída mientras el fusible de protección del circuito no se funda.]]></text>
+      <text><![CDATA[Código F3; puede montarse en la parte inferior del paragolpes trasero siempre que supere las 150 candelas.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La eficacia luminosa depende drásticamente de la tensión en bornes.]]></text>
+        <text><![CDATA[Incorrecto. F3 corresponde a proyectores antiniebla delanteros y debe ser sobreelevada.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P12_MC_Calculo_Intensidad_Halogena</text>
+      <text>ALUM_P12_MC_Luz_Marcha_Atras_Reglamento</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la corriente eléctrica que consumen dos lámparas halógenas H7 de 55 W cada una conectadas en paralelo a una batería de 12 V?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Respecto a la luz de marcha atrás, ¿cuál es el color reglamentario, su código de homologación y el número de luces permitido en turismos?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;I = P_total / V = 110 W / 12 V = 9,17 A.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Luz de marcha atrás: Color blanco (código AR). Obligatoria una, opcional dos en vehículos de categoría M1 y N1.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -428,39 +428,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Aproximadamente 9,17 A (P = 110 W; I = 110 / 12).]]></text>
+      <text><![CDATA[Blanco, código AR; obligatorio llevar al menos una luz y opcional una segunda en la parte trasera.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! I = P / V = (55 + 55) / 12 = 9,17 A.]]></text>
+        <text><![CDATA[¡Correcto! El color es blanco (código AR); los turismos deben equipar obligatoriamente una luz de marcha atrás y pueden equipar una segunda opcional.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Exactamente 4,58 A, pues la intensidad calculada se divide entre las dos bombillas.]]></text>
+      <text><![CDATA[Ámbar selectivo, código F1; obligatorio llevar dos luces situadas simétricamente en los extremos del parachoques.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 4,58 A es el consumo de una sola bombilla.]]></text>
+        <text><![CDATA[Incorrecto. El color blanco es exclusivo para indicar la dirección contraria o maniobra de retroceso.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Exactamente 18,33 A, al multiplicar la potencia por dos por el factor de resistencia.]]></text>
+      <text><![CDATA[Rojo de alta intensidad, código R; sólo se autoriza una luz en el lado izquierdo del vehículo.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Has multiplicado la potencia por dos erróneamente.]]></text>
+        <text><![CDATA[Incorrecto. La luz roja hacia atrás sólo se permite en posición, freno y antiniebla.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Aproximadamente 1,20 A, aplicando la impedancia reactiva del filamento en corriente continua.]]></text>
+      <text><![CDATA[Azul destellante, código B; obligatorio en todos los vehículos comerciales ligeros para maniobras de carga.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Revisa la Ley de Joule: I = P / V.]]></text>
+        <text><![CDATA[Incorrecto. La luz azul está reservada exclusivamente a vehículos prioritarios de emergencia.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P13_MC_Inclinacion_Regloscopio_Turismos</text>
+      <text>ALUM_P13_MC_Iluminacion_Interior_Temporizada</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es el porcentaje de inclinación o caída descendente reglamentaria del haz de cruce para un turismo estándar en el regloscopio?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;¿Qué componente electrónico ejecuta la atenuación progresiva ('theater dimming') de los plafones interiores al cerrar las puertas del vehículo?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Regloscopio en turismos: Inclinación descendente de -1,0% a -1,5%.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Atenuación interior: Gestionada por software en la BCM mediante rampa PWM decreciente hacia el driver de potencia.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -469,39 +469,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Entre el -1,0% y el -1,5% (generalmente -1,2%).]]></text>
+      <text><![CDATA[Un transistor MOSFET en la BCM controlado por modulación de ancho de pulso PWM.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Equivale a descender entre 25 y 37,5 cm a una distancia de 25 metros.]]></text>
+        <text><![CDATA[¡Correcto! La centralita de carrocería (BCM/BSI) gestiona un transistor MOSFET variando el ciclo de trabajo para un apagado gradual y elegante.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[0,0% perfectamente horizontal y paralelo al suelo para maximizar el alcance en carretera.]]></text>
+      <text><![CDATA[Un interruptor bimetálico térmico que se enfría paulatinamente al cortarse el paso de la corriente.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Un haz horizontal causaría deslumbramiento con el cabeceo del vehículo.]]></text>
+        <text><![CDATA[Incorrecto. Los bimetales antiguos no permiten un control preciso ni tiempos adaptables.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Entre el -3,5% y el -5,0% para garantizar que el haz no deslumbre bajo ninguna circunstancia.]]></text>
+      <text><![CDATA[Un motor paso a paso con potenciómetro reostático montado en la caja de fusibles del vano motor.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Ese valor se reserva para camiones pesados muy elevados.]]></text>
+        <text><![CDATA[Incorrecto. Los reóstatos mecánicos son ineficientes y generan calor excesivo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[+1,5% con inclinación ascendente hacia arriba para mejorar la visibilidad de los paneles informativos.]]></text>
+      <text><![CDATA[Un condensador electrolítico de 50 Faradios conectado directamente en paralelo con cada bombilla.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Provocaría un deslumbramiento masivo ilegal.]]></text>
+        <text><![CDATA[Incorrecto. Una capacidad de tal magnitud es físicamente inviable e innecesaria en electrónica moderna.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P14_MC_Efecto_Desreglaje_Deslumbramiento</text>
+      <text>ALUM_P14_MC_Calculo_Seccion_Conductor</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Según los estudios de fotometría vial del RACE, ¿qué consecuencia tiene un desajuste de tan solo +1% hacia arriba en el reglaje de los faros de cruce?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Se instalan dos faros antiniebla de 55 W cada uno (potencia total P = 110 W) a 12 V. La longitud del cable es de 3 metros y la caída admisible es ΔV = 0,3 V (cobre κ = 56 m/(Ω·mm²)). ¿Qué sección teórica de cable se requiere?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Desreglaje +1% arriba = Deslumbramiento x20 / Desreglaje -2,5% abajo = Pérdida 50% alcance.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Fórmula de cálculo: S = (2 · L · I) / (κ · ΔV). En este circuito: S = (2 · 3 · 9,17) / (56 · 0,3) = 3,27 mm² ➔ 4 mm².&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -510,39 +510,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Multiplica por 20 el nivel de deslumbramiento a los conductores en sentido contrario.]]></text>
+      <text><![CDATA[S = 3,27 mm² (debiendo escogerse la sección comercial normalizada de 4 mm²).]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Eleva la línea de corte directamente hacia los ojos del conductor que viene de frente.]]></text>
+        <text><![CDATA[¡Correcto! I = 110W / 12V = 9,17 A. S = (2 · 3 m · 9,17 A) / (56 · 0,3 V) = 55,02 / 16,8 = 3,27 mm². La sección normalizada inmediata superior es 4 mm².]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Disminuye la temperatura de trabajo del reflector parabólico prolongando la vida útil del bulbo.]]></text>
+      <text><![CDATA[S = 0,75 mm² (suficiente para no sobrecalentar el aislante de PVC del conductor).]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. El reglaje mecánico no modifica la potencia eléctrica.]]></text>
+        <text><![CDATA[Incorrecto. 0,75 mm² generaría una caída de tensión muy superior a 0,3 V, reduciendo drásticamente la luz emitida.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Reduce el consumo eléctrico del alternador un 15% al elevar la tensión eficaz en los bornes.]]></text>
+      <text><![CDATA[S = 1,50 mm² (sección estándar válida para cualquier consumidor de potencia en automoción).]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La durabilidad depende del filamento y la tensión.]]></text>
+        <text><![CDATA[Incorrecto. Con 1,5 mm² la caída de tensión superaría los 0,65 V, incumpliendo el límite del 2,5% de la tensión nominal.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[No genera ningún efecto mensurable sobre el campo visual nocturno ni sobre la seguridad vial.]]></text>
+      <text><![CDATA[S = 10,00 mm² (necesaria para evitar la interferencia de corrientes parásitas de alta frecuencia).]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Es una de las causas principales de siniestralidad nocturna.]]></text>
+        <text><![CDATA[Incorrecto. Es una sección sobredimensionada en exceso para 9,17 A a 3 metros de recorrido.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P15_MC_Caida_Tension_Masa_Tolerancia</text>
+      <text>ALUM_P15_MC_Seleccion_Fusible_Proteccion</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Al diagnosticar una masa deficiente (Línea 31) en el casquillo de un faro con el voltímetro digital bajo carga, ¿cuál es el valor máximo admisible de caída de tensión?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Para el circuito anterior con dos lámparas de 55 W (corriente nominal I = 9,17 A), ¿cuál es el calibre de fusible ATO recomendado aplicando el margen de seguridad del 25%?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Límite metrológico en masa: V_masa ≤ 0,1V bajo carga.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Calibre de fusible: I_fusible = 1,25 · I_nom = 1,25 · 9,17 = 11,46 A ➔ Fusible comercial normalizado de 15 A (Azul cielo).&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -551,21 +551,155 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[V_masa ≤ 0,1 V (idealmente &lt; 0,05 V).]]></text>
+      <text><![CDATA[15 A (color azul cielo, aplicando el factor de 1,25 a la corriente nominal de 9,17 A).]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Una lectura superior indica óxido, sulfatación o terminal flojo en el chasis.]]></text>
+        <text><![CDATA[¡Correcto! I_fusible = 9,17 A · 1,25 = 11,46 A. El calibre comercial normalizado inmediatamente superior en la serie ATO/Mini es 15 A (azul cielo).]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[V_masa ≤ 1,5 V, ya que la masa metálica tolera mayores fluctuaciones que el positivo.]]></text>
+      <text><![CDATA[7,5 A (color marrón, para asegurar que el filamento de las lámparas nunca sufra sobretensión).]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 1,5V de caída en masa provocaría una pérdida crítica de luminosidad.]]></text>
+        <text><![CDATA[Incorrecto. Un fusible de 7,5 A se fundiría al instante debido a la corriente de 9,17 A y al pico inicial en frío.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[V_masa = 12,0 V en condiciones normales de funcionamiento continuo con el motor encendido.]]></text>
+      <text><![CDATA[10 A (color rojo, operando exactamente al 92% de su capacidad nominal máxima).]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. 12V en masa indicaría una interrupción total del circuito (circuito abierto).]]></text>
+        <text><![CDATA[Incorrecto. 10 A no proporciona margen de seguridad frente al pico de arranque de filamento frío (inrush current) y provocaría falsos disparos.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[30 A (color verde, para admitir la conexión futura de accesorios de calefacción adicionales).]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. 30 A no protegería eficazmente un cable de 4 mm² ante sobrecargas moderadas prolongadas.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>ALUM_P16_MC_Reglaje_Faros_Regloscopio_Cota</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;En el regloscopio óptico, ¿a qué distancia equivale la pantalla interna colimadora y cuál es la caída porcentual reglamentaria para turismos estándar?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;Regloscopio: Distancia óptica de 25 m. Caída típica: 1,0% a 1,5% (10 a 15 cm de descenso a 10 metros).&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Equivale a una distancia de 25 metros; la caída reglamentaria se sitúa entre el -1,0% y el -1,5%.]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! La lente colimadora reproduce la pantalla a 25 metros. La inclinación estándar fijada por el fabricante oscila entre -1,0% y -1,5% (indicado en el faro con el símbolo %).]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Equivale a una distancia de 5 metros; la inclinación debe ajustarse exactamente al 0,0% horizontal.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Un ajuste al 0,0% horizontal deslumbraría gravemente en cambios de rasante y baches.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Equivale a una distancia de 50 metros; la inclinación recomendada es del -3,5% hacia el suelo.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. -3,5% reduciría el alcance útil a menos de 20 metros, dejando al conductor a oscuras.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[Equivale a una distancia de 10 metros; los faros de xenón deben apuntar hacia arriba un +1,0%.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. Los faros de xenón jamás apuntan hacia arriba: provocarían un deslumbramiento cegador masivo.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>ALUM_P17_TF_Lavafaros_Regulacion_2000_Lumenes</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;La normativa europea exige obligatoriamente regulación automática del alcance luminoso y sistema lavafaros cuando el flujo de la fuente luminosa supera los 2.000 lúmenes (como en xenón de 35 W y faros LED de alta potencia).&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text/>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! Fuentes con más de 2.000 lm provocan deslumbramiento crítico si los faros están sucios o desalineados por la carga del vehículo.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. La Directiva ECE fija en 2.000 lúmenes el límite legal estricto que exige regulador automático dinámico de altura y eyectores de lavado.]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="truefalse">
+    <name>
+      <text>ALUM_P18_TF_Tension_Cebado_Xenon_25kV</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;Las lámparas de descarga de xenón no disponen de filamento y requieren un pulso de cebado de entre 20.000 y 30.000 V (20-30 kV) generado por el transformador/reactancia para ionizar el gas e iniciar el arco eléctrico.&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text/>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! El arco inicial precisa de 20 a 30 kV; tras establecerse la descarga, la tensión se reduce a un valor de mantenimiento de aproximadamente 85 V.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. El encendido de una lámpara de descarga exige ionizar el gas xenón a alta presión (100 bar) mediante un pico de muy alta tensión (20-30 kV).]]></text>
+      </feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>ALUM_P19_MC_Diagnosis_Caida_Tension_Masa</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[&lt;p&gt;Al diagnosticar un faro halógeno derecho cuya luz es tenue y amarillenta, el voltímetro digital conectado entre el terminal de masa de la bombilla y el borne (-) de la batería marca 0,95 V en carga. ¿Cuál es el diagnóstico correcto?&lt;/p&gt;]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[&lt;p&gt;Diagnosis de masas: La caída máxima admisible en el retorno a masa (borne 31) con consumidores en carga es de 0,1 V.&lt;/p&gt;]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>1</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Avería crítica en la línea de masa (borne 31): existe una resistencia parásita por óxido (máximo admisible: 0,1 V).]]></text>
+      <feedback format="html">
+        <text><![CDATA[¡Correcto! En una línea de masa la caída no debe superar 0,1 V. Un valor de 0,95 V roba casi un voltio a la bombilla, reduciendo su flujo luminoso más de un 25%.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El circuito de masa se encuentra en perfecto estado, ya que en masa siempre debe existir una tensión residual de 1 voltio.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. La masa del vehículo ideal debe estar a 0 V; 0,95 V es una pérdida inadmisible.]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[El alternador está averiado y envía corriente alterna parásita a través del regulador de tensión.]]></text>
+      <feedback format="html">
+        <text><![CDATA[Incorrecto. La medición se realiza entre dos puntos de masa; no evalúa el rizado del alternador.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
@@ -577,13 +711,13 @@
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P16_MC_Chequeo_Frio_BCM</text>
+      <text>ALUM_P20_MC_Condicion_Medicion_Caida_Tension</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿En qué consiste el procedimiento de 'chequeo en frío' que realiza la unidad BCM sobre las lámparas del vehículo?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;¿Por qué la medición de caída de tensión en el cableado con el voltímetro exige obligatoriamente que las luces estén encendidas y el circuito bajo carga?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Chequeo en frío: Microimpulsos para medir continuidad con la lámpara apagada.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Ley de Ohm: La caída de tensión sólo se manifiesta cuando circula la corriente nominal por la resistencia del conductor (ΔV = I · R).&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -592,39 +726,39 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Envía microimpulsos breves con la bombilla apagada para medir continuidad sin encenderla.]]></text>
+      <text><![CDATA[Porque según la Ley de Ohm (V = I · R), si la corriente es cero (circuito apagado), la caída de tensión es cero aunque exista óxido.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Si no hay retorno de corriente, registra el fallo en el cuadro antes de accionar el mando.]]></text>
+        <text><![CDATA[¡Correcto! Con circuito abierto (I = 0 A), no hay caída de potencial a través de la resistencia parásita (ΔV = 0 · R = 0 V), enmascarando por completo la avería.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Activa ventiladores de refrigeración dentro de la carcasa del faro antes de arrancar el motor.]]></text>
+      <text><![CDATA[Para evitar que el multímetro digital descargue la batería del vehículo durante la toma de datos.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La refrigeración es térmica, no un protocolo de chequeo eléctrico.]]></text>
+        <text><![CDATA[Incorrecto. Un voltímetro digital tiene una impedancia interna de 10 MΩ y no descarga la batería.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Mide la temperatura ambiente exterior mediante una sonda en el paragolpes para regular el haz.]]></text>
+      <text><![CDATA[Para calentar el cristal del faro y conseguir que el haz óptico se enfoque hacia el regloscopio.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Es una prueba eléctrica de diagnóstico de lámpara.]]></text>
+        <text><![CDATA[Incorrecto. No tiene ninguna relación con la óptica del faro.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Desconecta preventivamente la alimentación de Línea 30 cuando la temperatura baja de 0 °C.]]></text>
+      <text><![CDATA[Porque las unidades de control BCM bloquean la pantalla del multímetro si no detectan consumo de corriente.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. No tiene relación técnica.]]></text>
+        <text><![CDATA[Incorrecto. El multímetro es un instrumento autónomo e independiente de las centralitas.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="truefalse">
     <name>
-      <text>ALUM_P17_TF_Desprendimiento_Laca_Ambar</text>
+      <text>ALUM_P21_TF_Bixenon_Mecanismo_Trampilla</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Debido a la prohibición del vidrio dopado con cadmio por la directiva europea RoHS, las bombillas ámbar de señalización actuales emplean lacas superficiales que pueden cuartearse con los ciclos térmicos, provocando que el intermitente emita luz blanca ilegal (defecto grave en ITV).&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;En un proyector Bixenón, la conmutación entre luz de cruce y luz de carretera se produce mediante un electroimán o servomotor que abate mecánicamente el diafragma obturador interno.&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Directiva RoHS: La degradación de la laca en bombillas ámbar provoca emisión de luz blanca ilegal.&lt;/p&gt;]]></text>
+      <text/>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>1.0000000</penalty>
@@ -632,51 +766,25 @@
     <answer fraction="100" format="moodle_auto_format">
       <text>true</text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Es una de las averías más frecuentes en inspección técnica y exige sustituir la bombilla de inmediato.]]></text>
+        <text><![CDATA[¡Correcto! Utiliza una sola lámpara de xenón; el electroimán retira el obturador permitiendo proyectar el 100% del flujo luminoso en carretera.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="moodle_auto_format">
       <text>false</text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. La pérdida de laca exterior es un fallo real y extendido tras la directiva medioambiental RoHS.]]></text>
-      </feedback>
-    </answer>
-  </question>
-  <question type="truefalse">
-    <name>
-      <text>ALUM_P18_TF_Medicion_En_Carga_Obligatoria</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;La medición voltimétrica de caídas de tensión en conductores, relés y masas debe realizarse obligatoriamente con el circuito encendido y consumiendo corriente (en carga), ya que con el circuito apagado (I = 0 A) la caída de tensión es matemáticamente cero.&lt;/p&gt;]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Regla de oro metrológica: Medir caídas de tensión SIEMPRE en carga.&lt;/p&gt;]]></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>1.0000000</penalty>
-    <hidden>0</hidden>
-    <answer fraction="100" format="moodle_auto_format">
-      <text>true</text>
-      <feedback format="html">
-        <text><![CDATA[¡Correcto! Ley de Ohm: ΔV = I · R. Si no circula intensidad (I = 0), la caída de tensión en la resistencia parásita no se manifiesta.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>false</text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. Sin corriente circulando es imposible detectar resistencias de contacto parásitas con el voltímetro.]]></text>
+        <text><![CDATA[Incorrecto. El sistema bixenón mantiene la misma lámpara encendida y mueve un obturador móvil (pantalla) para cambiar el patrón fotométrico.]]></text>
       </feedback>
     </answer>
   </question>
   <question type="multichoice">
     <name>
-      <text>ALUM_P19_MC_Sensores_Inclinacion_Suspension</text>
+      <text>ALUM_P22_MC_Alumbrado_Curvas_Dinamico_Sensores</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Qué sensores y componentes integran el sistema de regulación automática dinámica del alcance luminoso en faros de xenón o LED de alta gama?&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;En los sistemas de iluminación adaptativa en curva dinámica (AFS), ¿qué señales principales utiliza la unidad de control para calcular el giro motorizado de los proyectores?&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Regulación automática dinámica: Sensores de altura en suspensión + Calculador + Motores paso a paso.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Sistemas AFS dinámicos: Combinan sensor de ángulo de volante (SAS), velocidad del vehículo y sensor de guiñada (ESP).&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -685,135 +793,27 @@
     <shuffleanswers>1</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
-      <text><![CDATA[Sensores de nivel en ejes delantero y trasero con bieletas, calculador y servomotores.]]></text>
+      <text><![CDATA[Ángulo del volante de dirección, velocidad lineal del vehículo y aceleración transversal de guiñada.]]></text>
       <feedback format="html">
-        <text><![CDATA[¡Correcto! Miden la inclinación de la carrocería en milisegundos compensando carga, aceleraciones y frenadas.]]></text>
+        <text><![CDATA[¡Correcto! La centralita AFS procesa el ángulo de dirección (sensor SAS), la velocidad del vehículo y los datos del ESP para girar los proyectores hasta ±15° anticipando la curva.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Un giróscopo electrónico en el cuadro de mandos con cables mecánicos tipo Bowden hasta los faros.]]></text>
+      <text><![CDATA[Nivel de combustible en el depósito y temperatura del aceite de la caja de cambios automática.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Los cables mecánicos corresponden a reguladores manuales arcaicos.]]></text>
+        <text><![CDATA[Incorrecto. Esos parámetros no guardan relación con la trayectoria del vehículo.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Cuatro sensores piezoeléctricos de presión integrados en los neumáticos coordinados por la red CAN.]]></text>
+      <text><![CDATA[Presión del pedal del acelerador y temperatura del líquido refrigerante del radiador.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Se emplean sensores de ángulo en los brazos de suspensión.]]></text>
+        <text><![CDATA[Incorrecto. No determinan la geometría de la curva que recorre el automóvil.]]></text>
       </feedback>
     </answer>
     <answer fraction="0" format="html">
-      <text><![CDATA[Cámaras de visión infrarroja montadas en los pasos de rueda conectadas directamente a los balastros.]]></text>
+      <text><![CDATA[Intensidad del viento exterior detectada por el sensor ultrasónico del parachoques trasero.]]></text>
       <feedback format="html">
-        <text><![CDATA[Incorrecto. Eso corresponde al sistema TPMS de presión de neumáticos.]]></text>
-      </feedback>
-    </answer>
-  </question>
-  <question type="multichoice">
-    <name>
-      <text>ALUM_P20_MC_Luces_Curvas_Estatica_Dinamica</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;¿Cuál es la diferencia técnica entre la luz de giro estática (cornering light) y la luz de curvas dinámica (faros direccionales)?&lt;/p&gt;]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Luz de giro estática = Lámpara lateral a baja velocidad / Luz dinámica = Pivotado de lente en carretera.&lt;/p&gt;]]></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.3333333</penalty>
-    <hidden>0</hidden>
-    <single>true</single>
-    <shuffleanswers>1</shuffleanswers>
-    <answernumbering>abc</answernumbering>
-    <answer fraction="100" format="html">
-      <text><![CDATA[La luz estática enciende una lámpara lateral a baja velocidad; la dinámica gira el proyector en carretera.]]></text>
-      <feedback format="html">
-        <text><![CDATA[¡Correcto! La estática ilumina cruces y giros cerrados; la dinámica acompaña el trazado de la carretera en velocidad.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[La luz estática opera exclusivamente en horario diurno y la luz dinámica solo se activa al conectar las luces de carretera.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. Ambas están diseñadas para conducción nocturna o túneles.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[La luz estática sustituye a los faros antiniebla delanteros y la luz dinámica modifica la altura de los pilotos traseros.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. Son sistemas frontales de visibilidad de calzada.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[Ambas denominaciones corresponden al mismo actuador electromecánico sin que existan diferencias técnicas en su funcionamiento.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. Son arquitecturas electromecánicas completamente distintas.]]></text>
-      </feedback>
-    </answer>
-  </question>
-  <question type="truefalse">
-    <name>
-      <text>ALUM_P21_TF_Tercera_Luz_Desviacion_15cm</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En vehículos comerciales con portón trasero de apertura asimétrica (dos puertas batientes), la normativa europea ECE R48 autoriza que la tercera luz de freno elevada (S3) se desplace como máximo 15 cm respecto al eje de simetría central del vehículo.&lt;/p&gt;]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;ECE R48: Tolerancia máxima de 15 cm en tercera luz de freno en portones asimétricos.&lt;/p&gt;]]></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>1.0000000</penalty>
-    <hidden>0</hidden>
-    <answer fraction="100" format="moodle_auto_format">
-      <text>true</text>
-      <feedback format="html">
-        <text><![CDATA[¡Correcto! Se contempla esta excepción geométrica exclusiva de 15 cm en furgones de carga.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="moodle_auto_format">
-      <text>false</text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. La normativa ECE R48 permite específicamente una tolerancia de hasta 15 cm en portones asimétricos.]]></text>
-      </feedback>
-    </answer>
-  </question>
-  <question type="multichoice">
-    <name>
-      <text>ALUM_P22_MC_Color_Marcha_Atras_AR</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;En el marco reglamentario internacional vigente, ¿de qué color debe ser obligatoriamente la luz de marcha atrás (código AR)?&lt;/p&gt;]]></text>
-    </questiontext>
-    <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Luz de marcha atrás AR: Color blanco continuo obligatorio.&lt;/p&gt;]]></text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.3333333</penalty>
-    <hidden>0</hidden>
-    <single>true</single>
-    <shuffleanswers>1</shuffleanswers>
-    <answernumbering>abc</answernumbering>
-    <answer fraction="100" format="html">
-      <text><![CDATA[Color blanco continuo reglamentario.]]></text>
-      <feedback format="html">
-        <text><![CDATA[¡Correcto! Advierte de la maniobra de retroceso e ilumina el entorno posterior.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[Color ámbar intermitente con frecuencia de 1 a 2 Hz.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. Aunque fue admitido en algunos países en el siglo XX, hoy es blanco estricto.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[Color rojo fijo de alta luminosidad similar al antiniebla.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. El rojo se reserva para posición, freno y antiniebla trasero.]]></text>
-      </feedback>
-    </answer>
-    <answer fraction="0" format="html">
-      <text><![CDATA[Color azul continuo reservado para maniobras de retroceso.]]></text>
-      <feedback format="html">
-        <text><![CDATA[Incorrecto. El azul está reservado a vehículos de policía y emergencias.]]></text>
+        <text><![CDATA[Incorrecto. El viento no orienta las ópticas de los faros delanteros.]]></text>
       </feedback>
     </answer>
   </question>
@@ -822,37 +822,37 @@
       <text>ALUM_P23_Matching_Bornes_DIN_Alumbrado</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[&lt;p&gt;Relaciona cada borne normalizado según la norma DIN 72552 con su función específica en el circuito de alumbrado y señalización:&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Empareja cada número de borne según la norma DIN 72552 con su función técnica en el circuito de alumbrado:&lt;/p&gt;]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[&lt;p&gt;Norma DIN 72552: 56b = Cruce, 56a = Carretera, 58 = Posición, 49a = Intermitente pulsante.&lt;/p&gt;]]></text>
+      <text><![CDATA[&lt;p&gt;Norma DIN 72552: 56a = Carretera, 56b = Cruce, 58 = Posición, 31 = Masa.&lt;/p&gt;]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.3333333</penalty>
     <hidden>0</hidden>
     <shuffleanswers>1</shuffleanswers>
     <subquestion format="html">
-      <text><![CDATA[Borne 56b]]></text>
+      <text><![CDATA[56a]]></text>
       <answer>
-        <text>Salida de alimentación para luz de cruce (corto alcance)</text>
+        <text>Luz de carretera o largo alcance</text>
       </answer>
     </subquestion>
     <subquestion format="html">
-      <text><![CDATA[Borne 56a]]></text>
+      <text><![CDATA[56b]]></text>
       <answer>
-        <text>Salida de alimentación para luz de carretera (largo alcance)</text>
+        <text>Luz de cruce o corto alcance</text>
       </answer>
     </subquestion>
     <subquestion format="html">
-      <text><![CDATA[Borne 58]]></text>
+      <text><![CDATA[58]]></text>
       <answer>
-        <text>Circuito de luces de posición, gálibo e iluminación de mandos</text>
+        <text>Luces de posición y gálibo</text>
       </answer>
     </subquestion>
     <subquestion format="html">
-      <text><![CDATA[Borne 49a]]></text>
+      <text><![CDATA[31]]></text>
       <answer>
-        <text>Salida pulsante intermitente desde el relé hacia el mando</text>
+        <text>Retorno a masa negativo de batería</text>
       </answer>
     </subquestion>
   </question>

@@ -8,6 +8,16 @@ _archivo_cursos_anteriores/
 *.avi
 *.mov
 
+# Fotogramas temporales de extracción de vídeo
+master_4k_frames/
+scan_timeline/
+video_frames/
+video_scenes/
+crops/
+extracted_figures/
+_build_temp/
+
+
 # Python
 __pycache__/
 *.py[cod]

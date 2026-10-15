@@ -49,33 +49,33 @@ La creación de recursos H5P de calidad superior en Formación Profesional y ens
 ```
 
 ### Pilar 1: Participación Constante del Estudiante y Enriquecimiento Multimedia
-* **Evitar la pasividad**: Queda expresamente desaconsejada la lectura pasiva de textos extensos o la simple visualización pasiva de vídeos lineales. El alumnado debe explorar, tomar decisiones, responder preguntas, arrastrar elementos e interactuar con el material en cada lección.
+* **Evitar la pasividad**: Queda expresamente desaconsejada la lectura pasiva de textos extensos o la simple visualización pasiva de vídeos lineales. El alumnado debe explorar esquemas de taller, tomar decisiones de diagnosis y seguir protocolos interactivos en cada lección.
 * **Enriquecimiento Multimedia Interactivo**:
-  * **Imágenes Enriquecidas con Puntos de Inspección (`H5P.ImageHotspots 1.10`)**: Transforma fotografías de motores, placas de circuito o esquemas eléctricos en mapas interactivos donde cada punto despliega explicaciones detalladas y criterios de comprobación (`create_image_hotspots`).
-  * **Manipulación Activa de Conceptos (`H5P.DragText 1.10`)**: El alumno arrastra términos técnicos, magnitudes, unidades o pasos lógicos para completar definiciones y deducciones (`create_drag_text_activity`).
-  * **Vídeo Interactivo (`H5P.InteractiveVideo 1.27` / `H5P.Video 1.6`)**: Vídeos alojados en la Mediateca de EducaMadrid con interrupciones reflexivas y preguntas intercaladas que evitan el avance sin asimilación.
+  * **Imágenes Técnicas en Alta Resolución (`H5P.Image 1.1`)**: Ilustraciones vectoriales rasterizadas o fotogramas 4K de taller nítidos (1200 a 1600 px) con texto alternativo descriptivo obligatorio.
+  * **Puntos de Inspección Táctil (`H5P.ImageHotspots 1.10`)**: Transforma fotografías de componentes, placas de circuito o esquemas eléctricos en mapas interactivos donde cada punto despliega comprobaciones y tolerancias técnicas (`create_image_hotspots`).
+  * **Retos de Taller y Toma de Decisiones (`.tech-challenge`)**: Casos reales de avería con toma de decisiones diagnósticas guiadas (`create_active_challenge`).
+  * **Listas de Cotejo Táctiles (`.tech-checklist`)**: Checklists ergonómicos con áreas de pulsación mínimas de 44x44 px (WCAG 2.5.5) para certificar protocolos de seguridad y verificación (`create_checklist_section`).
+  * **Protocolos Desplegables en Acordeón (`H5P.Accordion 1.0`)**: Desglose modular de pasos de taller sin saturar visualmente la pantalla (`create_accordion`).
 
-### Pilar 2: Estructuración Pedagógica Integrada (Andamiaje)
-* **Contenedores Unificados**: En lugar de presentar recursos dispersos en el aula virtual (un PDF suelto, un vídeo en otro enlace, un cuestionario aparte), integrar la teoría, los ejemplos y las prácticas en un **único recurso estructurado**:
-  * **`H5P.InteractiveBook 1.7`** como contenedor macro del curso (unidades modulares con tabla de contenidos lateral).
+### Pilar 2: Estructuración Pedagógica Integrada (Andamiaje en 4 Fases)
+* **Contenedores Unificados**: En lugar de presentar recursos dispersos en el aula virtual, integrar la teoría, las figuras y los procedimientos de taller en un **único recurso estructurado**:
+  * **`H5P.InteractiveBook 1.7`** como contenedor macro del curso (unidades modulares con tabla de contenidos lateral accesible y cerrada por defecto en móviles).
   * **`H5P.Column 1.16`** como contenedor estructurador de cada capítulo.
 * **Secuencia Didáctica Progresiva en 4 Fases**: Cada unidad debe implementar la secuencia de andamiaje:
-  1. *Fase 1: Presentación motivadora y activación*: Introducción visual (`tech-hero`), insignias de unidad y activación de conocimientos previos mediante un reto inicial o actividad gamificada.
+  1. *Fase 1: Presentación motivadora y activación*: Introducción visual (`.tech-hero`), insignias de unidad y activación conceptual previa.
   2. *Fase 2: Explicación interactiva*: Bloques concisos de teoría técnica maquetada, fórmulas semánticas normalizadas y recursos multimedia enriquecidos (`ImageHotspots`).
-  3. *Fase 3: Práctica guiada activa*: Arrastre de magnitudes (`DragText`), retos de taller de toma de decisiones (`.tech-challenge`), listas de cotejo táctiles (`.tech-checklist`), protocolos en acordeón y laboratorios virtuales (`.sim-box`).
-  4. *Fase 4: Evaluación formativa inmediata*: Autocomprobaciones (`MultiChoice`, `TrueFalse`) con retroalimentación pedagógica razonada en cada opción.
+  3. *Fase 3: Práctica guiada activa*: Retos de taller (`.tech-challenge`), listas de cotejo táctiles (`.tech-checklist`), protocolos en acordeón y enlaces a laboratorios virtuales (`.sim-box`).
+  4. *Fase 4: Consolidación y Derivación a Evaluación Oficial*: Tarjeta de síntesis de unidad (`.tech-checkpoint`) y remisión directa al cuestionario oficial en Moodle XML (`create_moodle_quiz_referral`).
 
-### Pilar 3: Retroalimentación Inmediata y Explicada
-* **Corrección automática y autorregulación**: Las actividades deben ofrecer corrección instantánea al pulsar "Comprobar", permitiendo al estudiante verificar sus aciertos y errores en el momento de máximo enfoque mental.
-* **Justificación pedagógica obligatoria**: Cada opción de respuesta debe incluir explicaciones razonadas:
+### Pilar 3: Retroalimentación Inmediata y Explicada en Moodle XML
+* **Ubicación en el Banco de Preguntas XML**: En la arquitectura desacoplada, la retroalimentación inmediata, explicada y razonada reside en los cuestionarios de Moodle XML (`mod_quiz`), no en actividades dentro del paquete H5P.
+* **Justificación pedagógica obligatoria en `<feedback>`**:
   * Para la opción correcta: explicar **por qué** es la solución técnica adecuada y qué principio físico la avala.
   * Para cada distractor incorrecto: explicar **en qué consiste el error** cometido (ej. confundir intensidad con tensión, olvidar atenuar la sonda, no esperar la descarga de condensadores).
-* **Pistas orientativas (`tips`)**: Proporcionar pistas previas para guiar el razonamiento sin regalar la solución.
-* **Aprender del error**: Configurar siempre `enableRetry: true` y `enableSolutionsButton: true` para que el error sea una palanca de reflexión formativa, no un castigo.
+* **Aprender del error**: Configurar el cuestionario Moodle con intentos múltiples y retroalimentación diferida o interactiva con múltiples intentos para que el error sea una palanca de aprendizaje activo.
 
-### Pilar 4: Gamificación Estratégica con Propósito Didáctico
-* **Dinamización lúdica planificada**: Incorporar mecánicas lúdicas (arrastre de términos `DragText`, juegos de memoria `MemoryGame`, emparejamiento de magnitudes) para activar conocimientos previos al inicio de la lección, romper la monotonía o realizar cierres atractivos.
-* **Integración curricular orgánica**: La gamificación no es un adorno superficial aislado; forma parte orgánica de la narrativa técnica de la unidad (ej. "Reto previo: empareja cada magnitud con su unidad antes de conectar el osciloscopio").
+### Pilar 4: Dinamización y Retos Didácticos
+* **Enfoque técnico motivador**: Incorporar retos de diagnosis de taller, checklists de comprobación previa y simuladores interactivos para activar conocimientos sin sobrecargar la pantalla con actividades de arrastre incompatibles con dispositivos móviles.
 
 ### Pilar 5: Desacoplamiento de Formación (H5P) y Evaluación Oficial (Moodle XML)
 
@@ -83,15 +83,19 @@ La creación de recursos H5P de calidad superior en Formación Profesional y ens
 En Moodle / EducaMadrid, vincular la finalización de un paquete H5P complejo a una calificación de aprobado o sentencias xAPI genera frecuentes bloqueos para el alumnado:
 * **Fuga de sentencias xAPI**: En dispositivos móviles (especialmente iOS/Safari y Chrome Android), las restricciones de cookies de terceros, bloqueos de iframes o microcortes de red provocan que las sentencias xAPI (`completed`, `passed`) no lleguen al servidor Moodle.
 * **Sobreescritura por puntaje de dominio**: Si Moodle tiene activado *"El puntaje de dominio anula el estado"* (*Mastery score overrides status*), un estudiante que complete la lectura y práctica pero no supere el corte de un cuestionario interno figura como **"No intentado"** o **"No superado"**, anulando su progreso formativo.
+* **Problemas ergonómicos en móviles con actividades de arrastre (`DragText`)**: En pantallas táctiles de smartphones, los elementos de arrastre colisionan con el gesto de scroll vertical de la página y las etiquetas resultan diminutas para interacción con los dedos.
 
-#### La Solución Oficial Homologada: Arquitectura Dual Desacoplada
-Para garantizar que **el 100% de los alumnos registre la realización de los contenidos sin errores**, separamos estrictamente la experiencia formativa de la evaluación sumativa:
+#### La Solución Oficial Homologada: Cursos H5P 100% Formativos y Cuestionarios Moodle XML
+Para garantizar que **el 100% de los alumnos registre la realización de los contenidos sin errores** y disfrute de una experiencia fluida en smartphones y tablets:
+1. **El paquete H5P es 100% Formativo**: Queda expresamente prohibido incluir actividades puntuables o de arrastre (`H5P.MultiChoice`, `H5P.DragText`, `H5P.TrueFalse`, `H5P.QuestionSet`) dentro de los cursos H5P de producción.
+2. **La evaluación se realiza íntegramente en Moodle XML**: Toda la evaluación sumativa y calificación académica se canaliza a través de cuestionarios nativos de Moodle (`mod_quiz`) importados desde el banco XML oficial.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  1. CONTENIDO EDUCATIVO Y PRÁCTICA ACTIVA (H5P INTERACTIVO) │
-│  - Paquete .h5p en H5P.InteractiveBook 1.7                  │
-│  - Andamiaje en 4 fases, retos y autocomprobación formativa │
+│  - Paquete .h5p en H5P.InteractiveBook 1.7 (100% formativo) │
+│  - Andamiaje en 4 fases, esquemas HD y checklists táctiles  │
+│  - Sin DragText ni cuestionarios internos (cero fallos)     │
 │  - Finalización Moodle: "El estudiante debe VER la          │
 │    actividad para completarla" (100% FIABLE)                │
 └─────────────────────────────────────────────────────────────┘
