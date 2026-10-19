@@ -1,129 +1,98 @@
-# Entorno de Creación de Cursos H5P para EducaMadrid (Moodle)
+# Plantilla Oficial de Cursos H5P y Cuestionarios Moodle XML para EducaMadrid (FP Automoción)
 
-Este repositorio contiene el **entorno oficial y plantilla homologada** para la creación, maquetación y validación de cursos interactivos H5P destinados a las Aulas Virtuales de **EducaMadrid** y entornos **Moodle**.
+Este repositorio contiene el **entorno maestro y plantilla homologada** para la creación, maquetación y validación de cursos interactivos **H5P** (100 % formativos) y bancos de evaluación sumativa en **Moodle XML** destinados a las Aulas Virtuales de **EducaMadrid** (Formación Profesional de Automoción).
 
-Garantiza el cumplimiento de las normativas de seguridad institucional, la **integración de los 5 pilares pedagógicos de aprendizaje activo** y las pautas de **accesibilidad universal (WCAG 2.1 AA / AAA)**.
+> **Política del Repositorio**: En GitHub se mantiene **exclusivamente la plantilla maestra y el toolkit de compilación/validación**, sin subir paquetes `.h5p` ni carpetas de cursos concretos.
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Estructura del Repositorio
 
 ```text
 H5P/
+├── GEMINI.md                                 # Reglas operativas y psicométricas del entorno
 ├── REQUISITOS_CURSOS_H5P_EDUCAMADRID.md      # Especificación oficial EducaMadrid (Técnica, Pedagógica y Accesibilidad)
-├── build.py                                  # Script maestro de compilación, inyección CSS y validación
+├── build.py                                  # Script maestro de inicialización, compilación, inyección CSS y validación
 ├── plantilla/                                # Toolkit y plantilla técnica maestra
-│   ├── REQUISITOS_CURSOS_H5P_EDUCAMADRID.md  # Especificación técnica oficial, los 5 pilares y accesibilidad
-│   ├── generar_curso_plantilla.py            # Generador y plantilla de código con helpers de los 5 pilares
-│   ├── validar_h5p_educamadrid.py            # Validador de certificación EducaMadrid (whitelist, CSS, a11y)
-│   ├── moodle_xml_builder.py                 # Generador y validador de bancos de preguntas Moodle XML
-│   ├── evaluacion_modelo_moodle.xml          # Banco de preguntas modelo sumativo para Moodle (10 preguntas)
-│   ├── estilos_educamadrid.css               # Hoja de estilos accesible y responsive (WCAG AAA, táctil, fórmulas)
-│   ├── append_css_to_libraries.py            # Inyector limpio de CSS en librerías base (preserva 1.646 líneas)
-│   ├── logo2026.png                          # Logotipo institucional oficial con transparencia (Comunidad de Madrid)
-│   ├── logo2026.bmp                          # Logotipo complementario en formato BMP
+│   ├── generar_curso_plantilla.py            # Generador maestro con helpers didácticos y de taller de Automoción
+│   ├── validar_h5p_educamadrid.py            # Validador de certificación EducaMadrid / Lumi / Moodle
+│   ├── moodle_xml_builder.py                 # Constructor y validador psicométrico de bancos Moodle XML (5 tipos)
+│   ├── evaluacion_modelo_moodle.xml          # Banco de preguntas modelo sumativo para Moodle (12 preguntas)
+│   ├── estilos_educamadrid.css               # Hoja de estilos accesible y responsive (WCAG AAA, cero texto claro)
+│   ├── append_css_to_libraries.py            # Inyector limpio de CSS en librerías base
+│   ├── logo2026.png / logo2026.bmp           # Logotipo institucional oficial (Comunidad de Madrid)
 │   ├── CC.png                                # Logotipo oficial Creative Commons
-│   ├── Plantilla_Curso_Modelo_EducaMadrid.h5p# Paquete H5P modelo certificado y listo para Moodle (1.7 MB)
+│   ├── Plantilla_Curso_Modelo_EducaMadrid.h5p# Paquete H5P modelo certificado y listo para Moodle
 │   └── README.md                             # Documentación detallada de la plantilla
 │
-├── EsquemasElectricosAutomocion/             # Caso de éxito real: Curso interactivo de Formación Profesional
-│   ├── Curso_Esquemas_Electricos_Automocion.h5p # Paquete H5P certificado listo para el Aula Virtual (2.0 MB)
-│   ├── evaluacion_esquemas_electricos.xml    # Banco sumativo oficial Moodle XML para el curso (20 preguntas)
-│   ├── generar_curso_esquemas.py             # Script generador maestro con 4 capítulos y 13 actividades
-│   ├── images/                               # Esquemas eléctricos y diagramas rasterizados de alta resolución
-│   └── README.md                             # Guía curricular, unidades didácticas y normativa DIN
-│
-├── CircuitosAlumbrado/                       # Curso técnico: Circuitos de Alumbrado y Señalización del Vehículo
-│   ├── Curso_Circuitos_Alumbrado_Automocion.h5p # Paquete H5P certificado listo para EducaMadrid (6.9 MB)
-│   ├── evaluacion_circuitos_alumbrado.xml    # Banco sumativo oficial Moodle XML (25 preguntas)
-│   ├── generar_curso_alumbrado.py            # Generador maestro con 5 capítulos y 15 epígrafes técnicos
-│   ├── generar_imagenes.py                   # Generador de esquemas electrotécnicos e infografías HD
-│   ├── images/                               # Diagramas técnicos rasterizados (proyector DE, regloscopio, relés)
-│   └── README.md                             # Guía didáctica, epígrafes 6.1 a 6.15 y configuración Moodle
-│
 ├── h5p_builder/
-│   └── h5p-libraries/                        # Repositorio maestro de librerías oficiales H5P homologadas
+│   └── h5p-libraries/                        # Repositorio maestro de librerías oficiales H5P depuradas (whitelist)
 │
 └── .agents/
+    ├── rules/
+    │   └── cuestionarios_xml.md              # Reglas psicométricas para bancos Moodle XML
     └── skills/
         └── h5p-educamadrid/                  # Skill oficial para Agentes de IA (Gemini / Antigravity)
-            ├── SKILL.md                      # Manual operativo con progressive disclosure
-            ├── scripts/                      # Scripts ejecutables (generar, validar, inyectar, moodle_xml)
-            ├── resources/                    # Logos oficiales (2026, CC) y estilos CSS accesibles
-            ├── references/                   # Documentación modular (pedagogía, técnica, a11y, entrevista)
-            └── examples/                     # Implementaciones de referencia, paquete .h5p y banco .xml
 ```
 
 ---
 
-## 🌟 Los 5 Pilares Pedagógicos de Aprendizaje Activo
+## 🚀 Comandos Rápidos con `build.py`
 
-1. **Participación Constante del Estudiante y Enriquecimiento Multimedia**:
-   - Cero lectura pasiva o visualización lineal. El alumnado explora esquemas interactivos (`create_image_hotspots`), arrastra términos técnicos (`create_drag_text_activity`) y toma decisiones diagnósticas en cada lección.
-2. **Estructuración Pedagógica Integrada (Andamiaje en 4 Fases)**:
-   - Contenedor unificado (`InteractiveBook 1.7` con capítulos `Column 1.16`).
-   - Secuencia de andamiaje: *Fase 1 (Motivación/Activación)* ➔ *Fase 2 (Explicación interactiva)* ➔ *Fase 3 (Práctica guiada)* ➔ *Fase 4 (Evaluación formativa)* (`create_didactic_sequence_chapter`).
-3. **Retroalimentación Inmediata y Explicada**:
-   - Corrección instantánea con justificación pedagógica en cada opción: explicación razonada de aciertos y análisis del error en opciones incorrectas (`create_multichoice_question`).
-   - Pistas orientativas (`tips`) y reintentos ilimitados para aprender del error.
-4. **Gamificación Estratégica con Propósito Didáctico**:
-   - Dinamización lúdica planificada (arrastre de magnitudes, juegos de memoria, retos) integrada orgánicamente en la narrativa técnica.
-5. **Desacoplamiento Pedagógico: H5P Formativo + Moodle XML Sumativo**:
-   - **Solución al error de registro en Moodle ("No intentado")**: En navegadores móviles y redes móviles, exigir calificación dentro del iframe H5P provoca pérdidas de eventos xAPI. Se establece la separación oficial:
-     - **H5P Formativo**: Se sube al aula virtual configurando la finalización de actividad con **"El estudiante debe ver esta actividad para completarla"** (sin requerir calificación). Garantiza el 100% de éxito en el registro de finalización.
-      - **Moodle XML Sumativo**: Las pruebas evaluativas con nota oficial para el Calificador se gestionan mediante **Cuestionarios nativos de Moodle (`mod_quiz`)**, importando los archivos Moodle XML provistos (`plantilla/evaluacion_modelo_moodle.xml`, `EsquemasElectricosAutomocion/evaluacion_esquemas_electricos.xml` y `CircuitosAlumbrado/evaluacion_circuitos_alumbrado.xml`).
-
----
-
-## 🚀 Cómo Crear y Compilar Cursos con `build.py`
-
-El script maestro [`build.py`](build.py) centraliza todas las operaciones de compilación, inyección y validación:
+El script maestro [`build.py`](build.py) centraliza todas las operaciones:
 
 ```bash
-# Compilar y certificar el curso modelo de la plantilla
+# 1. Compilar CSS, certificar la plantilla maestra y sincronizar el skill
 python3 build.py
 
-# Compilar y certificar el curso completo de Esquemas Eléctricos
-python3 build.py esquemas
+# 2. Inicializar la carpeta y el código base para un NUEVO curso de Automoción
+python3 build.py nuevo SistemasInyeccion "Sistemas de Inyección Electrónica"
 
-# Compilar y certificar el curso completo de Circuitos de Alumbrado y Señalización
-python3 build.py alumbrado
+# 3. Compilar y validar un curso creado localmente
+python3 build.py SistemasInyeccion
 
-# Compilar todos los cursos del repositorio
-python3 build.py todos
-
-# Validar todos los bancos de preguntas Moodle XML del repositorio
+# 4. Validar todos los bancos de preguntas Moodle XML
 python3 build.py xml
 
-# Inyectar estilos CSS accesibles y responsive en las librerías base
+# 5. Inyectar estilos CSS accesibles y responsive en las librerías base
 python3 build.py css
 
-# Validar cualquier paquete .h5p existente
-python3 build.py validar <ruta_al_paquete.h5p>
+# 6. Validar cualquier paquete .h5p o banco .xml individual
+python3 build.py validar <ruta_al_archivo.h5p_o_xml>
 ```
 
 ---
 
-## 📱 Optimización para Dispositivos Móviles
+## 🛠️ Helpers para FP de Automoción en `generar_curso_plantilla.py`
 
-Para garantizar una experiencia visual y funcional impecable en smartphones y tablets (desde 360px de ancho):
-1. **Cajón lateral cerrado por defecto (`defaultTableOfContents: false`)**: Impide que el menú lateral ocupe el 100% de la pantalla al abrir el recurso en móviles.
-2. **Progreso textual (`progressType: "textual"`)**: Sustituye la hilera de círculos (que se solapan o desbordan) por texto adaptativo "Página X de Y".
-3. **Contenedores de ancho flexible**: `max-width: 100%` y `box-sizing: border-box` en todos los contenedores `.h5p-interactive-book`, tarjetas (`.tech-card`) y héroes (`.tech-hero`).
-4. **Desplazamiento táctil suave**: Bloques de fórmulas (`.tech-formula-block`) y tablas (`.tech-table`) configurados con `overflow-x: auto` y `-webkit-overflow-scrolling: touch`.
-5. **Objetivos táctiles adaptados**: Todos los botones y selectores interactivos cuentan con un área mínima de **44 × 44 px** según directrices WCAG 2.1 AAA.
+| Función Helper | Propósito Didáctico en Automoción |
+| :--- | :--- |
+| `create_header_logo()` | Cabecera institucional oficial con resolución dinámica de logotipo. |
+| `create_text_section(html, titulo)` | Bloques teóricos de alto contraste (`#0f172a`) y fórmulas semánticas (`.tech-formula`). |
+| `create_component_spec_card(...)` | **Ficha técnica de sensor/actuador**: valores nominales ($\Omega$, V, A, Hz), pinout DIN 72552 y patrón de osciloscopio. |
+| `create_diagnostic_table(titulo, filas)` | **Tabla metrológica de diagnosis en taller**: Síntoma ➔ Punto de medida / Instrumento ➔ Valor nominal vs. Avería ➔ Causa raíz y acción correctiva. |
+| `create_video_section(url, titulo)` | Bloque nativo `H5P.Video 1.6` para vídeos técnicos demostrativos (YouTube / Mediateca EducaMadrid). |
+| `create_image_section(...)` | Esquema técnico rasterizado (`.png` / `.jpg`) con texto alternativo accesible (`alt`). |
+| `create_image_hotspots(...)` | Esquema interactivo con puntos de inspección táctiles (`H5P.ImageHotspots 1.10`). |
+| `create_active_challenge(...)` | Reto práctico de taller paso a paso ante casos reales de avería (`.tech-challenge`). |
+| `create_checklist_section(...)` | Lista de cotejo de verificación en vehículo con área táctil $\ge 44 \times 44\text{ px}$. |
+| `create_accordion(...)` | Protocolos de taller desplegables (`H5P.Accordion 1.0`). |
+| `create_simulation_box(...)` | Enlace a simuladores de circuitos o laboratorios externos seguros. |
+| `create_moodle_quiz_referral(...)` | Cierre de capítulo (Fase 4) con síntesis y derivación al cuestionario oficial en Moodle (`mod_quiz`). |
 
 ---
 
-## 🔒 Reglas Técnicas y Accesibilidad Obligatorias
+## 📝 Cuestionarios Moodle XML (`moodle_xml_builder.py`)
 
-1. **Accesibilidad Universal y Legibilidad (WCAG 2.1 AA / AAA)**:
-   * Contraste certificado (> 7:1 en badges y > 9:1 en alertas y tarjetas).
-   * Tamaño táctil mínimo de 44 x 44 px en botones y elementos interactivos.
-   * Foco de navegación por teclado visible (`:focus-visible`).
-   * Textos alternativos descriptivos obligatorios en todas las imágenes (`alt`).
-   * Prohibido el texto justificado; siempre alineación a la izquierda.
-2. **Whitelist Estricta en `content/`**: Cero archivos `.html` y cero `.svg` dentro de `content/`. Todos los esquemas deben ser imágenes rasterizadas (`.png` o `.jpg`).
-3. **Fórmulas Matemáticas y Eléctricas**: Cero LaTeX crudo (`$ ... $`). Emplear **HTML semántico y Unicode** (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).
-4. **Cero etiquetas `<style>` en HTML**: Los estilos globales se inyectan en las librerías base mediante `append_css_to_libraries.py`.
-5. **Anidamiento en `H5P.Column`**: Cada elemento debe envolverse con `{"content": ..., "useSeparator": "auto"}` y contar con `subContentId` (UUIDv4) y `metadata.title`.
+El constructor `MoodleXMLBuilder` soporta **5 tipos de preguntas nativas de Moodle** ideales para FP de Automoción y aplica controles psicométricos automáticos:
+
+1. **`add_multichoice(...)`**: Opción múltiple con retroalimentación razonada en cada opción, `<shuffleanswers>1</shuffleanswers>` y **rotación automática de la posición de la opción correcta (A, B, C, D) en el código XML**.
+2. **`add_numerical(...)`**: Problemas de cálculo numérico de taller (Ley de Ohm, caída de tensión $\Delta V = I \cdot R$, frecuencia $f = 1/T$, ciclo de trabajo PWM) con margen de tolerancia (`<tolerance>`) y unidades (`V`, `A`, `Ω`, `Hz`).
+3. **`add_shortanswer(...)`**: Respuesta corta para identificación directa de códigos de bornes DIN 72552 (`30`, `15`, `31`, `50`, `85`, `86`, `87`) o códigos de homologación ECE.
+4. **`add_matching(...)`**: Emparejamiento de componentes, siglas multimarca o bornes con su función.
+5. **`add_truefalse(...)`**: Preguntas de Verdadero/Falso para axiomas técnicos y normas de seguridad en taller.
+
+### Reglas Psicométricas Certificadas Automáticamente
+- **Control bidireccional contra sesgo de longitud (*Length Bias*)**: Verifica que la respuesta correcta sea la más larga en una proporción equilibrada (**entre el 15 % y el 40 %** de las preguntas `multichoice`), evitando tanto que la más larga sea siempre la correcta como el patrón inverso (`0 %`).
+- **Distribución equitativa en el XML**: Verifica que la opción correcta (`fraction="100"`) se reparta entre las posiciones A, B, C y D del archivo XML.
+- **Formato limpio sin `<p>` redundantes (Norma Picuino)**: Elimina envoltorios `<p>...</p>` innecesarios en enunciados, respuestas y feedbacks.

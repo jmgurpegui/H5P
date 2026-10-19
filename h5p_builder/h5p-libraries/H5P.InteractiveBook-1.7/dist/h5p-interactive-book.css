@@ -1801,6 +1801,75 @@ summary:focus-visible,
   margin: 8px 0;
 }
 
+.tech-card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #f0f9ff;
+  color: #0c4a6e;
+  border: 1px solid #0284c7;
+  margin-bottom: 8px;
+}
+
+/* Cuadrícula de Especificaciones Técnicas de Sensores y Actuadores (Automoción) */
+.tech-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.tech-spec-item {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #0284c7;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.tech-spec-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0c4a6e; /* Contraste > 9:1 */
+  margin-bottom: 4px;
+}
+
+.tech-spec-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a; /* Contraste > 13:1 */
+}
+
+.tech-pinout-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-pinout-badge {
+  background: #ffffff;
+  border: 1px solid #0369a1;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.tech-pinout-badge strong {
+  color: #0c4a6e;
+}
+
 /* --------------------------------------------------------------------------
    5. CAJAS DE ALERTA CON DOBLE SEÑALIZACIÓN (COLOR + ICONO/TEXTO)
    -------------------------------------------------------------------------- */

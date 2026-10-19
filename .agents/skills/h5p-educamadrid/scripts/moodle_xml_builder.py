@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Módulo Oficial de Generación y Validación de Cuestionarios Moodle XML para EducaMadrid.
+Módulo Oficial de Generación y Validación de Cuestionarios Moodle XML para EducaMadrid (FP Automoción).
 Permite desacoplar la formación activa (H5P) de la evaluación sumativa oficial (Moodle Quiz).
 
 Garantiza:
 1. Exportación 100% compatible con Moodle 3.x, 4.x y Aulas Virtuales de EducaMadrid (<quiz>).
-2. Preguntas de opción múltiple, verdadero/falso y emparejamiento con retroalimentación razonada.
-3. Validación estricta de sintaxis, fracciones, equilibrio de alternativas y metadatos pedagógicos.
+2. Cinco tipos de preguntas nativas para FP de Automoción:
+   - multichoice (opción múltiple con rotación automática de posición A/B/C/D en el XML)
+   - truefalse (verdadero/falso con retroalimentación específica)
+   - matching (emparejamiento de componentes, bornes DIN o códigos ECE)
+   - numerical (cálculo electrotécnico/metrológico con margen de tolerancia y unidades)
+   - shortanswer (respuesta corta para identificación directa de bornes, siglas o códigos)
+3. Validación estricta de sintaxis, fracciones, equilibrio psicométrico bidireccional de longitud,
+   distribución de posiciones de clave en XML y ausencia de etiquetas <p> redundantes (Norma Picuino).
 4. Registro fiable de intentos y calificaciones en Moodle (mdl_grade_grades), evitando fallos de xAPI.
 """
 
@@ -18,6 +24,7 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import html
 import re
+
 
 def strip_outer_p(text):
     """
@@ -35,38 +42,66 @@ def strip_outer_p(text):
             return inner
     return text
 
+
 class MoodleXMLBuilder:
-    """Constructor programático de bancos de preguntas Moodle XML."""
+    """Constructor programático de bancos de preguntas Moodle XML para FP de Automoción."""
 
     def __init__(self, category_name="Banco de Preguntas Oficial EducaMadrid"):
         self.category_name = category_name
         self.questions = []
+        self._mc_counter = 0
 
     def set_category(self, category_name):
         self.category_name = category_name
 
-    def add_multichoice(self, name, question_text, options, general_feedback="", single=True, shuffle=True, penalty=0.3333333, image_path=None, image_alt="Esquema técnico"):
+    def add_multichoice(
+        self,
+        name,
+        question_text,
+        options,
+        general_feedback="",
+        single=True,
+        shuffle=True,
+        penalty=0.3333333,
+        image_path=None,
+        image_alt="Esquema técnico",
+        rotate_xml_order=True
+    ):
         """
         Añade una pregunta de opción múltiple (con soporte opcional para imagen integrada en base64).
-        
+        Rota automáticamente la posición de la opción correcta en el XML (A, B, C, D) cuando
+        rotate_xml_order=True para evitar que todas las respuestas correctas estén en options[0].
+
         options: Lista de dicts:
             [
                 {"text": "Opción A...", "fraction": 100, "feedback": "Explicación razonada..."},
                 {"text": "Opción B...", "fraction": 0, "feedback": "Por qué es incorrecto..."}
             ]
         """
+        cleaned_options = [
+            {
+                "text": strip_outer_p(opt.get("text", "")),
+                "fraction": opt.get("fraction", 0),
+                "feedback": strip_outer_p(opt.get("feedback", ""))
+            }
+            for opt in options
+        ]
+
+        if rotate_xml_order and single and len(cleaned_options) >= 2:
+            # Si la correcta está en índice 0, rotamos determinísticamente a la posición (0, 1, 2, 3)
+            correct_indices = [i for i, o in enumerate(cleaned_options) if float(o.get("fraction", 0)) >= 99.9]
+            if len(correct_indices) == 1 and correct_indices[0] == 0:
+                target_pos = self._mc_counter % len(cleaned_options)
+                if target_pos != 0:
+                    correct_opt = cleaned_options.pop(0)
+                    cleaned_options.insert(target_pos, correct_opt)
+            self._mc_counter += 1
+
         self.questions.append({
             "type": "multichoice",
             "name": name,
             "text": strip_outer_p(question_text),
-            "options": [
-                {
-                    "text": strip_outer_p(opt.get("text", "")),
-                    "fraction": opt.get("fraction", 0),
-                    "feedback": strip_outer_p(opt.get("feedback", ""))
-                }
-                for opt in options
-            ],
+            "options": cleaned_options,
             "general_feedback": strip_outer_p(general_feedback),
             "single": single,
             "shuffle": shuffle,
@@ -75,7 +110,17 @@ class MoodleXMLBuilder:
             "image_alt": image_alt
         })
 
-    def add_truefalse(self, name, question_text, is_correct, feedback_true="", feedback_false="", general_feedback="", image_path=None, image_alt="Esquema técnico"):
+    def add_truefalse(
+        self,
+        name,
+        question_text,
+        is_correct,
+        feedback_true="",
+        feedback_false="",
+        general_feedback="",
+        image_path=None,
+        image_alt="Esquema técnico"
+    ):
         """Añade una pregunta de Verdadero / Falso (con soporte opcional para imagen integrada en base64)."""
         self.questions.append({
             "type": "truefalse",
@@ -89,7 +134,16 @@ class MoodleXMLBuilder:
             "image_alt": image_alt
         })
 
-    def add_matching(self, name, question_text, pairs, general_feedback="", shuffle=True, image_path=None, image_alt="Esquema técnico"):
+    def add_matching(
+        self,
+        name,
+        question_text,
+        pairs,
+        general_feedback="",
+        shuffle=True,
+        image_path=None,
+        image_alt="Esquema técnico"
+    ):
         """
         Añade una pregunta de emparejamiento (con soporte opcional para imagen integrada en base64).
         pairs: Lista de tuplas (concepto, definicion/respuesta)
@@ -101,6 +155,109 @@ class MoodleXMLBuilder:
             "pairs": [(strip_outer_p(c), strip_outer_p(a)) for c, a in pairs],
             "general_feedback": strip_outer_p(general_feedback),
             "shuffle": shuffle,
+            "image_path": image_path,
+            "image_alt": image_alt
+        })
+
+    def add_numerical(
+        self,
+        name,
+        question_text,
+        answer_value,
+        tolerance=0.0,
+        feedback="",
+        general_feedback="",
+        units=None,
+        unit_grading_type=0,
+        show_units=3,
+        penalty=0.3333333,
+        image_path=None,
+        image_alt="Esquema técnico"
+    ):
+        """
+        Añade una pregunta de cálculo numérico (<question type="numerical">), ideal para problemas de taller
+        (Ley de Ohm, caída de tensión, resistencia equivalente, frecuencia, ciclo de trabajo PWM, etc.).
+
+        answer_value: float o int con el resultado numérico exacto (ej. 0.45 o 500).
+        tolerance: margen de error admitido en unidades absolutas (ej. 0.05 permite entre 0.40 y 0.50).
+        units: lista opcional de unidades aceptadas, ej. ["V", "voltios"] o [("V", 1.0), ("mV", 1000.0)].
+        show_units: 3 = no se exige escribir la unidad (solo el número); 0 = unidad opcional; 1 = unidad calificada.
+        """
+        parsed_units = []
+        if units:
+            for u in units:
+                if isinstance(u, (list, tuple)) and len(u) >= 2:
+                    parsed_units.append((str(u[0]), float(u[1])))
+                else:
+                    parsed_units.append((str(u), 1.0))
+
+        self.questions.append({
+            "type": "numerical",
+            "name": name,
+            "text": strip_outer_p(question_text),
+            "answer_value": answer_value,
+            "tolerance": tolerance,
+            "feedback": strip_outer_p(feedback),
+            "general_feedback": strip_outer_p(general_feedback),
+            "units": parsed_units,
+            "unit_grading_type": unit_grading_type,
+            "show_units": show_units,
+            "penalty": penalty,
+            "image_path": image_path,
+            "image_alt": image_alt
+        })
+
+    def add_shortanswer(
+        self,
+        name,
+        question_text,
+        accepted_answers,
+        general_feedback="",
+        usecase=0,
+        penalty=0.3333333,
+        image_path=None,
+        image_alt="Esquema técnico"
+    ):
+        """
+        Añade una pregunta de respuesta corta (<question type="shortanswer">), ideal para identificar
+        códigos de bornes DIN 72552 (30, 15, 31, 50, 85, 86, 87), fusibles o códigos de homologación ECE.
+
+        accepted_answers: Lista de dicts o strings:
+            [
+                {"text": "31", "fraction": 100, "feedback": "¡Correcto! Borne 31 es retorno a masa."},
+                {"text": "Borne 31", "fraction": 100, "feedback": "¡Correcto! Borne 31 es retorno a masa."}
+            ]
+        usecase: 0 = insensible a mayúsculas/minúsculas (recomendado); 1 = sensible a mayúsculas.
+        """
+        formatted_answers = []
+        for ans in accepted_answers:
+            if isinstance(ans, dict):
+                formatted_answers.append({
+                    "text": strip_outer_p(ans.get("text", "")),
+                    "fraction": ans.get("fraction", 100),
+                    "feedback": strip_outer_p(ans.get("feedback", ""))
+                })
+            elif isinstance(ans, (list, tuple)):
+                formatted_answers.append({
+                    "text": strip_outer_p(ans[0]),
+                    "fraction": ans[1] if len(ans) > 1 else 100,
+                    "feedback": strip_outer_p(ans[2]) if len(ans) > 2 else ""
+                })
+            else:
+                formatted_answers.append({
+                    "text": strip_outer_p(str(ans)),
+                    "fraction": 100,
+                    "feedback": ""
+                })
+
+        self.questions.append({
+            "type": "shortanswer",
+            "name": name,
+            "text": strip_outer_p(question_text),
+            "answers": formatted_answers,
+            "general_feedback": strip_outer_p(general_feedback),
+            "usecase": usecase,
+            "penalty": penalty,
             "image_path": image_path,
             "image_alt": image_alt
         })
@@ -166,7 +323,7 @@ class MoodleXMLBuilder:
                     ans_text = ET.SubElement(ans_elem, "text")
                     clean_opt = strip_outer_p(opt['text'])
                     ans_text.text = f"<![CDATA[{clean_opt}]]>"
-                    
+
                     fb_elem = ET.SubElement(ans_elem, "feedback", format="html")
                     fb_text = ET.SubElement(fb_elem, "text")
                     clean_fb = strip_outer_p(opt.get('feedback', ''))
@@ -206,15 +363,53 @@ class MoodleXMLBuilder:
                     clean_ans = strip_outer_p(answer)
                     ET.SubElement(ans_elem, "text").text = clean_ans
 
+            elif q["type"] == "numerical":
+                ET.SubElement(q_elem, "defaultgrade").text = "1.0000000"
+                ET.SubElement(q_elem, "penalty").text = str(q.get("penalty", 0.3333333))
+                ET.SubElement(q_elem, "hidden").text = "0"
+
+                ans_elem = ET.SubElement(q_elem, "answer", fraction="100", format="moodle_auto_format")
+                ET.SubElement(ans_elem, "text").text = str(q["answer_value"])
+                ET.SubElement(ans_elem, "tolerance").text = str(q.get("tolerance", 0.0))
+                fb_elem = ET.SubElement(ans_elem, "feedback", format="html")
+                clean_fb = strip_outer_p(q.get("feedback", ""))
+                ET.SubElement(fb_elem, "text").text = f"<![CDATA[{clean_fb}]]>" if clean_fb else ""
+
+                units_list = q.get("units", [])
+                if units_list:
+                    units_elem = ET.SubElement(q_elem, "units")
+                    for u_name, u_mult in units_list:
+                        u_elem = ET.SubElement(units_elem, "unit")
+                        ET.SubElement(u_elem, "multiplier").text = str(u_mult)
+                        ET.SubElement(u_elem, "unit_name").text = str(u_name)
+                    ET.SubElement(q_elem, "unitgradingtype").text = str(q.get("unit_grading_type", 0))
+                    ET.SubElement(q_elem, "unitpenalty").text = "0.1000000"
+                    ET.SubElement(q_elem, "showunits").text = str(q.get("show_units", 3))
+                    ET.SubElement(q_elem, "unitsleft").text = "0"
+
+            elif q["type"] == "shortanswer":
+                ET.SubElement(q_elem, "defaultgrade").text = "1.0000000"
+                ET.SubElement(q_elem, "penalty").text = str(q.get("penalty", 0.3333333))
+                ET.SubElement(q_elem, "hidden").text = "0"
+                ET.SubElement(q_elem, "usecase").text = str(q.get("usecase", 0))
+
+                for ans in q["answers"]:
+                    frac = str(ans.get("fraction", 100))
+                    ans_elem = ET.SubElement(q_elem, "answer", fraction=frac, format="moodle_auto_format")
+                    ET.SubElement(ans_elem, "text").text = str(ans["text"])
+                    fb_elem = ET.SubElement(ans_elem, "feedback", format="html")
+                    clean_fb = strip_outer_p(ans.get("feedback", ""))
+                    ET.SubElement(fb_elem, "text").text = f"<![CDATA[{clean_fb}]]>" if clean_fb else ""
+
         rough_string = ET.tostring(quiz, encoding="utf-8")
         # Deshacer escape de CDATA generado por ElementTree
         xml_str = rough_string.decode("utf-8")
         xml_str = xml_str.replace("&lt;![CDATA[", "<![CDATA[").replace("]]&gt;", "]]>")
-        
+
         # Formatear con indentación legible
         reparsed = minidom.parseString(xml_str.encode("utf-8"))
         pretty_xml = reparsed.toprettyxml(indent="  ", encoding="utf-8").decode("utf-8")
-        
+
         # Limpiar líneas en blanco extras
         clean_lines = [line for line in pretty_xml.splitlines() if line.strip()]
         return "\n".join(clean_lines) + "\n"
@@ -272,6 +467,8 @@ def validar_moodle_xml(xml_path):
     tipos_detectados = {}
     multichoice_count = 0
     correct_is_longest_count = 0
+    correct_is_shortest_count = 0
+    correct_positions = {}
     redundant_p_count = 0
     embedded_images_count = 0
 
@@ -300,8 +497,14 @@ def validar_moodle_xml(xml_path):
                 errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 2 opciones de respuesta.")
 
             fracciones = [float(a.get("fraction", 0)) for a in answers]
-            if not any(f >= 99.9 for f in fracciones):
-                errores.append(f"Pregunta #{idx} ('{q_name}'): No tiene ninguna opción correcta con fracción 100%.")
+            if not any(f >= 99.9 for f in fracciones) and sum(f for f in fracciones if f > 0) < 99.9:
+                errores.append(f"Pregunta #{idx} ('{q_name}'): Las opciones correctas no suman el 100%.")
+
+            # Verificar posición de la correcta en el XML
+            for pos_idx, f_val in enumerate(fracciones):
+                if f_val >= 99.9:
+                    letter = chr(ord('A') + pos_idx) if pos_idx < 26 else str(pos_idx)
+                    correct_positions[letter] = correct_positions.get(letter, 0) + 1
 
             # Feedback de aprendizaje activo y control de <p>
             sin_feedback = []
@@ -318,7 +521,7 @@ def validar_moodle_xml(xml_path):
             if sin_feedback:
                 advertencias.append(f"Pregunta #{idx} ('{q_name}'): {len(sin_feedback)} opción(es) sin feedback razonado.")
 
-            # Control psicométrico de longitud (prevención de length bias)
+            # Control psicométrico bidireccional de longitud (prevención de length bias)
             opts_len = []
             for a in answers:
                 txt_node = a.find("text")
@@ -331,9 +534,19 @@ def validar_moodle_xml(xml_path):
             if opts_len:
                 multichoice_count += 1
                 max_len = max(l for l, _ in opts_len)
+                min_len = min(l for l, _ in opts_len)
+                avg_len = sum(l for l, _ in opts_len) / len(opts_len)
                 correct_is_longest = any(f >= 99.9 and l == max_len for l, f in opts_len)
+                correct_is_shortest = any(f >= 99.9 and l == min_len for l, f in opts_len)
                 if correct_is_longest:
                     correct_is_longest_count += 1
+                if correct_is_shortest:
+                    correct_is_shortest_count += 1
+                # Detectar desproporción extrema dentro de la misma pregunta
+                if avg_len > 25 and (max_len > avg_len * 1.65 or min_len < avg_len * 0.45):
+                    advertencias.append(
+                        f"Pregunta #{idx} ('{q_name}'): Longitud dispar entre opciones (mín: {min_len}, máx: {max_len} caract.). Homogeneice entre ±20%."
+                    )
 
         elif q_type == "truefalse":
             answers = q.findall("answer")
@@ -345,20 +558,60 @@ def validar_moodle_xml(xml_path):
             if len(subs) < 2:
                 errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 2 pares de emparejamiento.")
 
+        elif q_type == "numerical":
+            answers = q.findall("answer")
+            if not answers:
+                errores.append(f"Pregunta #{idx} ('{q_name}'): Pregunta numérica sin etiqueta <answer>.")
+            else:
+                for a in answers:
+                    val_txt = (a.find("text").text if a.find("text") is not None else "").strip()
+                    try:
+                        float(val_txt)
+                    except ValueError:
+                        errores.append(f"Pregunta #{idx} ('{q_name}'): Valor numérico no válido '{val_txt}'.")
+
+        elif q_type == "shortanswer":
+            answers = q.findall("answer")
+            if not answers:
+                errores.append(f"Pregunta #{idx} ('{q_name}'): Pregunta de respuesta corta sin <answer>.")
+
     print(f"✓ Tipos de preguntas certificados: {tipos_detectados}")
     if embedded_images_count > 0:
         print(f"✓ Imágenes técnicas embebidas en Base64 (@@PLUGINFILE@@): {embedded_images_count}")
     if redundant_p_count == 0:
-        print(f"✓ Formato XML limpio (sin <p> ni </p> redundantes, norma https://github.com/picuino/test): Certificado.")
+        print("✓ Formato XML limpio (sin <p> ni </p> redundantes, norma https://github.com/picuino/test): Certificado.")
     else:
-        advertencias.append(f"Se detectaron {redundant_p_count} etiquetas <p>...</p> redundantes en el XML. En preguntas de test XML no se necesitan etiquetas <p> y </p> (norma https://github.com/picuino/test).")
+        advertencias.append(
+            f"Se detectaron {redundant_p_count} etiquetas <p>...</p> redundantes en el XML. "
+            "En preguntas de test XML no se necesitan etiquetas <p> y </p> (norma https://github.com/picuino/test)."
+        )
 
-    # Reporte psicométrico de sesgo de longitud
+    # Reporte psicométrico de sesgo de longitud y posición
     if multichoice_count > 0:
         pct_longest = (correct_is_longest_count / multichoice_count) * 100
-        print(f"✓ Análisis psicométrico (sesgo de longitud): {correct_is_longest_count}/{multichoice_count} ({pct_longest:.1f}%) preguntas multichoice tienen la opción correcta como la más larga.")
-        if multichoice_count >= 3 and pct_longest > 50.0:
-            advertencias.append(f"Alerta Psicométrica (Sesgo de Longitud): En el {pct_longest:.1f}% de las preguntas multichoice ({correct_is_longest_count}/{multichoice_count}), la respuesta correcta es la más larga. Equilibre la extensión de los distractores para evitar patrones predecibles.")
+        print(
+            f"✓ Análisis psicométrico (sesgo de longitud): {correct_is_longest_count}/{multichoice_count} "
+            f"({pct_longest:.1f}%) preguntas multichoice tienen la opción correcta como la más larga."
+        )
+        print(f"✓ Distribución de posición de la respuesta correcta en XML: {dict(sorted(correct_positions.items()))}")
+
+        if multichoice_count >= 4 and pct_longest > 45.0:
+            advertencias.append(
+                f"Alerta Psicométrica (Sesgo de Longitud): En el {pct_longest:.1f}% de las preguntas multichoice "
+                f"({correct_is_longest_count}/{multichoice_count}), la respuesta correcta es la más larga (máximo recomendado: 40%)."
+            )
+        elif multichoice_count >= 5 and pct_longest == 0.0:
+            advertencias.append(
+                "Alerta Psicométrica (Sesgo Inverso de Longitud): En el 0.0% de las preguntas la respuesta correcta es la más larga. "
+                "Alterne deliberadamente para que en ~20-35% de las preguntas la correcta sea la más extensa."
+            )
+
+        if multichoice_count >= 4 and correct_positions:
+            max_pos_count = max(correct_positions.values())
+            if (max_pos_count / multichoice_count) > 0.60:
+                advertencias.append(
+                    f"Alerta de Patrón de Posición en XML: Más del 60% de las preguntas tienen la respuesta correcta en la misma posición ({correct_positions})."
+                )
 
     if advertencias:
         print(f"\n⚠️  {len(advertencias)} ADVERTENCIA(S):")

@@ -71,6 +71,8 @@ HOMOLOGATED_DEPENDENCIES = [
     {"machineName": "H5P.TrueFalse", "majorVersion": 1, "minorVersion": 8},
     {"machineName": "H5P.DragText", "majorVersion": 1, "minorVersion": 10},
     {"machineName": "H5P.Text", "majorVersion": 1, "minorVersion": 1},
+    {"machineName": "H5P.Table", "majorVersion": 1, "minorVersion": 2},
+    {"machineName": "H5P.Video", "majorVersion": 1, "minorVersion": 6},
     {"machineName": "H5P.ImageHotspots", "majorVersion": 1, "minorVersion": 10},
     {"machineName": "H5P.AdvancedText", "majorVersion": 1, "minorVersion": 1},
     {"machineName": "H5P.Accordion", "majorVersion": 1, "minorVersion": 0},
@@ -608,11 +610,142 @@ def create_checklist_section(title, items, intro_text=None):
     """
     return create_text_section(html, f"Checklist: {title}")
 
+def create_video_section(video_url, title="Vídeo Técnico Demostrativo de Taller"):
+    """
+    Genera un bloque nativo H5P.Video 1.6 para enlazar vídeos demostrativos de taller
+    (YouTube o Mediateca EducaMadrid) sin incrementar el peso del archivo .h5p.
+    """
+    mime_type = "video/YouTube" if ("youtube.com" in video_url or "youtu.be" in video_url) else "video/mp4"
+    params = {
+        "visuals": {
+            "fit": True,
+            "controls": True
+        },
+        "playback": {
+            "autoplay": False,
+            "loop": False
+        },
+        "l10n": {
+            "name": "Vídeo",
+            "loading": "Cargando reproductor de vídeo...",
+            "noPlayers": "No se encontraron reproductores compatibles con este formato de vídeo.",
+            "noSources": "Falta la fuente de vídeo.",
+            "aborted": "La reproducción de vídeo ha sido interrumpida.",
+            "networkFailure": "Fallo de red al cargar el vídeo.",
+            "cannotDecode": "No se puede decodificar el medio.",
+            "formatNotSupported": "Formato de vídeo no soportado.",
+            "mediaEncrypted": "Medio cifrado.",
+            "unknownError": "Error desconocido.",
+            "invalidYtId": "ID de YouTube no válido.",
+            "unknownYtId": "No se ha podido localizar el vídeo con ese ID de YouTube.",
+            "restrictedYt": "El propietario de este vídeo no permite su reproducción incrustada."
+        },
+        "sources": [
+            {
+                "path": video_url,
+                "mime": mime_type,
+                "copyright": {"license": "U"}
+            }
+        ]
+    }
+    return create_column_wrapper("H5P.Video 1.6", params, title)
+
+def create_diagnostic_table(title, rows, intro_text=None):
+    """
+    Genera una tabla técnica normalizada de Diagnosis en Taller de Automoción:
+    Columnas: Síntoma en Vehículo | Punto de Medida / Instrumento | Valor Nominal vs. Avería | Causa Raíz y Acción Correctiva.
+    rows: Lista de tuplas/listas de 4 elementos: (sintoma, instrumento_punto, valores, accion)
+    """
+    intro_part = f"<p>{intro_text}</p>" if intro_text else ""
+    rows_html = ""
+    for r in rows:
+        if len(r) >= 4:
+            rows_html += f"""
+            <tr>
+              <td><strong>{r[0]}</strong></td>
+              <td>{r[1]}</td>
+              <td><span class="tech-formula">{r[2]}</span></td>
+              <td>{r[3]}</td>
+            </tr>
+            """
+    html = f"""
+    <div class="tech-card">
+      <div class="tech-card-badge"><i class="fa fa-stethoscope"></i> CUADRO METROLÓGICO DE DIAGNOSIS EN TALLER</div>
+      <h3>{title}</h3>
+      {intro_part}
+      <div class="table-responsive">
+        <table class="tech-table">
+          <thead>
+            <tr>
+              <th>Síntoma en el Vehículo</th>
+              <th>Punto de Medida / Instrumento</th>
+              <th>Valor Nominal vs. Avería</th>
+              <th>Causa Raíz y Acción Correctiva</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows_html}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    """
+    return create_text_section(html, f"Diagnosis: {title}")
+
+def create_component_spec_card(component_name, category_badge, specs_dict, pinout_list=None, oscilloscope_note=None):
+    """
+    Genera una Ficha Técnica Estandarizada de Sensor / Actuador de Automoción.
+    specs_dict: Diccionario o lista de tuplas (etiqueta, valor), ej. [("Resistencia a 20 °C", "800 - 1000 Ω"), ("Tensión alimentación", "5.0 V ± 0.1 V")]
+    pinout_list: Lista opcional de tuplas (pin_o_borne, funcion), ej. [("Pin 1 (Borne 15)", "+12 V tras contacto"), ("Pin 2 (Borne 31)", "Masa electrónica ECU")]
+    oscilloscope_note: Nota opcional sobre forma de onda característica en osciloscopio.
+    """
+    items = specs_dict.items() if isinstance(specs_dict, dict) else specs_dict
+    specs_html = ""
+    for label, val in items:
+        specs_html += f"""
+        <div class="tech-spec-item">
+          <span class="tech-spec-label">{label}</span>
+          <span class="tech-spec-value">{val}</span>
+        </div>
+        """
+
+    pinout_html = ""
+    if pinout_list:
+        pins = "".join(
+            f'<li class="tech-pinout-badge"><strong>{p[0]}:</strong> {p[1]}</li>'
+            for p in pinout_list
+        )
+        pinout_html = f"""
+        <h4 style="color:#0c4a6e; margin:12px 0 6px 0; font-size:1rem;">Asignación de Bornes / Pinout (DIN 72552):</h4>
+        <ul class="tech-pinout-list">{pins}</ul>
+        """
+
+    osc_html = ""
+    if oscilloscope_note:
+        osc_html = f"""
+        <div class="alert-box alert-info" style="margin:12px 0 0 0; padding:12px 16px;">
+          <strong>📈 Patrón en Osciloscopio / Polímetro:</strong> {oscilloscope_note}
+        </div>
+        """
+
+    html = f"""
+    <div class="tech-card">
+      <div class="tech-card-badge"><i class="fa fa-microchip"></i> {category_badge}</div>
+      <h3>{component_name}</h3>
+      <div class="tech-spec-grid">
+        {specs_html}
+      </div>
+      {pinout_html}
+      {osc_html}
+    </div>
+    """
+    return create_text_section(html, f"Ficha Técnica: {component_name}")
+
 # =========================================================================
 # 6. EMPAQUETADOR MAESTRO Y COMPILACIÓN DEL ARCHIVO .H5P
 # =========================================================================
 
-def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, chapters, extra_images=None):
+def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, chapters, extra_images=None, images_source_dir=None, show_cover_page=True):
     """Compila físicamente el archivo ZIP final con estructura, accesibilidad y dependencias certificadas."""
     build_dir = os.path.join(PLANTILLA_DIR, "_build_tmp")
     if os.path.exists(build_dir):
@@ -623,7 +756,7 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
     images_dir = os.path.join(content_dir, 'images')
     os.makedirs(images_dir, exist_ok=True)
 
-    # 1. Copiar librerías
+    # 1. Copiar librerías homologadas exclusivamente
     for dep in HOMOLOGATED_DEPENDENCIES:
         folder_name = f"{dep['machineName']}-{dep['majorVersion']}.{dep['minorVersion']}"
         src_path = os.path.join(LIB_DIR, folder_name)
@@ -641,7 +774,16 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
     else:
         print("⚠️ Aviso: No se encontró archivo de logotipo institucional en los directorios de búsqueda.")
 
-    # 3. Copiar imágenes adicionales si existen
+    # 3. Copiar carpeta de imágenes del curso si se especifica images_source_dir
+    if images_source_dir and os.path.isdir(images_source_dir):
+        for img_file in sorted(os.listdir(images_source_dir)):
+            if img_file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
+                src_img = os.path.join(images_source_dir, img_file)
+                dst_img = os.path.join(images_dir, img_file)
+                shutil.copy2(src_img, dst_img)
+                print(f"✓ Imagen técnica empaquetada: content/images/{img_file}")
+
+    # 4. Copiar imágenes adicionales individuales si existen
     if extra_images:
         for src, rel in extra_images:
             if os.path.exists(src):
@@ -649,9 +791,9 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
                 shutil.copy2(src, dst)
 
-    # 4. Construir content.json
+    # 5. Construir content.json
     content_data = {
-        "showCoverPage": True,
+        "showCoverPage": show_cover_page,
         "bookCover": {
             "coverTitle": book_cover_title,
             "coverDescription": book_cover_desc,
@@ -687,21 +829,21 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
     with open(os.path.join(content_dir, 'content.json'), 'w', encoding='utf-8') as f:
         json.dump(content_data, f, ensure_ascii=False, indent=2)
 
-    # 5. Construir h5p.json
+    # 6. Construir h5p.json
     h5p_manifest = {
         "title": title,
         "language": "es",
         "mainLibrary": "H5P.InteractiveBook",
         "embedTypes": ["div"],
         "license": "CC BY-SA",
-        "authors": [{"name": "Profesorado de Formación Profesional y Tecnología", "role": "Author"}],
+        "authors": [{"name": "Profesorado de Formación Profesional - Automoción", "role": "Author"}],
         "preloadedDependencies": HOMOLOGATED_DEPENDENCIES
     }
 
     with open(os.path.join(build_dir, 'h5p.json'), 'w', encoding='utf-8') as f:
         json.dump(h5p_manifest, f, ensure_ascii=False, indent=2)
 
-    # 6. Empaquetar ZIP (filtrando estrictamente según whitelist de H5P / Lumi / Moodle)
+    # 7. Empaquetar ZIP (filtrando estrictamente según whitelist de H5P / Lumi / Moodle)
     if os.path.exists(output_path):
         os.remove(output_path)
 
@@ -739,74 +881,74 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
 # EJEMPLO MAESTRO: CURSO MODELO QUE INTEGRA LOS 5 PILARES PEDAGÓGICOS
 # =========================================================================
 def generar_evaluacion_modelo_xml(output_xml_path):
-    """Genera y valida el banco de preguntas Moodle XML oficial desacoplado de la plantilla."""
+    """Genera y valida el banco de preguntas Moodle XML oficial desacoplado de la plantilla (12 preguntas, 5 tipos)."""
     try:
         from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
     except ImportError:
         sys.path.insert(0, PLANTILLA_DIR)
         from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
 
-    builder = MoodleXMLBuilder("Plantilla Oficial EducaMadrid - Evaluacion Sumativa")
+    builder = MoodleXMLBuilder("Plantilla Oficial EducaMadrid - Evaluacion Sumativa Automocion")
 
-    # P1: Desacoplamiento de H5P y XML (Opciones equilibradas ~100-130 caracteres)
+    # P1: Desacoplamiento de H5P y XML (Correcta es la más larga #1 de 6 -> 33.3% equilibrado)
     builder.add_multichoice(
         "P01_Desacoplamiento_Evaluacion",
         "¿Por qué la normativa oficial de EducaMadrid recomienda separar los contenidos interactivos H5P del cuestionario sumativo oficial en Moodle XML?",
         [
             {
-                "text": "Garantizar el registro infalible en Moodle y evitar pérdidas de sentencias xAPI o bloqueos en móviles.",
+                "text": "Garantizar el registro infalible de notas en Moodle evitando pérdidas de eventos xAPI y bloqueos táctiles en móviles.",
                 "fraction": 100,
                 "feedback": "¡Correcto! El criterio de visualización en Moodle es 100% infalible, mientras que la nota sumativa se gestiona con fiabilidad absoluta mediante los cuestionarios nativos Moodle Quiz (mod_quiz)."
             },
             {
-                "text": "Cumplir la normativa que prohíbe evaluar contenidos interactivos directamente en los módulos técnicos de Formación Profesional.",
+                "text": "Cumplir la restricción que prohíbe evaluar contenidos interactivos en ciclos de Formación Profesional.",
                 "fraction": 0,
-                "feedback": "Incorrecto. H5P dispone de MultiChoice y QuestionSet, pero las sentencias xAPI dependen de conexión estable y cookies de terceros que a menudo fallan en móviles."
+                "feedback": "Incorrecto. H5P dispone de actividades propias, pero las sentencias xAPI dependen de conexión estable y cookies que fallan con frecuencia en smartphones."
             },
             {
-                "text": "Reducir el tamaño de descarga del paquete H5P en el navegador y minimizar el consumo de ancho de banda en servidores EducaMadrid.",
+                "text": "Reducir el tamaño de descarga del paquete H5P y minimizar el consumo de datos en el Aula Virtual.",
                 "fraction": 0,
-                "feedback": "Incorrecto. Moodle integra H5P nativamente, pero el calificador xAPI no es recomendable como único filtro de superación."
+                "feedback": "Incorrecto. Aunque reduce el peso, el motivo crítico es la fiabilidad del registro de calificaciones en mdl_grade_grades."
             },
             {
-                "text": "Impedir que el alumnado repita las actividades formativas más de una vez durante el transcurso del curso académico en el aula.",
+                "text": "Impedir que el alumnado repita las actividades formativas durante el estudio autónomo de la unidad.",
                 "fraction": 0,
-                "feedback": "Incorrecto. Aunque el XML es ligero, el motivo primordial es la robustez en el registro de calificaciones (mdl_grade_grades)."
+                "feedback": "Incorrecto. Precisamente la parte formativa permite consulta libre e ilimitada."
             }
         ],
-        general_feedback="El desacoplamiento garantiza que la práctica autónoma sea formativa y la evaluación sumativa se gestione de forma nativa e infalible en Moodle."
+        general_feedback="El desacoplamiento garantiza que el estudio en H5P sea 100% fluido y la evaluación sumativa se registre de forma nativa e infalible en Moodle."
     )
 
-    # P2: Contraste WCAG 2.1 AAA (Opciones equilibradas ~80-100 caracteres)
+    # P2: Contraste WCAG 2.1 AAA (Correcta es la más larga #2 de 6 -> 33.3% equilibrado)
     builder.add_multichoice(
         "P02_Contraste_WCAG_AAA",
         "Según las directrices de accesibilidad universal WCAG 2.1 nivel AAA para entornos educativos, ¿cuál es el ratio de contraste mínimo exigido para el texto principal?",
         [
             {
-                "text": "Al menos 7:1 para garantizar lectura sin fatiga visual en cualquier soporte.",
+                "text": "Al menos 7:1 para garantizar lectura nítida sin fatiga visual en cualquier pantalla o luz de taller.",
                 "fraction": 100,
-                "feedback": "¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, lo que garantiza lectura sin fatiga visual en talleres con luz natural o dispositivos móviles."
+                "feedback": "¡Correcto! El nivel AAA exige un ratio mínimo de 7:1 para texto estándar, prohibiendo textos de color claro o pálido."
             },
             {
-                "text": "Al menos 4.5:1 exigido exclusivamente para textos estándar en nivel de conformidad intermedio AA.",
+                "text": "Al menos 4.5:1 exigido únicamente para textos secundarios en el nivel de conformidad básico AA.",
                 "fraction": 0,
-                "feedback": "Incorrecto. 4.5:1 es el umbral mínimo del nivel AA, pero el estándar técnico oficial EducaMadrid adopta el estándar superior AAA (>= 7:1)."
+                "feedback": "Incorrecto. 4.5:1 es el umbral mínimo del nivel AA, pero la plantilla adopta el estándar superior AAA (>= 7:1)."
             },
             {
-                "text": "Al menos 3:1 válido únicamente para componentes interactivos de gran escala y tipografías decorativas.",
+                "text": "Al menos 3:1 válido para cualquier tipo de texto técnico y tablas de medición en dispositivos móviles.",
                 "fraction": 0,
-                "feedback": "Incorrecto. 3:1 solo es admisible para texto de gran tamaño (>= 24px) o componentes de interfaz de usuario en nivel AA."
+                "feedback": "Incorrecto. 3:1 resulta insuficiente para texto de lectura técnica."
             },
             {
-                "text": "Cualquier valor numérico libre siempre que se mantengan los colores corporativos de la institución.",
+                "text": "Cualquier valor libre siempre que se utilicen colores corporativos suaves sobre fondos claros.",
                 "fraction": 0,
-                "feedback": "Incorrecto. El contraste debe certificarse matemáticamente mediante luminancia relativa."
+                "feedback": "Incorrecto. Los textos claros sobre fondos claros son ilegibles en proyectores y móviles."
             }
         ],
-        general_feedback="El estándar AAA previene la exclusión de alumnos con baja visión o daltonismo."
+        general_feedback="El estándar AAA (contraste > 7:1 y texto principal #0f172a > 13:1) asegura legibilidad total en proyectores de aula, móviles y talleres."
     )
 
-    # P3: Whitelist de Moodle (Distractor más largo ~61 caracteres, correcta ~54 caracteres)
+    # P3: Whitelist de Moodle (Distractor más largo que la correcta)
     builder.add_multichoice(
         "P03_Whitelist_Moodle_Seguridad",
         "¿Qué formatos de archivo están estrictamente prohibidos dentro del directorio content/ de un paquete H5P para prevenir el error 'not-in-whitelist'?",
@@ -814,57 +956,57 @@ def generar_evaluacion_modelo_xml(output_xml_path):
             {
                 "text": "Archivos vectoriales .svg y documentos locales .html.",
                 "fraction": 100,
-                "feedback": "¡Correcto! Moodle bloquea archivos SVG y HTML locales en content/ para neutralizar ataques de inyección de código malicioso (Stored XSS). Todos los diagramas deben rasterizarse a PNG o JPEG."
+                "feedback": "¡Correcto! Moodle bloquea archivos SVG y HTML locales en content/ para neutralizar ataques de inyección de código malicioso (Stored XSS). Todos los esquemas deben rasterizarse a PNG o JPEG."
             },
             {
-                "text": "Archivos de mapa de bits comprimidos en formato .png y .jpg.",
+                "text": "Archivos de mapa de bits comprimidos en formato .png y .jpg de alta resolución.",
                 "fraction": 0,
                 "feedback": "Incorrecto. PNG y JPEG son formatos plenamente admitidos y recomendados por la whitelist oficial."
             },
             {
-                "text": "Grabaciones de audio en .mp3 y tipografías web .woff2.",
+                "text": "Grabaciones de audio en .mp3 y tipografías web .woff2 incluidas en las librerías.",
                 "fraction": 0,
                 "feedback": "Incorrecto. El audio y las fuentes web forman parte de la lista blanca admitida."
             },
             {
-                "text": "Estructuras de metadatos del paquete en formato .json.",
+                "text": "Estructuras de configuración y metadatos del paquete en formato .json estándar.",
                 "fraction": 0,
                 "feedback": "Incorrecto. content.json es el núcleo semántico indispensable del paquete H5P."
             }
         ],
-        general_feedback="H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial."
+        general_feedback="H5PValidator.php rechaza cualquier paquete con extensiones fuera de la whitelist oficial tanto en content/ como en las librerías."
     )
 
-    # P4: Andamiaje pedagógico (Opciones equilibradas ~80-100 caracteres)
+    # P4: Andamiaje pedagógico (Distractor más largo que la correcta)
     builder.add_multichoice(
         "P04_Andamiaje_Cuatro_Fases",
         "¿Cuál es la secuencia didáctica progresiva en 4 fases que estructura cada unidad interactiva según el modelo de Aprendizaje Activo?",
         [
             {
-                "text": "1. Motivación activa ➔ 2. Explicación ➔ 3. Práctica guiada ➔ 4. Autocomprobación.",
+                "text": "1. Motivación activa ➔ 2. Explicación ➔ 3. Práctica guiada ➔ 4. Síntesis y evaluación.",
                 "fraction": 100,
-                "feedback": "¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa, ejercita la toma de decisiones y consolida el aprendizaje."
+                "feedback": "¡Correcto! Esta progresión pedagógica activa conocimientos previos, expone teoría concisa con fichas técnicas, ejercita protocolos de taller y deriva a la evaluación oficial."
             },
             {
-                "text": "1. Examen inicial ➔ 2. Lectura lineal teórica ➔ 3. Descanso pautado ➔ 4. Entrega de informe final.",
+                "text": "1. Examen inicial sin base previa ➔ 2. Lectura lineal teórica ➔ 3. Descanso pautado ➔ 4. Entrega de informe.",
                 "fraction": 0,
                 "feedback": "Incorrecto. El andamiaje pedagógico exige preparación y práctica antes de la evaluación."
             },
             {
-                "text": "1. Práctica de taller ➔ 2. Dudas en el foro ➔ 3. Examen sumativo ➔ 4. Repetición de la evaluación.",
+                "text": "1. Práctica directa en banco ➔ 2. Dudas en el foro ➔ 3. Examen sumativo ➔ 4. Repetición de la evaluación.",
                 "fraction": 0,
-                "feedback": "Incorrecto. La práctica sin andamiaje ni explicación previa genera frustración y abandono."
+                "feedback": "Incorrecto. La práctica sin andamiaje ni explicación previa de seguridad genera riesgos y errores en taller."
             },
             {
-                "text": "1. Visionado de vídeo ➔ 2. Descarga de manual ➔ 3. Cuestionario externo ➔ 4. Calificación final.",
+                "text": "1. Visionado de vídeo externo ➔ 2. Descarga de manual en PDF ➔ 3. Cuestionario ➔ 4. Calificación final.",
                 "fraction": 0,
                 "feedback": "Incorrecto. Este enfoque fragmentado dispersa la atención del estudiante; el modelo oficial unifica la secuencia."
             }
         ],
-        general_feedback="El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva continua."
+        general_feedback="El andamiaje en 4 fases sustituye los muros de texto pasivo por interacción cognitiva estructurada."
     )
 
-    # P5: Touch targets en dispositivos móviles (Correcta es la más corta ~62 caracteres, distractores ~74 caracteres)
+    # P5: Touch targets en dispositivos móviles (Correcta más corta que los distractores)
     builder.add_multichoice(
         "P05_Touch_Targets_Moviles",
         "Para garantizar que los contenidos sean perfectamente accesibles y utilizables en smartphones y tablets (incluso con guantes en taller), ¿qué dimensión mínima deben tener los objetivos táctiles?",
@@ -875,25 +1017,25 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "¡Correcto! 44 x 44 px es el tamaño mínimo ergonómico para interacción táctil con el pulgar o dedos enguantados."
             },
             {
-                "text": "Al menos 60 x 60 píxeles obligatorios exclusivamente en pantallas grandes.",
+                "text": "Al menos 60 x 60 píxeles obligatorios exclusivamente en monitores de escritorio.",
                 "fraction": 0,
-                "feedback": "Incorrecto. Un botón de 20x20 px provoca toques accidentales y fallos constantes en pantallas pequeñas."
+                "feedback": "Incorrecto. El requisito ergonómico táctil aplica de forma prioritaria a pantallas móviles y tablets."
             },
             {
-                "text": "Un máximo de 24 x 24 píxeles para aprovechar el espacio útil de pantalla.",
+                "text": "Un máximo de 24 x 24 píxeles para condensar más botones en pantallas pequeñas.",
                 "fraction": 0,
-                "feedback": "Incorrecto. Incumple totalmente las pautas de accesibilidad móvil."
+                "feedback": "Incorrecto. Botones tan pequeños provocan pulsaciones accidentales constantes en teléfonos móviles."
             },
             {
-                "text": "El ancho estricto del texto visible sin necesidad de márgenes de toque.",
+                "text": "El ancho estricto del texto visible sin añadir relleno ni márgenes de pulsación.",
                 "fraction": 0,
-                "feedback": "Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes del texto."
+                "feedback": "Incorrecto. Los elementos táctiles exigen áreas de pulsación mínimas independientes de la longitud del texto."
             }
         ],
-        general_feedback="Los botones, casillas de arrastre y opciones de test deben respetar siempre touch targets >= 44x44 px."
+        general_feedback="Los botones, listas de cotejo y cabeceras de acordeón deben respetar siempre touch targets >= 44x44 px."
     )
 
-    # P6: Fórmulas matemáticas (Distractores más largos ~103 caracteres, correcta ~101 caracteres)
+    # P6: Fórmulas matemáticas (Distractores ligeramente más largos)
     builder.add_multichoice(
         "P06_Formulas_HTML_Semantico",
         "¿Por qué está prohibido utilizar delimitadores LaTeX crudos ($ ... $) en los textos de H5P?",
@@ -904,19 +1046,19 @@ def generar_evaluacion_modelo_xml(output_xml_path):
                 "feedback": "¡Correcto! Se debe utilizar siempre HTML semántico y Unicode (<sub>, <sup>, .tech-formula), asegurando renderizado inmediato y accesible."
             },
             {
-                "text": "Porque el compilador de LaTeX genera incompatibilidades críticas con los sistemas operativos móviles.",
+                "text": "Porque el compilador de LaTeX genera incompatibilidades críticas con los navegadores móviles actuales.",
                 "fraction": 0,
-                "feedback": "Incorrecto. LaTeX es multiplataforma, pero requiere motores de renderizado que no residen en el sandbox de H5P."
+                "feedback": "Incorrecto. LaTeX es multiplataforma, pero requiere motores de renderizado que no residen en el iframe de H5P."
             },
             {
-                "text": "Porque la sintaxis matemática LaTeX vulnera los protocolos de seguridad de datos del servidor Moodle.",
+                "text": "Porque la sintaxis matemática LaTeX vulnera los protocolos de seguridad cortafuegos del servidor Moodle.",
                 "fraction": 0,
-                "feedback": "Incorrecto. Las fórmulas son esenciales en enseñanzas técnicas y científicas."
+                "feedback": "Incorrecto. No supone un problema de seguridad, sino de ausencia de motor MathJax dentro del iframe H5P."
             },
             {
                 "text": "Porque su procesamiento incrementa exponencialmente el peso del archivo comprimido superando la cuota.",
                 "fraction": 0,
-                "feedback": "Incorrecto. El texto plano no añade peso, el fallo es puramente visual y de renderizado."
+                "feedback": "Incorrecto. El texto plano no añade peso; el fallo es visual al mostrarse los signos de dólar crudos."
             }
         ],
         general_feedback="El estándar HTML semántico + Unicode garantiza compatibilidad universal en tablets, móviles y lectores de pantalla."
@@ -942,27 +1084,50 @@ def generar_evaluacion_modelo_xml(output_xml_path):
         general_feedback="El diseño responsive exige que el menú no obstruya la lectura inicial en pantallas reducidas."
     )
 
-    # P9: Verdadero / Falso - El error formativo
-    builder.add_truefalse(
-        "P09_TF_Error_Como_Palanca",
-        "En la modalidad de formación interactiva H5P, las autocomprobaciones deben configurarse con reintentos habilitados (enableRetry: true) y justificación pedagógica en cada opción para aprender del error.",
-        True,
-        feedback_true="¡Correcto! El Aprendizaje Activo convierte el error en una oportunidad formativa y no en un elemento punitivo.",
-        feedback_false="Incorrecto. Bloquear reintentos en actividades formativas genera frustración y contradice los pilares pedagógicos.",
-        general_feedback="La autorregulación del estudiante se fomenta con feedback inmediato y posibilidad de reintento."
+    # P9: Emparejamiento - Bornes DIN 72552 e Instrumentación
+    builder.add_matching(
+        "P09_Emparejamiento_Bornes_DIN_72552",
+        "Relaciona cada código de borne normalizado según DIN 72552 con su función eléctrica en el automóvil:",
+        [
+            ("Borne 30", "Alimentación positiva permanente directa desde el borne positivo de la batería"),
+            ("Borne 15", "Positivo conmutado tras llave de contacto o encendido activado"),
+            ("Borne 31", "Línea de retorno a masa conectada al chasis o polo negativo de batería"),
+            ("Borne 50", "Señal positiva temporal de excitación del solenoide del motor de arranque")
+        ],
+        general_feedback="El dominio de los bornes DIN 72552 (30, 15, 31, 50, 85, 86, 87) es indispensable para la lectura de esquemas eléctricos."
     )
 
-    # P10: Emparejamiento - Fases del Andamiaje
-    builder.add_matching(
-        "P10_Emparejamiento_Fases_Andamiaje",
-        "Relaciona cada una de las 4 fases de la secuencia didáctica progresiva con su componente o finalidad pedagógica:",
-        [
-            ("Fase 1: Activación y Motivación", "Reto detonante inicial y cabecera institucional (.tech-hero)"),
-            ("Fase 2: Explicación Interactiva", "Teoría concisa, fórmulas semánticas y puntos de inspección (ImageHotspots)"),
-            ("Fase 3: Práctica Guiada Activa", "Arrastre de magnitudes (DragText), retos de taller y checklists táctiles"),
-            ("Fase 4: Evaluación Formativa", "Autocomprobación con retroalimentación razonada inmediata (.tech-checkpoint)")
+    # P10: Cálculo Numérico de Taller (type="numerical")
+    builder.add_numerical(
+        "P10_Calculo_Caida_Tension_Contacto",
+        "Durante la comprobación bajo carga de una línea de alimentación por la que circulan <strong>I = 10 A</strong>, un borne sulfatado presenta una resistencia parásita de <strong>R = 0.25 Ω</strong>. Calcula la caída de tensión (ΔV = I × R) en voltios que medirá el polímetro entre los extremos del borne:",
+        answer_value=2.5,
+        tolerance=0.05,
+        feedback="¡Correcto! Aplicando la Ley de Ohm: ΔV = 10 A × 0.25 Ω = 2.5 V (valor muy superior al máximo admisible de 0.2 V, confirmando avería en el contacto).",
+        general_feedback="Por la Ley de Ohm (ΔV = I × R), 10 A × 0.25 Ω = 2.5 V. Cualquier caída superior a 0.2 V en una línea de potencia exige limpiar y reapretar el terminal.",
+        units=["V", "voltios"]
+    )
+
+    # P11: Cálculo Numérico de Frecuencia de Sensor (type="numerical")
+    builder.add_numerical(
+        "P11_Calculo_Frecuencia_Sensor_Hall",
+        "Al diagnosticar con el osciloscopio la señal cuadrada de un sensor Hall de régimen (CKP), mides un período completo de <strong>T = 0.002 s</strong> (2 ms). Calcula la frecuencia <strong>f = 1 / T</strong> de la señal en hercios (Hz):",
+        answer_value=500,
+        tolerance=1.0,
+        feedback="¡Correcto! f = 1 / 0.002 s = 500 Hz.",
+        general_feedback="La frecuencia es la inversa del período expresado en segundos: f = 1 / 0.002 s = 500 Hz.",
+        units=["Hz", "hercios"]
+    )
+
+    # P12: Respuesta Corta - Identificación directa de borne DIN (type="shortanswer")
+    builder.add_shortanswer(
+        "P12_Identificacion_Borne_Masa_DIN",
+        "Escribe únicamente el <strong>número de dos dígitos</strong> que identifica la línea de retorno a masa directa al chasis o negativo de batería según la norma alemana DIN 72552:",
+        accepted_answers=[
+            {"text": "31", "fraction": 100, "feedback": "¡Correcto! El número 31 designa universalmente la masa según DIN 72552."},
+            {"text": "Borne 31", "fraction": 100, "feedback": "¡Correcto! El Borne 31 designa universalmente la masa según DIN 72552."}
         ],
-        general_feedback="Las 4 fases articulan el aprendizaje activo desde la motivación inicial hasta la consolidación formativa."
+        general_feedback="Según la norma DIN 72552, el número 31 identifica siempre el retorno a masa (habitualmente cable marrón BR en vehículos alemanes)."
     )
 
     builder.save_xml(output_xml_path)
@@ -982,10 +1147,10 @@ if __name__ == '__main__':
           <h2>Módulo Formativo: Fundamentos Técnicos y Seguridad en Taller</h2>
           <p>Curso interactivo estructurado bajo el modelo de aprendizaje activo y diseño accesible (WCAG 2.1 AA / AAA), optimizado para tablets, smartphones y ordenadores de taller.</p>
           <div class="tech-badge-container">
-            <span class="tech-badge badge-blue">Formación Profesional FP</span>
+            <span class="tech-badge badge-blue">Formación Profesional Automoción</span>
             <span class="tech-badge badge-green">EducaMadrid Moodle Ready</span>
-            <span class="tech-badge badge-yellow">WCAG 2.1 AA Accesible</span>
-            <span class="tech-badge badge-purple">Aprendizaje Activo</span>
+            <span class="tech-badge badge-yellow">WCAG 2.1 AAA Accesible</span>
+            <span class="tech-badge badge-purple">100% Formativo + Moodle XML</span>
           </div>
         </div>
         """, "Presentación del Módulo")
@@ -1040,7 +1205,7 @@ if __name__ == '__main__':
     )
 
     # ---------------------------------------------------------------------
-    # CAPÍTULO 1: MEDIDAS ELÉCTRICAS, RELACIONES Y DIAGNOSIS
+    # CAPÍTULO 1: MEDIDAS ELÉCTRICAS, FICHAS TÉCNICAS Y DIAGNOSIS EN TALLER
     # ---------------------------------------------------------------------
     # Fase 1: Motivación y activación conceptual
     c1_fase1_intro = [
@@ -1063,7 +1228,7 @@ if __name__ == '__main__':
         """, "Recordatorio de Magnitudes")
     ]
 
-    # Fase 2: Explicación técnica interactiva con fórmulas semánticas
+    # Fase 2: Explicación técnica interactiva con fórmulas semánticas y ficha de componente
     c1_fase2_explicacion = [
         create_text_section("""
         <div class="tech-card">
@@ -1079,15 +1244,50 @@ if __name__ == '__main__':
           <div class="tech-formula-block">
             <span class="tech-formula">ΔV<sub>contacto</sub> = I<sub>servicio</sub> × R<sub>contacto</sub></span>
             <div class="tech-formula-desc">
-              Con una corriente de 10 A y 0.2 Ω de resistencia parásita en un borne: 10 A × 0.2 Ω = <strong>2.0 V de caída</strong>
+              Con una corriente de 10 A y 0.25 Ω de resistencia parásita en un borne: 10 A × 0.25 Ω = <strong>2.5 V de caída</strong>
             </div>
           </div>
         </div>
-        """, "Fundamentos de Medición y Ley de Ohm")
+        """, "Fundamentos de Medición y Ley de Ohm"),
+        create_component_spec_card(
+            component_name="Relé Electromagnético de Potencia (4/5 Patillas DIN 72552)",
+            category_badge="FICHA TÉCNICA DE ACTUADOR / CONMUTACIÓN",
+            specs_dict=[
+                ("Resistencia Bobina (85-86)", "75 Ω – 100 Ω (a 20 °C)"),
+                ("Consumo de Excitación", "120 mA – 160 mA (a 12 V)"),
+                ("Caída Máxima Contacto (30-87)", "≤ 0.15 V bajo carga nominal"),
+                ("Corriente Nominal Potencia", "20 A – 40 A según calibre")
+            ],
+            pinout_list=[
+                ("Borne 85", "Negativo de bobina (masa 31 o mando ECU)"),
+                ("Borne 86", "Positivo de excitación de bobina (+15)"),
+                ("Borne 30", "Entrada de potencia directa (+Bat protegida)"),
+                ("Borne 87", "Salida normalmente abierta (NO) al consumidor")
+            ],
+            oscilloscope_note="Al desactivar la bobina (85-86), un relé con diodo o resistencia antiparasitaria limita el pico inductivo a < 35 V."
+        )
     ]
 
-    # Fase 3: Práctica guiada activa con checklist táctil, acordeón y simulador
+    # Fase 3: Práctica guiada activa con tabla de diagnosis, checklist táctil, acordeón y simulador
     c1_fase3_practica = [
+        create_diagnostic_table(
+            title="Protocolo de Diagnosis por Caída de Tensión en Circuito de Potencia",
+            rows=[
+                (
+                    "Consumidor no actúa o funciona con debilidad",
+                    "Voltímetro en paralelo entre Borne (+) Batería y entrada positiva del consumidor (bajo carga)",
+                    "Nominal: ≤ 0.2 V | Avería: 2.5 V",
+                    "Sulfatación o contacto fogueado en relé (30-87) o portafusibles. Limpiar y reapretar."
+                ),
+                (
+                    "Calentamiento anómalo en conector de chasis",
+                    "Voltímetro en paralelo entre carcasa masa del consumidor y Borne (-) Batería (bajo carga)",
+                    "Nominal: ≤ 0.1 V | Avería: 1.4 V",
+                    "Óxido en tornillo de masa (Borne 31). Lijar terminal, aplicar grasa conductora y apretar a par."
+                )
+            ],
+            intro_text="Recuerda realizar todas las mediciones de caída de tensión con el circuito cerrado y el consumidor activado:"
+        ),
         create_checklist_section(
             title="Lista de Cotejo: Verificación Rápida de Línea de Alimentación",
             items=[
@@ -1115,7 +1315,7 @@ if __name__ == '__main__':
         create_moodle_quiz_referral(
             1,
             "Medición, Relaciones y Diagnóstico",
-            "<p>Has completado el análisis de la Ley de Ohm aplicada a caídas de tensión parásitas, verificación bajo consumo real con multímetro y protocolos de comprobación de líneas de alimentación. Para registrar tu evaluación oficial en el Libro de Calificaciones, realiza el cuestionario Moodle XML correspondiente.</p>"
+            "<p>Has completado el análisis de la Ley de Ohm aplicada a caídas de tensión parásitas, fichas técnicas de relés DIN 72552, tablas de diagnosis bajo consumo real con multímetro y protocolos de comprobación. Para registrar tu evaluación oficial en el Libro de Calificaciones, realiza el cuestionario Moodle XML correspondiente.</p>"
         )
     ]
 
@@ -1134,7 +1334,7 @@ if __name__ == '__main__':
         output_path=ejemplo_pkg,
         title="Plantilla Oficial de Curso Interactivo EducaMadrid",
         book_cover_title="Curso Interactivo Homologado EducaMadrid",
-        book_cover_desc="Plantilla técnica maestra para Formación Profesional en EducaMadrid y Moodle. Integración de los 5 pilares pedagógicos de aprendizaje activo, andamiaje, retroalimentación y accesibilidad WCAG 2.1 AA.",
+        book_cover_desc="Plantilla técnica maestra para Formación Profesional de Automoción en EducaMadrid y Moodle. Integración de los 5 pilares pedagógicos de aprendizaje activo, andamiaje, fichas técnicas, tablas de diagnosis y accesibilidad WCAG 2.1 AAA.",
         chapters=capitulos
     )
 
@@ -1161,4 +1361,5 @@ if __name__ == '__main__':
                         spec.loader.exec_module(mod)
                         mod.validate_h5p(ejemplo_pkg)
                         break
+
 

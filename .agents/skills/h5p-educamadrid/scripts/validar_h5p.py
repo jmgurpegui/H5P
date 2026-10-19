@@ -207,50 +207,36 @@ def validate_h5p(file_path):
                                                 f"Capítulo {i+1}, Elemento {j+1} (Image): El archivo multimedia '{expected_zip_path}' no existe dentro del paquete ZIP."
                                             )
 
-                                # Validar actividades formativas activas (MultiChoice y TrueFalse)
-                                if 'H5P.MultiChoice' in sub_lib:
-                                    active_activities_count += 1
-                                    q_text = sub_params.get('question', '')
-                                    check_text_for_leaks_and_latex(q_text, f"Capítulo {i+1}, Pregunta MultiChoice {j+1}", errors, warnings)
-                                    if not sub_params.get('answers'):
-                                        errors.append(f"Capítulo {i+1}, Elemento {j+1} (MultiChoice): No contiene opciones de respuesta.")
+                                # Validar desacoplamiento formativo H5P vs sumativo Moodle XML
+                                if any(eval_lib in sub_lib for eval_lib in ('H5P.MultiChoice', 'H5P.TrueFalse', 'H5P.DragText', 'H5P.QuestionSet')):
+                                    warnings.append(
+                                        f"Capítulo {i+1}, Elemento {j+1} ({sub_lib}): Se detectó actividad evaluativa o de arrastre dentro del paquete H5P. "
+                                        "Según la arquitectura oficial EducaMadrid (GEMINI.md), los cursos H5P deben ser 100% formativos y toda evaluación "
+                                        "debe desacoplarse en cuestionarios Moodle XML (mod_quiz) para evitar fallos xAPI y bloqueos táctiles en móviles."
+                                    )
 
-                                if 'H5P.TrueFalse' in sub_lib:
+                                if 'H5P.Accordion' in sub_lib or 'H5P.ImageHotspots' in sub_lib or 'H5P.Video' in sub_lib:
                                     active_activities_count += 1
-                                    q_text = sub_params.get('question', '')
-                                    check_text_for_leaks_and_latex(q_text, f"Capítulo {i+1}, Pregunta TrueFalse {j+1}", errors, warnings)
 
-                                if 'H5P.DragText' in sub_lib:
-                                    active_activities_count += 1
-                                    t_desc = sub_params.get('taskDescription', '')
-                                    check_text_for_leaks_and_latex(t_desc, f"Capítulo {i+1}, DragText {j+1}", errors, warnings)
+                                if 'H5P.AdvancedText' in sub_lib:
+                                    t_html = sub_params.get('text', '')
+                                    if any(cls in t_html for cls in ('tech-challenge', 'tech-checklist', 'sim-box', 'tech-spec-grid')):
+                                        active_activities_count += 1
 
                                 if 'H5P.ImageHotspots' in sub_lib:
-                                    active_activities_count += 1
                                     hs_alt = sub_params.get('backgroundImageAltText', '')
                                     if not hs_alt:
                                         warnings.append(f"Capítulo {i+1}, Elemento {j+1} (ImageHotspots): Falta 'backgroundImageAltText'.")
-
-                                if 'H5P.MemoryGame' in sub_lib:
-                                    active_activities_count += 1
-
-                                if 'H5P.QuestionSet' in sub_lib:
-                                    has_eval_questionset = True
-                                    active_activities_count += 1
-                                    pool = sub_params.get('poolSize')
-                                    pass_pct = sub_params.get('passPercentage')
-                                    q_count = len(sub_params.get('questions', []))
-                                    print(f"  ✓ Módulo de Evaluación xAPI detectado: QuestionSet con {q_count} preguntas (poolSize: {pool}, passPercentage: {pass_pct}%).")
 
                                 if sub_content and not sub_content.get('subContentId'):
                                     warnings.append(f"Capítulo {i+1}, Elemento {j+1}: Falta 'subContentId' en bloque '{sub_lib}'.")
 
                         if active_activities_count > 0:
-                            print(f"✓ Aprendizaje Activo: {active_activities_count} actividad(es) formativa(s) interactiva(s) detectada(s).")
+                            print(f"✓ Aprendizaje Activo (100% Formativo y Móvil): {active_activities_count} componente(s) interactivo(s)/taller detectado(s).")
 
                         if not has_eval_questionset:
-                            info_messages.append("Modalidad Didáctica: No contiene módulo interno QuestionSet (la evaluación sumativa final se gestionará mediante cuestionarios Moodle XML).")
-                        
+                            info_messages.append("Modalidad Didáctica Desacoplada: Paquete 100% formativo sin bloqueo xAPI (evaluación oficial mediante banco Moodle XML).")
+
                         print(f"✓ Total de {total_elements} bloques de contenido validados en estructura de capítulos.")
 
                 except Exception as e:
@@ -308,6 +294,14 @@ def validate_h5p(file_path):
                 )
             else:
                 print(f"✓ Clausura completa verificada: Las {len(deps)} librerías declaradas están físicamente presentes en la raíz del ZIP.")
+
+            declared_folders = {f"{d.get('machineName')}-{d.get('majorVersion')}.{d.get('minorVersion')}" for d in deps}
+            extra_libs = sorted(bundled_dirs - declared_folders)
+            if extra_libs:
+                warnings.append(
+                    f"Sobrepeso en paquete: Se encontraron {len(extra_libs)} carpetas de librerías no declaradas en preloadedDependencies ({extra_libs[:5]}...). "
+                    "Empaqueta únicamente HOMOLOGATED_DEPENDENCIES."
+                )
 
     except Exception as e:
         errors.append(f"Error abriendo paquete ZIP: {e}")

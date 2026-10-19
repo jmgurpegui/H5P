@@ -83,36 +83,39 @@ Diseña el contenido asegurando la participación constante del estudiante (cons
      * **Sin etiquetas `<p>` ni `</p>` innecesarias (Norma Picuino / Test)**: Las preguntas de test XML no necesitan `<p>` ni `</p>`. El texto del enunciado (`<questiontext>`), opciones (`<answer>`) y retroalimentaciones (`<feedback>`) deben redactarse en texto limpio y directo sin envoltorios `<p>...</p>`, preservando únicamente formato inline (`<strong>`, `<sub>`, `<sup>`, `<code>`) cuando sea técnicamente indispensable (referencia técnica: [https://github.com/picuino/test](https://github.com/picuino/test)).
 
 ### Paso 3: Reglas Técnicas, Accesibilidad Universal y Optimización Móvil
-85: Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):
-86: * **Whitelist estricta**: Cero archivos `.html` y cero `.svg` en `content/`. Diagramas rasterizados a **PNG** o **JPEG**.
-87: * **Fórmulas sin LaTeX**: Prohibido usar `$ ... $`. Usar HTML semántico y Unicode (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).
-88: * **Cero etiquetas `<style>` en HTML**: Estilos inyectados en librerías base para evitar fugas de código CSS en pantalla.
-89: * **Diseño Responsive para Móviles**:
-90:   - `behaviour.defaultTableOfContents: false` en `InteractiveBook` para evitar que el índice tape la pantalla en móviles.
-91:   - `behaviour.progressType: "textual"` para evitar desbordamientos de círculos de progreso en pantallas estrechas (≤480px).
-92:   - Tablas y fórmulas envueltas con desplazamiento horizontal táctil suave (`overflow-x: auto; -webkit-overflow-scrolling: touch;`).
-93: * **Contraste WCAG AAA**: Texto Slate 900 (`#0f172a`) sobre blanco (> 13:1), insignias y alertas con ratios > 7:1 a 9:1.
-94: * **Objetivos táctiles**: Botones y elementos interactivos con tamaño mínimo de **44 x 44 px**.
-95: * **Textos alternativos `alt`**: Toda imagen técnica exige descripción funcional obligatoria.
-96: * **Anidamiento en `H5P.Column`**: Todo elemento debe envolverse con `{"content": ..., "useSeparator": "auto"}` y contar con `subContentId` (UUIDv4) y `metadata.title`.
-97: 
-98: ---
-99: 
-100: ## 🛠️ Catálogo de Helpers en `scripts/generar_curso.py`
-101: 
-102: | Función Helper | Librería / Módulo | Utilidad en el Diseño |
-103: | :--- | :--- | :--- |
-104: | `create_header_logo()` | `H5P.Image 1.1` | Inserta cabecera institucional oficial con resolución dinámica de logo (`.bmp`, `.png`, `.jpg`). |
-105: | `create_text_section(html, titulo)` | `H5P.AdvancedText 1.1` | Bloques de texto técnico de alto contraste y fórmulas semánticas. |
-106: | `create_image_hotspots(img, puntos, titulo, alt)` | `H5P.ImageHotspots 1.10` | Enriquecimiento interactivo de imágenes con puntos de inspección táctiles. |
-107: | `create_moodle_quiz_referral(num, titulo, resumen)` | `.tech-checkpoint` | Tarjeta de síntesis de unidad y derivación oficial a evaluación en Moodle XML. |
-108: | `create_checkpoint_section(titulo, intro)` | `.tech-checkpoint` | Pausa activa visual y recordatorio conceptual de unidad. |
-109: | `create_active_challenge(titulo, escenario, pasos)` | `.tech-challenge` | Reto práctico de taller y toma de decisiones ante averías. |
-110: | `create_checklist_section(titulo, items)` | `.tech-checklist` | Lista de cotejo táctil accesible (touch targets ≥44px). |
-111: | `create_accordion(paneles, titulo)` | `H5P.Accordion 1.0` | Paneles desplegables colapsables para protocolos extensos. |
-112: | `create_simulation_box(titulo, desc, btn, url)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales. |
-113: | `create_didactic_sequence_chapter(...)` | `H5P.Column 1.16` | Ensamblado del capítulo en la secuencia progresiva de 4 fases. |
-114: | `build_h5p_package(...)` | Empaquetador | Compila físicamente el archivo `.h5p` con sus 16 librerías. |
+Cumple estrictamente los estándares técnicos y de accesibilidad (consulta [Requisitos Técnicos](./references/requisitos_tecnicos.md) y [Accesibilidad WCAG](./references/accesibilidad_wcag.md)):
+* **Whitelist estricta**: Cero archivos `.html` y cero `.svg` en `content/`. Diagramas rasterizados a **PNG** o **JPEG**.
+* **Fórmulas sin LaTeX**: Prohibido usar `$ ... $`. Usar HTML semántico y Unicode (`<sub>`, `<sup>`, `.tech-formula`, `.tech-formula-block`).
+* **Cero etiquetas `<style>` en HTML**: Estilos inyectados en librerías base para evitar fugas de código CSS en pantalla.
+* **Diseño Responsive para Móviles**:
+  - `behaviour.defaultTableOfContents: false` en `InteractiveBook` para evitar que el índice tape la pantalla en móviles.
+  - `behaviour.progressType: "textual"` para evitar desbordamientos de círculos de progreso en pantallas estrechas (≤480px).
+  - Tablas y fórmulas envueltas con desplazamiento horizontal táctil suave (`overflow-x: auto; -webkit-overflow-scrolling: touch;`).
+* **Contraste WCAG AAA**: Texto Slate 900 (`#0f172a`) sobre blanco (> 13:1), insignias y alertas con ratios > 7:1 a 9:1.
+* **Objetivos táctiles**: Botones y elementos interactivos con tamaño mínimo de **44 x 44 px**.
+* **Textos alternativos `alt`**: Toda imagen técnica exige descripción funcional obligatoria.
+* **Anidamiento en `H5P.Column`**: Todo elemento debe envolverse con `{"content": ..., "useSeparator": "auto"}` y contar con `subContentId` (UUIDv4) y `metadata.title`.
+
+---
+
+## 🛠️ Catálogo de Helpers en `scripts/generar_curso.py`
+
+| Función Helper | Librería / Módulo | Utilidad en el Diseño |
+| :--- | :--- | :--- |
+| `create_header_logo()` | `H5P.Image 1.1` | Inserta cabecera institucional oficial con resolución dinámica de logo (`.bmp`, `.png`, `.jpg`). |
+| `create_text_section(html, titulo)` | `H5P.AdvancedText 1.1` | Bloques de texto técnico de alto contraste y fórmulas semánticas. |
+| `create_component_spec_card(...)` | `.tech-spec-grid` | Ficha técnica de sensor/actuador de Automoción (valores nominales, pinout DIN 72552, osciloscopio). |
+| `create_diagnostic_table(titulo, filas)` | `.tech-table` | Tabla metrológica de diagnosis en taller (Síntoma ➔ Medición ➔ Valores ➔ Acción correctiva). |
+| `create_video_section(url, titulo)` | `H5P.Video 1.6` | Reproductor nativo de vídeos técnicos demostrativos (YouTube / Mediateca EducaMadrid). |
+| `create_image_hotspots(img, puntos, titulo, alt)` | `H5P.ImageHotspots 1.10` | Enriquecimiento interactivo de imágenes con puntos de inspección táctiles. |
+| `create_moodle_quiz_referral(num, titulo, resumen)` | `.tech-checkpoint` | Tarjeta de síntesis de unidad y derivación oficial a evaluación en Moodle XML. |
+| `create_checkpoint_section(titulo, intro)` | `.tech-checkpoint` | Pausa activa visual y recordatorio conceptual de unidad. |
+| `create_active_challenge(titulo, escenario, pasos)` | `.tech-challenge` | Reto práctico de taller y toma de decisiones ante averías. |
+| `create_checklist_section(titulo, items)` | `.tech-checklist` | Lista de cotejo táctil accesible (touch targets ≥44px). |
+| `create_accordion(paneles, titulo)` | `H5P.Accordion 1.0` | Paneles desplegables colapsables para protocolos extensos. |
+| `create_simulation_box(titulo, desc, btn, url)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales. |
+| `create_didactic_sequence_chapter(...)` | `H5P.Column 1.16` | Ensamblado del capítulo en la secuencia progresiva de 4 fases. |
+| `build_h5p_package(...)` | Empaquetador | Compila físicamente el archivo `.h5p` con sus 18 librerías homologadas. |
 
 ---
 
