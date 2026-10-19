@@ -13,6 +13,7 @@ Garantiza:
 
 import os
 import sys
+import base64
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import html
@@ -44,9 +45,9 @@ class MoodleXMLBuilder:
     def set_category(self, category_name):
         self.category_name = category_name
 
-    def add_multichoice(self, name, question_text, options, general_feedback="", single=True, shuffle=True, penalty=0.3333333):
+    def add_multichoice(self, name, question_text, options, general_feedback="", single=True, shuffle=True, penalty=0.3333333, image_path=None, image_alt="Esquema técnico"):
         """
-        Añade una pregunta de opción múltiple.
+        Añade una pregunta de opción múltiple (con soporte opcional para imagen integrada en base64).
         
         options: Lista de dicts:
             [
@@ -69,11 +70,13 @@ class MoodleXMLBuilder:
             "general_feedback": strip_outer_p(general_feedback),
             "single": single,
             "shuffle": shuffle,
-            "penalty": penalty
+            "penalty": penalty,
+            "image_path": image_path,
+            "image_alt": image_alt
         })
 
-    def add_truefalse(self, name, question_text, is_correct, feedback_true="", feedback_false="", general_feedback=""):
-        """Añade una pregunta de Verdadero / Falso."""
+    def add_truefalse(self, name, question_text, is_correct, feedback_true="", feedback_false="", general_feedback="", image_path=None, image_alt="Esquema técnico"):
+        """Añade una pregunta de Verdadero / Falso (con soporte opcional para imagen integrada en base64)."""
         self.questions.append({
             "type": "truefalse",
             "name": name,
@@ -81,12 +84,14 @@ class MoodleXMLBuilder:
             "is_correct": bool(is_correct),
             "feedback_true": strip_outer_p(feedback_true),
             "feedback_false": strip_outer_p(feedback_false),
-            "general_feedback": strip_outer_p(general_feedback)
+            "general_feedback": strip_outer_p(general_feedback),
+            "image_path": image_path,
+            "image_alt": image_alt
         })
 
-    def add_matching(self, name, question_text, pairs, general_feedback="", shuffle=True):
+    def add_matching(self, name, question_text, pairs, general_feedback="", shuffle=True, image_path=None, image_alt="Esquema técnico"):
         """
-        Añade una pregunta de emparejamiento.
+        Añade una pregunta de emparejamiento (con soporte opcional para imagen integrada en base64).
         pairs: Lista de tuplas (concepto, definicion/respuesta)
         """
         self.questions.append({
@@ -95,7 +100,9 @@ class MoodleXMLBuilder:
             "text": strip_outer_p(question_text),
             "pairs": [(strip_outer_p(c), strip_outer_p(a)) for c, a in pairs],
             "general_feedback": strip_outer_p(general_feedback),
-            "shuffle": shuffle
+            "shuffle": shuffle,
+            "image_path": image_path,
+            "image_alt": image_alt
         })
 
     def generate_xml(self):
@@ -119,9 +126,24 @@ class MoodleXMLBuilder:
 
             # Enunciado (sin <p> innecesarios según https://github.com/picuino/test)
             clean_q_text = strip_outer_p(q['text'])
+            img_path = q.get("image_path")
+            img_alt = q.get("image_alt", "Esquema técnico")
+            img_b64 = None
+            img_filename = None
+
+            if img_path and os.path.exists(img_path):
+                img_filename = os.path.basename(img_path)
+                with open(img_path, "rb") as img_f:
+                    img_b64 = base64.b64encode(img_f.read()).decode("ascii")
+                if "@@PLUGINFILE@@" not in clean_q_text:
+                    clean_q_text = f'{clean_q_text}<br><img src="@@PLUGINFILE@@/{img_filename}" alt="{html.escape(img_alt)}" width="620" />'
+
             qt_elem = ET.SubElement(q_elem, "questiontext", format="html")
             qt_text = ET.SubElement(qt_elem, "text")
             qt_text.text = f"<![CDATA[{clean_q_text}]]>"
+            if img_b64 and img_filename:
+                file_elem = ET.SubElement(qt_elem, "file", name=img_filename, path="/", encoding="base64")
+                file_elem.text = img_b64
 
             # Retroalimentación general
             clean_gf = strip_outer_p(q.get('general_feedback', ''))
@@ -251,6 +273,7 @@ def validar_moodle_xml(xml_path):
     multichoice_count = 0
     correct_is_longest_count = 0
     redundant_p_count = 0
+    embedded_images_count = 0
 
     for idx, q in enumerate(eval_questions, 1):
         q_type = q.get("type")
@@ -258,7 +281,10 @@ def validar_moodle_xml(xml_path):
         name = q.find("name/text")
         q_name = name.text if name is not None else f"Pregunta {idx}"
 
-        # Enunciado
+        # Enunciado e imágenes embebidas
+        q_files = q.findall("questiontext/file")
+        if q_files:
+            embedded_images_count += len(q_files)
         q_text = q.find("questiontext/text")
         if q_text is None or not (q_text.text or "").strip():
             errores.append(f"Pregunta #{idx} ('{q_name}'): Enunciado vacío.")
@@ -320,6 +346,8 @@ def validar_moodle_xml(xml_path):
                 errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 2 pares de emparejamiento.")
 
     print(f"✓ Tipos de preguntas certificados: {tipos_detectados}")
+    if embedded_images_count > 0:
+        print(f"✓ Imágenes técnicas embebidas en Base64 (@@PLUGINFILE@@): {embedded_images_count}")
     if redundant_p_count == 0:
         print(f"✓ Formato XML limpio (sin <p> ni </p> redundantes, norma https://github.com/picuino/test): Certificado.")
     else:

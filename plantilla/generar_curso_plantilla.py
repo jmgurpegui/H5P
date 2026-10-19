@@ -701,15 +701,34 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
     with open(os.path.join(build_dir, 'h5p.json'), 'w', encoding='utf-8') as f:
         json.dump(h5p_manifest, f, ensure_ascii=False, indent=2)
 
-    # 6. Empaquetar ZIP
+    # 6. Empaquetar ZIP (filtrando estrictamente según whitelist de H5P / Lumi / Moodle)
     if os.path.exists(output_path):
         os.remove(output_path)
 
+    allowed_h5p_ext = {
+        'json', 'png', 'jpg', 'jpeg', 'gif', 'bmp', 'tif', 'tiff', 'svg',
+        'eot', 'ttf', 'woff', 'woff2', 'otf', 'webm', 'mp4', 'ogg', 'mp3',
+        'm4a', 'wav', 'txt', 'pdf', 'rtf', 'doc', 'docx', 'xls', 'xlsx',
+        'ppt', 'pptx', 'odt', 'ods', 'odp', 'xml', 'csv', 'diff', 'patch',
+        'swf', 'md', 'textile', 'vtt', 'webvtt', 'gltf', 'glb', 'js', 'css'
+    }
+    excluded_dev_files = {
+        'LICENSE', 'crowdin.yml', 'package.json', 'package-lock.json',
+        'webpack.config.js', 'webpack.dev.config.js', 'karma.conf.js'
+    }
+
     with zipfile.ZipFile(output_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
         for root, _, files in os.walk(build_dir):
-            for file in files:
+            for file in sorted(files):
+                if file.startswith('.') or file in excluded_dev_files:
+                    continue
+                ext = file.rsplit('.', 1)[-1].lower() if '.' in file else ''
+                if ext not in allowed_h5p_ext:
+                    continue
                 abs_path = os.path.join(root, file)
-                rel_path = os.path.relpath(abs_path, build_dir)
+                rel_path = os.path.relpath(abs_path, build_dir).replace('\\', '/')
+                if rel_path.startswith('H5P.InteractiveBook-1.7/src/'):
+                    continue
                 zipf.write(abs_path, rel_path)
 
     shutil.rmtree(build_dir)

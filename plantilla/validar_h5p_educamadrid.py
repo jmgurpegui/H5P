@@ -191,7 +191,7 @@ def validate_h5p(file_path):
                                         check_text_for_leaks_and_latex(p_text, f"Capítulo {i+1}, Acordeón panel {p_idx+1} ('{p.get('title')}')", errors, warnings)
 
                                 # Validar imágenes por accesibilidad (alt text) y existencia en ZIP
-                                if 'H5P.Image' in sub_lib:
+                                if sub_lib.startswith('H5P.Image '):
                                     alt_val = sub_params.get('alt', '')
                                     if not alt_val or alt_val.strip() == '':
                                         warnings.append(
@@ -256,7 +256,7 @@ def validate_h5p(file_path):
                 except Exception as e:
                     errors.append(f"Error parseando content/content.json: {e}")
 
-            # 3. Comprobar Whitelist en content/
+            # 3. Comprobar Whitelist en content/ y en librerías empaquetadas
             content_files = [f for f in namelist if f.startswith('content/') and not f.endswith('/') and f != 'content/content.json']
             print(f"✓ Total de recursos multimedia en content/: {len(content_files)}")
 
@@ -265,7 +265,7 @@ def validate_h5p(file_path):
                 if ext not in MOODLE_WHITELIST:
                     errors.append(
                         f"FATAL WHITELIST: '{cf}' tiene extensión '.{ext}' no permitida en EducaMadrid. "
-                        f"Causará el error fatal 'not-in-whitelist' en Moodle."
+                        f"Causará el error fatal 'not-in-whitelist' en Moodle/Lumi."
                     )
                 if ext == 'html':
                     errors.append(f"FATAL: Archivo HTML en content/ '{cf}'. EducaMadrid prohíbe HTML local en content/.")
@@ -276,6 +276,17 @@ def validate_h5p(file_path):
                         f"Aviso de optimización: '{cf}' utiliza formato BMP. Aunque está permitido en la whitelist de Moodle, "
                         "los archivos BMP no disponen de canal alfa transparente y pueden incrementar el peso. "
                         "Se recomienda PNG (.png) para logotipos institucionales e iconografía."
+                    )
+
+            lib_whitelist = MOODLE_WHITELIST | {'js', 'css', 'svg', 'xml'}
+            lib_files = [f for f in namelist if not f.startswith('content/') and not f.endswith('/') and f != 'h5p.json']
+            for lf in lib_files:
+                bn = os.path.basename(lf)
+                ext = bn.rsplit('.', 1)[-1].lower() if '.' in bn else ''
+                if ext not in lib_whitelist or bn.startswith('.'):
+                    errors.append(
+                        f"FATAL WHITELIST LIBRERÍA: '{lf}' no está permitido en paquetes H5P "
+                        f"(provoca 'package-validation-failed:not-in-whitelist' en Lumi y Moodle)."
                     )
 
             # 4. Comprobar Clausura de Dependencias

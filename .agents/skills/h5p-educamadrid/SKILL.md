@@ -125,10 +125,11 @@ python3 .agents/skills/h5p-educamadrid/scripts/validar_h5p.py <paquete.h5p>
 ```
 
 El script certifica:
-1. Whitelist estricta en `content/` (cero `.html`, cero `.svg`).
-2. Clausura física completa de las 16 librerías homologadas en el ZIP.
+1. Whitelist estricta en `content/` (cero `.html`, cero `.svg`) y en todas las carpetas de librerías empaquetadas (cero `.scss`, `.yml`, `LICENSE` sin extensión o dotfiles que provoquen `package-validation-failed:not-in-whitelist` en Lumi y Moodle).
+2. Clausura física completa de las librerías homologadas en el ZIP.
 3. Anidamiento reglamentario en `H5P.Column 1.16`.
 4. Metadatos obligatorios UUIDv4 y `metadata.title`.
 5. Ausencia de fugas de etiquetas `<style>` y delimitadores LaTeX crudos `$`.
 6. Detección y contabilización de actividades de Aprendizaje Activo.
 7. Cumplimiento de accesibilidad básica (`alt` no vacíos en imágenes).
+

@@ -152,7 +152,7 @@ def validate_h5p(file_path):
                 except Exception as e:
                     errors.append(f"Error parseando content/content.json: {e}")
 
-            # 3. Comprobar Whitelist en content/
+            # 3. Comprobar Whitelist en content/ y en librerías empaquetadas
             content_files = [f for f in namelist if f.startswith('content/') and not f.endswith('/') and f != 'content/content.json']
             print(f"✓ Total de recursos multimedia en content/: {len(content_files)}")
 
@@ -161,12 +161,23 @@ def validate_h5p(file_path):
                 if ext not in MOODLE_WHITELIST:
                     errors.append(
                         f"FATAL WHITELIST: '{cf}' tiene extensión '.{ext}' no permitida en EducaMadrid. "
-                        f"Causará el error fatal 'not-in-whitelist' en Moodle."
+                        f"Causará el error fatal 'not-in-whitelist' en Moodle/Lumi."
                     )
                 if ext == 'html':
                     errors.append(f"FATAL: Archivo HTML en content/ '{cf}'. EducaMadrid prohíbe HTML local en content/.")
                 if ext == 'svg':
                     errors.append(f"FATAL: Archivo SVG en content/ '{cf}'. Debe rasterizarse a PNG.")
+
+            lib_whitelist = MOODLE_WHITELIST | {'js', 'css', 'svg', 'xml'}
+            lib_files = [f for f in namelist if not f.startswith('content/') and not f.endswith('/') and f != 'h5p.json']
+            for lf in lib_files:
+                bn = os.path.basename(lf)
+                ext = bn.rsplit('.', 1)[-1].lower() if '.' in bn else ''
+                if ext not in lib_whitelist or bn.startswith('.'):
+                    errors.append(
+                        f"FATAL WHITELIST LIBRERÍA: '{lf}' no está permitido en paquetes H5P "
+                        f"(provoca 'package-validation-failed:not-in-whitelist' en Lumi y Moodle)."
+                    )
 
             # 4. Comprobar Clausura de Dependencias
             deps = h5p_meta.get('preloadedDependencies', [])

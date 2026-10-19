@@ -32,3 +32,8 @@
    - Mantener objetivos táctiles (*touch targets*) de al menos 44 x 44 px (WCAG 2.5.5) en listas de cotejo táctiles y botones de navegación.
    - Prohibido el uso de etiquetas `<style>` dentro de contenidos de texto (evita *CSS leakage*); todos los estilos responsive se inyectan en las hojas de estilo de las librerías base (`h5p-interactive-book.css` y `h5p-column.css`).
 
+3. **Whitelist Estricta en Librerías H5P (Compatibilidad Lumi Desktop y Moodle)**:
+   - Los paquetes `.h5p` no deben incluir jamás archivos de desarrollo listados en `.h5pignore` ni archivos sin extensión o fuera de la *whitelist* de H5P dentro de las carpetas de librerías (ej. `crowdin.yml`, `LICENSE` sin extensión, archivos fuente `.scss` en `src/`, `package.json`, `package-lock.json`, `webpack.config.js` o dotfiles como `.babelrc`, `.eslintrc.json`, `.gitignore`, `.h5pignore`, `.sass-lint.yml`, `.en.json`).
+   - El empaquetador y el validador filtran y verifican siempre las extensiones permitidas tanto en `content/` como en todas las carpetas de librerías para evitar el error `package-validation-failed:not-in-whitelist` al abrir en Lumi o Moodle.
+
+
