@@ -43,3 +43,24 @@
 3. **Whitelist Estricta en Librerías H5P (Compatibilidad Lumi Desktop y Moodle)**:
    - Los paquetes `.h5p` no deben incluir jamás archivos de desarrollo listados en `.h5pignore` ni archivos sin extensión o fuera de la *whitelist* de H5P dentro de las carpetas de librerías.
    - Todo curso debe empaquetarse invocando `build_h5p_package()` de `plantilla/generar_curso_plantilla.py` y certificarse con `validar_h5p_educamadrid.py`.
+
+## 4. Arquitectura de Cursos: Contenido en YAML y Lógica en Python
+
+1. **Separación de Responsabilidades**:
+   - El contenido pedagógico (secuencia en 4 fases, fichas técnicas, cuadros de diagnosis, listas de verificación) y el banco de preguntas se redactan en **`contenido_curso.yaml`** (o `plantilla/contenido_modelo.yaml`).
+   - La lógica de empaquetado, dependencias de librerías, generación de `subContentId` con `uuid.uuid4()`, rotación y control de sesgo psicométrico corre en **Python** (`yaml_course_builder.py`).
+2. **Metadatos y Licenciamiento Homologado**:
+   - Autoría obligatoria: `"FP Madrid profesor JM Gurpegui"`.
+   - Licencia: `"CC BY-NC-SA"`, versión `"4.0"`, idioma `"es"`.
+3. **Pipeline de Imágenes con Pillow**:
+   - Toda imagen ubicada en `images/` se optimiza automáticamente: ancho máximo de 1280 px, compresión JPEG a calidad 82 (o PNG optimizado), y sanitización de nombres de archivo (sin tildes, ñ ni caracteres especiales).
+
+## 5. Compilación de Simuladores Interactivos HTML (Whitelist Safe)
+
+1. **Incrustación Segura sin Error 'not-in-whitelist'**:
+   - Para integrar simuladores HTML (osciloscopios Rigol, multímetros Fluke, bancos de diagnosis) en EducaMadrid, utiliza:
+     ```bash
+     python3 build.py simuladores <carpeta_o_archivo.html>
+     ```
+   - El compilador `h5p_builder/compilar_simulador.py` incrusta el código HTML en `content/content.json` y `iframe-embed.js` lo ejecuta vía Blob URL / `srcdoc` local.
+   - Prohibido dejar archivos `.html` sueltos dentro de la carpeta `content/` del ZIP (evita el bloqueo estricto de Moodle al importar).

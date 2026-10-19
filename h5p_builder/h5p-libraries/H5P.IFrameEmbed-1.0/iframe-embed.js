@@ -22,33 +22,39 @@ H5P.IFrameEmbed = function (options, contentId) {
     // it to '$wrapper'.
 
     var iFrameSource = '';
+    var iframeAttrs = {
+      scrolling: 'auto',
+      frameBorder: 0,
+      'class': 'h5p-iframe-content h5p-iframe-wrapper',
+      allow: 'autoplay; fullscreen',
+      css: {
+        width: options.width,
+        height: options.height,
+        display: 'block'
+      }
+    };
 
-    if (options.source !== undefined) {
+    if (options.htmlContent) {
+      try {
+        var blob = new Blob([options.htmlContent], { type: 'text/html;charset=utf-8' });
+        iframeAttrs.src = URL.createObjectURL(blob);
+      } catch (e) {
+        iframeAttrs.srcdoc = options.htmlContent;
+      }
+    } else if (options.source !== undefined && options.source.trim() !== '') {
       if (options.source.trim().toLowerCase().substring(0, 4) === 'http') {
         iFrameSource = options.source;
       }
       else {
         iFrameSource = H5P.getContentPath(contentId) + '/' + options.source;
       }
+      // Remove HTML encoding from source
+      iFrameSource = new DOMParser().parseFromString(iFrameSource, 'text/html').documentElement.textContent;
+      // Take care of special characters
+      iframeAttrs.src = encodeURI(iFrameSource);
     }
 
-    // Remove HTML encoding from source
-    iFrameSource = new DOMParser().parseFromString(iFrameSource, 'text/html').documentElement.textContent;
-
-    // Take care of special characters
-    iFrameSource = encodeURI(iFrameSource);
-
-    $iframe = $('<iframe/>', {
-      src: iFrameSource,
-      scrolling: 'no',
-      frameBorder: 0,
-      'class': 'h5p-iframe-content h5p-iframe-wrapper',
-      css: {
-        width: options.width,
-        height: options.height,
-        display: 'block'
-      }
-    });
+    $iframe = $('<iframe/>', iframeAttrs);
 
     $wrapper.html('');
     $wrapper.append($iframe);

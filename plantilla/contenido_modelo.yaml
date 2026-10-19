@@ -1,0 +1,298 @@
+# =============================================================================
+# CURSO MODELO FP AUTOMOCIÓN - COMUNIDAD DE MADRID (EDUCAMADRID)
+# Plantilla Maestra en Formato YAML (Contenido Desacoplado de la Lógica)
+# Autoría: FP Madrid profesor JM Gurpegui | Licencia: CC BY-NC-SA 4.0
+# =============================================================================
+
+meta:
+  titulo: "Curso Modelo de Circuitos Eléctricos y Metrología"
+  subtitulo: "Fundamentos Metrológicos y Diagnosis en Vehículos"
+  descripcion: "Plantilla técnica oficial para Formación Profesional de Automoción en EducaMadrid. Integración de los 5 pilares pedagógicos de aprendizaje activo, andamiaje en 4 fases, fichas de componentes, tablas de diagnosis metrológica y evaluación desacoplada Moodle XML."
+  autor: "FP Madrid profesor JM Gurpegui"
+  licencia: "CC BY-NC-SA"
+  version_licencia: "4.0"
+  idioma: "es"
+
+# =============================================================================
+# CAPÍTULOS H5P (INTERACTIVE BOOK - MODALIDAD 100% FORMATIVA)
+# Cada capítulo sigue la secuencia didáctica de 4 fases para aprendizaje activo:
+#   - fase1_intro: Activación de conocimientos previos y contexto
+#   - fase2_explicacion: Fichas técnicas de componentes, esquemas y conceptos
+#   - fase3_practica: Tablas de diagnosis, retos guiados y listas de comprobación
+#   - fase4_evaluacion: Derivación formativa al cuestionario oficial en Moodle
+# =============================================================================
+capitulos:
+  - titulo: "Unidad 0: Seguridad Metrológica y Multímetro de Automoción"
+    fase1_intro:
+      - tipo: "hero"
+        titulo: "Unidad 0: Seguridad Metrológica y Protección de ECUs"
+        subtitulo: "Criterios de selección de instrumentación, categorías CAT III y prevención de sobrecargas en taller."
+        badges:
+          - "FP Automoción"
+          - "EducaMadrid H5P"
+          - "WCAG 2.1 AAA"
+
+      - tipo: "texto"
+        titulo: "Marco Metodológico de la Unidad"
+        html: |
+          <p>La intervención en vehículos modernos con múltiples unidades electrónicas de control (ECU) exige instrumentación con <strong>impedancia mínima de 10 MΩ</strong> y categorías de seguridad homologadas (CAT III 600V/1000V). El empleo de lámparas de pruebas tradicionales o equipos de baja impedancia destruye los transistores de conmutación interna de las ECUs.</p>
+
+    fase2_explicacion:
+      - tipo: "ficha_tecnica"
+        nombre_componente: "Multímetro Digital Automotriz CAT III 1000V"
+        categoria: "INSTRUMENTACIÓN METROLÓGICA DE TALLER"
+        especificaciones:
+          - parametro: "Impedancia interna"
+            valor: "10 MΩ en CC (protección de etapas de entrada de ECUs)"
+          - parametro: "Categoría de seguridad"
+            valor: "CAT III 1000V / CAT IV 600V con fusibles cerámicos ultrarrápidos"
+          - parametro: "Funciones automotrices"
+            valor: "Duty Cycle (0.5% - 99.9%), Frecuencia hasta 200 kHz, Medición de RPM"
+          - parametro: "Resolución mínima en CC"
+            valor: "0.1 mV (imprescindible para caídas de tensión parásitas)"
+        bornes:
+          - borne: "Borne V/Ω/RPM"
+            descripcion: "Entrada positiva para tensión, resistencia, continuidad y tacómetro."
+          - borne: "Borne COM"
+            descripcion: "Retorno de referencia común a masa o borne negativo de batería."
+          - borne: "Borne 10A"
+            descripcion: "Entrada en serie para amperímetro (fusible cerámico de 11A / 1000V)."
+        nota_osciloscopio: "Para transitorios rápidos con tiempos de conmutación inferiores a 10 ms (como la patada inductiva de inyectores piezoeléctricos o la trama del bus CAN), el multímetro solo muestra valores medios cuadráticos; se requiere osciloscopio digital con ancho de banda ≥ 20 MHz."
+
+    fase3_practica:
+      - tipo: "tabla_diagnosis"
+        titulo: "Cuadro de Diagnosis y Comprobación del Equipo Metrológico"
+        filas:
+          - sintoma: "Lectura de 0.00 A fijos en circuito con consumo comprobado"
+            metodo_medicion: "Prueba de continuidad entre borne COM y borne 10A con un segundo polímetro en reposo"
+            valores_referencia: "Resistencia < 0.2 Ω | Si se observa resistencia infinita (OL / ∞): circuito abierto"
+            accion_correctiva: "Sustituir el fusible cerámico original de acción rápida de 11A/1000V. Prohibido puentear con hilo de cobre."
+          - sintoma: "Lectura errática o flotante al medir caída de tensión en masa"
+            metodo_medicion: "Inspección de las puntas de prueba y ajuste a cero (modo Relativo/REL)"
+            valores_referencia: "Resistencia de cables y bananas < 0.05 Ω"
+            accion_correctiva: "Limpiar terminales tipo banana y utilizar agujas de back-probing con aislamiento en la punta."
+
+      - tipo: "checklist"
+        titulo: "Protocolo de Seguridad Metrológica Previa a la Medición"
+        items:
+          - "Comprobar que las sondas de prueba no presentan cortes ni aislamientos cuarteados."
+          - "Verificar que el borne selector está insertado en V/Ω y NUNCA en 10A al medir tensión."
+          - "Seleccionar el rango de tensión continua (DC V) y activar la función de registro de picos (Min/Max)."
+          - "Conectar la pinza de cocodrilo de masa firmemente en chasis sin restos de pintura o sulfato."
+
+    fase4_evaluacion:
+      - tipo: "derivacion_moodle"
+        numero_tema: 0
+        titulo_tema: "Seguridad Metrológica y Multímetro de Automoción"
+        descripcion: "Has completado la revisión de fundamentos de seguridad metrológica e instrumentación. Para registrar tu evaluación oficial en el Libro de Calificaciones de EducaMadrid, realiza el cuestionario correspondiente en Moodle."
+
+  - titulo: "Unidad 1: Ley de Ohm y Caídas de Tensión en Taller"
+    fase1_intro:
+      - tipo: "hero"
+        titulo: "Unidad 1: Diagnosis por Caída de Tensión Bajo Carga"
+        subtitulo: "Detección de resistencias parásitas en líneas de potencia y masa sin desmontaje destructivo."
+        badges:
+          - "FP Automoción"
+          - "Metrología Práctica"
+          - "Norma DIN 72552"
+
+      - tipo: "reto"
+        titulo: "Reto Técnico de Taller: Lámpara Atenuada con Tensión de Batería Correcta"
+        problema: "Un faro de carretera con lámpara halógena H7 (55 W) luce con una intensidad luminosa visiblemente inferior a la del lado opuesto. La batería entrega 12.6 V en reposo y 14.2 V con motor en marcha. El técnico novato mide 12.5 V en el conector con la lámpara desenchufada y concluye erróneamente que la instalación está perfecta."
+        pasos:
+          - "Explicar por qué la medición en circuito abierto oculta la resistencia parásita."
+          - "Conectar la lámpara para que circule la intensidad nominal de trabajo (~4.5 A)."
+          - "Medir la caída de tensión en el tramo positivo (desde borne 30 al borne positivo de la lámpara)."
+          - "Medir la caída de tensión en el tramo de masa (desde el casquillo de la lámpara al borne 31 de chasis)."
+        consejo: "Recuerda que según la Ley de Ohm (ΔV = I × R), si no circula intensidad (I = 0), la caída de tensión es cero aunque exista una resistencia de contacto de varios ohmios."
+
+    fase2_explicacion:
+      - tipo: "ficha_tecnica"
+        nombre_componente: "Relé Electromecánico Estándar (Norma DIN 72552)"
+        categoria: "ACTUADOR DE CONMUTACIÓN DE POTENCIA"
+        especificaciones:
+          - parametro: "Tensión nominal de bobina"
+            valor: "12 V CC (tensión de excitación mínima: 8.5 V)"
+          - parametro: "Resistencia de bobina (85 - 86)"
+            valor: "70 Ω a 90 Ω a 20 °C (consumo aproximado: 150 mA)"
+          - parametro: "Capacidad de corriente del contacto (30 - 87)"
+            valor: "30 A continuo / 40 A pico inductivo"
+          - parametro: "Caída máxima admisible en contactos cerrados"
+            valor: "≤ 0.15 V bajo corriente máxima de carga"
+        bornes:
+          - borne: "Borne 30"
+            descripcion: "Alimentación positiva permanente directa desde batería a través de fusible."
+          - borne: "Borne 87"
+            descripcion: "Salida de potencia normalmente abierta hacia el consumidor eléctrico."
+          - borne: "Borne 85"
+            descripcion: "Extremo negativo de la bobina de excitación (controlado por ECU o interruptor)."
+          - borne: "Borne 86"
+            descripcion: "Extremo positivo de la bobina de excitación (alimentación bajo contacto 15)."
+        nota_osciloscopio: "Al desactivar la bobina (85-86), el campo magnético colapsa generando una fuerza contraelectromotriz inversa de hasta -150 V. Se debe incorporar diodo de supresión o resistencia en paralelo para evitar la perforación de la ECU."
+
+    fase3_practica:
+      - tipo: "tabla_diagnosis"
+        titulo: "Cuadro de Diagnosis de Caídas de Tensión en Circuitos de Automoción"
+        filas:
+          - sintoma: "Caída de tensión en línea positiva de consumidor > 0.3 V bajo carga"
+            metodo_medicion: "Voltímetro en CC entre borne positivo de batería y pin de entrada al consumidor con el sistema activado"
+            valores_referencia: "Nominal: ≤ 0.20 V en línea positiva total"
+            accion_correctiva: "Inspeccionar terminales sulfatados, contactos fogueados en el relé o empalmes corroídos."
+          - sintoma: "Caída de tensión en línea de retorno a masa > 0.1 V"
+            metodo_medicion: "Voltímetro en CC entre el casquillo metálico del consumidor y el borne negativo de batería"
+            valores_referencia: "Nominal: ≤ 0.10 V (masa de señal de sensor ≤ 0.05 V)"
+            accion_correctiva: "Lijar punto de masa en carrocería, sustituir tornillo oxidado y aplicar grasa conductora."
+
+      - tipo: "checklist"
+        titulo: "Procedimiento de Medición de Caídas de Tensión en Taller"
+        items:
+          - "Asegurar que el consumidor eléctrico bajo prueba se encuentra en funcionamiento y bajo carga nominal."
+          - "Seleccionar el modo milivoltios (mV DC) o voltios (V DC) en el multímetro digital."
+          - "Pinchado en paralelo con agujas de dorso sin dañar el sello de goma estanco del conector."
+          - "Comparar el valor medido con las tolerancias máximas de la norma (0.2 V en positivo, 0.1 V en masa)."
+
+    fase4_evaluacion:
+      - tipo: "derivacion_moodle"
+        numero_tema: 1
+        titulo_tema: "Ley de Ohm y Caídas de Tensión en Taller"
+        descripcion: "Has finalizado el análisis metrológico de caídas de tensión y relés DIN 72552. Realiza el cuestionario oficial Moodle XML para consolidar tu aprendizaje formativo."
+
+# =============================================================================
+# EVALUACIÓN OFICIAL MOODLE XML (MOD_QUIZ SUMATIVO DESACOPLADO)
+# Diseñado siguiendo estrictamente:
+#   1. Cero etiquetas <p> en preguntas y respuestas (Norma Picuino / Test).
+#   2. Control bidireccional del sesgo de longitud (15% a 40% de preguntas con
+#      respuesta correcta como la más larga).
+#   3. Rotación y barajado equitativo de letras (A, B, C, D).
+#   4. Tipología rica: multichoice, numerical, shortanswer, matching, truefalse.
+# =============================================================================
+evaluacion_moodle:
+  categoria: "FP Automoción - Evaluacion Oficial de Circuitos y Metrologia"
+  preguntas:
+    - tipo: "multichoice"
+      nombre: "P01_Impedancia_Polimetro_Automocion"
+      enunciado: "¿Por qué un multímetro digital para diagnosis en automoción debe tener una impedancia de entrada mínima de 10 MΩ al medir circuitos de sensores?"
+      opciones:
+        - texto: "Para no desviar corriente apreciable del circuito del sensor y evitar alterar la lectura o deteriorar la electrónica interna de la ECU."
+          correcta: true
+          feedback: "¡Correcto! Una impedancia de 10 MΩ minimiza el consumo del aparato y garantiza que no se perturbe la tensión de referencia ni se dañe la ECU."
+        - texto: "Para evitar que el fusible térmico interno de 10 A se recaliente al realizar comprobaciones de continuidad con el contacto desconectado."
+          correcta: false
+          feedback: "Incorrecto. La medición de tensión se realiza por un circuito de alta resistencia totalmente independiente del fusible de 10 A."
+        - texto: "Para estabilizar las fluctuaciones parásitas de alta frecuencia provocadas por el puente rectificador de diodos del alternador."
+          correcta: false
+          feedback: "Incorrecto. La atenuación de ruidos electromagnéticos depende de los filtros pasabajos internos y no de la impedancia estática."
+        - texto: "Para asegurar que la sonda suministre una tensión de polarización constante al componente electrónico durante la medición en vivo."
+          correcta: false
+          feedback: "Incorrecto. En medición de tensión el voltímetro es un receptor pasivo; no inyecta tensión en el circuito bajo prueba."
+      feedback_general: "Los multímetros automotrices homologados deben poseer al menos 10 MΩ de impedancia para no cargar el circuito bajo ensayo."
+
+    - tipo: "multichoice"
+      nombre: "P02_Error_Circuito_Abierto"
+      enunciado: "¿Cuál es el error cometido al diagnosticar la alimentación de un consumidor desconectando su clavija y midiendo 12.6 V con el voltímetro?"
+      opciones:
+        - texto: "Al desconectar la clavija la corriente se anula (I = 0) y, según la Ley de Ohm, la caída de tensión en una resistencia parásita es cero (ΔV = 0)."
+          correcta: true
+          feedback: "¡Correcto! Si no circula corriente, cualquier resistencia de contacto parásita no produce caída de tensión y el voltímetro lee falsamente la tensión en reposo."
+        - texto: "El multímetro digital entra en modo de autoprotección térmica al registrar una tensión continua superior a los 12.0 V nominales de batería."
+          correcta: false
+          feedback: "Incorrecto. Un polímetro automotriz soporta hasta 600 V o 1000 V sin daño alguno."
+        - texto: "La centralita de carrocería detecta una desconexión y commuta de inmediato a modo de emergencia suministrando una tensión pulsante fija."
+          correcta: false
+          feedback: "Incorrecto. Aunque la centralita registre un código DTC, la tensión de línea abierta responde a las leyes eléctricas fundamentales."
+        - texto: "Se destruye el fusible de protección de la línea debido al pico de sobretensión inductiva que produce la apertura súbita del conector."
+          correcta: false
+          feedback: "Incorrecto. Desconectar una clavija sin carga no produce sobrecorrientes en el fusible."
+      feedback_general: "Las mediciones de tensión para detectar bornes sulfatados o cables estrangulados solo son válidas cuando el circuito opera bajo carga nominal."
+
+    - tipo: "multichoice"
+      nombre: "P03_Caida_Tension_Maxima_Masa"
+      enunciado: "¿Cuál es el valor máximo admisible para la caída de tensión en la línea de masa (Borne 31) de un consumidor de potencia medido bajo carga nominal?"
+      opciones:
+        - texto: "0.1 V entre el terminal de masa del consumidor y el borne negativo de la batería."
+          correcta: true
+          feedback: "¡Correcto! En líneas de masa de potencia, cualquier valor superior a 0.1 V indica corrosión, fijación floja o cable trenzado dañado."
+        - texto: "0.8 V siempre que la tensión de carga del alternador se mantenga por encima de 14 V."
+          correcta: false
+          feedback: "Incorrecto. Una caída de 0.8 V en masa provocaría mal funcionamiento en actuadores y errores de masa flotante."
+        - texto: "1.5 V calculados con respecto al borne positivo de la batería con motor a ralentí."
+          correcta: false
+          feedback: "Incorrecto. La medición de masa se efectúa respecto al negativo de la batería y jamás debe alcanzar ese valor."
+        - texto: "El 10% del valor de la tensión nominal de la batería indicado en la ficha técnica."
+          correcta: false
+          feedback: "Incorrecto. El 10% (1.2 V) provocaría caídas inaceptables en componentes de alumbrado e inyección."
+      feedback_general: "El valor estándar de caída máxima en el retorno a masa de chasis (Borne 31) es de 0.1 V (y 0.2 V en línea positiva)."
+
+    - tipo: "multichoice"
+      nombre: "P04_Borne_87_Rele_DIN"
+      enunciado: "Según la norma DIN 72552, ¿qué función desempeña el borne 87 en un relé electromecánico de automoción?"
+      opciones:
+        - texto: "Contacto normalmente abierto de salida de potencia hacia el consumidor eléctrico."
+          correcta: true
+          feedback: "¡Correcto! El borne 87 cierra con el borne 30 cuando la bobina (85-86) es excitada con corriente."
+        - texto: "Entrada de señal de excitación positiva procedente de la llave de contacto (Borne 15)."
+          correcta: false
+          feedback: "Incorrecto. La excitación de la bobina corresponde a los bornes 85 y 86."
+        - texto: "Retorno a masa directo del bobinado de mando conectado a la carrocería del vehículo."
+          correcta: false
+          feedback: "Incorrecto. El borne 85 suele actuar como retorno de masa de la bobina de excitación."
+        - texto: "Alimentación positiva permanente con protección directa desde la batería (Borne 30)."
+          correcta: false
+          feedback: "Incorrecto. La alimentación directa permanente es el borne 30."
+      feedback_general: "En la norma DIN 72552: 30 = Entrada batería, 87 = Salida hacia consumidor, 85/86 = Bobina de control."
+
+    - tipo: "numerical"
+      nombre: "P05_Calculo_Caida_Tension_Ley_Ohm"
+      enunciado: "En una línea de alimentación circula una intensidad de <strong>I = 7.5 A</strong>. Debido a un terminal sulfatado, existe una resistencia de contacto parásita de <strong>R = 0.16 Ω</strong>. Calcula la caída de tensión en dicho terminal expresada en voltios (V):"
+      valor: 1.2
+      tolerancia: 0.05
+      unidades: ["V", "voltios"]
+      feedback: "¡Correcto! Aplicando la Ley de Ohm: ΔV = I × R = 7.5 A × 0.16 Ω = 1.2 V."
+      feedback_general: "La caída de tensión es ΔV = 7.5 × 0.16 = 1.2 V. Este valor es 6 veces superior al máximo tolerado (0.2 V)."
+
+    - tipo: "numerical"
+      nombre: "P06_Calculo_Resistencia_Bobina_Rele"
+      enunciado: "La bobina de un relé conectada a <strong>12.0 V</strong> consume una intensidad constante de <strong>150 mA (0.15 A)</strong>. Calcula la resistencia interna de la bobina en ohmios (Ω):"
+      valor: 80.0
+      tolerancia: 2.0
+      unidades: ["Ω", "ohmios"]
+      feedback: "¡Correcto! R = V / I = 12.0 V / 0.15 A = 80 Ω."
+      feedback_general: "Aplicando la Ley de Ohm: R = 12 / 0.15 = 80 Ω. Típico en relés electromecánicos de 12 V."
+
+    - tipo: "shortanswer"
+      nombre: "P07_Codigo_Borne_DIN_30"
+      enunciado: "Indica el código numérico según la norma DIN 72552 que identifica la línea de alimentación positiva directa y permanente desde la batería:"
+      respuestas:
+        - texto: "30"
+          fraccion: 100
+          feedback: "¡Correcto! El borne 30 identifica el positivo directo de batería."
+        - texto: "borne 30"
+          fraccion: 100
+          feedback: "¡Correcto!"
+      feedback_general: "El borne 30 de la norma DIN 72552 es el positivo permanente directo de batería."
+
+    - tipo: "matching"
+      nombre: "P08_Emparejamiento_Bornes_DIN"
+      enunciado: "Empareja cada número de borne de la norma DIN 72552 con su función técnica correspondiente:"
+      parejas:
+        - ["Borne 30", "Positivo directo y permanente desde batería"]
+        - ["Borne 15", "Positivo bajo llave de contacto"]
+        - ["Borne 31", "Retorno de masa al chasis o polo negativo"]
+        - ["Borne 50", "Señal de excitación del relé de arranque"]
+      feedback_general: "Identificación según la norma DIN 72552 empleada en automoción."
+
+    - tipo: "truefalse"
+      nombre: "P09_Verdadero_Falso_Back_Probing"
+      enunciado: "El método de punzonado directo atravesando el aislante del cable con agujas sin sellar es la técnica recomendada en automoción para medir caídas de tensión."
+      correcta: false
+      feedback_true: "Incorrecto. Punzonar el aislante permite la entrada de humedad, sulfatando el conductor de cobre en pocos meses."
+      feedback_false: "¡Correcto! Se debe utilizar la técnica de back-probing por la parte trasera del conector o conectores en T específicos."
+      feedback_general: "El punzonado del cable daña la protección estanca del conductor y acelera la corrosión interna por capilaridad."
+
+    - tipo: "truefalse"
+      nombre: "P10_Verdadero_Falso_Diodo_Supresion"
+      enunciado: "La desconexión súbita de la bobina de un relé electromecánico puede generar picos inductivos inversos de más de 100 V capaces de averiar las etapas de salida de la ECU."
+      correcta: true
+      feedback_true: "¡Correcto! El colapso del campo magnético produce una fuerza contraelectromotriz inversa de alta tensión."
+      feedback_false: "Incorrecto. Los inductores generan picos elevados de tensión al interrumpirse la corriente si no cuentan con diodo de supresión."
+      feedback_general: "Para proteger las centralitas se incorporan relés con diodo de rueda libre o resistencia en paralelo a la bobina."

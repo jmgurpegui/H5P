@@ -17,6 +17,8 @@ import uuid
 import json
 import shutil
 import zipfile
+import re
+import unicodedata
 
 # Asegurar codificación UTF-8 en consola multiplataforma
 if sys.stdout.encoding != 'utf-8':
@@ -83,6 +85,128 @@ HOMOLOGATED_DEPENDENCIES = [
 ]
 
 # =========================================================================
+# 0. CONFIGURACIÓN GLOBAL: AUTORÍA, LICENCIA E IMÁGENES
+# =========================================================================
+
+AUTOR = "FP Madrid profesor JM Gurpegui"
+LICENCIA = "CC BY-NC-SA"
+LICENCIA_VERSION = "4.0"
+
+MAX_IMAGE_WIDTH = 1280            # Ancho máximo en píxeles de las imágenes empaquetadas
+JPEG_QUALITY = 85                 # Calidad JPG (85 = equilibrio nitidez/peso)
+PNG_A_JPG_UMBRAL = 300 * 1024     # PNG opacos más pesados que esto se convierten a JPG
+FORMATOS_IMAGEN = ('.png', '.jpg', '.jpeg', '.gif')  # WebP NO está en la whitelist de Moodle
+
+# Registro de imágenes optimizadas: clave = nombre original o seguro -> metadatos reales
+IMAGE_REGISTRY = {}
+
+
+def nombre_seguro(filename):
+    """Convierte un nombre de archivo en ASCII seguro: sin espacios, tildes ni caracteres especiales."""
+    base, ext = os.path.splitext(os.path.basename(filename))
+    base = unicodedata.normalize('NFKD', base).encode('ascii', 'ignore').decode('ascii')
+    base = re.sub(r'[^A-Za-z0-9_-]+', '_', base).strip('_').lower() or 'imagen'
+    return base + ext.lower()
+
+
+def preparar_imagenes(src_dir, cache_dir=None):
+    """
+    Optimiza todas las imágenes de src_dir con Pillow antes de empaquetar:
+    - Redimensiona a un ancho máximo de MAX_IMAGE_WIDTH px (sin deformar).
+    - JPG: recomprime a calidad JPEG_QUALITY.
+    - PNG con transparencia: se mantiene PNG optimizado.
+    - PNG opaco pesado (> PNG_A_JPG_UMBRAL): se convierte a JPG.
+    - Renombra a nombres seguros (sin espacios ni tildes).
+    Registra en IMAGE_REGISTRY la ruta, dimensiones reales y tipo MIME de cada imagen.
+    """
+    from PIL import Image
+
+    src_dir = os.path.abspath(src_dir)
+    if not os.path.isdir(src_dir):
+        return IMAGE_REGISTRY
+    if cache_dir is None:
+        cache_dir = os.path.join(os.path.dirname(src_dir), '_imagenes_optimizadas')
+    if os.path.exists(cache_dir):
+        shutil.rmtree(cache_dir)
+    os.makedirs(cache_dir, exist_ok=True)
+
+    usados = set()
+    total_antes = total_despues = 0
+    for name in sorted(os.listdir(src_dir)):
+        src = os.path.join(src_dir, name)
+        ext = os.path.splitext(name)[1].lower()
+        if not os.path.isfile(src):
+            continue
+        if ext not in FORMATOS_IMAGEN:
+            print(f"⚠️ Imagen ignorada (formato no admitido en Moodle): {name}")
+            continue
+
+        seguro = nombre_seguro(name)
+        base = os.path.splitext(seguro)[0]
+        candidato, n = base, 2
+        while candidato in usados:
+            candidato, n = f"{base}_{n}", n + 1
+        usados.add(candidato)
+        bytes_antes = os.path.getsize(src)
+
+        if ext == '.gif':
+            final = candidato + '.gif'
+            shutil.copy2(src, os.path.join(cache_dir, final))
+            with Image.open(src) as im:
+                w, h = im.size
+            mime = 'image/gif'
+        else:
+            with Image.open(src) as im:
+                im.load()
+                tiene_alfa = im.mode in ('RGBA', 'LA') or (im.mode == 'P' and 'transparency' in im.info)
+                im = im.convert('RGBA' if tiene_alfa else 'RGB')
+                if im.width > MAX_IMAGE_WIDTH:
+                    nuevo_alto = round(im.height * MAX_IMAGE_WIDTH / im.width)
+                    im = im.resize((MAX_IMAGE_WIDTH, nuevo_alto), Image.LANCZOS)
+                w, h = im.size
+
+                if ext in ('.jpg', '.jpeg'):
+                    final, mime = candidato + '.jpg', 'image/jpeg'
+                    im.save(os.path.join(cache_dir, final), 'JPEG', quality=JPEG_QUALITY, optimize=True, progressive=True)
+                else:
+                    final, mime = candidato + '.png', 'image/png'
+                    destino_png = os.path.join(cache_dir, final)
+                    im.save(destino_png, 'PNG', optimize=True)
+                    if not tiene_alfa and os.path.getsize(destino_png) > PNG_A_JPG_UMBRAL:
+                        os.remove(destino_png)
+                        final, mime = candidato + '.jpg', 'image/jpeg'
+                        im.save(os.path.join(cache_dir, final), 'JPEG', quality=JPEG_QUALITY, optimize=True, progressive=True)
+
+        ruta_final = os.path.join(cache_dir, final)
+        bytes_despues = os.path.getsize(ruta_final)
+        total_antes += bytes_antes
+        total_despues += bytes_despues
+        info = {
+            "path": ruta_final,
+            "rel_path": f"images/{final}",
+            "width": w,
+            "height": h,
+            "mime": mime,
+            "original": name
+        }
+        for clave in (name, seguro, final, f"images/{name}", f"images/{final}"):
+            IMAGE_REGISTRY[clave] = info
+        print(f"✓ Imagen optimizada: {name} → images/{final} ({w}x{h} px, {bytes_antes // 1024} KB → {bytes_despues // 1024} KB)")
+
+    if total_antes:
+        print(f"✓ Optimización de imágenes: {total_antes / 1048576:.2f} MB → {total_despues / 1048576:.2f} MB")
+    return IMAGE_REGISTRY
+
+
+def resolver_imagen(ref, width=None, height=None):
+    """Devuelve (rel_path, mime, width, height) usando el registro de imágenes optimizadas si existe."""
+    info = IMAGE_REGISTRY.get(ref) or IMAGE_REGISTRY.get(os.path.basename(ref))
+    if info:
+        return info["rel_path"], info["mime"], info["width"], info["height"]
+    mime = "image/png" if ref.lower().endswith('.png') else "image/jpeg"
+    return ref, mime, width or 1600, height or 900
+
+# =========================================================================
 # 1. HELPERS DE ENVOLTORIO Y MAQUETACIÓN BASE
 # =========================================================================
 
@@ -96,7 +220,7 @@ def create_column_wrapper(library_str, params_dict, title_str="Sección"):
             "metadata": {
                 "title": title_str,
                 "contentType": library_str.split()[0].replace('H5P.', ''),
-                "license": "CC BY-SA"
+                "license": LICENCIA
             }
         },
         "useSeparator": "auto"
@@ -183,13 +307,17 @@ def create_header_logo():
         "alt": logo["alt"]
     }, "Cabecera Institucional EducaMadrid")
 
-def create_image_section(rel_path, alt_text, title="Imagen Técnica", width=1600, height=800):
-    """Crea un bloque nativo H5P.Image 1.1 homologado con alt text descriptivo obligatorio."""
+def create_image_section(rel_path, alt_text, title="Imagen Técnica", width=None, height=None):
+    """
+    Crea un bloque nativo H5P.Image 1.1 homologado con alt text descriptivo obligatorio.
+    Si la imagen fue procesada con preparar_imagenes(), usa su ruta segura y dimensiones reales.
+    """
+    path, mime, width, height = resolver_imagen(rel_path, width, height)
     return create_column_wrapper("H5P.Image 1.1", {
         "contentName": "Image",
         "file": {
-            "path": rel_path,
-            "mime": "image/png" if rel_path.lower().endswith('.png') else "image/jpeg",
+            "path": path,
+            "mime": mime,
             "copyright": {"license": "U"},
             "width": width,
             "height": height
@@ -218,7 +346,7 @@ def create_accordion(panels_data, title="Protocolo Desplegable"):
                 "metadata": {
                     "title": p_title,
                     "contentType": "AdvancedText",
-                    "license": "CC BY-SA"
+                    "license": LICENCIA
                 }
             }
         })
@@ -313,13 +441,14 @@ def create_image_hotspots(image_rel_path, hotspots_data, title="Esquema Interact
             ]
         })
 
+    img_path, img_mime, img_w, img_h = resolver_imagen(image_rel_path)
     params = {
         "image": {
-            "path": image_rel_path,
-            "mime": "image/png" if image_rel_path.lower().endswith('.png') else "image/jpeg",
+            "path": img_path,
+            "mime": img_mime,
             "copyright": {"license": "U"},
-            "width": 1600,
-            "height": 900
+            "width": img_w,
+            "height": img_h
         },
         "backgroundImageAltText": alt_text,
         "iconType": "icon",
@@ -394,8 +523,8 @@ def create_chapter(title, sections):
         "metadata": {
             "title": title,
             "contentType": "Column",
-            "license": "CC BY-SA",
-            "authors": [{"name": "Departamento de Formación Profesional", "role": "Author"}]
+            "license": LICENCIA,
+            "authors": [{"name": AUTOR, "role": "Author"}]
         },
         "params": {
             "title": title,
@@ -774,14 +903,20 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
     else:
         print("⚠️ Aviso: No se encontró archivo de logotipo institucional en los directorios de búsqueda.")
 
-    # 3. Copiar carpeta de imágenes del curso si se especifica images_source_dir
-    if images_source_dir and os.path.isdir(images_source_dir):
-        for img_file in sorted(os.listdir(images_source_dir)):
-            if img_file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
-                src_img = os.path.join(images_source_dir, img_file)
-                dst_img = os.path.join(images_dir, img_file)
-                shutil.copy2(src_img, dst_img)
-                print(f"✓ Imagen técnica empaquetada: content/images/{img_file}")
+    # 3. Copiar imágenes optimizadas (Pillow: ≤1280 px, nombres seguros, dimensiones reales)
+    if images_source_dir and os.path.isdir(images_source_dir) and not IMAGE_REGISTRY:
+        hay_imgs = any(f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')) for f in os.listdir(images_source_dir))
+        if hay_imgs:
+            print("⚠️ Aviso: llama a preparar_imagenes() ANTES de crear los capítulos para registrar dimensiones reales.")
+            preparar_imagenes(images_source_dir)
+    copiadas = set()
+    for info in IMAGE_REGISTRY.values():
+        if info["path"] in copiadas or not os.path.exists(info["path"]):
+            continue
+        shutil.copy2(info["path"], os.path.join(content_dir, info["rel_path"]))
+        copiadas.add(info["path"])
+    if copiadas:
+        print(f"✓ {len(copiadas)} imagen(es) optimizada(s) empaquetada(s) en content/images/")
 
     # 4. Copiar imágenes adicionales individuales si existen
     if extra_images:
@@ -813,7 +948,7 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
                 "subContentId": str(uuid.uuid4()),
                 "metadata": {
                     "contentType": "Image",
-                    "license": "CC BY-SA",
+                    "license": LICENCIA,
                     "title": "Portada Institucional"
                 }
             }
@@ -835,8 +970,9 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
         "language": "es",
         "mainLibrary": "H5P.InteractiveBook",
         "embedTypes": ["div"],
-        "license": "CC BY-SA",
-        "authors": [{"name": "Profesorado de Formación Profesional - Automoción", "role": "Author"}],
+        "license": LICENCIA,
+        "authors": [{"name": AUTOR, "role": "Author"}],
+        "licenseVersion": LICENCIA_VERSION,
         "preloadedDependencies": HOMOLOGATED_DEPENDENCIES
     }
 
@@ -1132,6 +1268,19 @@ def generar_evaluacion_modelo_xml(output_xml_path):
 
     builder.save_xml(output_xml_path)
     validar_moodle_xml(output_xml_path)
+
+
+def cargar_curso_yaml(yaml_path, output_dir=None, images_dir=None):
+    """
+    Compila un curso completo (H5P InteractiveBook + Moodle XML) a partir de un archivo YAML.
+    Desacopla el contenido pedagógico de la lógica de programación y empaquetado.
+    """
+    try:
+        from yaml_course_builder import compilar_curso_desde_yaml
+    except ImportError:
+        from plantilla.yaml_course_builder import compilar_curso_desde_yaml
+    return compilar_curso_desde_yaml(yaml_path, output_dir=output_dir, images_dir=images_dir)
+
 
 if __name__ == '__main__':
     ejemplo_pkg = os.path.join(PLANTILLA_DIR, "Plantilla_Curso_Modelo_EducaMadrid.h5p")

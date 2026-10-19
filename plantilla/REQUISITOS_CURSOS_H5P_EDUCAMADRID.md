@@ -335,3 +335,32 @@ El validador de Moodle XML certifica:
 3. Retroalimentación pedagógica explicada para aciertos y fallos.
 4. Control psicométrico de sesgo de longitud (auditoría de homogeneidad y alerta si la opción correcta es sistemáticamente la más extensa).
 5. Limpieza de etiquetas `<p>` y `</p>` redundantes según la norma [https://github.com/picuino/test](https://github.com/picuino/test).
+
+---
+
+## 11. Arquitectura Desacoplada: Contenido en YAML + Lógica en Python
+
+Para agilizar la producción de cursos y permitir que el profesorado se centre en el rigor técnico y pedagógico sin lidiar con sintaxis de programación o comillas escapadas:
+1. **Archivo `contenido_curso.yaml`**: Define los metadatos (autoría `"FP Madrid profesor JM Gurpegui"`, licencia `"CC BY-NC-SA 4.0"`), la secuencia de 4 fases por unidad y las preguntas de evaluación.
+2. **Compilador Python (`yaml_course_builder.py`)**:
+   - Ensambla automáticamente el paquete `.h5p` (`InteractiveBook`) formativo.
+   - Genera el banco de preguntas Moodle XML (`mod_quiz`) sumativo.
+   - Optimiza las imágenes de la carpeta `images/` con Pillow (ancho máx 1280 px, calidad 82).
+   - Genera UUIDv4 reales y valida ambos productos contra los estándares de EducaMadrid.
+3. **Inicio rápido de curso**:
+   ```bash
+   python3 build.py nuevo MiCurso "Título del Curso"
+   python3 build.py MiCurso
+   ```
+
+---
+
+## 12. Compilador de Simuladores Interactivos HTML (Whitelist Safe)
+
+Los simuladores de taller desarrollados en HTML/JS (osciloscopios digitales, polímetros, tableros de relés) pueden empaquetarse directamente como recursos H5P independientes listos para Moodle:
+```bash
+# Compilar un simulador individual o una carpeta completa de simuladores
+python3 build.py simuladores <carpeta_o_archivo.html>
+```
+* **Mecanismo de Seguridad Anti-Rechazo Moodle**: Moodle EducaMadrid rechaza archivos `.html` dentro de `content/` (`not-in-whitelist`). El compilador `h5p_builder/compilar_simulador.py` incrusta el código HTML dentro de `content/content.json` y la librería `H5P.IFrameEmbed 1.0` lo instancia en el navegador mediante Blob URL / `srcdoc` local seguro. Cero archivos `.html` sueltos en `content/`.
+
