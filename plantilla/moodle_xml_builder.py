@@ -452,7 +452,24 @@ class MoodleXMLBuilder:
                 ET.SubElement(q_elem, "defaultgrade").text = str(q.get("defaultgrade", "1.0000000"))
                 ET.SubElement(q_elem, "penalty").text = str(q.get("penalty", 0.3333333))
                 ET.SubElement(q_elem, "hidden").text = "0"
-                ET.SubElement(q_elem, "shuffleanswers").text = "1" if q.get("shuffle", True) else "0"
+                if q.get("shuffle", True):
+                    ET.SubElement(q_elem, "shuffleanswers").text = "1"
+
+                # Retroalimentaciones combinadas estándar de Moodle
+                cf = ET.SubElement(q_elem, "correctfeedback", format="html")
+                clean_cf = strip_outer_p(q.get("correctfeedback", "Tu respuesta es correcta."))
+                ET.SubElement(cf, "text").text = f"<![CDATA[<p>{clean_cf}</p>]]>" if clean_cf else ""
+
+                pcf = ET.SubElement(q_elem, "partiallycorrectfeedback", format="html")
+                clean_pcf = strip_outer_p(q.get("partiallycorrectfeedback", "Tu respuesta es parcialmente correcta."))
+                ET.SubElement(pcf, "text").text = f"<![CDATA[<p>{clean_pcf}</p>]]>" if clean_pcf else ""
+
+                icf = ET.SubElement(q_elem, "incorrectfeedback", format="html")
+                clean_icf = strip_outer_p(q.get("incorrectfeedback", "Tu respuesta es incorrecta."))
+                ET.SubElement(icf, "text").text = f"<![CDATA[<p>{clean_icf}</p>]]>" if clean_icf else ""
+
+                if q.get("shownumcorrect", True):
+                    ET.SubElement(q_elem, "shownumcorrect")
 
                 # Incrustación de la imagen de fondo en Base64 directamente en la etiqueta <question>
                 bg_path = q.get("image_path")
@@ -460,28 +477,35 @@ class MoodleXMLBuilder:
                     bg_filename = os.path.basename(bg_path)
                     with open(bg_path, "rb") as img_f:
                         bg_b64 = base64.b64encode(img_f.read()).decode("ascii")
-                    file_elem = ET.SubElement(q_elem, "file", name=bg_filename, path="/", encoding="base64")
+                    file_elem = ET.SubElement(q_elem, "file", name=bg_filename, encoding="base64")
                     file_elem.text = bg_b64
 
-                # Generación de elementos arrastrables (drag) y zonas de soltado (drop)
+                # Generación de elementos arrastrables (drag)
                 items = q.get("items", [])
                 for idx, item in enumerate(items, start=1):
                     drag = ET.SubElement(q_elem, "drag")
                     ET.SubElement(drag, "no").text = str(idx)
-                    ET.SubElement(drag, "text").text = strip_outer_p(item.get("text", ""))
+                    clean_drag_txt = strip_outer_p(item.get("text", ""))
+                    ET.SubElement(drag, "text").text = f"<![CDATA[{clean_drag_txt}]]>"
                     ET.SubElement(drag, "draggroup").text = str(item.get("group", item.get("draggroup", 1)))
-                    inf_val = "1" if item.get("infinite") in (True, 1, "1") else "0"
-                    ET.SubElement(drag, "infinite").text = inf_val
+                    # En Moodle XML, solo se incluye <infinite/> si es infinito (la existencia de la etiqueta lo activa)
+                    if item.get("infinite") in (True, 1, "1"):
+                        ET.SubElement(drag, "infinite")
 
+                # Generación de zonas de soltado (drop) con etiqueta obligatoria <no>
+                drop_idx = 1
+                for idx, item in enumerate(items, start=1):
                     x = item.get("x", item.get("xleft"))
                     y = item.get("y", item.get("ytop"))
                     if x is not None and y is not None:
                         drop = ET.SubElement(q_elem, "drop")
                         ET.SubElement(drop, "text").text = ""
+                        ET.SubElement(drop, "no").text = str(drop_idx)
                         choice_val = item.get("choice")
                         ET.SubElement(drop, "choice").text = str(choice_val if choice_val is not None else idx)
                         ET.SubElement(drop, "xleft").text = str(x)
                         ET.SubElement(drop, "ytop").text = str(y)
+                        drop_idx += 1
 
         rough_string = ET.tostring(quiz, encoding="utf-8")
         # Deshacer escape de CDATA generado por ElementTree
@@ -723,9 +747,12 @@ def validar_moodle_xml(xml_path):
                     advertencias.append(f"Pregunta #{idx} ('{q_name}'): Elemento drag #{d_idx} con texto visible vacío.")
 
             for dp_idx, dp in enumerate(drops, 1):
+                dp_no = dp.find("no")
                 ch = dp.find("choice")
                 xl = dp.find("xleft")
                 yt = dp.find("ytop")
+                if dp_no is None or not (dp_no.text or "").strip():
+                    errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin etiqueta obligatoria <no> (Moodle colapsa los drops a índice -1 sin esta etiqueta).")
                 if ch is None or not (ch.text or "").strip():
                     errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin etiqueta <choice>.")
                 elif ch.text.strip() not in drag_nos:
@@ -734,6 +761,16 @@ def validar_moodle_xml(xml_path):
                     errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin coordenada <xleft>.")
                 if yt is None or not (yt.text or "").strip():
                     errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin coordenada <ytop>.")
+                else:
+                    try:
+                        x_val = int(xl.text.strip())
+                        y_val = int(yt.text.strip())
+                        if x_val < 0 or x_val >= 600 or y_val < 0 or y_val >= 400:
+                            advertencias.append(
+                                f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} ({x_val}, {y_val}) fuera de límites estándar Moodle (600x400 px)."
+                            )
+                    except ValueError:
+                        pass
 
     print(f"✓ Tipos de preguntas certificados: {tipos_detectados}")
     if embedded_images_count > 0:
