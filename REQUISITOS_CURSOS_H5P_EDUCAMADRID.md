@@ -301,7 +301,8 @@ Para resolver los reportes de mala visualización o desbordamiento en teléfonos
 | `create_accordion(paneles, titulo)` | `H5P.Accordion 1.0` | Desplegables colapsables para protocolos extensos de taller. |
 | `create_simulation_box(...)` | `.sim-box` / `.btn-sim` | Conexión directa a simuladores y laboratorios virtuales interactivos. |
 | `create_didactic_sequence_chapter(...)` | `H5P.Column 1.16` | Ensambla un capítulo completo bajo la secuencia de andamiaje de 4 fases. |
-| `MoodleXMLBuilder` | `moodle_xml_builder.py` | Generador oficial de bancos de preguntas Moodle XML con retroalimentación. |
+| `MoodleXMLBuilder` | `moodle_xml_builder.py` | Generador oficial de bancos de preguntas Moodle XML con retroalimentación (multichoice, truefalse, matching, numerical, shortanswer, ddimageortext). |
+| `build_ddimageortext_xml(...)` | `moodle_xml_builder.py` | Generador directo de preguntas de arrastrar y soltar sobre imagen con fondo en Base64. |
 | `validar_moodle_xml(xml)` | `moodle_xml_builder.py` | Validador y certificador automático de bancos de preguntas Moodle XML. |
 
 ---
@@ -335,6 +336,7 @@ El validador de Moodle XML certifica:
 3. Retroalimentación pedagógica explicada para aciertos y fallos.
 4. Control psicométrico de sesgo de longitud (auditoría de homogeneidad y alerta si la opción correcta es sistemáticamente la más extensa).
 5. Limpieza de etiquetas `<p>` y `</p>` redundantes según la norma [https://github.com/picuino/test](https://github.com/picuino/test).
+6. Validación exhaustiva de preguntas de arrastrar sobre imagen (`ddimageortext`): comprobación de imagen de fondo `<file>` en Base64, etiquetas `<drag>` y zonas de caída `<drop>` con coordenadas `<xleft>` y `<ytop>`.
 
 ---
 

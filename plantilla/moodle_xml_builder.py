@@ -6,12 +6,13 @@ Permite desacoplar la formación activa (H5P) de la evaluación sumativa oficial
 
 Garantiza:
 1. Exportación 100% compatible con Moodle 3.x, 4.x y Aulas Virtuales de EducaMadrid (<quiz>).
-2. Cinco tipos de preguntas nativas para FP de Automoción:
+2. Seis tipos de preguntas nativas para FP de Automoción y Educación Secundaria/Bachillerato:
    - multichoice (opción múltiple con rotación automática de posición A/B/C/D en el XML)
    - truefalse (verdadero/falso con retroalimentación específica)
    - matching (emparejamiento de componentes, bornes DIN o códigos ECE)
    - numerical (cálculo electrotécnico/metrológico con margen de tolerancia y unidades)
    - shortanswer (respuesta corta para identificación directa de bornes, siglas o códigos)
+   - ddimageortext (arrastrar y soltar etiquetas sobre imagen con fondo incrustado en Base64)
 3. Validación estricta de sintaxis, fracciones, equilibrio psicométrico bidireccional de longitud,
    distribución de posiciones de clave en XML y ausencia de etiquetas <p> redundantes (Norma Picuino).
 4. Registro fiable de intentos y calificaciones en Moodle (mdl_grade_grades), evitando fallos de xAPI.
@@ -262,6 +263,52 @@ class MoodleXMLBuilder:
             "image_alt": image_alt
         })
 
+    def add_ddimageortext(
+        self,
+        name,
+        question_text,
+        image_path,
+        items,
+        general_feedback="",
+        shuffle=True,
+        penalty=0.3333333,
+        defaultgrade="1.0000000"
+    ):
+        """
+        Añade una pregunta de arrastrar y soltar sobre imagen (<question type="ddimageortext">).
+        Incrusta la imagen de fondo en Base64 directamente dentro de la pregunta en Moodle XML.
+
+        items: Lista de elementos arrastrables (drag) y sus zonas de soltado (drop):
+            [
+                {"text": "Bomba de alta presión", "x": 110, "y": 95, "group": 1, "infinite": False},
+                {"text": "Rampa de inyección", "x": 280, "y": 140, "group": 1},
+                {"text": "Sensor de rail", "x": 420, "y": 185, "group": 1},
+                {"text": "Distractor sin soltar", "group": 1}  # Distractor sin coordenadas x, y
+            ]
+        """
+        formatted_items = []
+        for it in items:
+            formatted_items.append({
+                "text": strip_outer_p(it.get("text", "")),
+                "x": it.get("x", it.get("xleft")),
+                "y": it.get("y", it.get("ytop")),
+                "group": it.get("group", it.get("draggroup", 1)),
+                "infinite": bool(it.get("infinite", False)),
+                "choice": it.get("choice")
+            })
+
+        self.questions.append({
+            "type": "ddimageortext",
+            "name": name,
+            "text": strip_outer_p(question_text),
+            "image_path": image_path,
+            "items": formatted_items,
+            "general_feedback": strip_outer_p(general_feedback),
+            "shuffle": shuffle,
+            "penalty": penalty,
+            "defaultgrade": defaultgrade
+        })
+
     def generate_xml(self):
         """Construye y formatea el árbol XML oficial de Moodle."""
         quiz = ET.Element("quiz")
@@ -288,7 +335,7 @@ class MoodleXMLBuilder:
             img_b64 = None
             img_filename = None
 
-            if img_path and os.path.exists(img_path):
+            if q["type"] != "ddimageortext" and img_path and os.path.exists(img_path):
                 img_filename = os.path.basename(img_path)
                 with open(img_path, "rb") as img_f:
                     img_b64 = base64.b64encode(img_f.read()).decode("ascii")
@@ -298,7 +345,7 @@ class MoodleXMLBuilder:
             qt_elem = ET.SubElement(q_elem, "questiontext", format="html")
             qt_text = ET.SubElement(qt_elem, "text")
             qt_text.text = f"<![CDATA[{clean_q_text}]]>"
-            if img_b64 and img_filename:
+            if q["type"] != "ddimageortext" and img_b64 and img_filename:
                 file_elem = ET.SubElement(qt_elem, "file", name=img_filename, path="/", encoding="base64")
                 file_elem.text = img_b64
 
@@ -401,6 +448,41 @@ class MoodleXMLBuilder:
                     clean_fb = strip_outer_p(ans.get("feedback", ""))
                     ET.SubElement(fb_elem, "text").text = f"<![CDATA[{clean_fb}]]>" if clean_fb else ""
 
+            elif q["type"] == "ddimageortext":
+                ET.SubElement(q_elem, "defaultgrade").text = str(q.get("defaultgrade", "1.0000000"))
+                ET.SubElement(q_elem, "penalty").text = str(q.get("penalty", 0.3333333))
+                ET.SubElement(q_elem, "hidden").text = "0"
+                ET.SubElement(q_elem, "shuffleanswers").text = "1" if q.get("shuffle", True) else "0"
+
+                # Incrustación de la imagen de fondo en Base64 directamente en la etiqueta <question>
+                bg_path = q.get("image_path")
+                if bg_path and os.path.exists(bg_path):
+                    bg_filename = os.path.basename(bg_path)
+                    with open(bg_path, "rb") as img_f:
+                        bg_b64 = base64.b64encode(img_f.read()).decode("ascii")
+                    file_elem = ET.SubElement(q_elem, "file", name=bg_filename, path="/", encoding="base64")
+                    file_elem.text = bg_b64
+
+                # Generación de elementos arrastrables (drag) y zonas de soltado (drop)
+                items = q.get("items", [])
+                for idx, item in enumerate(items, start=1):
+                    drag = ET.SubElement(q_elem, "drag")
+                    ET.SubElement(drag, "no").text = str(idx)
+                    ET.SubElement(drag, "text").text = strip_outer_p(item.get("text", ""))
+                    ET.SubElement(drag, "draggroup").text = str(item.get("group", item.get("draggroup", 1)))
+                    inf_val = "1" if item.get("infinite") in (True, 1, "1") else "0"
+                    ET.SubElement(drag, "infinite").text = inf_val
+
+                    x = item.get("x", item.get("xleft"))
+                    y = item.get("y", item.get("ytop"))
+                    if x is not None and y is not None:
+                        drop = ET.SubElement(q_elem, "drop")
+                        ET.SubElement(drop, "text").text = ""
+                        choice_val = item.get("choice")
+                        ET.SubElement(drop, "choice").text = str(choice_val if choice_val is not None else idx)
+                        ET.SubElement(drop, "xleft").text = str(x)
+                        ET.SubElement(drop, "ytop").text = str(y)
+
         rough_string = ET.tostring(quiz, encoding="utf-8")
         # Deshacer escape de CDATA generado por ElementTree
         xml_str = rough_string.decode("utf-8")
@@ -422,6 +504,44 @@ class MoodleXMLBuilder:
             f.write(xml_content)
         print(f"✅ Archivo Moodle XML generado: {output_path} ({len(self.questions)} preguntas)")
         return output_path
+
+
+def build_ddimageortext_xml(
+    output_xml_path: str,
+    question_name: str,
+    question_prompt: str,
+    image_path: str,
+    items: list,
+    general_feedback: str = "",
+    shuffle: bool = True,
+    penalty: float = 0.3333333,
+    defaultgrade: str = "1.0000000",
+    category_name: str = "Preguntas de Arrastrar sobre Imagen"
+):
+    """
+    Genera un archivo Moodle XML de arrastrar sobre imagen (<question type="ddimageortext">)
+    con imagen incrustada en Base64, plenamente compatible con Moodle 3.x, 4.x y EducaMadrid.
+    Cumple con la norma técnica de preguntas de test sin etiquetas <p> innecesarias (https://github.com/picuino/test).
+
+    items = [
+        {"text": "Bomba de alta presión", "x": 110, "y": 95, "group": 1},
+        {"text": "Rampa de inyección", "x": 280, "y": 140, "group": 1},
+        {"text": "Sensor de rail", "x": 420, "y": 185, "group": 1},
+        {"text": "Distractor sin zona de soltado", "group": 1} # Opcional: distractor sin drop
+    ]
+    """
+    builder = MoodleXMLBuilder(category_name=category_name)
+    builder.add_ddimageortext(
+        name=question_name,
+        question_text=question_prompt,
+        image_path=image_path,
+        items=items,
+        general_feedback=general_feedback,
+        shuffle=shuffle,
+        penalty=penalty,
+        defaultgrade=defaultgrade
+    )
+    return builder.save_xml(output_xml_path)
 
 
 def validar_moodle_xml(xml_path):
@@ -479,7 +599,7 @@ def validar_moodle_xml(xml_path):
         q_name = name.text if name is not None else f"Pregunta {idx}"
 
         # Enunciado e imágenes embebidas
-        q_files = q.findall("questiontext/file")
+        q_files = q.findall("questiontext/file") + q.findall("file")
         if q_files:
             embedded_images_count += len(q_files)
         q_text = q.find("questiontext/text")
@@ -575,9 +695,49 @@ def validar_moodle_xml(xml_path):
             if not answers:
                 errores.append(f"Pregunta #{idx} ('{q_name}'): Pregunta de respuesta corta sin <answer>.")
 
+        elif q_type == "ddimageortext":
+            bg_files = q.findall("file")
+            if not bg_files:
+                errores.append(f"Pregunta #{idx} ('{q_name}'): Pregunta ddimageortext sin imagen de fondo <file>.")
+            else:
+                for f in bg_files:
+                    if not (f.text or "").strip():
+                        errores.append(f"Pregunta #{idx} ('{q_name}'): Archivo de imagen de fondo '{f.get('name')}' vacío.")
+
+            drags = q.findall("drag")
+            drops = q.findall("drop")
+            if not drags:
+                errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 1 elemento arrastrable <drag>.")
+            if not drops:
+                errores.append(f"Pregunta #{idx} ('{q_name}'): Requiere al menos 1 zona de soltado <drop>.")
+
+            drag_nos = set()
+            for d_idx, d in enumerate(drags, 1):
+                d_no = d.find("no")
+                d_txt = d.find("text")
+                if d_no is None or not (d_no.text or "").strip():
+                    errores.append(f"Pregunta #{idx} ('{q_name}'): Elemento drag #{d_idx} sin etiqueta <no>.")
+                else:
+                    drag_nos.add(d_no.text.strip())
+                if d_txt is None or not (d_txt.text or "").strip():
+                    advertencias.append(f"Pregunta #{idx} ('{q_name}'): Elemento drag #{d_idx} con texto visible vacío.")
+
+            for dp_idx, dp in enumerate(drops, 1):
+                ch = dp.find("choice")
+                xl = dp.find("xleft")
+                yt = dp.find("ytop")
+                if ch is None or not (ch.text or "").strip():
+                    errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin etiqueta <choice>.")
+                elif ch.text.strip() not in drag_nos:
+                    errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} apunta a <choice> '{ch.text}' inexistente en los elementos <drag>.")
+                if xl is None or not (xl.text or "").strip():
+                    errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin coordenada <xleft>.")
+                if yt is None or not (yt.text or "").strip():
+                    errores.append(f"Pregunta #{idx} ('{q_name}'): Zona drop #{dp_idx} sin coordenada <ytop>.")
+
     print(f"✓ Tipos de preguntas certificados: {tipos_detectados}")
     if embedded_images_count > 0:
-        print(f"✓ Imágenes técnicas embebidas en Base64 (@@PLUGINFILE@@): {embedded_images_count}")
+        print(f"✓ Imágenes técnicas embebidas en Base64 (@@PLUGINFILE@@ / fondo ddimageortext): {embedded_images_count}")
     if redundant_p_count == 0:
         print("✓ Formato XML limpio (sin <p> ni </p> redundantes, norma https://github.com/picuino/test): Certificado.")
     else:

@@ -296,3 +296,26 @@ evaluacion_moodle:
       feedback_true: "¡Correcto! El colapso del campo magnético produce una fuerza contraelectromotriz inversa de alta tensión."
       feedback_false: "Incorrecto. Los inductores generan picos elevados de tensión al interrumpirse la corriente si no cuentan con diodo de supresión."
       feedback_general: "Para proteger las centralitas se incorporan relés con diodo de rueda libre o resistencia en paralelo a la bobina."
+
+    - tipo: "ddimageortext"
+      nombre: "P11_Arrastrar_Imagen_Esquema_Rele"
+      enunciado: "Arrastra cada etiqueta al componente o borne correspondiente sobre el esquema técnico del relé de automoción:"
+      imagen: "logo2026.png"
+      items:
+        - texto: "Borne 30 (Alimentación Batería)"
+          x: 60
+          y: 40
+          grupo: 1
+        - texto: "Borne 87 (Salida a Consumidor)"
+          x: 240
+          y: 40
+          grupo: 1
+        - texto: "Bobina de Mando (85 - 86)"
+          x: 150
+          y: 120
+          grupo: 1
+        - texto: "Diodo de Supresión de Picos"
+          x: 150
+          y: 180
+          grupo: 1
+      feedback_general: "Identificación de bornes y componentes internos de un relé electromecánico de automoción."

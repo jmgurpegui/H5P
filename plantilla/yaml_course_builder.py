@@ -300,6 +300,36 @@ def _construir_evaluacion_moodle(eval_config, xml_output_path):
                     pairs.append((item.get("concepto", item.get("pregunta", "")), item.get("definicion", item.get("respuesta", ""))))
             builder.add_matching(nombre, enunciado, pairs, fb_general, shuffle=p.get("shuffle", True))
 
+        elif tipo in ("ddimageortext", "arrastrar_imagen", "drag_drop_image", "drag_image"):
+            raw_img = p.get("imagen", p.get("image_path", ""))
+            img_path = raw_img
+            if img_path and not os.path.isabs(img_path) and not os.path.exists(img_path):
+                cand = os.path.join(os.path.dirname(xml_output_path), img_path)
+                if os.path.exists(cand):
+                    img_path = cand
+            raw_items = p.get("items", p.get("elementos", []))
+            items = []
+            for it in raw_items:
+                if isinstance(it, dict):
+                    items.append({
+                        "text": str(it.get("texto", it.get("text", ""))),
+                        "x": it.get("x", it.get("xleft")),
+                        "y": it.get("y", it.get("ytop")),
+                        "group": it.get("grupo", it.get("group", 1)),
+                        "infinite": bool(it.get("infinite", False)),
+                        "choice": it.get("choice")
+                    })
+            builder.add_ddimageortext(
+                nombre,
+                enunciado,
+                image_path=img_path,
+                items=items,
+                general_feedback=fb_general,
+                shuffle=p.get("shuffle", True),
+                penalty=float(p.get("penalty", 0.3333333)),
+                defaultgrade=str(p.get("defaultgrade", "1.0000000"))
+            )
+
     builder.save_xml(xml_output_path)
     validar_moodle_xml(xml_output_path)
     print(f"✅ Archivo Moodle XML generado: {xml_output_path}")

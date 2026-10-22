@@ -1017,7 +1017,7 @@ def build_h5p_package(output_path, title, book_cover_title, book_cover_desc, cha
 # EJEMPLO MAESTRO: CURSO MODELO QUE INTEGRA LOS 5 PILARES PEDAGÓGICOS
 # =========================================================================
 def generar_evaluacion_modelo_xml(output_xml_path):
-    """Genera y valida el banco de preguntas Moodle XML oficial desacoplado de la plantilla (12 preguntas, 5 tipos)."""
+    """Genera y valida el banco de preguntas Moodle XML oficial desacoplado de la plantilla (13 preguntas, 6 tipos)."""
     try:
         from moodle_xml_builder import MoodleXMLBuilder, validar_moodle_xml
     except ImportError:
@@ -1264,6 +1264,20 @@ def generar_evaluacion_modelo_xml(output_xml_path):
             {"text": "Borne 31", "fraction": 100, "feedback": "¡Correcto! El Borne 31 designa universalmente la masa según DIN 72552."}
         ],
         general_feedback="Según la norma DIN 72552, el número 31 identifica siempre el retorno a masa (habitualmente cable marrón BR en vehículos alemanes)."
+    )
+
+    # P13: Arrastrar sobre Imagen (type="ddimageortext") - Identificación de elementos de taller
+    builder.add_ddimageortext(
+        "P13_Arrastrar_Imagen_Esquema_Rele_Bornes",
+        "Arrastra los rótulos a su posición correspondiente sobre el esquema técnico del relé de automoción:",
+        image_path=os.path.join(PLANTILLA_DIR, "logo2026.png"),
+        items=[
+            {"text": "Borne 30 (Entrada Batería)", "x": 60, "y": 40, "group": 1},
+            {"text": "Borne 87 (Salida a Consumidor)", "x": 240, "y": 40, "group": 1},
+            {"text": "Bobina de Mando (85 - 86)", "x": 150, "y": 120, "group": 1},
+            {"text": "Diodo de Supresión de Picos", "x": 150, "y": 180, "group": 1},
+        ],
+        general_feedback="La correcta identificación de los terminales de un relé es esencial para realizar diagnósticos y mediciones de caída de tensión en el taller."
     )
 
     builder.save_xml(output_xml_path)

@@ -49,3 +49,19 @@ En la generación de reactivos tipo test existe una tendencia habitual a redacta
 El script oficial `moodle_xml_builder.py` (`validar_moodle_xml`) audita la longitud relativa de las alternativas e informa del porcentaje de preguntas donde la opción correcta es la más extensa:
 * Si el ratio supera el umbral admisible (> 50%), emite una **Advertencia Psicométrica de Sesgo de Longitud**.
 * Antes de certificar un banco XML para producción en EducaMadrid o Moodle, se debe verificar que no existan patrones predecibles ni sesgos de longitud.
+
+---
+
+## 4. Preguntas de Arrastrar y Soltar sobre Imagen (`ddimageortext`)
+
+1. **Estructura Oficial Moodle XML**:
+   - Tipo de pregunta: `<question type="ddimageortext">`.
+   - Incrustación de imagen de fondo: Directamente dentro de `<question>` mediante `<file name="..." path="/" encoding="base64">...</file>` (NO en `<questiontext>`).
+   - Elementos arrastrables: `<drag><no>1</no><text>...</text><draggroup>1</draggroup><infinite>0</infinite></drag>`.
+   - Zonas de soltado: `<drop><text></text><choice>1</choice><xleft>X</xleft><ytop>Y</ytop></drop>`.
+   - Distractores: Se pueden incluir elementos `<drag>` adicionales sin crearles una zona `<drop>`.
+2. **Norma Técnica Picuino / Test**:
+   - Sin etiquetas `<p>` ni `</p>` innecesarias en `<questiontext>` ni en las etiquetas `<text>` de drag/drop.
+3. **Generación Programática**:
+   - Utilizar el método `builder.add_ddimageortext(...)` o la función directa `build_ddimageortext_xml(...)` en `moodle_xml_builder.py`.
+   - Certificar siempre con `validar_moodle_xml(xml_path)`.

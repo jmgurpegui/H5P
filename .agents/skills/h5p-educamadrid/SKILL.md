@@ -72,7 +72,7 @@ Diseña el contenido asegurando la participación constante del estudiante (cons
    - **Cursos H5P 100% Formativos**: Para evitar fallos en el registro de calificaciones ("No intentado" o pérdida de sentencias xAPI en móviles por bloqueo de cookies o iframes) y problemas de arrastre táctil en smartphones, **está prohibido incluir actividades puntuables o de arrastre (`MultiChoice`, `DragText`, `TrueFalse`, `QuestionSet`) dentro de los paquetes H5P de producción**.
    - **Fase 4 de Andamiaje**: Concluye con un bloque didáctico de síntesis y derivación directa al Cuestionario Moodle XML (`create_moodle_quiz_referral`).
    - **Finalización en Moodle**: El recurso H5P se configura con **"El estudiante debe ver esta actividad para completarla"** (100% fiable para todos los alumnos).
-   - **Evaluación Sumativa Oficial**: Se canaliza a través de **Cuestionarios Moodle (`mod_quiz`)** a partir del banco de preguntas XML generado con `moodle_xml_builder.py`.
+   - **Evaluación Sumativa Oficial**: Se canaliza a través de **Cuestionarios Moodle (`mod_quiz`)** a partir del banco de preguntas XML generado con `moodle_xml_builder.py` (soporta `multichoice`, `truefalse`, `matching`, `numerical`, `shortanswer` y `ddimageortext` para arrastrar rótulos sobre esquemas técnicos con imagen incrustada en Base64, con la función `build_ddimageortext_xml(...)`).
    - **Regla Psicométrica contra Patrones y Sesgo de Longitud (*Length Bias*)**:
      * Queda estrictamente prohibido que la respuesta correcta sea sistemáticamente la más extensa o detallada.
      * La opción correcta y los distractores deben mantener una longitud y estructura sintáctica homogénea (±15-20% de caracteres).

@@ -16,8 +16,8 @@ H5P/
 ├── plantilla/                                # Toolkit y plantilla técnica maestra
 │   ├── generar_curso_plantilla.py            # Generador maestro con helpers didácticos y de taller de Automoción
 │   ├── validar_h5p_educamadrid.py            # Validador de certificación EducaMadrid / Lumi / Moodle
-│   ├── moodle_xml_builder.py                 # Constructor y validador psicométrico de bancos Moodle XML (5 tipos)
-│   ├── evaluacion_modelo_moodle.xml          # Banco de preguntas modelo sumativo para Moodle (12 preguntas)
+│   ├── moodle_xml_builder.py                 # Constructor y validador psicométrico de bancos Moodle XML (6 tipos, incl. ddimageortext)
+│   ├── evaluacion_modelo_moodle.xml          # Banco de preguntas modelo sumativo para Moodle (13 preguntas, 6 tipos)
 │   ├── estilos_educamadrid.css               # Hoja de estilos accesible y responsive (WCAG AAA, cero texto claro)
 │   ├── append_css_to_libraries.py            # Inyector limpio de CSS en librerías base
 │   ├── logo2026.png / logo2026.bmp           # Logotipo institucional oficial (Comunidad de Madrid)
